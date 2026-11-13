@@ -119,12 +119,14 @@ def keystone(xc, y_crown, zf, side, c, face_c, lion):
 R_COL = 0.48
 
 
-def ionic_column(x, zf, side, y_cap_top):
+def ionic_column(x, zf, side, y_cap_top, ped=None):
     """Engaged Ionic column on its pedestal, standing out of the face zf (side +1 east, −1 west)."""
     zc = zf + 0.22 * side
-    out = [B(x - 0.7, x + 0.7, 0, 1.55, zc - 0.7, zc + 0.7, granite()),                      # pedestal
-           B(x - 0.78, x + 0.78, 1.45, 1.7, zc - 0.78, zc + 0.78, STONE),                     # its cap
-           B(x - 0.78, x + 0.78, 0, 0.3, zc - 0.78, zc + 0.78, PLINTH)]
+    px0, px1 = ped if isinstance(ped, tuple) else (x - 0.7, x + 0.7)
+    out = [] if ped == "skip" else [
+           B(px0, px1, 0, 1.55, zc - 0.7, zc + 0.7, granite()),                                # pedestal
+           B(px0 - 0.08, px1 + 0.08, 1.45, 1.7, zc - 0.78, zc + 0.78, STONE),                  # its cap
+           B(px0 - 0.08, px1 + 0.08, 0, 0.3, zc - 0.78, zc + 0.78, PLINTH)]
     y0, y1 = 1.7, y_cap_top - 0.75
     out.append(cyl(R_COL * 1.22, R_COL * 1.12, 0.28, STONE, 16).T(x, y0, zc))                  # base
     out.append(cyl(R_COL, R_COL * 0.86, y1 - y0 - 0.28, granite(1.02), 16, caps=False).T(x, y0 + 0.28, zc))
@@ -260,36 +262,36 @@ def gate():
     half.append(B(2.55, 5.15, FOUND, TOP_C, -D3, D3, granite()))                  # central body, pier of the central arch
     # light lowest course, impost bands, frames of the rectangular opening
     for x0, x1, d in ((19.3, 21.6, D1), (13.65, 16.1, D1), (6.55, 8.55, D1), (5.15, 6.55, D2), (2.55, 5.15, D3)):
-        half.append(B(x0, x1, 0, 0.45, -d - 0.05, d + 0.05, PLINTH))
+        half.append(B(x0 - 0.04, x1 + 0.04, 0, 0.45, -d - 0.05, d + 0.05, PLINTH))
     for x0, x1, d, yi in ((13.65, 16.1, D1, 6.9), (6.55, 8.55, D1, 6.9), (5.15, 6.55, D2, 7.15), (2.55, 5.15, D3, 7.15)):
-        half.append(B(x0, x1, yi - 0.28, yi, -d - 0.1, d + 0.1, STONE))
+        half.append(B(x0 - 0.05, x1 + 0.05, yi - 0.28, yi, -d - 0.1, d + 0.1, STONE))
     for s in (E, W):
         zf = s * (D1 + 0.04)
-        half += [B(15.85, 16.1, 0.45, 5.8, min(zf, zf + 0.1 * s), max(zf, zf + 0.1 * s), STONE),
-                 B(19.3, 19.55, 0.45, 5.8, min(zf, zf + 0.1 * s), max(zf, zf + 0.1 * s), STONE)]
+        half += [B(15.85, 16.14, 0.45, 5.8, min(zf, zf + 0.1 * s), max(zf, zf + 0.1 * s), STONE),
+                 B(19.26, 19.55, 0.45, 5.8, min(zf, zf + 0.1 * s), max(zf, zf + 0.1 * s), STONE)]
         half.append(archivolt(8.55, 13.65, 6.9, s * (D1 + 0.06), STONE))
         half += keystone(11.1, 6.9 + 2.55, s * D1, s, STONE, MARBLE, lion=(s == W))
     # the soffits of the openings (inside faces of the piers are the boxes' own sides)
     # Entablature and cornice of the side bodies (deeper on the east, where the columns stand out)
     half.append(B(6.55, 21.6, TOP_S, 12.6, -3.35, 3.85, granite(0.98)))
-    half.append(B(6.55, 21.6, TOP_S, TOP_S + 0.12, -3.4, 3.9, STONE))
+    half.append(B(6.55, 21.64, TOP_S - 0.03, TOP_S + 0.12, -3.4, 3.9, STONE))
     half.append(B(6.55, 21.95, 12.6, 13.4, -3.7, 4.2, granite(1.04)))
     half.append(B(6.6, 21.4, 13.4, 14.45, -3.0, 3.0, granite()))                  # parapet
-    half.append(B(6.55, 21.5, 14.3, 14.45, -3.08, 3.08, STONE))
+    half.append(B(6.55, 21.5, 14.45, 14.6, -3.08, 3.08, STONE))
     half.append(hip(6.9, 21.1, -2.6, 2.6, 14.0, 15.0, LEAD))                      # low lead roof
     # Central body: entablature and cornice
     half.append(B(5.15, 6.55, TOP_C, 13.4, -5.2, 5.2, granite(0.98)))
     half.append(B(0.0, 5.15, TOP_C, 13.4, -6.9, 6.9, granite(0.98)))
-    half.append(B(0.0, 5.15, TOP_C, TOP_C + 0.12, -6.95, 6.95, STONE))
+    half.append(B(0.0, 5.19, TOP_C - 0.03, TOP_C + 0.12, -6.95, 6.95, STONE))
     half.append(B(5.15, 6.9, 13.4, 14.2, -5.55, 5.55, granite(1.04)))
     half.append(B(0.0, 5.15, 13.4, 14.2, -7.25, 7.25, granite(1.04)))
     # Orders: east columns, west pilasters (+ the two columns of each pair beside the central arch)
     for x in (20.45, 14.9, 7.55):
         half += ionic_column(x, E * D1, E, TOP_S)
         half += pilaster(x, W * D1, W, TOP_S)
-    for x in (3.2, 4.5):
-        for s in (E, W):
-            half += ionic_column(x, s * D3, s, TOP_C)
+    for s in (E, W):                                         # the pair shares one pedestal
+        half += ionic_column(3.2, s * D3, s, TOP_C, ped=(2.6, 5.1))
+        half += ionic_column(4.5, s * D3, s, TOP_C, ped="skip")
     # Panels over the rectangular openings: garlands (east), crossed cornucopias (west)
     half.append(B(17.7 - 1.67, 17.7 + 1.67, 7.5, 9.17, D1, D1 + 0.12, STONE))
     half.append(tube([(17.7 + 1.3 * math.cos(a), 8.6 - 0.4 * math.sin(a), D1 + 0.18) for a in np.linspace(math.pi, 0, 9)], 0.12, MARBLE, 6))
