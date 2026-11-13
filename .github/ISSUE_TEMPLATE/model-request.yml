@@ -1,0 +1,28 @@
+name: "🏛️ Model request / Pedir un modelo"
+description: "A monument or landmark building you would like to see in 3D. / Un monumento o edificio emblemático que te gustaría ver en 3D."
+title: "[Model] "
+labels: ["model request"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Plans, photos and measurements help whoever makes the model. Please check there is no request for it yet.
+        Los planos, fotos y medidas ayudan a quien haga el modelo. Comprueba que no lo ha pedido nadie ya.
+  - type: input
+    id: qid
+    attributes:
+      label: "Wikidata id or name / Id de Wikidata o nombre"
+      placeholder: "Q1140634 — Puerta de Alcalá"
+    validations:
+      required: true
+  - type: textarea
+    id: refs
+    attributes:
+      label: "References / Referencias"
+      description: "Plans, photos, heritage records, OpenStreetMap link (say their licence if you know it). / Planos, fotos, fichas de patrimonio, enlace de OpenStreetMap (indica su licencia si la sabes)."
+  - type: checkboxes
+    id: me
+    attributes:
+      label: "I'd like to make it myself / Me gustaría hacerlo yo"
+      options:
+        - label: "Yes / Sí"

@@ -1,0 +1,37 @@
+cff-version: 1.2.0
+message: "If you use Offlined Landmarks 3D, credit the authors of each model (see its meta.json) together with this project."
+type: dataset
+title: "Offlined Landmarks 3D"
+abstract: >-
+  Open 3D models of monuments and landmark buildings that have a Wikipedia article, at real size, placed and
+  oriented where they really stand, by their Wikidata id. Made by the community, for Offlined's Wiki Flight and
+  for anyone. Models CC BY 4.0 or CC0 1.0, descriptions CC0 1.0, code MIT.
+authors:
+  - given-names: "Álvaro"
+    family-names: "C. Chulvi"
+    affiliation: "Offlined"
+    website: "https://www.offlined.org"
+repository-code: "https://github.com/Aruvaro-Chulvi/OfflinedLandmarks3D"
+url: "https://www.offlined.org"
+license: CC-BY-4.0
+keywords:
+  - landmarks
+  - monuments
+  - architecture
+  - 3D models
+  - glTF
+  - Wikidata
+  - Wikipedia
+  - offline
+  - Offlined
+references:
+  - type: database
+    title: "Wikidata"
+    authors:
+      - name: "Wikidata contributors"
+    url: "https://www.wikidata.org"
+  - type: database
+    title: "OpenStreetMap"
+    authors:
+      - name: "OpenStreetMap contributors"
+    url: "https://www.openstreetmap.org"

@@ -1,0 +1,23 @@
+name: "⚖️ Rights / takedown — Derechos / retirada"
+description: "You hold rights over a building or a model here and want it changed or removed. / Tienes derechos sobre un edificio o un modelo y quieres que se cambie o se quite."
+title: "[Rights] "
+labels: ["rights"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Models are removed from the next release on request; nothing has to be proven first (NOTICE.md). If you prefer not to write in public, contact the maintainer through https://www.offlined.org.
+        Los modelos se quitan en la siguiente release si se pide; no hay que demostrar nada antes (NOTICE.md). Si prefieres no escribir en público, contacta con el responsable a través de https://www.offlined.org.
+  - type: input
+    id: qid
+    attributes:
+      label: "Model (Wikidata id or name) / Modelo (id de Wikidata o nombre)"
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: "Request / Petición"
+      description: "Who you are (or whom you represent) and what you ask for. / Quién eres (o a quién representas) y qué pides."
+    validations:
+      required: true

@@ -1,0 +1,3 @@
+# Only build_release.py needs it (far-away versions and footprints of the models).
+# validate.py, wikidata.py and build_site.py use the standard library only.
+numpy>=1.24

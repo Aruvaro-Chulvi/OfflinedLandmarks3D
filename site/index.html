@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Offlined Landmarks 3D</title>
+<meta name="description" content="Open 3D models of monuments and landmark buildings that have a Wikipedia article, placed where they really are, by Wikidata id. Made by the community, for Offlined's Wiki Flight.">
+<style>
+  :root { --bg: #eef2f5; --panel: #ffffff; --line: #d5dde4; --text: #18232c; --muted: #5f7180; --acc: #1f78b4; --gold: #b7862a; --sky: #cfe3f1; }
+  * { box-sizing: border-box; }
+  [hidden] { display: none !important; }
+  html, body { margin: 0; height: 100%; background: var(--bg); color: var(--text); font: 14px/1.45 system-ui, "Segoe UI", sans-serif; }
+  a { color: var(--acc); }
+  #app { display: grid; grid-template-columns: 330px 1fr; grid-template-rows: auto 1fr; height: 100%; }
+  header { grid-column: 1 / 3; display: flex; align-items: center; gap: 16px; padding: 10px 16px; border-bottom: 1px solid var(--line); background: var(--panel); }
+  header h1 { font-size: 17px; margin: 0; white-space: nowrap; }
+  header .sub { color: var(--muted); font-size: 13px; flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  header nav { display: flex; gap: 12px; align-items: center; white-space: nowrap; }
+  header button { background: none; border: 1px solid var(--line); color: var(--text); border-radius: 7px; padding: 4px 9px; cursor: pointer; font: inherit; }
+  aside { border-right: 1px solid var(--line); display: flex; flex-direction: column; min-height: 0; background: var(--panel); }
+  .filters { padding: 12px; border-bottom: 1px solid var(--line); }
+  .filters input { width: 100%; padding: 7px 9px; border-radius: 8px; border: 1px solid var(--line); background: #f7f9fb; color: var(--text); font: inherit; }
+  #list { overflow: auto; flex: 1; }
+  .it { display: grid; grid-template-columns: 56px 1fr; gap: 10px; align-items: center; padding: 8px 12px; border-bottom: 1px solid #edf1f4; cursor: pointer; }
+  .it:hover { background: #f1f6fa; }
+  .it.on { background: #e1eef8; }
+  .it img, .it .ph { width: 56px; height: 36px; object-fit: cover; border-radius: 5px; background: #dfe7ee; display: block; }
+  .it .nm { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .it .nm small { display: block; color: var(--muted); font-size: 12px; }
+  #people { border-top: 1px solid var(--line); padding: 10px 12px 12px; max-height: 38%; overflow: auto; }
+  #people h3 { font-size: 13px; margin: 0 0 6px; color: var(--muted); font-weight: 600; text-transform: uppercase; letter-spacing: .04em; }
+  #people ol { margin: 0; padding-left: 20px; }
+  #people li { padding: 2px 0; }
+  #people li span { color: var(--muted); }
+  main { position: relative; min-height: 0; }
+  #view { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+  #card { position: absolute; left: 16px; top: 16px; width: 340px; max-width: calc(100% - 32px); background: rgba(255,255,255,0.94); border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; }
+  #card h2 { margin: 0 0 2px; font-size: 18px; }
+  #card .tog { float: right; background: none; border: 0; color: var(--muted); cursor: pointer; font-size: 16px; padding: 0 0 0 8px; }
+  #card.min > :not(h2) { display: none; }
+  #card .q { color: var(--muted); font-size: 13px; margin-bottom: 8px; }
+  #card .author { margin: 10px 0; padding: 10px 12px; border-radius: 9px; background: #f6f1e6; border-left: 3px solid var(--gold); }
+  #card .author b { font-size: 15px; }
+  #card .author small { display: block; color: var(--muted); }
+  #card dl { display: grid; grid-template-columns: auto 1fr; gap: 3px 12px; margin: 8px 0; font-size: 13px; }
+  #card dt { color: var(--muted); }
+  #card dd { margin: 0; }
+  #card .links { display: flex; flex-wrap: wrap; gap: 6px 12px; font-size: 13px; }
+  #card .note { color: var(--muted); font-size: 12px; margin-top: 8px; }
+  #scale { position: absolute; right: 16px; bottom: 14px; color: var(--muted); font-size: 12px; text-align: right; background: rgba(255,255,255,.7); padding: 3px 7px; border-radius: 6px; }
+  #empty { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; color: var(--muted); }
+  @media (max-width: 760px) {
+    #app { grid-template-columns: 1fr; grid-template-rows: auto 40% 1fr; }
+    header { grid-column: 1; }
+    header .sub { display: none; }
+    aside { border-right: 0; border-bottom: 1px solid var(--line); }
+    #people { display: none; }
+    #card { width: auto; right: 16px; font-size: 13px; }
+  }
+</style>
+<script type="importmap">
+{ "imports": {
+  "three": "https://cdn.jsdelivr.net/npm/three@0.169.0/build/three.module.js",
+  "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.169.0/examples/jsm/"
+} }
+</script>
+</head>
+<body>
+<div id="app">
+  <header>
+    <h1>🏛️ Offlined Landmarks 3D</h1>
+    <div class="sub" id="sub"></div>
+    <nav>
+      <a href="https://github.com/Aruvaro-Chulvi/OfflinedLandmarks3D" id="lnk-repo">GitHub</a>
+      <a href="https://github.com/Aruvaro-Chulvi/OfflinedLandmarks3D/blob/main/CONTRIBUTING.md" id="lnk-contrib"></a>
+      <button id="lang" type="button"></button>
+    </nav>
+  </header>
+  <aside>
+    <div class="filters"><input type="search" id="q" autocomplete="off"></div>
+    <div id="list"></div>
+    <div id="people"><h3 id="people-h"></h3><ol id="people-l"></ol></div>
+  </aside>
+  <main>
+    <canvas id="view"></canvas>
+    <div id="empty"></div>
+    <div id="card" hidden></div>
+    <div id="scale"></div>
+  </main>
+</div>
+<script type="module" src="viewer.js"></script>
+</body>
+</html>

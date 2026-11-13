@@ -1,0 +1,56 @@
+{
+  "id": "Q1140634",
+  "name": "Puerta de Alcalá",
+  "heading": 80.6,
+  "position": {
+    "lat": 40.419986,
+    "lon": -3.688725,
+    "source": "https://www.openstreetmap.org/way/174805987 (centroid of the outline; long axis at 350.6°)"
+  },
+  "authors": [
+    {
+      "name": "Álvaro C. Chulvi",
+      "url": "https://github.com/Aruvaro-Chulvi"
+    }
+  ],
+  "license": "CC-BY-4.0",
+  "rights": {
+    "status": "public_domain",
+    "architects": [
+      {
+        "name": "Francesco Sabatini",
+        "died": 1797
+      }
+    ],
+    "built": 1778,
+    "note": "Sculpture by Francisco Gutiérrez (died 1782) and Roberto Michel (died 1786)."
+  },
+  "sources": [
+    {
+      "title": "OpenStreetMap way 174805987 — outline, height 21.946 m, building parts (© OpenStreetMap contributors, ODbL)",
+      "url": "https://www.openstreetmap.org/way/174805987"
+    },
+    {
+      "title": "Puerta de Alcalá — Wikipedia (es): length 43.967 m, height 21.946 m, materials, the two façades, sculptors",
+      "url": "https://es.wikipedia.org/wiki/Puerta_de_Alcal%C3%A1"
+    },
+    {
+      "title": "Puerta de Alcalá — Wikipedia (en)",
+      "url": "https://en.wikipedia.org/wiki/Puerta_de_Alcal%C3%A1"
+    },
+    {
+      "title": "Wikimedia Commons — near-orthographic photos of the west, east and south sides (heights measured on them)",
+      "url": "https://commons.wikimedia.org/wiki/Category:Puerta_de_Alcal%C3%A1,_Madrid"
+    },
+    {
+      "title": "ONCE — description of the tactile model of the Puerta de Alcalá (the four virtues on the east parapets)",
+      "url": "https://portal.once.es/bibliotecas/fondo-bibliografico-discapacidad-visual/1757/04-la-puerta-de-alcala-doc-2326/at_download/file"
+    },
+    {
+      "title": "inSpain — Puerta de Alcalá (pediments, sculptors)",
+      "url": "https://www.inspain.org/es/madrid/madrid/puerta-de-alcala/"
+    }
+  ],
+  "triangles": 17838,
+  "notes": "Built by code (model_sources/Q1140634_puerta_de_alcala.py, tools/meshkit.py) with AI assistance. Proportions from the OpenStreetMap outline and from measurements on near-orthographic photos (±3–5 %): no published measured drawing was found. East (exterior) façade with ten engaged Ionic columns, satyr-mask keystones, garland panels, children with trophies and the royal arms with Fame and a Genius; west façade with pilasters, lion keystones, cornucopias, armour trophies and a triangular pediment inside the segmental one. Sculpture is stylised. The inscription REGE CAROLO III / ANNO / MDCCLXXVIII is on both attics."
+}

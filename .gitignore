@@ -1,0 +1,9 @@
+tools/.cache/
+__pycache__/
+*.pyc
+*.blend1
+.DS_Store
+Thumbs.db
+private/
+_site/
+dist/

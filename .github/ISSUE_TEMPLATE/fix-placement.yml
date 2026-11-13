@@ -1,0 +1,44 @@
+name: "📍 Fix a placement / Corregir colocación"
+description: "A model in the wrong place, turned, floating, sunk, or clearing the wrong buildings. / Un modelo fuera de sitio, girado, flotando, hundido o que quita los edificios que no debe."
+title: "[Placement] "
+labels: ["placement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks! One model per report, please, and always a source we can check.
+        ¡Gracias! Un modelo por aviso, por favor, y siempre una fuente que se pueda comprobar.
+  - type: input
+    id: qid
+    attributes:
+      label: "Wikidata id or name / Id de Wikidata o nombre"
+      placeholder: "Q1140634 — Puerta de Alcalá"
+    validations:
+      required: true
+  - type: dropdown
+    id: problem
+    attributes:
+      label: "Problem / Problema"
+      options:
+        - "Wrong position / Posición equivocada"
+        - "Turned the wrong way / Mal orientado"
+        - "Floating or sunk / Flotando o hundido"
+        - "Clears a building it should not, or leaves one inside / Quita un edificio que no debe, o deja uno dentro"
+        - "Wrong size / Tamaño equivocado"
+        - "Other / Otro"
+    validations:
+      required: true
+  - type: textarea
+    id: fix
+    attributes:
+      label: "What is right / Qué es lo correcto"
+      description: "e.g. 40.419986, -3.688725 · façade to 80.6° / p. ej. 40,419986, -3,688725 · fachada a 80,6°"
+    validations:
+      required: true
+  - type: textarea
+    id: source
+    attributes:
+      label: "Source / Fuente"
+      description: "OpenStreetMap link, orthophoto, survey… / Enlace de OpenStreetMap, ortofoto, levantamiento…"
+    validations:
+      required: true
