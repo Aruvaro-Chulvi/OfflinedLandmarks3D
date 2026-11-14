@@ -11,12 +11,18 @@ heading, footprint (the area where generated buildings, trees and street furnitu
 the Wikipedia titles in the ten Offlined languages (from Wikidata, to find the article), authors, licence,
 rights status — and, at the top, every author with the number of models they have in the release.
 
+Every .glb goes into the release gzip-compressed (Q….glb.gz, Q…-lod.glb.gz: about a fifth of the size). In the
+manifest, "file", "size" and "sha256" describe the compressed file that is downloaded; "encoding": "gzip" says so
+and "raw_size" is the size of the .glb inside. Offlined keeps them compressed and serves them with
+Content-Encoding: gzip, so the browser unpacks them.
+
 Offlined reads https://github.com/Aruvaro-Chulvi/OfflinedLandmarks3D/releases/latest/download/manifest.json
 and downloads the files it lists (checking size and SHA-256).
 """
 from __future__ import annotations
 
 import datetime as dt
+import gzip
 import hashlib
 import json
 import shutil
@@ -36,6 +42,13 @@ def sha(b: bytes) -> str:
     return hashlib.sha256(b).hexdigest()
 
 
+def packed(raw: bytes, path: Path) -> dict:
+    """Write raw (a .glb) gzip-compressed to path (reproducible: no name, no date) -> its manifest entry."""
+    data = gzip.compress(raw, compresslevel=9, mtime=0)
+    path.write_bytes(data)
+    return {"file": path.name, "size": len(data), "sha256": sha(data), "encoding": "gzip", "raw_size": len(raw)}
+
+
 def main():
     if len(sys.argv) < 2:
         sys.exit(__doc__)
@@ -52,16 +65,13 @@ def main():
         scene = glbtool.read_glb(d / "model.glb")
         lo, hi = glbtool.bounds(scene)
         tris = glbtool.triangles(scene)
-        name = f"{d.name}.glb"
-        shutil.copy2(d / "model.glb", out / name)
-        data = (out / name).read_bytes()
-        m = {"id": d.name, "file": name, "size": len(data), "sha256": sha(data), "triangles": tris}
+        m = {"id": d.name, **packed((d / "model.glb").read_bytes(), out / f"{d.name}.glb.gz"), "triangles": tris}
         m.update({k: meta[k] for k in META_KEYS if k in meta})
         # the far-away version: about 1/8 of the triangles, never more than 8,000
-        lname = f"{d.name}-lod.glb"
-        ltris, _ = glbtool.write_lod(scene, out / lname, target=max(600, min(8000, tris // 8)))
-        ldata = (out / lname).read_bytes()
-        m["lod"] = {"file": lname, "size": len(ldata), "sha256": sha(ldata), "triangles": ltris}
+        lraw = out / f"{d.name}-lod.glb"
+        ltris, _ = glbtool.write_lod(scene, lraw, target=max(600, min(8000, tris // 8)))
+        m["lod"] = {**packed(lraw.read_bytes(), out / f"{d.name}-lod.glb.gz"), "triangles": ltris}
+        lraw.unlink()
         m["footprint"] = meta.get("footprint") or glbtool.footprint(scene)
         m["height"] = round(float(hi[1]), 2)
         m["base"] = round(float(lo[1]), 2)
@@ -77,10 +87,11 @@ def main():
             e["models"] += 1
             if a.get("url"):
                 e["url"] = a["url"]
-        print(f"{d.name} {meta.get('name')}: {tris:,} tris ({len(data) / 2**20:.2f} MB), lod {ltris:,} tris "
-              f"({len(ldata) / 1024:.0f} KB), {len(m['footprint'])}-point footprint, {len(m['titles'])} titles")
+        print(f"{d.name} {meta.get('name')}: {tris:,} tris ({m['raw_size'] / 2**20:.2f} MB, {m['size'] / 2**20:.2f} MB "
+              f"gzipped), lod {ltris:,} tris ({m['lod']['size'] / 1024:.0f} KB gzipped), {len(m['footprint'])}-point "
+              f"footprint, {len(m['titles'])} titles")
     man = {
-        "name": "Offlined Landmarks 3D", "version": tag, "generated": dt.date.today().isoformat(),
+        "name": "Offlined Landmarks 3D", "format": 2, "version": tag, "generated": dt.date.today().isoformat(),
         "repository": REPO, "base_url": f"{REPO}/releases/download/{tag}/",
         "license": "Each model: its own licence (CC-BY-4.0 or CC0-1.0), authors in 'authors'.",
         "authors": dict(sorted(authors.items(), key=lambda kv: (-kv[1]["models"], kv[0]))),

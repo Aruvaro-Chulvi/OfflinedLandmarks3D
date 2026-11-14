@@ -30,7 +30,8 @@ their real size against a person, open their Wikipedia article, download the `.g
 ## How it works in Offlined
 
 1. Offlined downloads the latest [release](https://github.com/Aruvaro-Chulvi/OfflinedLandmarks3D/releases/latest):
-   its `manifest.json` and the models, each one checked by size and SHA-256.
+   its `manifest.json` and the models, each one checked by size and SHA-256. Only the landmarks you choose (the
+   whole world, one country or one author), gzip-compressed: about a fifth of the size of the `.glb` files.
 2. In Wiki Flight, where a model stands, the buildings, trees and street lamps that the map would have
    drawn inside its **footprint** are not drawn, and the model is set on the ground, turned to its real
    heading.

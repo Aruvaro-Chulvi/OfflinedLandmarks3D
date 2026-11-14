@@ -30,7 +30,8 @@ tamaño real con una persona, abre su artículo de Wikipedia, descarga el `.glb`
 ## Cómo funciona en Offlined
 
 1. Offlined descarga la última [release](https://github.com/Aruvaro-Chulvi/OfflinedLandmarks3D/releases/latest):
-   su `manifest.json` y los modelos, cada uno comprobado por tamaño y SHA-256.
+   su `manifest.json` y los modelos, cada uno comprobado por tamaño y SHA-256. Solo los monumentos que eliges (todo
+   el mundo, un país o un autor), comprimidos con gzip: más o menos un quinto de lo que ocupan los `.glb`.
 2. En Wiki Flight, donde hay un modelo, no se dibujan los edificios, árboles ni farolas que el mapa habría
    puesto dentro de su **planta**, y el modelo se apoya en el suelo, girado hacia su orientación real.
 3. **Funciona en ordenadores modestos.** Cada release lleva una versión de lejos de cada modelo (más o menos
