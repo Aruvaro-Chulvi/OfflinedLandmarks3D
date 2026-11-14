@@ -1,0 +1,49 @@
+{
+  "id": "Q1364354",
+  "name": "Torre Emperador Castellana (Torre Espacio)",
+  "heading": 101.5,
+  "position": {
+    "lat": 40.4791032,
+    "lon": -3.6868212,
+    "source": "https://www.openstreetmap.org/way/98280735 (centroid of the outline; long axis at 101.5°)"
+  },
+  "authors": [
+    {
+      "name": "Álvaro C. Chulvi",
+      "url": "https://github.com/Aruvaro-Chulvi"
+    }
+  ],
+  "license": "CC-BY-4.0",
+  "rights": {
+    "status": "protected",
+    "architects": [
+      {
+        "name": "Henry N. Cobb (Pei Cobb Freed & Partners)",
+        "died": 2020,
+        "wikidata": "Q5726216"
+      }
+    ],
+    "built": 2008,
+    "note": "Designed by Henry N. Cobb, partner of Pei Cobb Freed & Partners (Q6623279), for Inmobiliaria Espacio (Grupo Villar Mir); structural engineering MC2; main contractor OHL. Topped out in 2007, completed in 2008; renamed Torre Emperador Castellana in 2016."
+  },
+  "sources": [
+    {
+      "title": "OpenStreetMap way 98280735 and its building:part ways, one plan per floor from the ground floor to floors 51–57 (230 m), and way 307857391 (the porch pier) (© OpenStreetMap contributors, ODbL)",
+      "url": "https://www.openstreetmap.org/way/98280735"
+    },
+    {
+      "title": "Torre Emperador Castellana — Wikipedia (es): 230 m, 57 floors, a square plan turning into the intersection of two curves, central and lateral cores",
+      "url": "https://es.wikipedia.org/wiki/Torre_Emperador_Castellana"
+    },
+    {
+      "title": "Torre Emperador Castellana — Wikipedia (en): 230 m, Henry N. Cobb / Pei Cobb Freed, 2004–2008",
+      "url": "https://en.wikipedia.org/wiki/Torre_Emperador_Castellana"
+    },
+    {
+      "title": "Wikimedia Commons — Torre Espacio, Madrid (category of photos, for reference)",
+      "url": "https://commons.wikimedia.org/wiki/Category:Torre_Espacio,_Madrid"
+    }
+  ],
+  "triangles": 32874,
+  "notes": "Built by code (model_sources/Q1364354_torre_emperador_castellana.py, tools/meshkit.py) with AI assistance. The plan follows the OpenStreetMap floor-by-floor outlines: a square at the foot whose two opposite corners are cut away by flat faces that slide across the plan floor by floor, until the top (floors 51–57) is the lens between two quarter-circle façades; built as one smooth loft through the floor plans (the cut positions of each floor read from its OSM outline, linear between floors). Dark grey-blue glass with a lighter floor line at every slab and mullions every 2.4 m on fixed vertical lines. The 16 m high porch on the south-east corner (floors 1–3 cut back to the lens, a corner pier, two low glass boxes of the ground floor) as mapped. Main façade (+Z) = east, where the porch and entrance open towards the ring road of the Cuatro Torres; the Paseo de la Castellana is on the west. Simplified: the small notches at the two sharp corners are left out, the roof is flat with a metal coping and no equipment. Uncertain: the crown (OSM maps floors 51–57 as one block to 230 m), the porch boxes and the exact entrance."
+}

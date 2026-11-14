@@ -229,6 +229,139 @@ def tube(points, r, c, seg=8):
     return Mesh(v, f, c)
 
 
+# ── Plans: outlines seen from above, as [(x, z), …] in model metres ─────────
+def ring_area(P):
+    """Signed area of a ring in the (x, z) plane: > 0 counter-clockwise in (x, z)."""
+    P = np.asarray(P, float)
+    x, z = P[:, 0], P[:, 1]
+    return 0.5 * float(np.sum(x * np.roll(z, -1) - np.roll(x, -1) * z))
+
+
+def _clean(P):
+    out = []
+    for p in map(tuple, np.asarray(P, float)[:, :2]):
+        if not out or math.dist(out[-1], p) > 1e-6:
+            out.append(p)
+    if len(out) > 1 and math.dist(out[0], out[-1]) <= 1e-6:
+        out.pop()
+    return out
+
+
+def _orient(P, ccw):
+    P = _clean(P)
+    return P if (ring_area(P) > 0) == ccw else P[::-1]
+
+
+def _x2(o, a, b):
+    return (a[0] - o[0]) * (b[1] - o[1]) - (a[1] - o[1]) * (b[0] - o[0])
+
+
+def _in_tri(p, a, b, c, eps=1e-9):
+    return _x2(a, b, p) >= -eps and _x2(b, c, p) >= -eps and _x2(c, a, p) >= -eps
+
+
+def _bridge(poly, hole):
+    """Splice a clockwise hole into a counter-clockwise polygon (Eberly's visible-vertex bridge)."""
+    m = max(range(len(hole)), key=lambda i: (hole[i][0], hole[i][1]))
+    M = hole[m]
+    best, bx = None, math.inf
+    n = len(poly)
+    for i in range(n):
+        a, b = poly[i], poly[(i + 1) % n]
+        if (a[1] - M[1]) * (b[1] - M[1]) > 0 or a[1] == b[1]:
+            continue
+        x = a[0] + (M[1] - a[1]) * (b[0] - a[0]) / (b[1] - a[1])
+        if M[0] <= x < bx:
+            bx, best = x, (i if a[0] > b[0] else (i + 1) % n)
+    if best is None:
+        best = min(range(n), key=lambda i: math.dist(poly[i], M))
+    else:
+        I, P = (bx, M[1]), poly[best]
+        cands = [i for i in range(n) if i != best and _x2(poly[i - 1], poly[i], poly[(i + 1) % n]) < 0
+                 and _in_tri(poly[i], M, I, P) and poly[i][0] >= M[0]]
+        if cands:
+            best = min(cands, key=lambda i: (abs(math.atan2(poly[i][1] - M[1], poly[i][0] - M[0])), math.dist(poly[i], M)))
+    return poly[:best + 1] + hole[m:] + hole[:m + 1] + poly[best:]
+
+
+def triangulate(outer, holes=()):
+    """Ear clipping of a simple polygon with holes -> (points (N,2), triangles (M,3)), counter-clockwise in (x, z)."""
+    poly = _orient(outer, True)
+    for h in sorted((_orient(h, False) for h in holes), key=lambda h: -max(p[0] for p in h)):
+        poly = _bridge(poly, h)
+    pts = np.array(poly, float)
+    idx = list(range(len(poly)))
+    tris = []
+    guard = 0
+    while len(idx) > 3 and guard < 10 * len(poly) ** 2:
+        guard += 1
+        n = len(idx)
+        found = False
+        for k in range(n):
+            i0, i1, i2 = idx[k - 1], idx[k], idx[(k + 1) % n]
+            a, b, c = poly[i0], poly[i1], poly[i2]
+            if _x2(a, b, c) <= 1e-12:
+                continue
+            if any(_in_tri(poly[j], a, b, c) for j in idx if j not in (i0, i1, i2) and poly[j] not in (a, b, c)):
+                continue
+            tris.append((i0, i1, i2)); idx.pop(k); found = True
+            break
+        if not found:                                  # degenerate (collinear or touching): drop the flattest corner
+            k = min(range(n), key=lambda k: abs(_x2(poly[idx[k - 1]], poly[idx[k]], poly[idx[(k + 1) % n]])))
+            idx.pop(k)
+    if len(idx) == 3 and _x2(poly[idx[0]], poly[idx[1]], poly[idx[2]]) > 1e-12:
+        tris.append(tuple(idx))
+    return pts, np.array(tris, np.int64).reshape(-1, 3)
+
+
+def cap(outer, y, c, holes=(), up=True):
+    """A flat polygon at height y (a floor, a flat roof, a terrace), facing +y (or -y)."""
+    pts, tris = triangulate(outer, holes)
+    v = np.stack([pts[:, 0], np.full(len(pts), float(y)), pts[:, 1]], 1)
+    return Mesh(v, tris[:, ::-1] if up else tris, c)
+
+
+def walls(ring, y0, y1, c, hole=False):
+    """Vertical walls along a ring (each side its own quad, so edges stay sharp), facing out of the solid."""
+    P = _orient(ring, not hole)
+    v, f = [], []
+    for i in range(len(P)):
+        (x0, z0), (x1, z1) = P[i], P[(i + 1) % len(P)]
+        o = len(v)
+        v += [(x0, y0, z0), (x1, y0, z1), (x1, y1, z1), (x0, y1, z0)]
+        f += [(o, o + 2, o + 1), (o, o + 3, o + 2)]
+    return Mesh(v, f, c)
+
+
+def extrude(outer, y0, y1, c, holes=(), top=True, bottom=False, top_c=None):
+    """A prism from an outline (with courtyards as holes): walls from y0 to y1, a flat top (top_c colour)."""
+    ms = [walls(outer, y0, y1, c)] + [walls(h, y0, y1, c, hole=True) for h in holes]
+    if top:
+        ms.append(cap(outer, y1, c if top_c is None else top_c, holes, up=True))
+    if bottom:
+        ms.append(cap(outer, y0, c, holes, up=False))
+    return merge(ms)
+
+
+def offset(ring, d):
+    """Grow (d > 0) or shrink (d < 0) a ring by d metres, mitred corners (cornices, setbacks, plinths)."""
+    P = np.array(_orient(ring, True), float)
+    n = len(P)
+    out = []
+    for i in range(n):
+        a, b, c = P[i - 1], P[i], P[(i + 1) % n]
+        e0 = (b - a) / (np.linalg.norm(b - a) or 1); e1 = (c - b) / (np.linalg.norm(c - b) or 1)
+        n0 = np.array([e0[1], -e0[0]]); n1 = np.array([e1[1], -e1[0]])      # outward normals
+        m = n0 + n1
+        lm = np.linalg.norm(m)
+        if lm < 1e-9:
+            out.append(b + n0 * d); continue
+        m /= lm
+        k = d / max(float(np.dot(m, n0)), 0.25)
+        out.append(b + m * k)
+    return [(float(p[0]), float(p[1])) for p in out]
+
+
 # ── Colour ───────────────────────────────────────────────────────────────────
 def weather(m, rust=0.5, sediment=0.5, streaks=0.6, seed=1, rust_col=(0.45, 0.2, 0.08), sed_col=(0.56, 0.53, 0.47)):
     """Rust (in vertical streaks, like the rusticles of deep wrecks), sediment on upward faces, silt low down."""
@@ -251,12 +384,26 @@ def _srgb_to_linear(c):
 
 
 # ── glTF binary ─────────────────────────────────────────────────────────────
-def write_glb(path, parts, generator="Offlined Landmarks 3D meshkit", metallic=0.0, roughness=0.9):
-    """parts: [(name, Mesh)] or [(name, Mesh, {"translation": [x, y, z], "rotation": [qx, qy, qz, qw]})]
-    -> one node per part, one shared vertex-colour material."""
+GLASS = {"metallic": 0.35, "roughness": 0.18}      # curtain walls, skylights: a sharp sun glint, no transparency
+METAL = {"metallic": 0.7, "roughness": 0.4}        # zinc and copper roofs, steel trusses, gilded statues
+
+
+def write_glb(path, parts, generator="Offlined Landmarks 3D meshkit", metallic=0.0, roughness=0.9, materials=None):
+    """parts: [(name, Mesh)] or [(name, Mesh, {"translation": [x, y, z], "rotation": [qx, qy, qz, qw],
+    "material": "glass"})] -> one node per part. Every part shares the vertex-colour material "stone"
+    (metallic, roughness) unless it names another one from materials = {"glass": GLASS, "zinc": METAL, …}
+    (each {"metallic", "roughness"}; the colour always comes from the vertices)."""
     binbuf = bytearray()
     views, accs, meshes, nodes = [], [], [], []
     parts = [(p[0], p[1], p[2] if len(p) > 2 else {}) for p in parts]
+    mats = [{"name": "stone", "doubleSided": True,
+             "pbrMetallicRoughness": {"baseColorFactor": [1, 1, 1, 1], "metallicFactor": metallic, "roughnessFactor": roughness}}]
+    mat_ix = {"stone": 0}
+    for k, spec in (materials or {}).items():
+        mat_ix[k] = len(mats)
+        mats.append({"name": k, "doubleSided": True,
+                     "pbrMetallicRoughness": {"baseColorFactor": [1, 1, 1, 1], "metallicFactor": float(spec.get("metallic", 0.0)),
+                                              "roughnessFactor": float(spec.get("roughness", 0.9))}})
 
     def view(data, target):
         while len(binbuf) % 4:
@@ -283,16 +430,16 @@ def write_glb(path, parts, generator="Offlined Landmarks 3D meshkit", metallic=0
             {"bufferView": vc, "componentType": 5121, "normalized": True, "count": len(pos), "type": "VEC4"},
             {"bufferView": vi, "componentType": 5125, "count": len(idx), "type": "SCALAR"},
         ]
+        mi = mat_ix[trs.get("material", "stone")]
         meshes.append({"name": name, "primitives": [{"attributes": {"POSITION": a0, "NORMAL": a0 + 1, "COLOR_0": a0 + 2},
-                                                     "indices": a0 + 3, "material": 0}]})
+                                                     "indices": a0 + 3, "material": mi}]})
         node = {"name": name, "mesh": len(meshes) - 1}
         node.update({k: [float(x) for x in trs[k]] for k in ("translation", "rotation") if k in trs})
         nodes.append(node)
     g = {
         "asset": {"version": "2.0", "generator": generator},
         "scene": 0, "scenes": [{"nodes": list(range(len(nodes)))}], "nodes": nodes, "meshes": meshes,
-        "materials": [{"name": "stone", "doubleSided": True,
-                       "pbrMetallicRoughness": {"baseColorFactor": [1, 1, 1, 1], "metallicFactor": metallic, "roughnessFactor": roughness}}],
+        "materials": mats,
         "accessors": accs, "bufferViews": views, "buffers": [{"byteLength": len(binbuf)}],
     }
     js = json.dumps(g, separators=(",", ":")).encode()

@@ -1,0 +1,63 @@
+{
+  "id": "Q1364394",
+  "name": "Torre Picasso",
+  "heading": 184.0,
+  "position": {
+    "lat": 40.4502945,
+    "lon": -3.693017,
+    "source": "https://www.openstreetmap.org/way/11089668 (centroid of the outline; long axis at 4.0°)"
+  },
+  "authors": [
+    {
+      "name": "Álvaro C. Chulvi",
+      "url": "https://github.com/Aruvaro-Chulvi"
+    }
+  ],
+  "license": "CC-BY-4.0",
+  "rights": {
+    "status": "protected",
+    "architects": [
+      {
+        "name": "Minoru Yamasaki",
+        "died": 1986,
+        "wikidata": "Q347215"
+      },
+      {
+        "name": "Genaro Alas Rodríguez",
+        "died": 2021,
+        "wikidata": "Q10288672"
+      },
+      {
+        "name": "Pedro Casariego Hernández-Vaquero",
+        "died": 2002,
+        "wikidata": "Q10347384"
+      }
+    ],
+    "built": 1988,
+    "note": "Designed by Minoru Yamasaki in 1974 (adapted to Spanish regulations by Jorge Mir Valls and Rafael Coll Pujol); final design and site work by the studio of Genaro Alas and Pedro Casariego; engineer Fernando Cid García; built 1980–1988 by FCC, opened January 1989. Yamasaki died in 1986: protected in Spain until 2066."
+  },
+  "sources": [
+    {
+      "title": "OpenStreetMap way 11089668 — outline (main body, notched corners, west addition), height 157 m, 47 levels (© OpenStreetMap contributors, ODbL)",
+      "url": "https://www.openstreetmap.org/way/11089668"
+    },
+    {
+      "title": "OpenStreetMap way 393341921 — heliport on the roof (© OpenStreetMap contributors, ODbL)",
+      "url": "https://www.openstreetmap.org/way/393341921"
+    },
+    {
+      "title": "Torre Picasso — Wikipedia (es): 157 m, 38 × 50 m plan, west addition, crown floors 44–45 and heliport, the great entrance arch carrying the façade, architects",
+      "url": "https://es.wikipedia.org/wiki/Torre_Picasso"
+    },
+    {
+      "title": "Torre Picasso — Wikipedia (en)",
+      "url": "https://en.wikipedia.org/wiki/Torre_Picasso"
+    },
+    {
+      "title": "Wikimedia Commons — photos of the tower, its crown, the window strips, the podium arch and the corner notches (proportions measured on them)",
+      "url": "https://commons.wikimedia.org/wiki/Category:Torre_Picasso"
+    }
+  ],
+  "triangles": 3790,
+  "notes": "Built by code (model_sources/Q1364394_torre_picasso.py, tools/meshkit.py) with AI assistance. Main façade (+Z) = the south face over the Plaza de Pablo Ruiz Picasso, with the great elliptical entrance arch in the stone podium. White aluminium piers with 13 (short faces) / 17 (long faces) recessed window strips, dark glass in the notched corners, a plain white crown band with a slight flare, the west addition (stairs and shaft) up to 146 m, and a heliport on the lift block on the roof. Podium height (10.5 m), arch size (22 × 9.2 m), crown (147.5–157 m), window counts and the round-headed windows of the podium measured on photos (±5–10 %). Panel joints, the AZCA podium and plaza levels around the tower are not modelled."
+}

@@ -1,0 +1,235 @@
+{
+  "id": "Q171517",
+  "name": "Palacio Real de Madrid",
+  "heading": 184.6,
+  "position": {
+    "lat": 40.418481,
+    "lon": -3.714237,
+    "source": "https://www.openstreetmap.org/relation/30399 (centroid of the palace block; the whole relation also takes in the galleries of the Plaza de la Armería, whose centroid would fall on the south wing; long axis at 4.6°)"
+  },
+  "authors": [
+    {
+      "name": "Álvaro C. Chulvi",
+      "url": "https://github.com/Aruvaro-Chulvi"
+    }
+  ],
+  "license": "CC-BY-4.0",
+  "rights": {
+    "status": "public_domain",
+    "architects": [
+      {
+        "name": "Filippo Juvarra",
+        "died": 1736,
+        "wikidata": "Q85000"
+      },
+      {
+        "name": "Giovanni Battista Sacchetti",
+        "died": 1764,
+        "wikidata": "Q2327379"
+      },
+      {
+        "name": "Ventura Rodríguez",
+        "died": 1785,
+        "wikidata": "Q2565889"
+      },
+      {
+        "name": "Francesco Sabatini",
+        "died": 1797,
+        "wikidata": "Q2454966"
+      },
+      {
+        "name": "Enrique María Repullés",
+        "died": 1922,
+        "wikidata": "Q892266"
+      }
+    ],
+    "built": 1764,
+    "note": "Designed by Juvarra (1735), built to Sacchetti's project 1738–1755 and lived in from 1764; Ventura Rodríguez worked under Sacchetti (the Royal Chapel); Sabatini added the south-east corner «de San Gil» from 1770; the galleries closing the Plaza de la Armería and the Royal Armoury wing were built in the 1890s (Repullés). Every author died before 1945."
+  },
+  "sources": [
+    {
+      "title": "OpenStreetMap relation 30399 — outline of the palace and the galleries of the Plaza de la Armería, the Patio del Príncipe, building:levels of the parts (© OpenStreetMap contributors, ODbL)",
+      "url": "https://www.openstreetmap.org/relation/30399"
+    },
+    {
+      "title": "Palacio Real de Madrid — Wikipedia (es): storeys, materials (granite, Colmenar stone), south façade as the main one, Sabatini's San Gil wing, Plaza de la Armería (Repullés, 1892)",
+      "url": "https://es.wikipedia.org/wiki/Palacio_Real_de_Madrid"
+    },
+    {
+      "title": "Royal Palace of Madrid — Wikipedia (en): two-storey rusticated base, giant order, balustrade, courtyard",
+      "url": "https://en.wikipedia.org/wiki/Royal_Palace_of_Madrid"
+    },
+    {
+      "title": "Wikimedia Commons — «Plaza de la Armeria - Palacio Real - Madrid 01.jpg», near-frontal photo of the south façade: heights of the base (10.5 m), order (to 23.2 m), cornice (26.3 m), balustrade, clock attic, bays",
+      "url": "https://commons.wikimedia.org/wiki/File:Plaza_de_la_Armeria_-_Palacio_Real_-_Madrid_01.jpg"
+    },
+    {
+      "title": "Wikimedia Commons — «Palacio Real, Campo del Moro, fachada, Madrid, España, 2015.jpg» and «Royal Palace Madrid and Campo del Moro.JPG»: the west façade and the storeys below the plaza level",
+      "url": "https://commons.wikimedia.org/wiki/File:Palacio_Real,_Campo_del_Moro,_fachada,_Madrid,_Espa%C3%B1a,_2015.jpg"
+    },
+    {
+      "title": "Wikimedia Commons — Royal Palace of Madrid (category)",
+      "url": "https://commons.wikimedia.org/wiki/Category:Royal_Palace_of_Madrid"
+    },
+    {
+      "title": "Wikidata Q171517 — architects and dates",
+      "url": "https://www.wikidata.org/wiki/Q171517"
+    }
+  ],
+  "footprint": [
+    [
+      -66.1,
+      -66.1
+    ],
+    [
+      -40.6,
+      -66.1
+    ],
+    [
+      -40.6,
+      -60.7
+    ],
+    [
+      -17.8,
+      -60.7
+    ],
+    [
+      -17.8,
+      -66.1
+    ],
+    [
+      17.1,
+      -66.1
+    ],
+    [
+      17.1,
+      -60.9
+    ],
+    [
+      39.9,
+      -60.9
+    ],
+    [
+      39.9,
+      -66.3
+    ],
+    [
+      65.5,
+      -66.3
+    ],
+    [
+      65.5,
+      -38.6
+    ],
+    [
+      59.2,
+      -38.6
+    ],
+    [
+      59.2,
+      40.7
+    ],
+    [
+      65.9,
+      40.7
+    ],
+    [
+      65.9,
+      61.6
+    ],
+    [
+      79.7,
+      61.6
+    ],
+    [
+      79.7,
+      63.2
+    ],
+    [
+      83.3,
+      63.2
+    ],
+    [
+      83.3,
+      210.1
+    ],
+    [
+      54.0,
+      210.2
+    ],
+    [
+      54.0,
+      64.9
+    ],
+    [
+      41.8,
+      64.9
+    ],
+    [
+      41.8,
+      63.9
+    ],
+    [
+      -41.7,
+      63.9
+    ],
+    [
+      -41.7,
+      64.9
+    ],
+    [
+      -53.3,
+      64.9
+    ],
+    [
+      -53.3,
+      210.5
+    ],
+    [
+      -82.3,
+      210.5
+    ],
+    [
+      -82.3,
+      163.9
+    ],
+    [
+      -62.9,
+      163.9
+    ],
+    [
+      -62.9,
+      125.9
+    ],
+    [
+      -82.9,
+      125.9
+    ],
+    [
+      -82.9,
+      62.3
+    ],
+    [
+      -65.8,
+      62.3
+    ],
+    [
+      -65.8,
+      41.2
+    ],
+    [
+      -59.2,
+      41.2
+    ],
+    [
+      -59.2,
+      -38.1
+    ],
+    [
+      -66.1,
+      -38.1
+    ]
+  ],
+  "triangles": 109687,
+  "notes": "Built by code (model_sources/Q171517_palacio_real.py, tools/meshkit.py) with AI assistance. The OpenStreetMap relation is a U: the palace block (about 130 × 129 m, corner pavilions, the Patio del Príncipe 51 × 51 m) and the two galleries that close the Plaza de la Armería to the south (Royal Armoury on the west, 145 m long); all of it is modelled, the palace in detail. The outline is the OSM polygon squared to the model axes (within ~1 m); the 4 m projections where the galleries meet the south corner pavilions in OSM are left out (the photos show the pavilions free to the ground). Heights measured on near-frontal photos (±5 %), as no published elevation was found. Rusticated granite base, Colmenar limestone above, Ionic columns on the central bodies and corner pavilions, pilasters elsewhere, alternating pediments, balconies with iron railings, balustrade with vases and statues (stylised), the clock attic with its bell frame on the main façade, royal arms over the other centres, the courtyard arcades and the four emperors. The walls go down to y = −24 m (the west side drops to the Campo del Moro: rusticated granite with small windows down to −12 m, then substructure), the west gallery to −20 m. Uncertain: the size of the Royal Chapel dome (estimated), the roof shapes (low lead hips behind the balustrade), the small light wells and the terraces west of the palace (not modelled), the exact window count of each façade. footprint: the U with the Plaza de la Armería left out, +1 m."
+}

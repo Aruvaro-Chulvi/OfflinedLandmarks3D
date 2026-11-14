@@ -1,0 +1,61 @@
+{
+  "id": "Q164027",
+  "name": "Estadio Santiago Bernabéu",
+  "heading": 274.2,
+  "position": {
+    "lat": 40.4530559,
+    "lon": -3.688355,
+    "source": "https://www.openstreetmap.org/relation/21041481 (centre of the pitch, its inner ring way 1446479375; pitch long axis at 4.2°, so the Castellana side faces 274.2°)"
+  },
+  "authors": [
+    {
+      "name": "Álvaro C. Chulvi",
+      "url": "https://github.com/Aruvaro-Chulvi"
+    }
+  ],
+  "license": "CC-BY-4.0",
+  "rights": {
+    "status": "protected",
+    "architects": [
+      { "name": "Manuel Muñoz Monasterio", "died": 1969 },
+      { "name": "Luis Alemany Soler", "died": 1970 },
+      { "name": "gmp Architekten (von Gerkan, Marg und Partner)" },
+      { "name": "L35 Arquitectos" },
+      { "name": "Ribas & Ribas Arquitectos" }
+    ],
+    "built": 2024,
+    "note": "Original stadium 1944–1947 by Manuel Muñoz Monasterio and Luis Alemany Soler (structure by the engineer Carlos Fernández Casado), enlarged in 1982 and in 1992–94 (fourth tier and the four corner towers). The present skin, roof and video ring are the 2019–2024 renovation by gmp Architekten, L35 and Ribas & Ribas. Every author died after 1945 or is alive: protected in Spain."
+  },
+  "sources": [
+    {
+      "title": "OpenStreetMap relation 21041481 (building=stadium) with its outer way 1507411898 (leisure=stadium, wikidata Q164027): outline 242.7 × 220.1 m, 47,372 m²; inner way 1446479375 = the pitch, 105.1 × 70.4 m, long axis 4.2° (© OpenStreetMap contributors, ODbL)",
+      "url": "https://www.openstreetmap.org/relation/21041481"
+    },
+    {
+      "title": "Estadio Santiago Bernabéu — Wikipedia (es): fixed roof 28,000 m², retractable roof 8,000 m² with 12 moving trusses, 360° video ring 6.5 m high on the sides and corners and 11 m at the ends tilted 8°, curved stainless-steel strips, four tiers, pitch 105 × 68 m, architects and dates",
+      "url": "https://es.wikipedia.org/wiki/Estadio_Santiago_Bernab%C3%A9u"
+    },
+    {
+      "title": "Bernabéu (stadium) — Wikipedia (en): raised 12 m for the roof, total height 60 m; block between Castellana, Concha Espina, Padre Damián and Rafael Salgado",
+      "url": "https://en.wikipedia.org/wiki/Santiago_Bernab%C3%A9u_Stadium"
+    },
+    {
+      "title": "Real Madrid — news of the works: the retractable roof installed 55 m above the ground",
+      "url": "https://www.realmadrid.com/es-ES/noticias/club/actualidad/toda-la-actualidad-del-santiago-bernabeu-del-siglo-xxi"
+    },
+    {
+      "title": "gmp Architekten — press release on completion: curved stainless-steel louvres with horizontal gaps forming a continuous shell, retractable roof",
+      "url": "https://www.gmp.de/en/aktuelles/41/presse/17393/vom-stadion-zur-multifunktionalen-arena-der-umbau-des-stadions-santiago-bernabeu-ist-fertiggestellt"
+    },
+    {
+      "title": "Wikimedia Commons — photos of the renovated stadium from the streets (2024): skin tucked in at the foot and overhanging, rising at the corners, dark band under the roof along the sides",
+      "url": "https://commons.wikimedia.org/w/index.php?search=Santiago+Bernab%C3%A9u+stadium+2024&title=Special:MediaSearch&type=image"
+    },
+    {
+      "title": "Dezeen — Real Madrid reveals revamped Santiago Bernabéu stadium (photos: the skin sweeping up into the roof at the corners)",
+      "url": "https://www.dezeen.com/2023/09/05/real-madrid-unveils-stadium-revamped-santiago-bernabeu-l35-ribas-ribas-gmp-architecten/"
+    }
+  ],
+  "triangles": 99706,
+  "notes": "Built by code (model_sources/Q164027_estadio_santiago_bernabeu.py, tools/meshkit.py) with AI assistance. Origin at the centre of the pitch (it is also within 6 m of the centroid of the outline); +Z faces the Paseo de la Castellana (west), the main side with the presidential box, square to the pitch. Every piece is lofted along 240 rays from the centre through the OSM outline, so the plan follows it exactly, including the wide slanting east side on Padre Damián. The skin is ~28 tilted louvres with dark gaps, tucked in 4 m at the foot over a glazed ground storey and overhanging above; its top sweeps up to ~50 m at the four corners and dips to ~42 m along the sides, where a dark recessed band runs under the roof edge (heights measured on photos, ±2–3 m). The roof is a cushion of concentric strips rising to 60 m at the rim of the opening, modelled OPEN: the retractable panels (stowed when open) are not shown; the opening (~108 × 74 m, ≈8,000 m²) is an estimate from the published area and the orthophoto. Inside: the 360° video ring (truncated cone, 6.5 m sides / 11 m ends, tilted 8°), four tiers as stepped bands (no single seats, white/grey) with glazed box levels between them, a light underside of the roof, and the pitch with mowing stripes, lines and goals at street level (y = +0.3 m so the terrain does not cover it). The four 1992–94 corner towers are now wrapped inside the skin and are not modelled separately. No crest, name, sponsor or advertising. Foundations go down to −12 m because the surrounding streets fall to the east. Uncertain: the exact heights of the skin top and the roof profile, the shape of the east side above the street (the OSM line only), and the depth of the stands under the roof."
+}

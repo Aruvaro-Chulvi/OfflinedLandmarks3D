@@ -6,8 +6,12 @@ body:
   - type: markdown
     attributes:
       value: |
-        Plans, photos and measurements help whoever makes the model. Please check there is no request for it yet.
-        Los planos, fotos y medidas ayudan a quien haga el modelo. Comprueba que no lo ha pedido nadie ya.
+        Plans, photos and measurements help whoever makes the model. Please check there is no request for it yet
+        (and look at the [wanted list](https://github.com/Aruvaro-Chulvi/OfflinedLandmarks3D/blob/main/WANTED.md)).
+        Making it yourself? Tick the box below: the issue then says the landmark is taken, so nobody else starts it.
+        Los planos, fotos y medidas ayudan a quien haga el modelo. Comprueba que no lo ha pedido nadie ya (y mira la
+        [lista de deseos](https://github.com/Aruvaro-Chulvi/OfflinedLandmarks3D/blob/main/WANTED.es.md)).
+        ¿Lo vas a hacer tú? Marca la casilla de abajo: así el issue dice que está reservado y nadie más lo empieza.
   - type: input
     id: qid
     attributes:
@@ -15,6 +19,12 @@ body:
       placeholder: "Q1140634 — Puerta de Alcalá"
     validations:
       required: true
+  - type: input
+    id: size
+    attributes:
+      label: "Size / Tamaño"
+      description: "Height and footprint if you know them, with their source. / Altura y planta si las sabes, con su fuente."
+      placeholder: "21.9 m high, 43 × 12 m (OpenStreetMap way 174805987)"
   - type: textarea
     id: refs
     attributes:

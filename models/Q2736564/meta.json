@@ -1,0 +1,53 @@
+{
+  "id": "Q2736564",
+  "name": "Fuente de Cibeles",
+  "heading": 262.9,
+  "position": {
+    "lat": 40.4193344,
+    "lon": -3.6930878,
+    "source": "https://www.openstreetmap.org/relation/6345116 (centroid of the outline, the centre of the round basin; heading from the long axis of the rock, way 1346140195)"
+  },
+  "authors": [
+    {
+      "name": "Álvaro C. Chulvi",
+      "url": "https://github.com/Aruvaro-Chulvi"
+    }
+  ],
+  "license": "CC-BY-4.0",
+  "rights": {
+    "status": "public_domain",
+    "architects": [
+      {
+        "name": "Ventura Rodríguez",
+        "died": 1785,
+        "wikidata": "Q2565889"
+      }
+    ],
+    "built": 1782,
+    "note": "Goddess and chariot by Francisco Gutiérrez (died 1782), lions by Roberto Michel (died 1786), chariot borders by Miguel Ximénez. The two putti at the back were added in 1895, when the fountain was moved to the centre of the square (Miguel Ángel Trilles, died 1936; Antonio Parera, died 1946)."
+  },
+  "sources": [
+    {
+      "title": "OpenStreetMap relation 6345116 — the fountain's outer ring, r 14.8 m (© OpenStreetMap contributors, ODbL)",
+      "url": "https://www.openstreetmap.org/relation/6345116"
+    },
+    {
+      "title": "OpenStreetMap relations 12982518 and 18462208 — the stepped ring (r 11.4 m) and the upper basin (r 9.9 m) (© OpenStreetMap contributors, ODbL)",
+      "url": "https://www.openstreetmap.org/relation/18462208"
+    },
+    {
+      "title": "OpenStreetMap way 1346140195 — the rock with the group, 13.5 × 8.9 m, height 8 m, long axis 82.9° (© OpenStreetMap contributors, ODbL)",
+      "url": "https://www.openstreetmap.org/way/1346140195"
+    },
+    {
+      "title": "Fuente de Cibeles — Wikipedia (es): group 5.5 × 4.7 × 12.5 m, sculptors, materials, the goddess facing the first stretch of the calle de Alcalá",
+      "url": "https://es.wikipedia.org/wiki/Fuente_de_Cibeles"
+    },
+    {
+      "title": "Wikimedia Commons — photos of the fountain from the square and from the Palacio de Cibeles mirador («008495 - Madrid (9416183413).jpg»)",
+      "url": "https://commons.wikimedia.org/wiki/File:008495_-_Madrid_(9416183413).jpg"
+    }
+  ],
+  "triangles": 20281,
+  "notes": "Built by code (model_sources/Q2736564_fuente_de_cibeles.py, tools/meshkit.py) with AI assistance. Basin rings from OpenStreetMap: outer curb, lower pool, three steps and the rim of the upper basin, with flat water surfaces (glass material for a glint). The goddess, chariot, lions, putti and the mask are stylised volumes, proportioned on photos (±10 %); the rock is a set of lumps. Not modelled: the water jets, the topiary and flagpoles on the outer curb. Uncertain: exact step heights (about 0.4 m each, from photos)."
+}

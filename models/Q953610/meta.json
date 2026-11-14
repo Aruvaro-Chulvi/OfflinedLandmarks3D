@@ -1,0 +1,59 @@
+{
+  "id": "Q953610",
+  "name": "Torre de Cristal",
+  "heading": 101.9,
+  "position": {
+    "lat": 40.4782074,
+    "lon": -3.6875085,
+    "source": "https://www.openstreetmap.org/way/979555466 (centroid of the outline; long axis at 101.8°)"
+  },
+  "authors": [
+    {
+      "name": "Álvaro C. Chulvi",
+      "url": "https://github.com/Aruvaro-Chulvi"
+    }
+  ],
+  "license": "CC-BY-4.0",
+  "rights": {
+    "status": "protected",
+    "architects": [
+      {
+        "name": "César Pelli",
+        "died": 2019,
+        "wikidata": "Q309483"
+      },
+      {
+        "name": "Íñigo Ortiz"
+      },
+      {
+        "name": "Enrique León"
+      }
+    ],
+    "built": 2008,
+    "note": "Pelli Clarke Pelli, 2004–2008, with Íñigo Ortiz and Enrique León (Ortiz y León Arquitectos). Rooftop garden by Balmori Associates, plant wall by Patrick Blanc."
+  },
+  "sources": [
+    {
+      "title": "OpenStreetMap way 979555466 and its building:part ways (corner facets from 12 m, sloping top 249 → 220 m, glass hall, east entrance pavilion) (© OpenStreetMap contributors, ODbL)",
+      "url": "https://www.openstreetmap.org/way/979555466"
+    },
+    {
+      "title": "Torre de Cristal — Wikipedia (es): 249 m, 52 floors, 600 m² garden at the top",
+      "url": "https://es.wikipedia.org/wiki/Torre_de_Cristal_(Madrid)"
+    },
+    {
+      "title": "Torre de Cristal — Wikipedia (en): diamond-shaped, top floor at 210 m, «cut crystal» facets",
+      "url": "https://en.wikipedia.org/wiki/Torre_de_Cristal"
+    },
+    {
+      "title": "Arquitectura Viva — Torre de Cristal, Madrid (rectangular plan with corners chamfered as it rises, greenhouse above floor 46, clear low-e glass)",
+      "url": "https://arquitecturaviva.com/obras/torre-de-cristal-madrid"
+    },
+    {
+      "title": "Wikimedia Commons — Torre de Cristal, Madrid (category of photos, for reference)",
+      "url": "https://commons.wikimedia.org/wiki/Category:Torre_de_Cristal,_Madrid"
+    }
+  ],
+  "triangles": 1806,
+  "notes": "Built by code (model_sources/Q953610_torre_de_cristal.py, tools/meshkit.py) with AI assistance. Geometry from the OpenStreetMap building:parts (made symmetric within 8 cm): a 32.5 × 49.5 m rectangle whose four corners are cut, from 12 m up, by sloping triangular facets that end in a pointed hexagon under one sloping top plane (249 m over the east point, 220 m over the west one). Flat glass faces with thin floor lines (46 office floors) and vertical mullions on the four vertical faces, a lighter crown above 208 m for the greenhouse with the garden, a dark sloping roof. The glass hall round the foot follows the OSM roofs (22 m against the tower on three sides, 12 m on the east, 4 m at the edge) and the east entrance pavilion. Main façade (+Z) = east, where the entrance pavilion is; the west side faces the Paseo de la Castellana. Uncertain: the sloping top (Arquitectura Viva speaks of a two-pitch roof over the greenhouse; OSM maps one plane), the exact height where the lighter crown glass starts, and the hall roofs."
+}

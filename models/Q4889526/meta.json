@@ -1,0 +1,108 @@
+{
+  "id": "Q4889526",
+  "name": "Banco de España",
+  "heading": 44.3,
+  "position": {
+    "lat": 40.4182604,
+    "lon": -3.6948029,
+    "source": "https://www.openstreetmap.org/relation/2614014 (centroid of the outline; heading = outward normal of the Cibeles chamfer, whose OSM edge runs at 134.3°)"
+  },
+  "authors": [
+    {
+      "name": "Álvaro C. Chulvi",
+      "url": "https://github.com/Aruvaro-Chulvi"
+    }
+  ],
+  "license": "CC-BY-4.0",
+  "rights": {
+    "status": "protected",
+    "architects": [
+      {
+        "name": "Eduardo Adaro",
+        "died": 1906,
+        "wikidata": "Q2882850"
+      },
+      {
+        "name": "Severiano Sainz de la Lastra",
+        "died": 1884,
+        "wikidata": "Q26882307"
+      },
+      {
+        "name": "José Yarnoz Larrosa",
+        "died": 1966,
+        "wikidata": "Q5946144"
+      },
+      {
+        "name": "Luis Cubillo de Arteaga",
+        "died": 2000,
+        "wikidata": "Q16594226"
+      },
+      {
+        "name": "Rafael Moneo",
+        "wikidata": "Q311692"
+      },
+      {
+        "name": "Alberto Palacio",
+        "died": 1939,
+        "wikidata": "Q982959"
+      }
+    ],
+    "built": 1891,
+    "note": "The 1884–1891 building by Adaro and Sainz de la Lastra (the Cibeles corner and the first stretches of Paseo del Prado and Alcalá) is in the public domain, but the block also holds the Alcalá extension by José Yarnoz Larrosa (1927–1934, died 1966), the 1969–1975 extension towards Los Madrazo (José Yarnoz Orcoyen per es.wikipedia; Wikidata also lists Luis Cubillo de Arteaga, died 2000) and the Alcalá / Marqués de Cubas corner by Rafael Moneo (2003–2006, living), so the whole is marked protected. The extensions repeat the 1891 façade design, which is what the model shows; nothing of the modern interiors is modelled. Alberto Palacio is listed by Wikidata (his role was not checked)."
+  },
+  "sources": [
+    {
+      "title": "OpenStreetMap relation 2614014 «Banco de España» — outline, 6 courtyards, building parts: inner 6–7 storey block, glazed mansard roofs (© OpenStreetMap contributors, ODbL)",
+      "url": "https://www.openstreetmap.org/relation/2614014"
+    },
+    {
+      "title": "PNOA orthophoto (Instituto Geográfico Nacional, CC BY 4.0, scne.es) — roof layout: glazed lanterns and glass roofs, pavilion roofs, courtyards",
+      "url": "https://www.ign.es/wms-inspire/pnoa-ma"
+    },
+    {
+      "title": "Banco de España (Madrid) — Wikipedia (es): phases, architects, the Cibeles chamfer with its clock",
+      "url": "https://es.wikipedia.org/wiki/Banco_de_Espa%C3%B1a_(Madrid)"
+    },
+    {
+      "title": "Wikimedia Commons — «Banco de España (Madrid) 01.jpg», «… 06.jpg» (the Cibeles corner: door, great arch, clock crest, globe; heights)",
+      "url": "https://commons.wikimedia.org/wiki/File:Banco_de_Espa%C3%B1a_(Madrid)_06.jpg"
+    },
+    {
+      "title": "Wikimedia Commons — «Banco de España (Madrid) 02.jpg», «… 05.jpg», «… 07.jpg» (Paseo del Prado front: bays, pavilions, dome)",
+      "url": "https://commons.wikimedia.org/wiki/File:Banco_de_Espa%C3%B1a_(Madrid)_02.jpg"
+    },
+    {
+      "title": "Wikimedia Commons — «Madrid. Bank of Spain building. Alcalá street. Spain (2853649900).jpg» (cornice, balustrade, dormers, the globe on its iron stand)",
+      "url": "https://commons.wikimedia.org/wiki/File:Madrid._Bank_of_Spain_building._Alcal%C3%A1_street._Spain_(2853649900).jpg"
+    }
+  ],
+  "triangles": 65515,
+  "notes": "Built by code (model_sources/Q4889526_banco_de_espana.py, tools/meshkit.py) with AI assistance. Main façade (+Z, heading 44.3°) = the chamfered corner facing the Plaza de Cibeles: its OSM edge runs at 134.3°, so its outward normal points to 44.3° (north-east); the Paseo del Prado front is on −X and the Calle de Alcalá front on +X. Outline and courtyards from OpenStreetMap, roof layout from the PNOA orthophoto, heights and bays measured on photos (±5 %): rusticated granite ground storey 6.8 m, limestone upper floors with arched main-floor windows between engaged columns, cornice 17.0 m, balustrade 18.2 m, slate mansards with dormers and iron cresting to 21.4 m, pavilion roofs to 22 m. The corner: door between two columns, the great glazed arch, the crest with the clock, figures and finials, and the gilded globe on its iron stand (top ≈ 24.6 m). Uncertain: the positions of the pavilions along the fronts (corner; the domed pavilion about 34–46 m from the corner on Paseo del Prado, then 101–113 m and the ends; on Alcalá at the bend and near Marqués de Cubas), the shape of the slate dome, the rhythm of the later wings (drawn like the 1891 fronts), the inner 6–7 storey block (from its OSM parts, plain), the glazed roofs (frustums). Sculpture is stylised. The ground rises a little to the west along Alcalá: foundations go 5 m down and y = 0 is the ground at the centroid, so the Cibeles corner may show a little plinth. Footprint = OSM outline grown by 1.5 m (balconies and the corner door columns stand out of the wall line).",
+  "footprint": [
+    [63.69, -40.49],
+    [64.89, -41.52],
+    [77.55, -28.75],
+    [81.36, -29.57],
+    [84.45, -11.04],
+    [80.51, -10.74],
+    [75.33, -1.63],
+    [44.37, 52.88],
+    [9.96, 104.23],
+    [-4.07, 104.23],
+    [-91.03, -33.21],
+    [-57.17, -54.83],
+    [-53.12, -48.68],
+    [-50.10, -50.66],
+    [-51.61, -52.98],
+    [-51.97, -54.37],
+    [-51.27, -56.00],
+    [-8.92, -83.62],
+    [-8.70, -84.91],
+    [-3.04, -84.74],
+    [-3.19, -84.23],
+    [-0.15, -84.09],
+    [-0.02, -84.50],
+    [4.84, -84.61],
+    [4.75, -83.36]
+  ]
+}

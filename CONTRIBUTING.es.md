@@ -14,19 +14,30 @@ las personas que sobrevuelan ese lugar, **con tu nombre en su ficha** y el núme
 
 ## Con un modelo
 
-1. Busca el id de Wikidata (`Q…`) del monumento en [wikidata.org](https://www.wikidata.org): tiene que tener
-   artículo en al menos una Wikipedia. Comprueba que no hay carpeta para él en [`models/`](models/) ni un pull
-   request o issue abierto diciendo que alguien lo está haciendo (dilo en un issue para no duplicar trabajo).
+1. Elige un monumento: uno de la **[lista de deseos](WANTED.es.md)** (con su id de Wikidata, su elemento de
+   OpenStreetMap y su altura ya buscados), u otro cualquiera con id de Wikidata (`Q…`, en
+   [wikidata.org](https://www.wikidata.org)) y artículo en al menos una Wikipedia. Comprueba que no hay carpeta
+   para él en [`models/`](models/) ni un pull request o issue abierto diciendo que alguien lo está haciendo.
+   **Resérvalo**: abre un issue *Pedir un modelo* (o comenta en el que ya hay) diciendo que lo haces tú, para
+   que nadie lo haga a la vez.
 2. Haz el modelo según [docs/MODEL_SPEC.es.md](docs/MODEL_SPEC.es.md): `.glb`, metros, +Y arriba, fachada
    principal hacia +Z, origen en el suelo en el centro, cimientos unos metros por debajo de 0, dentro de los
    límites. Herramientas gratuitas: [Blender](https://www.blender.org) (Archivo › Exportar › glTF 2.0,
    formato *glTF Binary*, «+Y Up» marcado) y [gltf.report](https://gltf.report) para revisar el resultado.
    O hazlo por código, como los modelos de [`model_sources/`](model_sources/), con [`tools/meshkit.py`](tools/meshkit.py).
-3. Acierta con la posición y la orientación: abre el monumento en [openstreetmap.org](https://www.openstreetmap.org),
-   toma el centro de su contorno como `position` y mide hacia dónde mira su fachada principal para `heading`.
+3. Acierta con el tamaño, la posición y la orientación. **El tamaño es el real**, en metros: el contorno de
+   [openstreetmap.org](https://www.openstreetmap.org), la altura de su etiqueta `height`, de Wikipedia, de una
+   ficha de patrimonio o de planos. `python tools/osm.py way 123456 --heading 80 --json out.json` te da el
+   contorno, sus patios y sus piezas `building:part` con sus alturas, ya en los ejes del modelo, además del
+   centro del contorno (tu `position`) y las dos direcciones a las que miran los lados largos (una suele ser tu
+   `heading`). `python tools/osm.py find 40.42 -3.69 "nombre"` encuentra el id del elemento.
 4. Añade `models/<Q…>/model.glb`, `meta.json` y, si puedes, `preview.jpg` (1280 × 720).
    `python tools/wikidata.py Q…` muestra los arquitectos y fechas que conoce Wikidata, para rellenar `rights`.
-5. Ejecuta `python tools/validate.py models/Q…` (Python 3.10+, sin instalar nada) y corrige lo que diga.
+5. Míralo y compruébalo: `python tools/render.py models/Q… --top --osm way/123456` dibuja el modelo visto desde
+   arriba con el contorno de OpenStreetMap encima: si no coinciden, está mal el tamaño, `position` o `heading`.
+   `python tools/render.py models/Q…` dibuja seis vistas con una figura de 1,8 m para la escala, y `--preview`
+   escribe `preview.jpg` (estas dos necesitan numpy y Pillow). Después ejecuta
+   `python tools/validate.py models/Q…` (Python 3.10+, sin instalar nada) y corrige lo que diga.
 6. Abre un pull request. Se hace la misma comprobación automáticamente y después lo revisa un responsable.
 
 Al abrir el pull request confirmas lo que dice [NOTICE.md](NOTICE.md#aviso): trabajo propio (o basado solo en
@@ -35,8 +46,8 @@ o **CC0 1.0**.
 
 ### ¿Por cuál empiezo?
 
-Por los monumentos a los que la gente vuela: los que tienen artículo en muchos idiomas, los símbolos de una
-ciudad, lo que se ve desde el aire. Un modelo sencillo y correcto de un monumento famoso vale más que uno muy
+Por los de la [lista de deseos](WANTED.es.md). Si no, por los monumentos a los que la gente vuela: los que
+tienen artículo en muchos idiomas, los símbolos de una ciudad, lo que se ve desde el aire. Un modelo sencillo y correcto de un monumento famoso vale más que uno muy
 detallado de un edificio que nadie conoce.
 
 ### Mejorar un modelo que ya existe
@@ -67,8 +78,9 @@ Los modelos que resulten erróneos, o que un titular de derechos pida quitar, sa
 
 ## Código
 
-Las herramientas están en [`tools/`](tools/) (Python, MIT). `validate.py` y `wikidata.py` solo necesitan
-Python; `build_release.py` (las versiones de lejos y el manifest) necesita numpy:
+Las herramientas están en [`tools/`](tools/) (Python, MIT). `validate.py`, `wikidata.py` y `osm.py` solo
+necesitan Python; `meshkit.py`, `render.py` y `build_release.py` (las versiones de lejos y el manifest)
+necesitan numpy y Pillow:
 
 ```bash
 pip install -r tools/requirements.txt

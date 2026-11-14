@@ -220,12 +220,14 @@ def simplify(scene, target):
             merged = cand
             break
     if n <= target:
-        return [_flat(m) for m in merged]
+        return [_flat(m) for m in merged if len(m["idx"])]
     cell = size / 300                                            # 2) clustering
     out = merged
     for _ in range(40):
         out, n = [], 0
         for m in merged:
+            if not len(m["idx"]):                             # a material whose pieces were all dropped
+                continue
             used_v = np.unique(m["idx"])
             key = np.floor((m["pos"][used_v] - lo) / cell).astype(np.int64)
             _, inv, cnt = np.unique(key, axis=0, return_inverse=True, return_counts=True)
@@ -242,14 +244,17 @@ def simplify(scene, target):
             if len(F):                                        # the same triangle twice: once
                 ui = np.unique(np.sort(F, axis=1), axis=0, return_index=True)[1]
                 F = F[np.sort(ui)]
+            col = None
+            if m["col"] is not None:                           # the cell's mean colour: no speckles from stripes
+                col = np.zeros((k, m["col"].shape[1])); np.add.at(col, inv, m["col"][used_v]); col /= cnt[:, None]
             out.append({"material": m["material"], "pos": m["pos"][rep], "idx": F,
-                        "col": m["col"][rep] if m["col"] is not None else None,
+                        "col": col,
                         "uv": m["uv"][rep] if m["uv"] is not None else None})
             n += len(F)
         if n <= target:
             break
         cell *= 1.2
-    return [_flat(m) for m in out]
+    return [_flat(m) for m in out if len(m["idx"])]
 
 
 def _flat(m):

@@ -1,0 +1,62 @@
+{
+  "id": "Q649426",
+  "name": "Edificio España",
+  "heading": 235.2,
+  "position": {
+    "lat": 40.4241196,
+    "lon": -3.7109543,
+    "source": "https://www.openstreetmap.org/way/49031978 (centroid of the outline; long axis at 145.2°, the Plaza de España façade faces 235.2°)"
+  },
+  "authors": [
+    {
+      "name": "Álvaro C. Chulvi",
+      "url": "https://github.com/Aruvaro-Chulvi"
+    }
+  ],
+  "license": "CC-BY-4.0",
+  "rights": {
+    "status": "protected",
+    "architects": [
+      {
+        "name": "Julián Otamendi Machimbarrena",
+        "died": 1966,
+        "wikidata": "Q5956173"
+      },
+      {
+        "name": "José María Otamendi Machimbarrena",
+        "died": 1959,
+        "wikidata": "Q5943283"
+      }
+    ],
+    "built": 1953,
+    "note": "Julián Otamendi designed the building and its Baroque main portal; his brother José María Otamendi, engineer, calculated the concrete structure (Compañía Inmobiliaria Metropolitana, 1948–1953). Façades restored 2005–2010 (Rubio & Álvarez-Sala); refurbished as a hotel 2017–2019 (rooftop terrace with glazed pavilions)."
+  },
+  "sources": [
+    {
+      "title": "OpenStreetMap way 49031978 — outline, height 117, 23 levels; and its 90 building:part pieces with heights 38–117 m and levels (© OpenStreetMap contributors, ODbL)",
+      "url": "https://www.openstreetmap.org/way/49031978"
+    },
+    {
+      "title": "Edificio España — Wikipedia (es): 117 m, 26 floors, stepped silhouette in four heights, five deep courtyards open at the back, terraces on floors 11, 20 and 26, Baroque portal by Julián Otamendi",
+      "url": "https://es.wikipedia.org/wiki/Edificio_Espa%C3%B1a"
+    },
+    {
+      "title": "Edificio España — Wikipedia (en)",
+      "url": "https://en.wikipedia.org/wiki/Edificio_Espa%C3%B1a"
+    },
+    {
+      "title": "Wikimedia Commons — «Edificio España (Madrid) 2014-02-10 perspective corrected.jpg»: floors counted and proportions measured (front façade, upper tower, lantern)",
+      "url": "https://commons.wikimedia.org/wiki/File:Edificio_Espa%C3%B1a_(Madrid)_2014-02-10_perspective_corrected.jpg"
+    },
+    {
+      "title": "Wikimedia Commons — «Edificio España 2025.jpg» (colours after the refurbishment, rooftop pavilions), «Madrid May 2014-84a.jpg», «Madrid May 2014-43a.jpg», «259 Edifici España, pl. España 19 (Madrid).jpg» (side)",
+      "url": "https://commons.wikimedia.org/wiki/Category:Edificio_Espa%C3%B1a,_Madrid"
+    },
+    {
+      "title": "Wikidata Q649426 (architect, dates)",
+      "url": "https://www.wikidata.org/wiki/Q649426"
+    }
+  ],
+  "triangles": 16891,
+  "notes": "Built by code (model_sources/Q649426_edificio_espana.py, tools/meshkit.py) with AI assistance. The massing is the OpenStreetMap building:part pieces extruded to their heights (three balcony overhangs with min_level left out). OSM pieces without a height get one from the floor grid counted on a perspective-corrected photo: granite base 0–9 m (shop floor and mezzanine), floors of 3.55 m to the slab cornice at 70 m and its attic at 73.8 m, upper tower floors of 3.7 m, its glazed attic gallery and balustrade at about 98.5 m, the lantern with its round oculus to 105.5 m and the flagpole to the quoted 117 m. The OSM heights 107 (upper tower) and 117 (lantern) were not used as such: counted floors give a lower roof, and 117 m is reached only with the mast — the vertical split of the top 20 m is uncertain (±5 m). Brick panels (front centre, wing fronts, the four sides of the upper tower) as seen on the photos; the side and back façades are shown in white stone with the same window grid, which is a simplification (their real pattern was not checked). Windows are dark quads on a 3.2 m grid aligned across the pieces; the Baroque portal, cornices, balustrades and pinnacles are stylised; the curved balconies of the wing corners and the rooftop pool are not modelled. The central light well of the upper tower and the five back courtyards follow OSM."
+}

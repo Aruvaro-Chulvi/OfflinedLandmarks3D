@@ -1,3 +1,4 @@
-# Only build_release.py needs it (far-away versions and footprints of the models).
-# validate.py, wikidata.py and build_site.py use the standard library only.
+# build_release.py (far-away versions and footprints), meshkit.py (models built by code) and render.py need these.
+# validate.py, wikidata.py, osm.py and build_site.py use the standard library only.
 numpy>=1.24
+Pillow>=10

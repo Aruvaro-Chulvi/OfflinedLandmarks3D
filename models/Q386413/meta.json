@@ -1,0 +1,48 @@
+{
+  "id": "Q386413",
+  "name": "Faro de Moncloa",
+  "heading": 175.0,
+  "position": {
+    "lat": 40.4373366,
+    "lon": -3.7216855,
+    "source": "https://www.openstreetmap.org/relation/4101237 (axis of the shaft, building:part way 307143827; the centroid of the outline is the deck's circle, 3.9 m to the south in mid-air)"
+  },
+  "authors": [
+    {
+      "name": "Álvaro C. Chulvi",
+      "url": "https://github.com/Aruvaro-Chulvi"
+    }
+  ],
+  "license": "CC-BY-4.0",
+  "rights": {
+    "status": "protected",
+    "architects": [
+      {
+        "name": "Salvador Pérez Arroyo",
+        "wikidata": "Q6117762"
+      }
+    ],
+    "built": 1992,
+    "note": "Designed in 1990 as the lighting and communications tower of the City of Madrid (European Capital of Culture 1992); refurbished after 2009 (second exterior lift, wider stairs, visitor reception at the base)."
+  },
+  "sources": [
+    {
+      "title": "OpenStreetMap relation 4101237 and building:parts 307143827 (shaft), 307143828 (deck), 307143829 (ring walkway), 307143831 (porch), 335504787 (mast) — outline, height 110 m (© OpenStreetMap contributors, ODbL)",
+      "url": "https://www.openstreetmap.org/relation/4101237"
+    },
+    {
+      "title": "Faro de Moncloa — Wikipedia (es): 110 m, viewing deck at about 92 m in a half-moon shape, two exterior glass lifts, metal plate cladding, architect",
+      "url": "https://es.wikipedia.org/wiki/Faro_de_Moncloa"
+    },
+    {
+      "title": "Ayuntamiento de Madrid — «Reabre el Faro de Moncloa totalmente accesible»: 110 m structure, viewpoint at 92 m",
+      "url": "https://diario.madrid.es/blog/notas-de-prensa/reabre-el-faro-de-moncloa-totalmente-accesible/"
+    },
+    {
+      "title": "Wikimedia Commons — photos of the tower, its deck, ring walkway, lifts and mast (proportions measured on them)",
+      "url": "https://commons.wikimedia.org/wiki/Category:Faro_de_Moncloa"
+    }
+  ],
+  "triangles": 8343,
+  "notes": "Built by code (model_sources/Q386413_faro_de_moncloa.py, tools/meshkit.py) with AI assistance. A cylindrical stainless-clad shaft (6 m, from OSM), not a lattice tower. +Z faces 175°: the side the D-shaped deck opens to and the side of the entrance porch and the stair-window slot. Deck plan from OSM: a 27.8 m circle centred 3.9 m south of the shaft, cut by a straight edge 1.1 m south of the shaft axis, a glazed block jutting north round the shaft, and the ring walkway closing the circle on the north, held by V struts. Heights partly measured on photos (±10 %): underside from 83.5 m, deck floor 92 m (published), gallery to 97.4 m, shaft cap 101 m, lattice mast to 110 m (OSM tags the deck at 104–110 m and the mast to 140 m; the published 110 m total and 92 m viewpoint were preferred). The lift guide frames (east and west) and cabins, the visitor reception at the base and the antennas are simplified; the LED screen is not modelled."
+}

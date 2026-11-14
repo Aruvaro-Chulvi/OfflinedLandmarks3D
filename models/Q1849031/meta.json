@@ -1,0 +1,69 @@
+{
+  "id": "Q1849031",
+  "name": "Palacio de Cibeles",
+  "heading": 308.5,
+  "position": {
+    "lat": 40.4187663,
+    "lon": -3.6918274,
+    "source": "https://www.openstreetmap.org/way/16322055 (centroid of the outline; the main façade is the cut corner facing the Plaza de Cibeles, at 308.5°)"
+  },
+  "authors": [
+    {
+      "name": "Álvaro C. Chulvi",
+      "url": "https://github.com/Aruvaro-Chulvi"
+    }
+  ],
+  "license": "CC-BY-4.0",
+  "rights": {
+    "status": "protected",
+    "architects": [
+      {
+        "name": "Antonio Palacios",
+        "died": 1945,
+        "wikidata": "Q2857391"
+      },
+      {
+        "name": "Joaquín Otamendi",
+        "died": 1960,
+        "wikidata": "Q5932291"
+      }
+    ],
+    "built": 1919,
+    "note": "Palacio de Comunicaciones, 1904–1919, by Antonio Palacios and Joaquín Otamendi (protected until 80 years after Otamendi's death); sculpture by Ángel García Díaz. Converted into the Madrid city hall and CentroCentro by Arquimática (2003–2011), with the glass roof over the old courtyard by Schlaich Bergermann und Partner (2008–2009)."
+  },
+  "sources": [
+    {
+      "title": "OpenStreetMap way 16322055 — outline and its building:part ways with levels, glass roofs and pinnacles (© OpenStreetMap contributors, ODbL)",
+      "url": "https://www.openstreetmap.org/way/16322055"
+    },
+    {
+      "title": "Palacio de Cibeles — Wikipedia (es): central tower of 70 m, Novelda stone, the Galería de Cristal (2 500 m² of glass), clock 3 m across, history",
+      "url": "https://es.wikipedia.org/wiki/Palacio_de_Cibeles"
+    },
+    {
+      "title": "Wikimedia Commons — frontal photos of the main façade used to measure heights («Fachada desde Plaza-Palacio de Comunicaciones.JPG», «Palacio de Cibeles, Madrid, España.jpg»)",
+      "url": "https://commons.wikimedia.org/wiki/File:Fachada_desde_Plaza-Palacio_de_Comunicaciones.JPG"
+    },
+    {
+      "title": "Wikimedia Commons — photos from the tower mirador (roofs, tower crowns)",
+      "url": "https://commons.wikimedia.org/wiki/File:008499_-_Madrid_(9436634068).jpg"
+    },
+    {
+      "title": "PNOA orthophoto, Instituto Geográfico Nacional (roof layout, glass roofs)",
+      "url": "https://www.ign.es/wms-inspire/pnoa-ma"
+    }
+  ],
+  "footprint": [
+    [20.2, 43.5], [7.0, 43.7], [4.4, 43.7], [4.3, 44.5], [-9.1, 45.0], [-9.1, 43.9], [-11.8, 43.8],
+    [-25.2, 43.5], [-24.2, 45.8], [-27.0, 50.1], [-30.6, 50.2], [-30.9, 51.0], [-39.5, 55.9], [-47.4, 48.9],
+    [-46.8, 47.4], [-61.9, 34.2], [-62.8, 33.5], [-68.6, 28.4], [-74.5, 23.3], [-78.0, 20.2], [-79.1, 21.1],
+    [-87.7, 13.1], [-86.9, 12.4], [-90.8, 9.0], [-83.9, 3.2], [-81.2, 1.0], [-72.8, -5.9], [-69.6, -1.8],
+    [-64.1, -6.2], [-67.5, -10.3], [-49.8, -24.9], [-38.2, -34.4], [-35.4, -36.8], [-24.5, -45.7],
+    [-18.3, -50.8], [-12.9, -55.3], [-10.7, -57.1], [-9.8, -57.9], [-6.5, -60.6], [-0.1, -65.9], [3.4, -68.8],
+    [4.3, -69.5], [14.2, -77.7], [26.4, -60.2], [30.9, -53.7], [35.5, -47.1], [50.4, -25.8], [68.0, -0.5],
+    [72.0, 5.3], [76.8, 12.1], [81.9, 19.4], [78.7, 27.9], [70.2, 33.2], [69.2, 31.5], [42.7, 48.1],
+    [43.6, 50.1], [34.8, 55.6], [26.4, 51.2], [25.9, 49.9], [22.3, 50.0], [19.2, 45.3]
+  ],
+  "triangles": 22609,
+  "notes": "Built by code (model_sources/Q1849031_palacio_de_cibeles.py, tools/meshkit.py) with AI assistance. Massing from the OpenStreetMap outline and its building:part ways (levels mapped to heights: 5 → 24 m, 6 → 27, 7 → 30.5, 8 → 33.5), with an 18 m base under everything; the rear range on the old Pasaje de Alarcón has no OSM part and is modelled as a 24 m block. Heights of the main façade, corner towers (36 m, crowns to about 46 m) and central tower (base 41 m, shaft to 58 m with clocks, lantern and finial to 70 m) measured on frontal photos (±5 %). Windows are dark panels in a regular rhythm (about 3.7 m bays), not the real bay layout; the plateresque ornament, balconies, galleries and sculpture are reduced to cornices, parapets, pinnacles and two stylised statues. Grey slate mansards are generic insets of each part; the glass vault over the old courtyard is a smooth cushion (the real one is a steel gridshell). Uncertain: the exact heights of the rear ranges and of the inner courts. footprint = the OSM outline grown by 1.5 m, so the forecourt on the Plaza de Cibeles is not cleared."
+}

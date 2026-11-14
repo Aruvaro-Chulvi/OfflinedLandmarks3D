@@ -21,11 +21,11 @@ tamaño real con una persona, abre su artículo de Wikipedia, descarga el `.glb`
 
 | | |
 |---|---|
-| [`models/`](models/) | Los modelos 3D, una carpeta por id de Wikidata: `model.glb`, `meta.json` (autoría, licencia, fuentes, posición, orientación, derechos) y `preview.jpg`. Primer modelo: **[Puerta de Alcalá](models/Q1140634/)**, Madrid. |
+| [`models/`](models/) | Los modelos 3D, una carpeta por id de Wikidata: `model.glb`, `meta.json` (autoría, licencia, fuentes, posición, orientación, derechos) y `preview.jpg`. Ya hay 20 monumentos de **Madrid**, de la [Puerta de Alcalá](models/Q1140634/) y el [Palacio Real](models/Q171517/) a las [Cuatro Torres](models/Q519568/). |
 | [`model_sources/`](model_sources/) | Modelos hechos por código (Python + [`tools/meshkit.py`](tools/meshkit.py)): ejecutas el programa y sale el `.glb`. |
 | [`docs/MODEL_SPEC.es.md`](docs/MODEL_SPEC.es.md) | Las reglas que siguen todos los modelos: glTF `.glb`, metros, ejes, origen, límites, `meta.json`. |
 | [`site/`](site/) | La página web publicada en GitHub Pages. |
-| [`tools/`](tools/) | El comprobador que se ejecuta en cada pull request, el que prepara las releases y un ayudante de Wikidata. |
+| [`tools/`](tools/) | El comprobador que se ejecuta en cada pull request, el que prepara las releases, un renderizador para ver un modelo sin navegador y ayudantes de Wikidata y OpenStreetMap (contorno, alturas, centro, orientación). |
 
 ## Cómo funciona en Offlined
 
@@ -45,8 +45,9 @@ tamaño real con una persona, abre su artículo de Wikipedia, descarga el `.glb`
 
 **Cualquiera puede añadir un monumento**: con Blender o cualquier programa que exporte glTF, o por código. Tu
 nombre aparece en la ficha del modelo en Offlined, para todas las personas que lo sobrevuelen, junto con el
-número de modelos que has aportado. También puedes ayudar sin modelar: pide un monumento o avisa de un modelo
-fuera de su sitio.
+número de modelos que has aportado. ¿No sabes cuál? La **[lista de deseos](WANTED.es.md)** tiene monumentos
+listos para empezar, con su id de Wikidata, su contorno de OpenStreetMap y lo que se sabe de su tamaño. También
+puedes ayudar sin modelar: pide un monumento o avisa de un modelo fuera de su sitio.
 
 Cada aportación pasa la comprobación automática, la revisión del responsable y solo entonces entra en una
 release: Offlined no descarga nada que no se haya publicado ahí. Ver [CONTRIBUTING.es.md](CONTRIBUTING.es.md).
@@ -55,7 +56,7 @@ release: Offlined no descarga nada que no se haya publicado ahí. Ver [CONTRIBUT
 
 | | Modelos |
 |---|---:|
-| [Álvaro C. Chulvi](https://github.com/Aruvaro-Chulvi) | 1 |
+| [Álvaro C. Chulvi](https://github.com/Aruvaro-Chulvi) | 20 |
 
 ## Licencias
 

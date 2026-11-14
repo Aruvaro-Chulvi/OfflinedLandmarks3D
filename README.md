@@ -21,11 +21,11 @@ their real size against a person, open their Wikipedia article, download the `.g
 
 | | |
 |---|---|
-| [`models/`](models/) | The 3D models, one folder per Wikidata id: `model.glb`, `meta.json` (author, licence, sources, position, orientation, rights) and `preview.jpg`. First model: **[Puerta de Alcalá](models/Q1140634/)**, Madrid. |
+| [`models/`](models/) | The 3D models, one folder per Wikidata id: `model.glb`, `meta.json` (author, licence, sources, position, orientation, rights) and `preview.jpg`. Now 20 landmarks of **Madrid**, from the [Puerta de Alcalá](models/Q1140634/) and the [Palacio Real](models/Q171517/) to the [Cuatro Torres](models/Q519568/). |
 | [`model_sources/`](model_sources/) | Models built by code (Python + [`tools/meshkit.py`](tools/meshkit.py)): run the script, get the `.glb`. |
 | [`docs/MODEL_SPEC.md`](docs/MODEL_SPEC.md) | The rules every model follows: glTF `.glb`, metres, axes, origin, size limits, `meta.json`. |
 | [`site/`](site/) | The web page published on GitHub Pages. |
-| [`tools/`](tools/) | The model checker that runs on every pull request, the release builder and a Wikidata helper. |
+| [`tools/`](tools/) | The model checker that runs on every pull request, the release builder, a renderer to look at a model without a browser, and helpers for Wikidata and OpenStreetMap (outline, heights, centre, orientation). |
 
 ## How it works in Offlined
 
@@ -45,7 +45,9 @@ their real size against a person, open their Wikipedia article, download the `.g
 
 **Everyone can add a landmark** — with Blender or any program that exports glTF, or by code. Your name goes on
 the model's card in Offlined, for everyone who flies over it, together with the number of models you have
-contributed. You can also help without modelling: ask for a landmark, or point out a model in the wrong place.
+contributed. Not sure which one? The **[wanted list](WANTED.md)** has landmarks ready to start, with their
+Wikidata id, OpenStreetMap outline and what is known of their size. You can also help without modelling: ask for
+a landmark, or point out a model in the wrong place.
 
 Every contribution goes through the automatic check, a review by the maintainer, and only then into a release —
 Offlined downloads nothing that has not been published there. See [CONTRIBUTING.md](CONTRIBUTING.md).
@@ -54,7 +56,7 @@ Offlined downloads nothing that has not been published there. See [CONTRIBUTING.
 
 | | Models |
 |---|---:|
-| [Álvaro C. Chulvi](https://github.com/Aruvaro-Chulvi) | 1 |
+| [Álvaro C. Chulvi](https://github.com/Aruvaro-Chulvi) | 20 |
 
 ## Licences
 

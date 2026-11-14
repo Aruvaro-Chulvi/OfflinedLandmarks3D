@@ -1,0 +1,144 @@
+{
+  "id": "Q1063195",
+  "name": "Torre de Madrid",
+  "heading": 143.7,
+  "position": {
+    "lat": 40.4244747,
+    "lon": -3.712379,
+    "source": "https://www.openstreetmap.org/relation/4085065 (centroid of the outline of the block; the tower's south-east face, on the Plaza de España frontage, faces 143.7°)"
+  },
+  "authors": [
+    {
+      "name": "Álvaro C. Chulvi",
+      "url": "https://github.com/Aruvaro-Chulvi"
+    }
+  ],
+  "license": "CC-BY-4.0",
+  "rights": {
+    "status": "protected",
+    "architects": [
+      {
+        "name": "Julián Otamendi Machimbarrena",
+        "died": 1966,
+        "wikidata": "Q5956173"
+      },
+      {
+        "name": "José María Otamendi Machimbarrena",
+        "died": 1959,
+        "wikidata": "Q5943283"
+      }
+    ],
+    "built": 1957,
+    "note": "Julián Otamendi, architect, and his brother José María Otamendi, structural engineer, for the Compañía Inmobiliaria Metropolitana; first phase finished 15 October 1957, second phase 1960. Façades and interiors rehabilitated 2010–2016."
+  },
+  "sources": [
+    {
+      "title": "OpenStreetMap relation 4085065 — outline of the block, height 142, 37 levels; building:part pieces relation 4085066 (33 levels), ways 307130335 (34), 307130336 (37), 307130337 (37, round bay), 307130344 and 307130345 (16), 307130340 (8) (© OpenStreetMap contributors, ODbL)",
+      "url": "https://www.openstreetmap.org/relation/4085065"
+    },
+    {
+      "title": "Torre de Madrid — Wikipedia (en): 142 m, antenna 162 m, 36–37 floors",
+      "url": "https://en.wikipedia.org/wiki/Torre_de_Madrid"
+    },
+    {
+      "title": "Torre de Madrid — Wikipedia (es): azotea 128 m, 34 floors, dates, hotel on floors 1–9",
+      "url": "https://es.wikipedia.org/wiki/Torre_de_Madrid"
+    },
+    {
+      "title": "Wikimedia Commons — «Torre de Madrid 2025.jpg» (cladding, pilaster strips, rounded corner balconies, crown) and «252 Plaza de España (Madrid), amb la Torre de Madrid i el monument a Cervantes.jpg»",
+      "url": "https://commons.wikimedia.org/wiki/Category:Torre_de_Madrid"
+    },
+    {
+      "title": "Wikidata Q1063195 (architect, dates)",
+      "url": "https://www.wikidata.org/wiki/Q1063195"
+    }
+  ],
+  "footprint": [
+    [
+      -21.16,
+      1.7
+    ],
+    [
+      -16.5,
+      -34.44
+    ],
+    [
+      19.01,
+      -26.97
+    ],
+    [
+      19.59,
+      -31.74
+    ],
+    [
+      30.34,
+      -30.21
+    ],
+    [
+      28.18,
+      -13.26
+    ],
+    [
+      26.89,
+      -3.08
+    ],
+    [
+      26.52,
+      -0.02
+    ],
+    [
+      25.67,
+      7.07
+    ],
+    [
+      25.08,
+      11.89
+    ],
+    [
+      24.54,
+      16.38
+    ],
+    [
+      24.12,
+      19.91
+    ],
+    [
+      19.05,
+      24.4
+    ],
+    [
+      16.27,
+      26.87
+    ],
+    [
+      14.23,
+      28.68
+    ],
+    [
+      11.42,
+      28.69
+    ],
+    [
+      8.44,
+      28.68
+    ],
+    [
+      -9.13,
+      28.69
+    ],
+    [
+      -15.52,
+      28.68
+    ],
+    [
+      -32.17,
+      28.68
+    ],
+    [
+      -32.16,
+      1.25
+    ]
+  ],
+  "triangles": 21880,
+  "notes": "Built by code (model_sources/Q1063195_torre_de_madrid.py, tools/meshkit.py) with AI assistance. Massing from the OpenStreetMap pieces: the hexagonal shaft to floor 33 (124.4 m) under a deep projecting cornice, floor 34 set back to 128.1 m (es.wikipedia gives 128 m for the roof), the crown (floors 35–37) to 139.3 m with a parapet that steps up at the corners to 142 m (OSM and en.wikipedia height), the round bay on the back-left chamfer, two 16-level wings and the 8-level podium; floor heights on a regular grid (5 m ground floor, then 3.73 m in the tower and 3.5 m in the podium and wings). Cream-white cladding as after the 2010–2016 rehabilitation; windows as dark quads, pilaster strips between the window columns, stacks of rounded balconies on the corners of the shaft (stylised). Not modelled: the two small light wells of the podium, the tall antenna of the past (162 m; the current photos show only a short mast), shop fronts and signs. Footprint = the OSM outline of the block + 1 m, because the block is L-shaped and the default convex hull would clear a neighbour."
+}

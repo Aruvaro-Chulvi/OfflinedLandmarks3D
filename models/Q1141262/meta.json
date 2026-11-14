@@ -1,0 +1,111 @@
+{
+  "id": "Q1141262",
+  "name": "Puerta de Europa (Torres KIO)",
+  "heading": 191.5,
+  "position": {
+    "lat": 40.4668612,
+    "lon": -3.6891124,
+    "source": "https://www.openstreetmap.org/way/11103227 and https://www.openstreetmap.org/way/965429323 (midpoint between the centroids of the two towers' outlines, on the axis of the Paseo de la Castellana; their sides run at 101.5°/191.5°)"
+  },
+  "authors": [
+    {
+      "name": "Álvaro C. Chulvi",
+      "url": "https://github.com/Aruvaro-Chulvi"
+    }
+  ],
+  "license": "CC-BY-4.0",
+  "rights": {
+    "status": "protected",
+    "architects": [
+      {
+        "name": "Philip Johnson",
+        "died": 2007,
+        "wikidata": "Q183528"
+      },
+      {
+        "name": "John Burgee",
+        "wikidata": "Q5590225"
+      }
+    ],
+    "built": 1996,
+    "note": "Johnson/Burgee Architects, 1989–1996 (works stopped 1992–1994). Structural engineering by Leslie E. Robertson Associates; built by FCC for the Kuwait Investment Office."
+  },
+  "sources": [
+    {
+      "title": "OpenStreetMap way 11103227 «Puerta de Europa Este» — outline, height 114.7 m, 27 levels, one building:part per floor (© OpenStreetMap contributors, ODbL)",
+      "url": "https://www.openstreetmap.org/way/11103227"
+    },
+    {
+      "title": "OpenStreetMap way 965429323 «Puerta de Europa Oeste» — outline, height 114.7 m, one building:part per floor (© OpenStreetMap contributors, ODbL)",
+      "url": "https://www.openstreetmap.org/way/965429323"
+    },
+    {
+      "title": "Puerta de Europa — Wikipedia (es): 113.8 m, 14.3° lean, 30 m overhang, perimeter bracing forming the crosses on the side façades, 20 × 20 m heliport on each tower, glass/aluminium/stainless façade",
+      "url": "https://es.wikipedia.org/wiki/Puerta_de_Europa"
+    },
+    {
+      "title": "Gate of Europe — Wikipedia (en): 114 m, 26 floors, heliports outlined in red (east) and blue (west)",
+      "url": "https://en.wikipedia.org/wiki/Gate_of_Europe"
+    },
+    {
+      "title": "Wikidata Q1141262 — height 114 m, architect, completion 1996",
+      "url": "https://www.wikidata.org/wiki/Q1141262"
+    },
+    {
+      "title": "Wikimedia Commons — photos of both towers (bands, bracing, red lines and tiers measured on them)",
+      "url": "https://commons.wikimedia.org/wiki/Category:Torres_Kio"
+    }
+  ],
+  "footprint": [
+    [
+      41.4,
+      -0.05
+    ],
+    [
+      41.4,
+      -19.0
+    ],
+    [
+      109.21,
+      -19.0
+    ],
+    [
+      109.21,
+      19.92
+    ],
+    [
+      41.4,
+      19.92
+    ],
+    [
+      41.4,
+      0.05
+    ],
+    [
+      -41.39,
+      0.05
+    ],
+    [
+      -41.39,
+      18.91
+    ],
+    [
+      -109.2,
+      18.91
+    ],
+    [
+      -109.2,
+      -20.01
+    ],
+    [
+      -41.39,
+      -20.01
+    ],
+    [
+      -41.39,
+      -0.05
+    ]
+  ],
+  "triangles": 11496,
+  "notes": "Built by code (model_sources/Q1141262_puerta_de_europa.py, tools/meshkit.py) with AI assistance. Both towers in one model, because Wikidata and Wikipedia have one item for the pair (the towers' own items Q56787231 and Q56787345 are parts of it). +Z faces south-south-west, down the Castellana towards the Plaza de Castilla, the classic view of the 'gate'; +X points to the east tower. Each tower is a 35.6 × 36.0 m prism leaning 14.3° towards the other, floors level (built upright and sheared). Bases from the OSM ground-floor parts; with the published 14.3° the roofs overhang about 2.6 m further towards the Castellana than the OSM floor parts (which imply about 13°). Façades simplified: black-blue glass with a fine grid, stainless central band and tier bands on the vertical façades, the stainless X bracing on the leaning ones, red lines in every panel, stainless corner columns and crown frame; heliports with red/blue outlines. Company logos (Realia, Bankia/CaixaBank) left out. The footprint is two rectangles (each tower seen from above, + 1 m) joined by a 10 cm slit, so the Castellana and the Plaza de Castilla between the towers are not cleared."
+}

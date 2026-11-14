@@ -1,0 +1,54 @@
+{
+  "id": "Q9054619",
+  "name": "Palacio de las Cortes (Congreso de los Diputados)",
+  "heading": 199.4,
+  "position": {
+    "lat": 40.4164134,
+    "lon": -3.6965778,
+    "source": "https://www.openstreetmap.org/relation/4545711 (centroid of the outline; long axis at 19.4°, the portico and its steps face 199.4°)"
+  },
+  "authors": [
+    {
+      "name": "Álvaro C. Chulvi",
+      "url": "https://github.com/Aruvaro-Chulvi"
+    }
+  ],
+  "license": "CC-BY-4.0",
+  "rights": {
+    "status": "public_domain",
+    "architects": [
+      {
+        "name": "Narciso Pascual y Colomer",
+        "died": 1870,
+        "wikidata": "Q10750587"
+      }
+    ],
+    "built": 1850,
+    "note": "Built 1843–1850. Pediment relief and the two bronze lions (cast 1866) by Ponciano Ponzano (died 1877). The later annexes of the Congress (1980, 1994, 2006) are separate buildings and are not part of this model."
+  },
+  "sources": [
+    {
+      "title": "OpenStreetMap relation 4545711 — outline, courtyards, portico, steps and building:parts layout (© OpenStreetMap contributors, ODbL)",
+      "url": "https://www.openstreetmap.org/relation/4545711"
+    },
+    {
+      "title": "Palacio de las Cortes — Wikipedia (es): architect, dates, hexastyle Corinthian portico, Ponzano's pediment and lions, glazed vault of the chamber",
+      "url": "https://es.wikipedia.org/wiki/Palacio_de_las_Cortes"
+    },
+    {
+      "title": "Palacio de las Cortes, Madrid — Wikipedia (en)",
+      "url": "https://en.wikipedia.org/wiki/Palacio_de_las_Cortes,_Madrid"
+    },
+    {
+      "title": "Wikimedia Commons — «Congreso de los Diputados (España) 17.jpg», near-frontal photo of the main façade (all heights measured on it, scale from the 55.6 m façade)",
+      "url": "https://commons.wikimedia.org/wiki/File:Congreso_de_los_Diputados_(Espa%C3%B1a)_17.jpg"
+    },
+    {
+      "title": "PNOA orthophoto (Instituto Geográfico Nacional, CC BY 4.0) — roof layout: perimeter hipped roofs, light wells, hemicycle roof with its glazed fan and round skylights",
+      "url": "https://www.ign.es/wms-inspire/pnoa-ma"
+    }
+  ],
+  "footprint": [[-28.77, -30.99], [-15.86, -31.02], [-15.85, -36.57], [15.82, -36.63], [15.82, -31.06], [28.82, -31.08], [28.8, 31.6], [11.2, 31.6], [11.2, 35.4], [10.3, 35.4], [10.3, 38.75], [-10.4, 38.75], [-10.4, 35.4], [-11.3, 35.4], [-11.3, 31.7], [-28.8, 31.7]],
+  "triangles": 27118,
+  "notes": "Built by code (model_sources/Q9054619_palacio_de_las_cortes.py, tools/meshkit.py) with AI assistance. Outline, light wells and the relative layout of the inner ranges and the hemicycle from OpenStreetMap; the OSM heights (13–16.5 m) are too low for the façade seen in photos, so all heights were measured on a near-frontal photo (±5 %): ground floor rusticated to 9.6 m, main cornice 15.9–16.35 m, attic coping 19.1 m, portico columns to 13.0 m, pediment apex 20.9 m. Main façade with four window bays a side, pilasters on the main floor, the hexastyle Corinthian portico with «CONGRESO DE LOS DIPUTADOS», the pediment relief (stylised figures), the bronze doors, the steps and the two lions (stylised). The side and rear façades repeat the same window system (13 bays on the sides, an entrance in the middle of the Floridablanca side): their exact bay counts were not checked. Roofs are simplified to low hipped zinc roofs at uniform pitches; the hemicycle roof is a low half dome with the glazed fan, the strip in front of it a low barrel; the halls beside the central range are shown with glazed vaults at 13.5 m (OSM parts 'height 8'; their real roofing is uncertain). The footprint is the outline (with the portico and the lion pedestals) grown by 1 m, so the street corners beside the portico are not cleared."
+}

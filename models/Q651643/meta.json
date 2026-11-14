@@ -1,0 +1,52 @@
+{
+  "id": "Q651643",
+  "name": "Torre PwC (Torre Sacyr Vallehermoso)",
+  "heading": 281.4,
+  "position": {
+    "lat": 40.4766975,
+    "lon": -3.6879455,
+    "source": "https://www.openstreetmap.org/way/98280725 (centroid of the outline)"
+  },
+  "authors": [
+    {
+      "name": "Álvaro C. Chulvi",
+      "url": "https://github.com/Aruvaro-Chulvi"
+    }
+  ],
+  "license": "CC-BY-4.0",
+  "rights": {
+    "status": "protected",
+    "architects": [
+      {
+        "name": "Carlos Rubio Carvajal",
+        "wikidata": "Q42316367"
+      },
+      {
+        "name": "Enrique Álvarez-Sala Walther",
+        "wikidata": "Q27864258"
+      }
+    ],
+    "built": 2008,
+    "note": "Built 2004–2008 for Sacyr Vallehermoso (main contractor Sacyr); renamed Torre PwC in 2011. Hotel Eurostars Madrid Tower on floors 6–27."
+  },
+  "sources": [
+    {
+      "title": "OpenStreetMap way 98280725 — trefoil outline with the three fissures, height 236 m; way 970617526 — hexagonal roof deck at 236 m (© OpenStreetMap contributors, ODbL)",
+      "url": "https://www.openstreetmap.org/way/98280725"
+    },
+    {
+      "title": "Torre PwC — Wikipedia (es): plan of three arches enclosing three cylinders, fissures dividing each floor in three, double-skin «scale» façade, floors 51–58 for plant",
+      "url": "https://es.wikipedia.org/wiki/Torre_PwC"
+    },
+    {
+      "title": "Torre PwC — Wikipedia (en): 236 m, 52 floors, hotel floors 6–27, two-storey restaurant at the top",
+      "url": "https://en.wikipedia.org/wiki/Torre_PwC"
+    },
+    {
+      "title": "Wikimedia Commons — Torre PwC, Madrid (category of photos, for reference)",
+      "url": "https://commons.wikimedia.org/wiki/Category:Torre_PwC,_Madrid"
+    }
+  ],
+  "triangles": 14144,
+  "notes": "Built by code (model_sources/Q651643_torre_pwc.py, tools/meshkit.py) with AI assistance. Plan from OpenStreetMap (simplified to 0.1 m); the scaly double skin is one tilted pane per floor (3.8 m) and bay (about 2.4 m), staggered from floor to floor, bronze-grey with a little random variation, darker in the three fissures; the last two floors (restaurant) in lighter glass. Above 212 m the skin goes on as separate panels with sky between them (the open crown that hides the plant), tied by a ring beam; the plant is one grey block under the hexagonal deck at 236 m. The tower has no front: the fissure towards the Paseo de la Castellana (west, the hotel's address and entrance) is taken as the main façade. Simplified or omitted: the entrance canopy, the inner skin, the wind turbines and the logo. Uncertain: the exact height where the open crown starts and the shape of the plant inside it."
+}

@@ -1,0 +1,141 @@
+{
+  "id": "Q160112",
+  "name": "Museo del Prado",
+  "heading": 260.5,
+  "position": {
+    "lat": 40.4138147,
+    "lon": -3.6922155,
+    "source": "https://www.openstreetmap.org/relation/13046997 (centroid of the outline of the Villanueva building; long axis at 170.5°)"
+  },
+  "authors": [
+    {
+      "name": "Álvaro C. Chulvi",
+      "url": "https://github.com/Aruvaro-Chulvi"
+    }
+  ],
+  "license": "CC-BY-4.0",
+  "rights": {
+    "status": "public_domain",
+    "architects": [
+      {
+        "name": "Juan de Villanueva",
+        "died": 1811,
+        "wikidata": "Q2429525"
+      },
+      {
+        "name": "Antonio López Aguado",
+        "died": 1831,
+        "wikidata": "Q3781231"
+      }
+    ],
+    "built": 1819,
+    "note": "Villanueva's building (1785–1819, finished by López Aguado) is what is modelled. Later works inside the same outline, kept only as plain massing: apse by Narciso Pascual y Colomer (1853, died 1870), north front by Francisco Jareño (1880s, died 1892), eastern ranges by Fernando Arbós (1911–1921, died 1916) and by Fernando Chueca Goitia and Manuel Lorente (1954–1956; Chueca died 2004), the Goya stair by Pedro Muguruza (1943–1946, died 1952). The last two are recent enough to be protected; they appear only as generic volumes (plain saw-tooth roofs, a plain stair). Rafael Moneo's 2007 extension (the Jerónimos building) is a separate OpenStreetMap building and is not included."
+  },
+  "sources": [
+    {
+      "title": "OpenStreetMap relation 13046997 «Edificio Villanueva» — outline, courtyard, building parts: portico, apse, Goya podium and stair landings, rotunda, Goya blocks (© OpenStreetMap contributors, ODbL)",
+      "url": "https://www.openstreetmap.org/relation/13046997"
+    },
+    {
+      "title": "OpenStreetMap relation 7726080 «Museo del Prado» — the museum site, wikidata Q160112 (© OpenStreetMap contributors, ODbL)",
+      "url": "https://www.openstreetmap.org/relation/7726080"
+    },
+    {
+      "title": "PNOA orthophoto (Instituto Geográfico Nacional, CC BY 4.0, scne.es) — roof layout: glazed lanterns and glass roofs, pavilion roofs, courtyards",
+      "url": "https://www.ign.es/wms-inspire/pnoa-ma"
+    },
+    {
+      "title": "Edificio Villanueva del Museo del Prado — Wikipedia (es): the Doric west portico with Ramón Barba's relief, later works on the north, east and apse",
+      "url": "https://es.wikipedia.org/wiki/Edificio_Villanueva_del_Museo_del_Prado"
+    },
+    {
+      "title": "Museo del Prado — Urbipedia: Ionic portico on the upper level of the north front; lintelled door and loggia of six Corinthian columns on the south front",
+      "url": "https://www.urbipedia.org/hoja/Museo_del_Prado"
+    },
+    {
+      "title": "Wikimedia Commons — «Museo del Prado 2016 (25185969599).jpg» (near-orthographic west front: portico, attic, gallery heights)",
+      "url": "https://commons.wikimedia.org/wiki/File:Museo_del_Prado_2016_(25185969599).jpg"
+    },
+    {
+      "title": "Wikimedia Commons — «Museo del Prado (Madrid) 04.jpg», «Museo del Prado 00 Fachada 1a.jpg», «… 1b.jpg» (galleries: arches, niches, medallions, Ionic loggia)",
+      "url": "https://commons.wikimedia.org/wiki/File:Museo_del_Prado_(Madrid)_04.jpg"
+    },
+    {
+      "title": "Wikimedia Commons — «Puerta de Goya del Museo del Prado.jpg» (north front: podium, stairs, portico in antis, taller blocks)",
+      "url": "https://commons.wikimedia.org/wiki/File:Puerta_de_Goya_del_Museo_del_Prado.jpg"
+    }
+  ],
+  "triangles": 34776,
+  "notes": "Built by code (model_sources/Q160112_museo_del_prado.py, tools/meshkit.py) with AI assistance. The Villanueva building only (OSM relation 13046997); Moneo's Jerónimos extension is a separate building and is left out, and so are the Velázquez and Goya statues (their own OSM/Wikidata items). Outline, portico, apse, rotunda and Goya blocks from OpenStreetMap; roof layout from the PNOA orthophoto; heights measured on photos (±5 %): ground storey 6.4 m, Ionic loggia 6.9–11.9 m, cornice 14.8 m, Doric portico columns 10 m, attic 18.4 m. West front: six Doric columns, Barba's relief (stylised figures), arched openings with grilles alternating with niches (statues, vases) and portrait medallions on brick, the Ionic colonnade in front of the recessed upper wall, frieze windows, modillion cornice. North (Goya): podium with two stairs, two Ionic columns in antis, taller brick blocks. South (Murillo): door and a loggia of six Corinthian columns. Simplified/uncertain: one cornice height for the whole building, low hipped roofs with glass lanterns standing for the real skylights, generic windows on the brick ends and the east side, the interior plan, the number of bays (17 per gallery). y = 0 is the level of the Paseo del Prado front; the ground rises towards the east, so the foundations go 5 m down. The footprint is the OSM outline grown by 1 m (the convex hull would clear the gardens in front of the galleries and the neighbouring buildings to the east).",
+  "footprint": [
+    [-6.96, -22.88],
+    [-6.19, -24.37],
+    [-5.05, -25.90],
+    [-3.61, -27.24],
+    [-0.75, -28.81],
+    [1.42, -29.36],
+    [3.63, -29.44],
+    [6.05, -29.00],
+    [8.31, -28.02],
+    [10.27, -26.58],
+    [11.85, -24.71],
+    [13.13, -22.11],
+    [16.24, -22.09],
+    [16.27, -23.49],
+    [17.81, -23.41],
+    [17.81, -26.99],
+    [18.93, -26.94],
+    [18.98, -32.89],
+    [51.02, -33.07],
+    [53.83, -33.08],
+    [61.20, -33.10],
+    [61.20, -29.77],
+    [61.19, -23.30],
+    [61.08, -16.77],
+    [104.31, -16.82],
+    [104.30, -4.04],
+    [104.31, 1.94],
+    [104.32, 6.64],
+    [104.31, 10.10],
+    [104.30, 17.56],
+    [104.31, 30.36],
+    [57.68, 30.41],
+    [57.75, 18.53],
+    [14.26, 18.71],
+    [14.26, 21.63],
+    [14.26, 28.24],
+    [2.96, 28.25],
+    [-8.09, 28.26],
+    [-8.09, 21.64],
+    [-8.09, 18.97],
+    [-50.47, 18.98],
+    [-52.28, 18.98],
+    [-52.31, 30.27],
+    [-99.22, 30.32],
+    [-99.21, 27.06],
+    [-108.30, 27.07],
+    [-108.30, 22.25],
+    [-108.30, 18.93],
+    [-104.57, 18.93],
+    [-104.57, 16.09],
+    [-104.57, -2.15],
+    [-104.56, -5.80],
+    [-108.26, -5.79],
+    [-108.27, -9.24],
+    [-108.26, -13.22],
+    [-98.95, -13.23],
+    [-98.94, -16.43],
+    [-56.26, -16.57],
+    [-56.27, -21.00],
+    [-56.41, -23.02],
+    [-56.35, -32.78],
+    [-46.35, -32.75],
+    [-13.30, -32.87],
+    [-13.22, -26.90],
+    [-11.74, -26.93],
+    [-11.75, -23.34],
+    [-10.81, -23.25],
+    [-10.83, -22.13],
+    [-7.22, -22.13]
+  ]
+}

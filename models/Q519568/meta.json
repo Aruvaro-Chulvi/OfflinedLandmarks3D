@@ -1,0 +1,52 @@
+{
+  "id": "Q519568",
+  "name": "Torre Moeve (Torre Cepsa)",
+  "heading": 191.6,
+  "position": {
+    "lat": 40.4757163,
+    "lon": -3.6877514,
+    "source": "https://www.openstreetmap.org/way/188396764 (centroid of the outline; long axis at 101.6°)"
+  },
+  "authors": [
+    {
+      "name": "Álvaro C. Chulvi",
+      "url": "https://github.com/Aruvaro-Chulvi"
+    }
+  ],
+  "license": "CC-BY-4.0",
+  "rights": {
+    "status": "protected",
+    "architects": [
+      {
+        "name": "Norman Foster (Foster + Partners)",
+        "wikidata": "Q104898"
+      }
+    ],
+    "built": 2008,
+    "note": "Foster + Partners, 2004–2008, opened in 2009 as Torre Repsol, then Torre Caja Madrid / Torre Bankia, Torre Cepsa (2014) and Torre Moeve (2024). Structural engineers Halvorson and Partners and Gilsanz Murray Steficek."
+  },
+  "sources": [
+    {
+      "title": "OpenStreetMap way 188396764 and its building:part ways (cores, office blocks 25.6–81.9, 92.1–153.5, 163.7–220 m, frame 239–248.3 m) (© OpenStreetMap contributors, ODbL)",
+      "url": "https://www.openstreetmap.org/way/188396764"
+    },
+    {
+      "title": "Torre Moeve — Wikipedia (es): 248.3 m (CTBUH 2013), two outer cores clad in stainless steel, floors hung in three blocks, 13.85 m lobby",
+      "url": "https://es.wikipedia.org/wiki/Torre_Moeve"
+    },
+    {
+      "title": "Torre Moeve — Wikipedia (en)",
+      "url": "https://en.wikipedia.org/wiki/Torre_Moeve"
+    },
+    {
+      "title": "Arch2O — Torre Cepsa, Foster + Partners (the tower as a tall arch, wind turbines under the frame, 22 m atrium, north–south orientation)",
+      "url": "https://arch2o.com/?p=154754"
+    },
+    {
+      "title": "Wikimedia Commons — Torre Cepsa, Madrid (category of photos, for reference)",
+      "url": "https://commons.wikimedia.org/wiki/Category:Torre_Cepsa,_Madrid"
+    }
+  ],
+  "triangles": 5896,
+  "notes": "Built by code (model_sources/Q519568_torre_moeve.py, tools/meshkit.py) with AI assistance. Plan and heights from the detailed OpenStreetMap building:parts; the plan is made symmetric (differences under 10 cm). Main façade (+Z) = the south glass face: the broad glass faces look north and south and the ends towards the Paseo de la Castellana are the blind steel cores; the entrance hall is glazed on both broad faces. Simplified: the cores are plain steel prisms with plate joints and the black strip of the end faces; the office façades are flat glass with floor lines (no mullions); the transfer platforms show a stylised steel W truss; the wind turbines under the frame and the rooftop equipment are omitted. Uncertain: the exact depth of the steel frame and the look of the platform trusses."
+}
