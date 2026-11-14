@@ -1,0 +1,206 @@
+{
+  "id": "Q9202",
+  "name": "Statue of Liberty",
+  "heading": 146.9,
+  "position": {
+    "lat": 40.689253,
+    "lon": -74.0445321,
+    "source": "https://www.openstreetmap.org/way/32965412 (centre of the pedestal: the common centre of the building:part squares of the terraces and the pedestal, 0.9 m east and 1.1 m north of the centroid of the star; heading from their faces, 146.9°)"
+  },
+  "authors": [
+    {
+      "name": "Álvaro C. Chulvi",
+      "url": "https://github.com/Aruvaro-Chulvi"
+    }
+  ],
+  "license": "CC-BY-4.0",
+  "rights": {
+    "status": "public_domain",
+    "architects": [
+      {
+        "name": "Frédéric Auguste Bartholdi",
+        "died": 1904,
+        "wikidata": "Q223274"
+      },
+      {
+        "name": "Gustave Eiffel",
+        "died": 1923,
+        "wikidata": "Q20882"
+      },
+      {
+        "name": "Eugène Viollet-le-Duc",
+        "died": 1879,
+        "wikidata": "Q272912"
+      },
+      {
+        "name": "Richard Morris Hunt",
+        "died": 1895,
+        "wikidata": "Q940298"
+      }
+    ],
+    "built": 1886,
+    "note": "Bartholdi sculpted the statue; Viollet-le-Duc, then Eiffel, designed its iron frame; Richard Morris Hunt designed the granite pedestal, on a concrete foundation by General Charles P. Stone, inside Fort Wood (an 11-pointed star fort built 1808–1811). Dedicated 28 October 1886."
+  },
+  "footprint": [
+    [
+      -36.32,
+      -19.51
+    ],
+    [
+      -36.07,
+      -36.19
+    ],
+    [
+      -18.98,
+      -35.27
+    ],
+    [
+      -14.91,
+      -44.81
+    ],
+    [
+      -14.14,
+      -46.5
+    ],
+    [
+      -13.74,
+      -47.39
+    ],
+    [
+      -12.89,
+      -49.26
+    ],
+    [
+      -3.93,
+      -40.28
+    ],
+    [
+      -1.21,
+      -40.38
+    ],
+    [
+      1.05,
+      -40.41
+    ],
+    [
+      9.67,
+      -49.88
+    ],
+    [
+      10.69,
+      -47.48
+    ],
+    [
+      16.8,
+      -35.63
+    ],
+    [
+      33.97,
+      -35.33
+    ],
+    [
+      33.73,
+      -29.56
+    ],
+    [
+      33.63,
+      -21.83
+    ],
+    [
+      33.58,
+      -18.72
+    ],
+    [
+      47.01,
+      -12.86
+    ],
+    [
+      36.09,
+      -1.04
+    ],
+    [
+      48.34,
+      10.18
+    ],
+    [
+      33.96,
+      17.85
+    ],
+    [
+      34.27,
+      38.2
+    ],
+    [
+      19.16,
+      35.06
+    ],
+    [
+      17.93,
+      34.76
+    ],
+    [
+      17.84,
+      34.74
+    ],
+    [
+      16.71,
+      35.88
+    ],
+    [
+      -0.6,
+      53.63
+    ],
+    [
+      -19.49,
+      34.38
+    ],
+    [
+      -36.49,
+      37.47
+    ],
+    [
+      -36.51,
+      17.56
+    ],
+    [
+      -50.91,
+      10.45
+    ],
+    [
+      -39.19,
+      -0.69
+    ],
+    [
+      -50.91,
+      -13.12
+    ]
+  ],
+  "sources": [
+    {
+      "title": "OpenStreetMap way 32965412 — the star of Fort Wood and the building:part squares of the terraces (39.7 × 40.1 m, 25.2 × 25.5 m), pedestal base (17.9 × 18.9 m), shaft (15.0 × 15.8 m) and balcony (16.4 × 17.3 m) (© OpenStreetMap contributors, ODbL)",
+      "url": "https://www.openstreetmap.org/way/32965412"
+    },
+    {
+      "title": "HAER NY-138, Statue of Liberty, sheet 15 of 36 — north, east, south and west elevations at 1:384 with the levels (top of fort 28'6\", terrace walls 43'2\" and 53'2\", top of pedestal 137'3\", bottom of statue 142'8\", top of head 253'8\", bottom of torch 260'3\", top of flame 290'1\"); the statue's sections measured on it",
+      "url": "https://commons.wikimedia.org/wiki/File:North_Elevation,_East_Elevation,_South_Elevation,_West_Elevation_-_Statue_of_Liberty,_Liberty_Island,_Manhattan,_New_York,_New_York_County,_NY_HAER_NY,31-NEYO,89-_(sheet_15_of_36).png"
+    },
+    {
+      "title": "HAER NY-138, sheet 21 of 36 — south pedestal elevation at 1:128 (every cornice, the disc frieze, loggia, balcony, attic and plinth)",
+      "url": "https://commons.wikimedia.org/wiki/File:South_Pedestal_Elevation_-_Statue_of_Liberty,_Liberty_Island,_Manhattan,_New_York,_New_York_County,_NY_HAER_NY,31-NEYO,89-_(sheet_21_of_36).tif"
+    },
+    {
+      "title": "HAER NY-138, sheet 20 of 36 — south fort elevation at 1:128 (fort wall, terraces and their grilles)",
+      "url": "https://commons.wikimedia.org/wiki/File:South_Fort_Elevation_-_Statue_of_Liberty,_Liberty_Island,_Manhattan,_New_York,_New_York_County,_NY_HAER_NY,31-NEYO,89-_(sheet_20_of_36).tif"
+    },
+    {
+      "title": "Statue of Liberty — Wikipedia (en): dimensions of the statue (head 5.26 m, arm 12.8 m and 3.66 m thick, tablet 7.19 × 4.14 × 0.61 m, nose 1.48 m, eye 0.76 m, mouth 0.91 m), the seven rays and 25 windows of the crown, the designers",
+      "url": "https://en.wikipedia.org/wiki/Statue_of_Liberty"
+    },
+    {
+      "title": "Wikimedia Commons — photos of the statue from the harbour and the air (colours, the tablet held against her side, the sleeve, the balcony): «Statue of Liberty 7.jpg», «Statue of liberty from the sky.JPG»",
+      "url": "https://commons.wikimedia.org/wiki/File:Statue_of_Liberty_7.jpg"
+    }
+  ],
+  "triangles": 35526,
+  "notes": "Built by code (model_sources/Q9202_statue_of_liberty.py, tools/meshkit.py) with AI assistance. Heights from the HAER measured drawings, above the entrance ground level of the fort (y = 0): the total of 88.4 m to the top of the flame is the drawing's figure; the often-quoted 93 m is measured from a lower datum. The statue's body is lofted through sections measured every 0.6 m on the front and side elevations (±0.1–0.2 m), with stylised relief: vertical folds of the chiton below the diagonal hem of the mantle, broad diagonal folds of the mantle in front and vertical ones at the back. Head, crown (seven rays, 25 windows), raised right arm with its sleeve, torch with its balcony, gilded flame, tablet with JULY IV MDCCLXXVI and left hand are simplified volumes placed on the same drawings; the face is reduced to brow, eyes, nose, mouth and chin; the broken shackles at her feet are not modelled. Pedestal from HAER sheet 21: every block, the ten discs and eight small gables per side, the loggia with four columns, the corner piers with rusticated courses, the balcony parapet with its posts, the attic windows and the entrances. Fort Wood is the OpenStreetMap star extruded to 8.69 m with a coping, the two terraces are the OSM squares; the sally port is a dark opening in the cut-off back point. Not modelled: the external steel stairs and the stairs on the back of the terraces (OSM building:part relations 3079001–3079016), skylights and railings on the terraces, the museum and the trees. Footprint = the star + 1 m, so the island's other buildings stay. Uncertain: the angle of the tablet and the rays (from the drawings and photos, ±10°)."
+}

@@ -225,7 +225,7 @@ def tube(points, r, c, seg=8):
         for k in range(seg):
             j = (k + 1) % seg
             p0, p1 = i * seg + k, i * seg + j
-            f += [(p0, p0 + seg, p1 + seg), (p0, p1 + seg, p1)]
+            f += [(p0, p1 + seg, p0 + seg), (p0, p1, p1 + seg)]      # wound outwards
     return Mesh(v, f, c)
 
 

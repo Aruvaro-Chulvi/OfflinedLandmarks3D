@@ -301,8 +301,12 @@ def describe(kind, oid, heading=None, origin=None, parts=True, radius=0.0):
         lst = []
         for e in d.get("elements", []):
             geo = e.get("geometry") or []
-            if e["type"] == "relation":
-                geo = [g for m in e.get("members", []) if m.get("role") != "inner" for g in (m.get("geometry") or [])]
+            if e["type"] == "relation":                     # join the outer member ways into rings (any direction)
+                ways = [[(g["lat"], g["lon"]) for g in (m.get("geometry") or [])]
+                        for m in e.get("members", []) if m.get("role") != "inner"]
+                rings = _join([w for w in ways if len(w) > 1])
+                ring = max(rings, key=lambda r: len(r)) if rings else []
+                geo = [{"lat": a, "lon": b} for a, b in ring]
             if len(geo) < 3:
                 continue
             pts = [fr.en(g["lat"], g["lon"]) for g in geo]

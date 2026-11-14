@@ -1,0 +1,68 @@
+{
+  "id": "Q243",
+  "name": "Torre Eiffel / Tour Eiffel",
+  "heading": 314.2,
+  "position": {
+    "lat": 48.8582621,
+    "lon": 2.2944962,
+    "source": "https://www.openstreetmap.org/way/5013364 (centroid of the outline = centre of the base square)"
+  },
+  "authors": [
+    {
+      "name": "Álvaro C. Chulvi",
+      "url": "https://github.com/Aruvaro-Chulvi"
+    }
+  ],
+  "license": "CC-BY-4.0",
+  "rights": {
+    "status": "protected",
+    "architects": [
+      {
+        "name": "Gustave Eiffel",
+        "died": 1923,
+        "wikidata": "Q20882"
+      },
+      {
+        "name": "Maurice Koechlin",
+        "died": 1946,
+        "wikidata": "Q339645"
+      },
+      {
+        "name": "Émile Nouguier",
+        "died": 1897,
+        "wikidata": "Q286254"
+      },
+      {
+        "name": "Stephen Sauvestre",
+        "died": 1919,
+        "wikidata": "Q778243"
+      }
+    ],
+    "built": 1889,
+    "note": "Designed by the engineers Maurice Koechlin and Émile Nouguier of the Compagnie des Établissements Eiffel (1884), architecture (arches, first-floor decoration) by Stephen Sauvestre; built 1887–1889 for the Exposition Universelle. Marked «protected» only because of the project's 80-year rule: Koechlin died on 14 January 1946, so it ends on 1 January 2027 (switch to public_domain then). In France (70 years after death) the design has been in the public domain since 1 January 2017; every other author died before 1924. Not modelled as such: the night illumination (a protected lighting design); later additions appear only as plain volumes — the glass pavilions of the 1st floor (2014 refurbishment) and the broadcasting antennas."
+  },
+  "sources": [
+    {
+      "title": "OpenStreetMap way 5013364 (base square 123.6 × 123.5 m, sides facing 134.2°/314.2°, height 330) and its building:parts: piers 69034127, 69034135, 69034179, 69034180; 1st-floor pavilions 308145239, 308145258, 308145259 (57.63–64 m); 3rd floor 308021389 (276.13 m) (© OpenStreetMap contributors, ODbL)",
+      "url": "https://www.openstreetmap.org/way/5013364"
+    },
+    {
+      "title": "Tour Eiffel — Wikipedia (fr): base square 125 m; 74.24 m between the piers inside and 124.90 m outside; piers in 25 m squares; floors at 57.63 m (70.69 m side), 115.73 m (40.96 m side), 276.13 m (18.65 m side) and 279.11 m; arches 74 m across rising to 39 m; 330 m with the antennas",
+      "url": "https://fr.wikipedia.org/wiki/Tour_Eiffel"
+    },
+    {
+      "title": "Eiffel Tower — Wikipedia (en)",
+      "url": "https://en.wikipedia.org/wiki/Eiffel_Tower"
+    },
+    {
+      "title": "Wikimedia Commons — «Tour Eiffel Wikimedia Commons.jpg» (frontal view from the Champ de Mars): leg profile, gap between the legs, upper columns and where they meet (≈178 m), bands under the floors, head and antenna mast, measured against the known floor widths",
+      "url": "https://commons.wikimedia.org/wiki/File:Tour_Eiffel_Wikimedia_Commons.jpg"
+    },
+    {
+      "title": "Wikimedia Commons — category Eiffel Tower (photos of the lattice, arches, platforms and colour)",
+      "url": "https://commons.wikimedia.org/wiki/Category:Eiffel_Tower"
+    }
+  ],
+  "notes": "Built by code (model_sources/Q243_eiffel_tower.py, tools/meshkit.py) with AI assistance. +Z faces 314.2° (north-west, towards the Seine, the Pont d'Iéna and the Trocadéro): the tower is square, so the main façade is a choice — the NW face is the one of the classic view from the Trocadéro. Origin at the centre of the base square (the OSM centroid); the legs stand on stone piers down to −3 m, one under each of the 16 corner chords. The lattice is modelled with about 5,000 thin square bars: each leg is a box girder of four chords (2.3 → 1.7 m) whose four faces carry a middle rail, horizontal struts and X braces (one X across the face every two panels below the 1st floor, one X per half-face between the 1st and 2nd floors); above the 2nd floor four corner columns (each a third of the face) whose inner chords meet at the middle of each face at about 178 m, then one shaft split by a centre rail, one X per panel; the real members are themselves lattice girders with rivets and secondary bracing, here solid bars. The outer profile (chord centre lines) is a smooth curve through the floor sizes and the photo measurements; the arches (74.6 m across, intrados 38.8 m high) lie on the inclined faces with a ring of radial posts (the round openings) above them; the 1st-floor frieze, lattice girders, gallery and the three glass pavilions (OSM), the 2nd-floor frieze, bands and grille, the 3rd-floor glazed level, the open terrace, the campanile block with the beacon and the antenna mast (lattice to 312 m, tube to 325.5 m, whip to 330 m) are simplified. Colour: three-tone «brun Tour Eiffel», graduated lighter towards the top, METAL material. Uncertain (±1–2 m): the profile between the floors, the leg widths and the inner edges of the legs (measured on one frontal photo), the height where the upper columns join, the details of the head above 280 m. Not modelled: lifts, stairs, the restaurants' interiors, lighting. Footprint: the default (convex hull + 1 m = the whole 125 m square) is kept on purpose — the ground between and under the legs is the paved esplanade with the ticket and security pavilions, which would otherwise show through the lattice; no trees stand inside the square.",
+  "triangles": 46448
+}
