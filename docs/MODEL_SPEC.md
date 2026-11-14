@@ -72,6 +72,7 @@ Models built by code keep their script in `model_sources/<Q…>_<name>.py` (see 
 | `sources` | yes | The plans, photos, surveys or measurements you used. At least one. |
 | `footprint` | no | The area, seen from above, where Offlined clears the generated buildings, trees and street furniture: `[[x, z], …]` in metres in the model's own axes. By default, the outline of the model seen from above plus 1 m. Give it for buildings with courtyards or L shapes, where the default would also clear a neighbour. |
 | `based_on` | no | If the model adapts someone else's work: `{ "title", "author", "url", "license" }` — that licence must be CC-BY-4.0 or CC0-1.0 too. |
+| `country` | no | The country as an ISO 3166-1 alpha-2 code (`ES`, `CN`…). Normally left out: the release takes it from Wikidata (the landmark's *country*, P17). Offlined lets people download only the landmarks of one country. |
 | `triangles` | no | Filled in by the checker if missing. |
 | `notes` | no | Anything worth knowing (what is simplified, what is uncertain). |
 

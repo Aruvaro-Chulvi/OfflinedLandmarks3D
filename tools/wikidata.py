@@ -64,11 +64,22 @@ def _year(v):
         return None
 
 
+def _country_id(e):
+    """The current country (P17): preferred rank first, never one with an end date (P582)."""
+    cs = [c for c in e.get("claims", {}).get("P17", []) if c.get("mainsnak", {}).get("snaktype") == "value"
+          and "P582" not in c.get("qualifiers", {})]
+    cs.sort(key=lambda c: c.get("rank") != "preferred")
+    return cs[0]["mainsnak"]["datavalue"]["value"]["id"] if cs else None
+
+
 def entities(qids: list[str]) -> dict:
-    """{qid: {"titles": {lang: title}, "coord": {lat, lon}, "architects": [{name, wikidata, died}], "built": year}}"""
+    """{qid: {"titles": {lang: title}, "coord": {lat, lon}, "country": "ES", "architects": [{name, wikidata, died}],
+    "built": year}} — country is the ISO 3166-1 alpha-2 code (P297) of the landmark's country (P17)."""
     raw = _raw(qids)
     arch_ids = sorted({a["id"] for e in raw.values() for a in _claims(e, "P84") if isinstance(a, dict)})
     people = _raw(arch_ids) if arch_ids else {}
+    country_ids = sorted({c for c in (_country_id(e) for e in raw.values()) if c})
+    countries = _raw(country_ids) if country_ids else {}
     res = {}
     for q, e in raw.items():
         titles = {l: e["sitelinks"][f"{l}wiki"]["title"] for l in LANGS if f"{l}wiki" in e.get("sitelinks", {})}
@@ -82,7 +93,9 @@ def entities(qids: list[str]) -> dict:
                          **({"died": _year(d[0])} if d and _year(d[0]) else {})})
         built = [_year(v) for v in _claims(e, "P571") + _claims(e, "P580")]
         built = [b for b in built if b]
-        res[q] = {"titles": titles, "coord": coord, "architects": arch, **({"built": min(built)} if built else {})}
+        iso = _claims(countries.get(_country_id(e) or "", {}), "P297")
+        res[q] = {"titles": titles, "coord": coord, **({"country": str(iso[0]).upper()} if iso else {}),
+                  "architects": arch, **({"built": min(built)} if built else {})}
     return res
 
 

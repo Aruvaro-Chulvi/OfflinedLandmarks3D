@@ -73,6 +73,7 @@ Los modelos hechos por código guardan su programa en `model_sources/<Q…>_<nom
 | `sources` | sí | Los planos, fotos, levantamientos o medidas que has usado. Al menos uno. |
 | `footprint` | no | La zona, vista desde arriba, donde Offlined quita los edificios generados, árboles y mobiliario urbano: `[[x, z], …]` en metros en los ejes del propio modelo. Si no se da, el contorno del modelo visto desde arriba más 1 m. Conviene darla en edificios con patio o en L, donde el contorno quitaría también un vecino. |
 | `based_on` | no | Si el modelo adapta el trabajo de otra persona: `{ "title", "author", "url", "license" }` — esa licencia también tiene que ser CC-BY-4.0 o CC0-1.0. |
+| `country` | no | El país, como código ISO 3166-1 alfa-2 (`ES`, `CN`…). Normalmente no se pone: la release lo toma de Wikidata (el *país* del monumento, P17). Offlined permite descargar solo los monumentos de un país. |
 | `triangles` | no | Lo rellena el comprobador si falta. |
 | `notes` | no | Lo que convenga saber (qué está simplificado, qué es dudoso). |
 

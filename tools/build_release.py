@@ -68,6 +68,7 @@ def main():
         m["radius"] = round(glbtool.radius(scene), 2)
         info = wd.get(d.name, {})
         m["titles"] = info.get("titles", {})
+        m["country"] = str(meta.get("country") or info.get("country") or "")      # ISO 3166-1 alpha-2, "" if unknown
         if info.get("coord"):
             m["wikidata_position"] = info["coord"]
         models.append(m)
@@ -83,6 +84,9 @@ def main():
         "repository": REPO, "base_url": f"{REPO}/releases/download/{tag}/",
         "license": "Each model: its own licence (CC-BY-4.0 or CC0-1.0), authors in 'authors'.",
         "authors": dict(sorted(authors.items(), key=lambda kv: (-kv[1]["models"], kv[0]))),
+        "countries": {c: {"models": sum(1 for m in models if m["country"] == c),
+                          "size": sum(m["size"] + m["lod"]["size"] for m in models if m["country"] == c)}
+                      for c in sorted({m["country"] for m in models})},
         "models": models,
     }
     (out / "manifest.json").write_text(json.dumps(man, ensure_ascii=False, indent=1), "utf-8")
