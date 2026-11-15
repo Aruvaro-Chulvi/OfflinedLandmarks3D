@@ -9,22 +9,38 @@ const REPO = "https://github.com/Aruvaro-Chulvi/OfflinedLandmarks3D";
 
 const TX = {
   en: {
-    sub: "{n} landmarks in 3D, placed where they really are · {a} contributors", contrib: "How to help", search: "Search a monument…",
+    sub: "{n} landmarks in 3D, placed where they really are · {a} contributors", contrib: "How to contribute", search: "Search a monument…",
     empty: "Choose a landmark on the list", people: "Contributors", nModels: "{n} model(s)", by: "3D model by",
     count: "{n} model(s) contributed to the project", lic: "Licence", tris: "Triangles", height: "Height", facing: "Main façade faces",
     rights: "Rights", pd: "Public domain work", prot: "Modern work (protected) — see NOTICE", pos: "Position",
     wp: "Wikipedia", wd: "Wikidata", src: "Sources", person: "The figure beside it is a 1.8 m person. N marks north.",
     dirs: ["north", "north-east", "east", "south-east", "south", "south-west", "west", "north-west"],
+    allCountries: "All countries ({n})", noCountry: "No country", cta: "Want to be on this list? See how to contribute.",
+    helpTitle: "How to contribute", helpIntro: "Every model you add appears in Offlined's Wiki Flight for everyone who flies over that place, with your name on its card.",
+    help1: "Without modelling", help1a: "Ask for a landmark you would like to see (issue “Request a model”).", help1b: "Fix a placement: a model out of place, rotated, floating or sunk (issue “Fix placement”).",
+    help2: "With a model", help2a: "Choose a landmark from the wanted list, or any other with a Wikidata id and a Wikipedia article, and book it in an issue.",
+    help2b: "Build it as a .glb in metres, +Y up, main façade towards +Z (Blender is free).", help2c: "Get the real size and position from OpenStreetMap: tools/osm.py does it for you.",
+    help2d: "Add models/<Q…>/model.glb and meta.json, check it with tools/validate.py and open a pull request.",
+    lGuide: "Full guide", lWanted: "Wanted list", lSpec: "Model specification", lRequest: "Request a model",
   },
   es: {
-    sub: "{n} monumentos en 3D, en su sitio real · {a} colaboradores", contrib: "Cómo ayudar", search: "Busca un monumento…",
+    sub: "{n} monumentos en 3D, en su sitio real · {a} colaboradores", contrib: "Cómo contribuir", search: "Busca un monumento…",
     empty: "Elige un monumento de la lista", people: "Colaboradores", nModels: "{n} modelo(s)", by: "Modelo 3D de",
     count: "{n} modelo(s) aportado(s) al proyecto", lic: "Licencia", tris: "Triángulos", height: "Altura", facing: "Fachada principal al",
     rights: "Derechos", pd: "Obra de dominio público", prot: "Obra moderna (protegida) — ver NOTICE", pos: "Posición",
     wp: "Wikipedia", wd: "Wikidata", src: "Fuentes", person: "La figura de al lado es una persona de 1,8 m. N marca el norte.",
     dirs: ["norte", "nordeste", "este", "sudeste", "sur", "suroeste", "oeste", "noroeste"],
+    allCountries: "Todos los países ({n})", noCountry: "Sin país", cta: "¿Quieres aparecer en esta lista? Mira cómo contribuir.",
+    helpTitle: "Cómo contribuir", helpIntro: "Cada modelo que añades aparece en Wiki Flight de Offlined para todas las personas que sobrevuelan ese lugar, con tu nombre en su ficha.",
+    help1: "Sin modelar", help1a: "Pide un monumento que te gustaría ver (issue «Pedir un modelo»).", help1b: "Corrige una colocación: un modelo fuera de su sitio, girado, flotando o hundido (issue «Corregir colocación»).",
+    help2: "Con un modelo", help2a: "Elige un monumento de la lista de deseos, u otro con id de Wikidata y artículo en Wikipedia, y resérvalo en un issue.",
+    help2b: "Hazlo en .glb, en metros, +Y arriba y la fachada principal hacia +Z (Blender es gratis).", help2c: "Toma el tamaño y la posición reales de OpenStreetMap: tools/osm.py lo hace por ti.",
+    help2d: "Añade models/<Q…>/model.glb y meta.json, compruébalo con tools/validate.py y abre un pull request.",
+    lGuide: "Guía completa", lWanted: "Lista de deseos", lSpec: "Especificación del modelo", lRequest: "Pedir un modelo",
   },
 };
+let regionName = c => c;
+function regionNames() { try { const dn = new Intl.DisplayNames([L, "en"], { type: "region" }); regionName = c => (c ? dn.of(c) || c : t("noCountry")); } catch { regionName = c => c || t("noCountry"); } }
 let L = (() => { try { const s = localStorage.getItem("lm3d_lang"); if (s) return s; } catch { /* */ } return /^es\b/i.test(navigator.language) ? "es" : "en"; })();
 const t = (k, v = {}) => String(TX[L][k] ?? TX.en[k] ?? k).replace(/\{(\w+)\}/g, (_, x) => v[x] ?? "");
 const fmt = n => Number(n).toLocaleString(L === "es" ? "es-ES" : "en-US", { maximumFractionDigits: 1 });
@@ -44,20 +60,48 @@ async function load() {
 function texts() {
   document.documentElement.lang = L;
   $("sub").textContent = t("sub", { n: fmt(IDX.models.length), a: fmt(Object.keys(IDX.authors).length) });
-  $("lnk-contrib").textContent = t("contrib");
-  $("lnk-contrib").href = `${REPO}/blob/main/${L === "es" ? "CONTRIBUTING.es.md" : "CONTRIBUTING.md"}`;
+  $("btn-contrib").textContent = t("contrib");
+  regionNames(); countries(); help();
   $("lang").textContent = L === "es" ? "English" : "Español";
   $("q").placeholder = t("search");
   $("empty").textContent = t("empty");
   $("people-h").textContent = t("people");
-  $("people-l").innerHTML = Object.entries(IDX.authors).map(([n, a]) =>
-    `<li>${a.url ? `<a href="${esc(a.url)}" target="_blank" rel="noopener">${esc(n)}</a>` : esc(n)} <span>· ${t("nModels", { n: a.models })}</span></li>`).join("");
+  const medal = ["🥇", "🥈", "🥉"];
+  $("people-l").innerHTML = Object.entries(IDX.authors).sort((x, y) => y[1].models - x[1].models || x[0].localeCompare(y[0])).map(([n, a], i) =>
+    `<li${i < 3 ? ' class="top"' : ""}>${i < 3 ? medal[i] + " " : ""}<b>${a.url ? `<a href="${esc(a.url)}" target="_blank" rel="noopener">${esc(n)}</a>` : esc(n)}</b> <span>· ${t("nModels", { n: a.models })}</span></li>`).join("")
+    + `<p class="cta"><a href="#" id="cta">${esc(t("cta"))}</a></p>`;
+  $("cta").onclick = e => { e.preventDefault(); openHelp(); };
   if (cur) card(cur);
 }
 
+/** Selector de país: todos y cada país con sus modelos */
+function countries() {
+  const v = $("cty").value, n = {};
+  for (const m of IDX.models) n[m.country || ""] = (n[m.country || ""] || 0) + 1;
+  const cs = Object.keys(n).sort((a, b) => regionName(a).localeCompare(regionName(b), L));
+  $("cty").innerHTML = `<option value="*">${esc(t("allCountries", { n: IDX.models.length }))}</option>`
+    + cs.map(c => `<option value="${esc(c)}">${esc(regionName(c))} (${n[c]})</option>`).join("");
+  $("cty").value = v && (v === "*" || v in n) ? v : "*";
+}
+/** La ventana «Cómo contribuir» */
+function help() {
+  const doc = f => `${REPO}/blob/main/${L === "es" ? f + ".es.md" : f + ".md"}`;
+  $("help-h").textContent = t("helpTitle"); $("help-intro").textContent = t("helpIntro");
+  $("help-h1").textContent = t("help1"); $("help-l1").innerHTML = ["help1a", "help1b"].map(k => `<li>${esc(t(k))}</li>`).join("");
+  $("help-h2").textContent = t("help2"); $("help-l2").innerHTML = ["help2a", "help2b", "help2c", "help2d"].map(k => `<li>${esc(t(k))}</li>`).join("");
+  $("help-links").innerHTML = [[t("lGuide"), doc("CONTRIBUTING")], [t("lWanted"), doc("WANTED")], [t("lSpec"), `${REPO}/blob/main/docs/${L === "es" ? "MODEL_SPEC.es.md" : "MODEL_SPEC.md"}`],
+    [t("lRequest"), `${REPO}/issues/new?template=model-request.yml`]].map(([l, u]) => `<a href="${esc(u)}" target="_blank" rel="noopener">${esc(l)}</a>`).join("");
+}
+function openHelp() { $("help").hidden = false; }
+$("btn-contrib").onclick = openHelp;
+$("help-x").onclick = () => { $("help").hidden = true; };
+$("help").onclick = e => { if (e.target === $("help")) $("help").hidden = true; };
+addEventListener("keydown", e => { if (e.key === "Escape") $("help").hidden = true; });
+$("cty").onchange = () => list();
+
 function list() {
-  const q = norm($("q").value.trim());
-  const res = IDX.models.filter(m => !q || m._s.includes(q));
+  const q = norm($("q").value.trim()), c = $("cty").value;
+  const res = IDX.models.filter(m => (!q || m._s.includes(q)) && (c === "*" || (m.country || "") === c));
   $("list").innerHTML = res.map(m => `<div class="it${cur === m ? " on" : ""}" data-q="${m.id}">
     ${m.preview ? `<img src="models/${m.id}/preview.jpg" alt="" loading="lazy">` : '<span class="ph"></span>'}
     <span class="nm">${esc(nameOf(m))}<small>${esc(m.authors.map(a => a.name).join(", "))}</small></span></div>`).join("");

@@ -40,7 +40,9 @@ def main():
                 shutil.copy2(d / f, dst / f)
         info = wd.get(d.name, {})
         models.append({k: m.get(k) for k in ("id", "name", "heading", "position", "authors", "license", "rights", "triangles", "sources", "notes")}
-                      | {"titles": info.get("titles", {}), "preview": (d / "preview.jpg").exists()})
+                      | {"titles": info.get("titles", {}), "preview": (d / "preview.jpg").exists(),
+                         # ISO 3166-1 alpha-2, as in the release manifest (meta.json first, then Wikidata); "" if unknown
+                         "country": str(m.get("country") or info.get("country") or "")})
         for a in m.get("authors", []):
             e = authors.setdefault(a["name"], {"models": 0})
             e["models"] += 1
