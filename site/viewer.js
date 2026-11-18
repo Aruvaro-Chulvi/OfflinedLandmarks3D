@@ -123,8 +123,8 @@ scene.add(new THREE.HemisphereLight(0xdfefff, 0x6f6a5c, 1.25));
 const sun = new THREE.DirectionalLight(0xfff1dc, 2.0);
 sun.castShadow = true; sun.shadow.mapSize.set(2048, 2048); sun.shadow.bias = -0.0006; sun.shadow.normalBias = 0.06;
 scene.add(sun, sun.target);
-const ground = new THREE.Mesh(new THREE.CircleGeometry(1, 96).rotateX(-Math.PI / 2), new THREE.MeshStandardMaterial({ color: 0xb9b4a6, roughness: 1 }));
-ground.receiveShadow = true; scene.add(ground);
+const ground = new THREE.Mesh(new THREE.CircleGeometry(1, 96).rotateX(-Math.PI / 2), new THREE.MeshStandardMaterial({ color: 0xb9b4a6, roughness: 1, transparent: true, opacity: 0.5, depthWrite: false }));
+ground.receiveShadow = true; ground.renderOrder = 1; scene.add(ground);      // half transparent: what stands below y = 0 shows through
 let grid = null;
 const person = new THREE.Group();
 {
@@ -170,9 +170,11 @@ async function build(m) {
   const gy = m.ground === "keep" && typeof m.ground_low === "number" ? Math.min(0, m.ground_low) : 0;
   ground.scale.setScalar(R * 6); ground.position.set(c.x, gy - 0.02, c.z);
   if (grid) { scene.remove(grid); grid.geometry.dispose(); }
-  const step = R > 150 ? 20 : R > 30 ? 5 : 1;
-  grid = new THREE.GridHelper(Math.round(R * 4 / step) * step, Math.round(R * 4 / step), 0x8a8676, 0x8a8676);
-  grid.material.transparent = true; grid.material.opacity = 0.18; grid.position.set(c.x, gy + 0.01, c.z); scene.add(grid);
+  // a grid of large squares (50 m on big landmarks, 10 m on middle ones, 2 m on small ones), half transparent like the ground
+  const step = R > 150 ? 50 : R > 30 ? 10 : 2, n = Math.max(2, Math.round(R * 6 / step));
+  grid = new THREE.GridHelper(n * step, n, 0x4f4b42, 0x4f4b42);
+  grid.material.transparent = true; grid.material.opacity = 0.5; grid.material.depthWrite = false; grid.renderOrder = 2;
+  grid.position.set(c.x, gy + 0.02, c.z); scene.add(grid);
   arrow.scale.setScalar(Math.max(2, R * 0.12)); arrow.position.set(c.x - R * 0.9, gy + 0.03, c.z - R * 0.9);
   person.position.set(box.max.x + Math.max(1.5, R * 0.04), gy, c.z + size.z * 0.3);
   scene.fog.near = R * 4; scene.fog.far = R * 14;
