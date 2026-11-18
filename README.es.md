@@ -21,7 +21,7 @@ tamaño real con una persona, abre su artículo de Wikipedia, descarga el `.glb`
 
 | | |
 |---|---|
-| [`models/`](models/) | Los modelos 3D, una carpeta por id de Wikidata: `model.glb`, `meta.json` (autoría, licencia, fuentes, posición, orientación, derechos) y `preview.jpg`. Ya hay 23 monumentos: 20 de **Madrid**, de la [Puerta de Alcalá](models/Q1140634/) y el [Palacio Real](models/Q171517/) a las [Cuatro Torres](models/Q519568/), además de la [Torre Eiffel](models/Q243/), la [Estatua de la Libertad](models/Q9202/) y la [muralla de Ávila](models/Q3050235/). |
+| [`models/`](models/) | Los modelos 3D, una carpeta por id de Wikidata: `model.glb`, `meta.json` (autoría, licencia, fuentes, posición, orientación, derechos) y `preview.jpg`. Ya hay 24 monumentos: 20 de **Madrid**, de la [Puerta de Alcalá](models/Q1140634/) y el [Palacio Real](models/Q171517/) a las [Cuatro Torres](models/Q519568/), además de la [Torre Eiffel](models/Q243/), la [Estatua de la Libertad](models/Q9202/) y, en España, la [muralla de Ávila](models/Q3050235/) y el [Monasterio de El Escorial](models/Q28471/) con sus jardines. |
 | [`model_sources/`](model_sources/) | Modelos hechos por código (Python + [`tools/meshkit.py`](tools/meshkit.py)): ejecutas el programa y sale el `.glb`. |
 | [`docs/MODEL_SPEC.es.md`](docs/MODEL_SPEC.es.md) | Las reglas que siguen todos los modelos: glTF `.glb`, metros, ejes, origen, límites, `meta.json`. |
 | [`site/`](site/) | La página web publicada en GitHub Pages. |
@@ -57,7 +57,7 @@ release: Offlined no descarga nada que no se haya publicado ahí. Ver [CONTRIBUT
 
 | | Modelos |
 |---|---:|
-| [Álvaro C. Chulvi](https://github.com/Aruvaro-Chulvi) | 23 |
+| [Álvaro C. Chulvi](https://github.com/Aruvaro-Chulvi) | 24 |
 
 ## Licencias
 

@@ -43,6 +43,12 @@ Los modelos hechos por código guardan su programa en `model_sources/<Q…>_<nom
   debajo de `y = 0`** (2–5 m; más en una cuesta fuerte), para que no quede un hueco donde el terreno esté
   más bajo que el origen. No modeles las calles de alrededor ni el terreno: Offlined los dibuja del mapa.
 - Lo pequeño que forma parte del monumento (su verja, escalinata, una fuente delante) puede ir incluido.
+- **En cuesta o en terrazas** (un monasterio con sus jardines en terrazas, un castillo en un cerro): por
+  defecto Offlined allana el suelo dentro de la planta a su punto más bajo y apoya ahí el modelo, que está bien
+  para un edificio en llano pero hunde uno en ladera. Pon `"ground": "keep"` en `meta.json`: el terreno se
+  deja como está y `y = 0` se apoya en el suelo en `ground_at` (`[x, z]`, por defecto el origen) — elige un
+  punto de suelo despejado a la altura de `y = 0` (una plaza delante de la fachada principal), no el centro de
+  los tejados. Entonces cada muro, terraza y muro de contención debe bajar lo bastante para tocar el terreno real.
 
 ## 4. `meta.json`
 
@@ -72,6 +78,8 @@ Los modelos hechos por código guardan su programa en `model_sources/<Q…>_<nom
 | `rights` | sí | `status`: `public_domain` o `protected`; `architects`: `[{name, died?, wikidata?}]`; `built` (año); `note`. Ver [NOTICE § Edificios y derechos de autor](../NOTICE.md#buildings-and-copyright). |
 | `sources` | sí | Los planos, fotos, levantamientos o medidas que has usado. Al menos uno. |
 | `footprint` | no | La zona, vista desde arriba, donde Offlined quita los edificios generados, árboles y mobiliario urbano: `[[x, z], …]` en metros en los ejes del propio modelo. Si no se da, el contorno del modelo visto desde arriba más 1 m. Conviene darla en edificios con patio o en L, donde el contorno quitaría también un vecino. |
+| `ground` | no | `"flatten"` (por defecto): Offlined allana el suelo dentro de la planta a su punto más bajo y apoya ahí el modelo. `"keep"`: el terreno se deja como está, para modelos en cuesta o en terrazas (§3). |
+| `ground_at` | no | Con `"ground": "keep"`: `[x, z]` en los ejes del modelo donde `y = 0` toca el suelo (por defecto `[0, 0]`, el origen). |
 | `based_on` | no | Si el modelo adapta el trabajo de otra persona: `{ "title", "author", "url", "license" }` — esa licencia también tiene que ser CC-BY-4.0 o CC0-1.0. |
 | `country` | no | El país, como código ISO 3166-1 alfa-2 (`ES`, `CN`…). Normalmente no se pone: la release lo toma de Wikidata (el *país* del monumento, P17). Offlined permite descargar solo los monumentos de un país. |
 | `triangles` | no | Lo rellena el comprobador si falta. |

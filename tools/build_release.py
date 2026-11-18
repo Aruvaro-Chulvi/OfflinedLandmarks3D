@@ -35,7 +35,7 @@ import wikidata  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
 REPO = "https://github.com/Aruvaro-Chulvi/OfflinedLandmarks3D"
-META_KEYS = ("name", "heading", "position", "authors", "license", "rights", "based_on")
+META_KEYS = ("name", "heading", "position", "authors", "license", "rights", "based_on", "ground", "ground_at")
 
 
 def sha(b: bytes) -> str:

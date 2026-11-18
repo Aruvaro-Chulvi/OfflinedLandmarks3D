@@ -42,6 +42,12 @@ Models built by code keep their script in `model_sources/<Q…>_<name>.py` (see 
   `y = 0`** (2–5 m; more on a steep slope), so that no gap shows where the terrain is lower than the origin.
   Do not model the surrounding streets or the terrain itself: Offlined draws them from the map.
 - Small things that belong to the monument (its railing, steps, a fountain in front) can be included.
+- **On a slope or on terraces** (a monastery with its terraced gardens, a castle on a hill): by default Offlined
+  levels the ground inside the footprint to its lowest point and sets the model there, which is right for a
+  building on flat ground but sinks one on a hillside. Give `"ground": "keep"` in `meta.json`: the terrain is
+  left as it is and `y = 0` is set on the ground at `ground_at` (`[x, z]`, default the origin) — pick a point of
+  open ground at the level of `y = 0` (a square in front of the main façade), not the middle of the roofs. Then
+  every wall, terrace and retaining wall must go down far enough to meet the real terrain.
 
 ## 4. `meta.json`
 
@@ -71,6 +77,8 @@ Models built by code keep their script in `model_sources/<Q…>_<name>.py` (see 
 | `rights` | yes | `status`: `public_domain` or `protected`; `architects`: `[{name, died?, wikidata?}]`; `built` (year); `note`. See [NOTICE § Buildings and copyright](../NOTICE.md#buildings-and-copyright). |
 | `sources` | yes | The plans, photos, surveys or measurements you used. At least one. |
 | `footprint` | no | The area, seen from above, where Offlined clears the generated buildings, trees and street furniture: `[[x, z], …]` in metres in the model's own axes. By default, the outline of the model seen from above plus 1 m. Give it for buildings with courtyards or L shapes, where the default would also clear a neighbour. |
+| `ground` | no | `"flatten"` (default): Offlined levels the ground inside the footprint to its lowest point and sets the model there. `"keep"`: the terrain is left as it is, for models on a slope or on terraces (§3). |
+| `ground_at` | no | With `"ground": "keep"`: `[x, z]` in the model's axes where `y = 0` meets the ground (default `[0, 0]`, the origin). |
 | `based_on` | no | If the model adapts someone else's work: `{ "title", "author", "url", "license" }` — that licence must be CC-BY-4.0 or CC0-1.0 too. |
 | `country` | no | The country as an ISO 3166-1 alpha-2 code (`ES`, `CN`…). Normally left out: the release takes it from Wikidata (the landmark's *country*, P17). Offlined lets people download only the landmarks of one country. |
 | `triangles` | no | Filled in by the checker if missing. |

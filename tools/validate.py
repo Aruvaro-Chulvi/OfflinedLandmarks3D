@@ -184,6 +184,13 @@ def check_folder(d: Path, errors: list, warnings: list):
         if not isinstance(b, dict) or b.get("license") not in LICENSES or not b.get("author"):
             err("based_on needs author, url and a CC-BY-4.0 or CC0-1.0 license")
     check_rights(m.get("rights"), err, warn)
+    if m.get("ground", "flatten") not in ("flatten", "keep"):
+        err('ground: "flatten" (the default) or "keep" (MODEL_SPEC §3)')
+    ga = m.get("ground_at")
+    if ga is not None and not (isinstance(ga, list) and len(ga) == 2 and all(isinstance(v, (int, float)) for v in ga)):
+        err("ground_at: [x, z] in metres in the model's axes")
+    elif ga is not None and m.get("ground") != "keep":
+        warn('ground_at is only used with "ground": "keep"')
     fp = m.get("footprint")
     if fp is not None and not (isinstance(fp, list) and len(fp) >= 3 and all(isinstance(q, list) and len(q) == 2 and all(isinstance(v, (int, float)) for v in q) for q in fp)):
         err("footprint: a list of at least 3 [x, z] points in metres (model space)")

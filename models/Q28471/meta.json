@@ -1,0 +1,159 @@
+{
+  "id": "Q28471",
+  "name": "Real Monasterio de San Lorenzo de El Escorial",
+  "heading": 282.15,
+  "position": {
+    "lat": 40.5890622,
+    "lon": -4.1479458,
+    "source": "https://www.openstreetmap.org/relation/1264135 (centre of the 207.7 × 162.6 m rectangle of the monastery, leaving out the palace that projects to the east; heading = the main front on the Lonja, squared to the outline within ~0.2 m)"
+  },
+  "ground": "keep",
+  "ground_at": [
+    0,
+    105
+  ],
+  "authors": [
+    {
+      "name": "Álvaro C. Chulvi",
+      "url": "https://github.com/Aruvaro-Chulvi"
+    }
+  ],
+  "license": "CC-BY-4.0",
+  "rights": {
+    "status": "public_domain",
+    "architects": [
+      {
+        "name": "Juan Bautista de Toledo",
+        "died": 1567
+      },
+      {
+        "name": "Juan de Herrera",
+        "died": 1597
+      },
+      {
+        "name": "Francisco de Mora",
+        "died": 1610
+      }
+    ],
+    "built": 1584,
+    "note": "Begun in 1563 to Juan Bautista de Toledo's design, finished in 1584 by Juan de Herrera for Philip II; the gardens and the Galería de Convalecientes are of the same years, the Botica is by Francisco de Mora. The roofs were renewed in 1968 to the same shapes. Every author died centuries ago."
+  },
+  "sources": [
+    {
+      "title": "OpenStreetMap relation 1264135 — outline of the monastery and its 16 courtyards (© OpenStreetMap contributors, ODbL)",
+      "url": "https://www.openstreetmap.org/relation/1264135"
+    },
+    {
+      "title": "OpenStreetMap relation 12030499 — «partes del Monasterio de El Escorial»: the ~180 building:part pieces (wings, towers, basilica, palace) with their roof shapes and relative heights",
+      "url": "https://www.openstreetmap.org/relation/12030499"
+    },
+    {
+      "title": "OpenStreetMap ways 232765850 (Jardín de los Frailes), 232765849 (Jardines reservados de los Reyes), 878714594, 1337321442–1337321517 (retaining walls, parterres, sunken stairs, garden walls), 663968139–663968143 (templete and ponds of the Patio de los Evangelistas), 887821665–888162182 (fountains of the courtyards), 878774512–878774516 (lower garden), 26136021 (Estanque), 1337321473–1337321486 (walls of the pond), 1337328790–1337328798 (parapets of the Lonja)",
+      "url": "https://www.openstreetmap.org/way/232765850"
+    },
+    {
+      "title": "OpenStreetMap relation 3126701 (Galería de Convalecientes) and way 890760522 (Botica)",
+      "url": "https://www.openstreetmap.org/relation/3126701"
+    },
+    {
+      "title": "OpenStreetMap nodes 8266944564–8266944569 and 8266944838 — the six kings of Judah on the basilica and San Lorenzo on the main portal (Juan Bautista Monegro)",
+      "url": "https://www.openstreetmap.org/node/8266944566"
+    },
+    {
+      "title": "Real Monasterio de San Lorenzo de El Escorial — Wikipedia (es): plan (Sigüenza, 735 × 580 Castilian feet), slate from Bernardos, granite, Lonja, gardens, Galería de Convalecientes, palace of Philip II",
+      "url": "https://es.wikipedia.org/wiki/Real_Monasterio_de_San_Lorenzo_de_El_Escorial"
+    },
+    {
+      "title": "Real basílica de San Lorenzo de El Escorial — Wikipedia (es): 50 m square plan, dome 17 m across on a drum with 8 windows, cross 95 m above the floor, Tuscan portico with the six kings, steps across the front, towers flanking the atrium",
+      "url": "https://es.wikipedia.org/wiki/Bas%C3%ADlica_de_El_Escorial"
+    },
+    {
+      "title": "El Escorial — Wikipedia (en): grey granite, square corner towers with spires",
+      "url": "https://en.wikipedia.org/wiki/El_Escorial"
+    },
+    {
+      "title": "EU-DEM v1.1 25 m (Copernicus), via OpenTopoData: the levels of the Lonja (≈1037 m), the garden terrace and the orchard",
+      "url": "https://www.opentopodata.org/datasets/eudem/"
+    },
+    {
+      "title": "Wikidata Q28471 — dates",
+      "url": "https://www.wikidata.org/wiki/Q28471"
+    }
+  ],
+  "notes": "Built by code (model_sources/Q28471_monasterio_de_el_escorial.py, tools/meshkit.py) with AI assistance. Plan and roof shapes from the OpenStreetMap building:parts; their heights are relative and too low for the known figures (cross of the dome 95 m above the church floor, corner towers 55 m, bell towers 72 m), so they were mapped to: wings 20 m to the cornice and 25.5 m to the ridge, cloister galleries 14 m, basilica arms 32/37.5 m, drum 38–57.5 m, dome to 70.5 m, lantern, ball and cross to 96.5 m, corner towers 34 m + spire to 55 m, bell towers 47 m + drum and cupola to 72 m (±10 %). Included: the gardens of the Frailes and of the King on their terrace 2 m below the Lonja, with retaining walls and parapets with balls, the box parterres as OpenStreetMap draws them, a fountain in each group of four parterres, the sunken stairs into the vaults, the walled lower garden at the north-east corner (−7 m), the Galería de Convalecientes and the Botica, the Estanque of the orchard (water ~10 m below the Lonja), the templete and ponds of the Patio de los Evangelistas, the fountains of the small courtyards and the parapets of the Lonja. Not included: the orchard itself, the terrain, the Casas de Oficios and the Casa de Infantes. Uncertain: the exact levels of the terrace, the orchard and the pond (EU-DEM is smoothed over 25 m), the number and size of the windows, the shapes of the small roofs of the palace, the details of the portals. footprint: the monastery, the garden terrace, the lower garden, the Galería and the pond, not the orchard. ground: keep — the monastery stands on a hillside with terraced gardens, so the terrain is not levelled; y = 0 is the ground of the Lonja in front of the main portal (ground_at [0, 105], ≈1037 m in EU-DEM).",
+  "triangles": 72060,
+  "footprint": [
+    [
+      -104.9,
+      84.2
+    ],
+    [
+      18.9,
+      84.2
+    ],
+    [
+      18.9,
+      84.4
+    ],
+    [
+      100.6,
+      84.4
+    ],
+    [
+      100.6,
+      138.0
+    ],
+    [
+      104.5,
+      138.0
+    ],
+    [
+      104.5,
+      164.5
+    ],
+    [
+      112.8,
+      164.5
+    ],
+    [
+      112.8,
+      138.1
+    ],
+    [
+      138.8,
+      138.1
+    ],
+    [
+      138.8,
+      131.4
+    ],
+    [
+      203.6,
+      131.4
+    ],
+    [
+      203.6,
+      80.8
+    ],
+    [
+      133.2,
+      80.8
+    ],
+    [
+      133.2,
+      -109.4
+    ],
+    [
+      46.5,
+      -109.4
+    ],
+    [
+      46.5,
+      -157.8
+    ],
+    [
+      -104.9,
+      -157.8
+    ]
+  ]
+}

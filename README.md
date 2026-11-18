@@ -21,7 +21,7 @@ their real size against a person, open their Wikipedia article, download the `.g
 
 | | |
 |---|---|
-| [`models/`](models/) | The 3D models, one folder per Wikidata id: `model.glb`, `meta.json` (author, licence, sources, position, orientation, rights) and `preview.jpg`. 23 landmarks so far: 20 in **Madrid**, from the [Puerta de Alcalá](models/Q1140634/) and the [Palacio Real](models/Q171517/) to the [Cuatro Torres](models/Q519568/), plus the [Eiffel Tower](models/Q243/), the [Statue of Liberty](models/Q9202/) and the [walls of Ávila](models/Q3050235/). |
+| [`models/`](models/) | The 3D models, one folder per Wikidata id: `model.glb`, `meta.json` (author, licence, sources, position, orientation, rights) and `preview.jpg`. 24 landmarks so far: 20 in **Madrid**, from the [Puerta de Alcalá](models/Q1140634/) and the [Palacio Real](models/Q171517/) to the [Cuatro Torres](models/Q519568/), plus the [Eiffel Tower](models/Q243/), the [Statue of Liberty](models/Q9202/) and, in Spain, the [walls of Ávila](models/Q3050235/) and the [Monastery of El Escorial](models/Q28471/) with its gardens. |
 | [`model_sources/`](model_sources/) | Models built by code (Python + [`tools/meshkit.py`](tools/meshkit.py)): run the script, get the `.glb`. |
 | [`docs/MODEL_SPEC.md`](docs/MODEL_SPEC.md) | The rules every model follows: glTF `.glb`, metres, axes, origin, size limits, `meta.json`. |
 | [`site/`](site/) | The web page published on GitHub Pages. |
@@ -57,7 +57,7 @@ Offlined downloads nothing that has not been published there. See [CONTRIBUTING.
 
 | | Models |
 |---|---:|
-| [Álvaro C. Chulvi](https://github.com/Aruvaro-Chulvi) | 23 |
+| [Álvaro C. Chulvi](https://github.com/Aruvaro-Chulvi) | 24 |
 
 ## Licences
 
