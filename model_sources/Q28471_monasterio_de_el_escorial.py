@@ -930,7 +930,7 @@ def lonja():
     out = []
     for i, r in DATA["walls"]:
         if 1337328790 <= i <= 1337328798:
-            out += wall_line_mesh(r, -2.0, 1.0, 0.75, balls=True)
+            out += wall_line_mesh(r, -10.5, 1.0, 0.75, balls=True)
     return out
 
 

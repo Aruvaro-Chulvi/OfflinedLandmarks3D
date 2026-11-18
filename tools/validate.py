@@ -191,6 +191,11 @@ def check_folder(d: Path, errors: list, warnings: list):
         err("ground_at: [x, z] in metres in the model's axes")
     elif ga is not None and m.get("ground") != "keep":
         warn('ground_at is only used with "ground": "keep"')
+    gl = m.get("ground_low")
+    if gl is not None and not (isinstance(gl, (int, float)) and -200 <= gl <= 0):
+        err("ground_low: the level (y) of the lowest ground around the model, between -200 and 0")
+    elif gl is not None and m.get("ground") != "keep":
+        warn('ground_low is only used with "ground": "keep"')
     fp = m.get("footprint")
     if fp is not None and not (isinstance(fp, list) and len(fp) >= 3 and all(isinstance(q, list) and len(q) == 2 and all(isinstance(v, (int, float)) for v in q) for q in fp)):
         err("footprint: a list of at least 3 [x, z] points in metres (model space)")

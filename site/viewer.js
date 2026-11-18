@@ -166,20 +166,22 @@ async function build(m) {
   scene.add(model);
   const box = new THREE.Box3().setFromObject(model), size = box.getSize(new THREE.Vector3()), c = box.getCenter(new THREE.Vector3());
   const R = Math.max(size.x, size.z, size.y, 4);
-  ground.scale.setScalar(R * 6); ground.position.set(c.x, -0.02, c.z);
+  // on a slope or on terraces ("ground": "keep") the flat ground goes to the lowest level around it (ground_low)
+  const gy = m.ground === "keep" && typeof m.ground_low === "number" ? Math.min(0, m.ground_low) : 0;
+  ground.scale.setScalar(R * 6); ground.position.set(c.x, gy - 0.02, c.z);
   if (grid) { scene.remove(grid); grid.geometry.dispose(); }
   const step = R > 150 ? 20 : R > 30 ? 5 : 1;
   grid = new THREE.GridHelper(Math.round(R * 4 / step) * step, Math.round(R * 4 / step), 0x8a8676, 0x8a8676);
-  grid.material.transparent = true; grid.material.opacity = 0.18; grid.position.set(c.x, 0.01, c.z); scene.add(grid);
-  arrow.scale.setScalar(Math.max(2, R * 0.12)); arrow.position.set(c.x - R * 0.9, 0.03, c.z - R * 0.9);
-  person.position.set(box.max.x + Math.max(1.5, R * 0.04), 0, c.z + size.z * 0.3);
+  grid.material.transparent = true; grid.material.opacity = 0.18; grid.position.set(c.x, gy + 0.01, c.z); scene.add(grid);
+  arrow.scale.setScalar(Math.max(2, R * 0.12)); arrow.position.set(c.x - R * 0.9, gy + 0.03, c.z - R * 0.9);
+  person.position.set(box.max.x + Math.max(1.5, R * 0.04), gy, c.z + size.z * 0.3);
   scene.fog.near = R * 4; scene.fog.far = R * 14;
   sun.position.set(c.x + R * 0.7, R * 1.4, c.z + R * 0.9); sun.target.position.copy(c);
   const sc = sun.shadow.camera; sc.left = sc.bottom = -R * 1.2; sc.right = sc.top = R * 1.2; sc.near = 1; sc.far = R * 5; sc.updateProjectionMatrix();
   camera.near = Math.max(0.05, R / 500); camera.far = R * 40; camera.updateProjectionMatrix();
   // first look: from the side the main façade faces, a little to one side
   const h = (m.heading || 0) * Math.PI / 180, a = h + 0.55;
-  controls.target.set(c.x, size.y * 0.4, c.z);
+  controls.target.set(c.x, gy + (box.max.y - gy) * 0.4, c.z);
   camera.position.set(c.x + Math.sin(a) * R * 1.25, Math.max(R * 0.35, 3), c.z - Math.cos(a) * R * 1.25);
   controls.maxDistance = R * 6; controls.minDistance = Math.max(1, R * 0.05);
   $("scale").textContent = `${fmt(size.x)} × ${fmt(size.z)} × ${fmt(size.y)} m · ${t("person")}`;

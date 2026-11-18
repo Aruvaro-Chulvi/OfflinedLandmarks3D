@@ -39,7 +39,7 @@ def main():
             if (d / f).exists():
                 shutil.copy2(d / f, dst / f)
         info = wd.get(d.name, {})
-        models.append({k: m.get(k) for k in ("id", "name", "heading", "position", "authors", "license", "rights", "triangles", "sources", "notes")}
+        models.append({k: m.get(k) for k in ("id", "name", "heading", "position", "authors", "license", "rights", "triangles", "sources", "notes", "ground", "ground_low")}
                       | {"titles": info.get("titles", {}), "preview": (d / "preview.jpg").exists(),
                          # ISO 3166-1 alpha-2, as in the release manifest (meta.json first, then Wikidata); "" if unknown
                          "country": str(m.get("country") or info.get("country") or "")})

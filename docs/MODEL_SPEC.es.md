@@ -80,6 +80,7 @@ Los modelos hechos por código guardan su programa en `model_sources/<Q…>_<nom
 | `footprint` | no | La zona, vista desde arriba, donde Offlined quita los edificios generados, árboles y mobiliario urbano: `[[x, z], …]` en metros en los ejes del propio modelo. Si no se da, el contorno del modelo visto desde arriba más 1 m. Conviene darla en edificios con patio o en L, donde el contorno quitaría también un vecino. |
 | `ground` | no | `"flatten"` (por defecto): Offlined allana el suelo dentro de la planta a su punto más bajo y apoya ahí el modelo. `"keep"`: el terreno se deja como está, para modelos en cuesta o en terrazas (§3). |
 | `ground_at` | no | Con `"ground": "keep"`: `[x, z]` en los ejes del modelo donde `y = 0` toca el suelo (por defecto `[0, 0]`, el origen). |
+| `ground_low` | no | Con `"ground": "keep"`: el nivel (y, ≤ 0) del suelo más bajo alrededor del modelo, p. ej. la huerta bajo un jardín en terrazas. El visor web y la vista previa dibujan ahí su suelo plano, para que se vea lo que queda por debajo de `y = 0` (por defecto 0). |
 | `based_on` | no | Si el modelo adapta el trabajo de otra persona: `{ "title", "author", "url", "license" }` — esa licencia también tiene que ser CC-BY-4.0 o CC0-1.0. |
 | `country` | no | El país, como código ISO 3166-1 alfa-2 (`ES`, `CN`…). Normalmente no se pone: la release lo toma de Wikidata (el *país* del monumento, P17). Offlined permite descargar solo los monumentos de un país. |
 | `triangles` | no | Lo rellena el comprobador si falta. |

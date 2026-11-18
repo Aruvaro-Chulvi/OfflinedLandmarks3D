@@ -13,6 +13,7 @@ horizon. The top view has the main façade at the bottom.
 from __future__ import annotations
 
 import argparse
+import json
 import math
 import sys
 from pathlib import Path
@@ -32,6 +33,16 @@ def _lin2srgb(c):
     return np.where(c <= 0.0031308, c * 12.92, 1.055 * c ** (1 / 2.4) - 0.055)
 
 
+def ground_low(path):
+    """For a model with \"ground\": \"keep\" and ground_low in its meta.json: that level (else 0)."""
+    meta = Path(path).parent / "meta.json"
+    try:
+        m = json.loads(meta.read_text("utf-8"))
+        return float(m["ground_low"]) if m.get("ground") == "keep" and "ground_low" in m else 0.0
+    except Exception:                                       # noqa: BLE001
+        return 0.0
+
+
 def load(path):
     sc = read_glb(str(path))
     mats = sc["gltf"].get("materials", [])
@@ -45,7 +56,9 @@ def load(path):
         rough = m.get("pbrMetallicRoughness", {}).get("roughnessFactor", 0.9)
         V.append(pos); C.append(_lin2srgb(col * bc)); Fs.append(p["idx"] + o); S.append(np.full(len(p["idx"]), 1 - rough))
         o += len(pos)
-    return np.vstack(V), np.vstack(C), np.vstack(Fs), np.concatenate(S)
+    V = np.vstack(V)
+    V[:, 1] -= ground_low(path)          # the grey ground is drawn at y = 0: lift a model whose lowest ground is below
+    return V, np.vstack(C), np.vstack(Fs), np.concatenate(S)
 
 
 def person(x, z):

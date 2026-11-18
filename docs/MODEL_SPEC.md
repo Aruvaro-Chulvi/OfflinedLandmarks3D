@@ -79,6 +79,7 @@ Models built by code keep their script in `model_sources/<Q…>_<name>.py` (see 
 | `footprint` | no | The area, seen from above, where Offlined clears the generated buildings, trees and street furniture: `[[x, z], …]` in metres in the model's own axes. By default, the outline of the model seen from above plus 1 m. Give it for buildings with courtyards or L shapes, where the default would also clear a neighbour. |
 | `ground` | no | `"flatten"` (default): Offlined levels the ground inside the footprint to its lowest point and sets the model there. `"keep"`: the terrain is left as it is, for models on a slope or on terraces (§3). |
 | `ground_at` | no | With `"ground": "keep"`: `[x, z]` in the model's axes where `y = 0` meets the ground (default `[0, 0]`, the origin). |
+| `ground_low` | no | With `"ground": "keep"`: the level (y, ≤ 0) of the lowest ground around the model, e.g. the orchard below a terraced garden. The web viewer and the preview draw their flat ground there, so what stands below `y = 0` can be seen (default 0). |
 | `based_on` | no | If the model adapts someone else's work: `{ "title", "author", "url", "license" }` — that licence must be CC-BY-4.0 or CC0-1.0 too. |
 | `country` | no | The country as an ISO 3166-1 alpha-2 code (`ES`, `CN`…). Normally left out: the release takes it from Wikidata (the landmark's *country*, P17). Offlined lets people download only the landmarks of one country. |
 | `triangles` | no | Filled in by the checker if missing. |
