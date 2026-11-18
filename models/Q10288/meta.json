@@ -1,0 +1,373 @@
+{
+  "id": "Q10288",
+  "name": "Parthenon (with the Acropolis of Athens)",
+  "heading": 77.09,
+  "position": {
+    "lat": 37.9715033,
+    "lon": 23.7266177,
+    "source": "https://www.openstreetmap.org/way/910010406 (centre of the 58 column centres of building relation 5723216; heading = their axis by least squares, the east front)"
+  },
+  "ground": "keep",
+  "ground_at": [
+    20,
+    60
+  ],
+  "ground_low": -30,
+  "authors": [
+    {
+      "name": "Álvaro C. Chulvi",
+      "url": "https://github.com/Aruvaro-Chulvi"
+    }
+  ],
+  "license": "CC-BY-4.0",
+  "rights": {
+    "status": "public_domain",
+    "architects": [
+      {
+        "name": "Ictinus",
+        "wikidata": "Q311502"
+      },
+      {
+        "name": "Callicrates",
+        "died": -420,
+        "wikidata": "Q114112"
+      },
+      {
+        "name": "Phidias",
+        "died": -430,
+        "wikidata": "Q177302"
+      },
+      {
+        "name": "Mnesicles"
+      }
+    ],
+    "built": -432,
+    "note": "The Parthenon was built 447–432 BC (Iktinos and Kallikrates, sculpture by Pheidias), the Propylaia 437–432 BC (Mnesikles), the Temple of Athena Nike c. 427–424 BC (Kallikrates), the Erechtheion 421–406 BC, the walls in the 5th century BC; the Beulé Gate is of the 3rd century AD. The ruin is shown as restored by the Acropolis Restoration Service (anastylosis), which adds no new design. Every author died over two thousand years ago."
+  },
+  "sources": [
+    {
+      "title": "OpenStreetMap building relation 5723216 (outline way 910010406, wikidata Q10288) — the Parthenon and its 286 building:parts: crepis, the 58 columns with their present heights, architrave and frieze pieces, cella walls, pediments (© OpenStreetMap contributors, ODbL)",
+      "url": "https://www.openstreetmap.org/relation/5723216"
+    },
+    {
+      "title": "OpenStreetMap way 910010334 — Erechtheion (Q242741)",
+      "url": "https://www.openstreetmap.org/way/910010334"
+    },
+    {
+      "title": "OpenStreetMap relations 12352555 (Propylaia, Q3407649), 12352554 (Temple of Athena Nike, Q384813), 12352551 (Old Temple of Athena)",
+      "url": "https://www.openstreetmap.org/relation/12352555"
+    },
+    {
+      "title": "OpenStreetMap relations 4423249 (outline of the Acropolis, Q131013) and 12352553 (walls of the Acropolis)",
+      "url": "https://www.openstreetmap.org/relation/12352553"
+    },
+    {
+      "title": "OpenStreetMap ways 910010374 (Beulé Gate), 426887028 (Monument of Agrippa), 144928413 (Temple of Rome and Augustus), 144928418 (Arrephorion), 910010375 (Old Acropolis Museum), 910010357 and 910010294 (ruins), nodes 1584057565 (Athena Promachos) and 11581542547 (sacred olive tree)",
+      "url": "https://www.openstreetmap.org/way/910010374"
+    },
+    {
+      "title": "Parthenon — Wikipedia (en): 69.5 × 30.9 m, octastyle with 17 columns on the sides, 13.72 m high, cella 29.8 × 19.2 m, Pentelic marble, 447–432 BC, the 1687 explosion (roof, cella walls, six south and eight north columns lost)",
+      "url": "https://en.wikipedia.org/wiki/Parthenon"
+    },
+    {
+      "title": "Acropolis of Athens — Wikipedia (en): the rock 150 m above sea level (156 m in OSM), ~3 ha, the walls of Kimon and Themistokles",
+      "url": "https://en.wikipedia.org/wiki/Acropolis_of_Athens"
+    },
+    {
+      "title": "Erechtheion, Propylaea (Acropolis of Athens), Temple of Athena Nike — Wikipedia (en): plans, columns, the Porch of the Caryatids, the five doors of the Propylaia, the Pinakotheke",
+      "url": "https://en.wikipedia.org/wiki/Erechtheion"
+    },
+    {
+      "title": "EU-DEM v1.1 25 m (Copernicus) and SRTM 30 m, via OpenTopoData: the plateau ≈147–148 m and the foot of the walls ≈115–125 m",
+      "url": "https://www.opentopodata.org/datasets/eudem/"
+    },
+    {
+      "title": "Wikidata Q10288 — architects and dates",
+      "url": "https://www.wikidata.org/wiki/Q10288"
+    }
+  ],
+  "notes": "Built by code (model_sources/Q10288_parthenon.py, tools/meshkit.py) with AI assistance. The whole Acropolis on its rock, as it is today: the Parthenon (roofless, the four broken columns and the missing entablature in the middle of the south side, the frieze and cornice missing over the middle of the north side, the complete west pediment and the two corners of the east one, the inner porches, the west cella wall with its door, the stepped ruins of the cella walls), the Erechtheion with its three porches and the Caryatids, the Propylaia with the Pinakotheke and the south wing, the Temple of Athena Nike on its bastion, the Roman staircase, the Beulé Gate, the Monument of Agrippa, the circuit walls, the rock face and low remains. Heights: Parthenon columns 10.43 m on a 1.8 m crepis, entablature 3.29 m, pediment apex ~19.2 m; the OSM heights of the broken columns and of the ruins are kept, rescaled. Uncertain (estimates): the state of the north entablature (OSM draws it complete; the frieze and cornice were left out over the middle), the levels of the plateau (Parthenon y = 0, Propylaia −4.5/−6.3, Erechtheion north porch −3.2, Beulé Gate −17, ±2 m), the heights of the walls over their foot (10–15 m) and of the rock face, the Beulé Gate (~9 m) and the Monument of Agrippa (~10 m), the roofs of the Erechtheion porches (drawn flat). Not modelled: the scaffolding and cranes of the restoration, the Odeon of Herodes Atticus and the Theatre of Dionysos (separate monuments on the south slope), paths, interiors. The Old Acropolis Museum is a plain low block. Ground: \"keep\"; y = 0 is the plateau at the Parthenon, ground_at [20, 60] is open rock north-east of it (the highest point of EU-DEM inside the walls), the rock goes down to y = −58 so that it meets the terrain all round. Heading 77.09° = the axis of the 58 column centres, the east front (the entrance) facing +Z.",
+  "triangles": 64647,
+  "footprint": [
+    [
+      -68.2,
+      119.1
+    ],
+    [
+      -72.0,
+      118.7
+    ],
+    [
+      -69.2,
+      91.2
+    ],
+    [
+      -65.4,
+      91.6
+    ],
+    [
+      -67.1,
+      109.1
+    ],
+    [
+      -70.4,
+      108.8
+    ],
+    [
+      -63.7,
+      73.4
+    ],
+    [
+      -65.2,
+      88.6
+    ],
+    [
+      -69.6,
+      87.5
+    ],
+    [
+      -64.0,
+      62.2
+    ],
+    [
+      -64.4,
+      80.2
+    ],
+    [
+      -67.1,
+      80.0
+    ],
+    [
+      -64.8,
+      53.7
+    ],
+    [
+      -61.9,
+      54.0
+    ],
+    [
+      -63.2,
+      68.6
+    ],
+    [
+      -66.3,
+      68.3
+    ],
+    [
+      -63.5,
+      41.3
+    ],
+    [
+      -60.6,
+      41.6
+    ],
+    [
+      -61.8,
+      53.6
+    ],
+    [
+      -66.9,
+      52.9
+    ],
+    [
+      -63.1,
+      26.4
+    ],
+    [
+      -58.7,
+      27.0
+    ],
+    [
+      -60.2,
+      38.8
+    ],
+    [
+      -64.2,
+      38.2
+    ],
+    [
+      -56.9,
+      5.1
+    ],
+    [
+      -60.5,
+      16.1
+    ],
+    [
+      -57.2,
+      -20.6
+    ],
+    [
+      12.1,
+      -137.0
+    ],
+    [
+      23.7,
+      -169.5
+    ],
+    [
+      29.5,
+      -167.6
+    ],
+    [
+      30.1,
+      -186.9
+    ],
+    [
+      61.3,
+      -186.2
+    ],
+    [
+      61.2,
+      -180.9
+    ],
+    [
+      44.3,
+      -181.3
+    ],
+    [
+      44.4,
+      -186.6
+    ],
+    [
+      76.4,
+      -185.8
+    ],
+    [
+      76.7,
+      -181.0
+    ],
+    [
+      79.8,
+      -180.9
+    ],
+    [
+      78.3,
+      -147.8
+    ],
+    [
+      77.2,
+      -169.7
+    ],
+    [
+      87.5,
+      -169.5
+    ],
+    [
+      79.6,
+      -165.2
+    ],
+    [
+      92.2,
+      -164.8
+    ],
+    [
+      91.2,
+      -149.8
+    ],
+    [
+      91.9,
+      -145.8
+    ],
+    [
+      96.0,
+      -145.7
+    ],
+    [
+      98.8,
+      -116.9
+    ],
+    [
+      95.6,
+      -124.3
+    ],
+    [
+      100.5,
+      -125.6
+    ],
+    [
+      107.7,
+      -98.9
+    ],
+    [
+      102.2,
+      -97.0
+    ],
+    [
+      104.1,
+      -81.2
+    ],
+    [
+      115.4,
+      -76.5
+    ],
+    [
+      105.9,
+      5.0
+    ],
+    [
+      94.9,
+      12.3
+    ],
+    [
+      89.7,
+      53.8
+    ],
+    [
+      73.8,
+      60.4
+    ],
+    [
+      61.0,
+      72.4
+    ],
+    [
+      54.4,
+      96.6
+    ],
+    [
+      36.1,
+      107.6
+    ],
+    [
+      27.6,
+      128.0
+    ],
+    [
+      27.9,
+      141.2
+    ],
+    [
+      -0.3,
+      147.4
+    ],
+    [
+      -1.3,
+      142.9
+    ],
+    [
+      -55.1,
+      154.7
+    ],
+    [
+      -68.7,
+      151.3
+    ],
+    [
+      -68.7,
+      141.2
+    ],
+    [
+      -73.5,
+      141.2
+    ],
+    [
+      -73.4,
+      113.2
+    ],
+    [
+      -67.6,
+      113.2
+    ]
+  ]
+}

@@ -1,0 +1,101 @@
+{
+  "id": "Q9141",
+  "name": "Taj Mahal",
+  "heading": 179.9,
+  "position": {
+    "lat": 27.175009,
+    "lon": 78.0420898,
+    "source": "https://www.openstreetmap.org/way/375257537 (centre of the tomb on its plinth: middle of the outline, 0.9 m west and 0.15 m north of its centroid; heading = the south front towards the great gate, from the same outline, 179.9°)"
+  },
+  "ground": "keep",
+  "ground_at": [
+    12,
+    150
+  ],
+  "ground_low": -8,
+  "authors": [
+    {
+      "name": "Álvaro C. Chulvi",
+      "url": "https://github.com/Aruvaro-Chulvi"
+    }
+  ],
+  "license": "CC-BY-4.0",
+  "rights": {
+    "status": "public_domain",
+    "architects": [
+      {
+        "name": "Ustad Ahmad Lahori",
+        "died": 1649,
+        "wikidata": "Q2551253"
+      }
+    ],
+    "built": 1653,
+    "note": "Built for Shah Jahan to the design attributed to Ustad Ahmad Lahori: the tomb 1632–1643, the mosque, jawab, garden and gate finished c. 1653. Every author died centuries ago."
+  },
+  "sources": [
+    {
+      "title": "OpenStreetMap way 375257537 and relation 11089173 — outline of the tomb on its plinth and its building:parts (body, drum, dome, chhatris, minarets) (© OpenStreetMap contributors, ODbL)",
+      "url": "https://www.openstreetmap.org/way/375257537"
+    },
+    {
+      "title": "OpenStreetMap ways 376367510 (mosque), 376367511 (jawab), 915319745–915319758 (their domes and corner towers), 376367512 and 435831215 (tanks), 435831216 (retaining wall of the terrace), 435831218–435831221, 59267923, 59267925 (octagonal towers)",
+      "url": "https://www.openstreetmap.org/way/376367510"
+    },
+    {
+      "title": "OpenStreetMap ways 27044943, 59267920, 59267927 (walls), 59156688 (Darwaza-i-Rauza), 346806298 and 435831217 (pavilions of the cross axis), 1128521747, 59220397, 242854370–242854429 and relation 3282464 (channels, central tank, lawns and beds) — the garden ways lie ~9 m east of the tomb's axis in OSM and were recentred",
+      "url": "https://www.openstreetmap.org/way/59156688"
+    },
+    {
+      "title": "Taj Mahal — Wikipedia (en): total height 73 m, plinth 6 m high and 95.5 m square, pishtaqs 33 m, drum 12 m (inner diameter 18.4 m), dome 23 m, finial 9.6 m, minarets over 40 m in three parts, terrace 300 m long and 8.7 m high",
+      "url": "https://en.wikipedia.org/wiki/Taj_Mahal"
+    },
+    {
+      "title": "Origins and architecture of the Taj Mahal — Wikipedia (en), after Ebba Koch, «The Complete Taj Mahal» (2006): tomb 56.9 m square, drum about 7 m visible, minaret 43.02 m, terrace 300 × 111.89 m, charbagh 296.31 m square, mosque 56.6 × 23.38 × 20.3 m, great gate 41.2 × 34 × 23.07 m",
+      "url": "https://en.wikipedia.org/wiki/Origins_and_architecture_of_the_Taj_Mahal"
+    },
+    {
+      "title": "SRTM and ASTER 30 m elevation, via OpenTopoData: the garden ≈ 162 m, the river bank ≈ 148–153 m",
+      "url": "https://www.opentopodata.org/datasets/srtm/"
+    },
+    {
+      "title": "Wikidata Q9141 — architect and dates",
+      "url": "https://www.wikidata.org/wiki/Q9141"
+    }
+  ],
+  "notes": "Built by code (model_sources/Q9141_taj_mahal.py, tools/meshkit.py) with AI assistance. The tomb with its plinth, iwans, niches, pinnacles, drum, onion dome, lotus crown and gilded finial with crescent, the four chhatris and the four minarets; the red sandstone terrace on the river with its octagonal towers; the mosque (west) and the jawab (east) with three white domes, corner towers and their tanks; the charbagh with the raised marble channels, the fountain jets, the central tank (al-Hawd al-Kawthar), cypress rows, sixteen sunken beds with trees, the pavilions of the cross axis, the crenellated walls with corner towers and the great gate (Darwaza-i rauza) with its rows of eleven chhatris. Heights from Koch / Wikipedia; estimated (±15–30 %): terrace 1.2 m above the garden, the side parapets of the tomb (24 m above the plinth; the 33 m of the pishtaqs taken from the terrace, as the OSM parts give), the bulb (27.4 m across on a 23 m drum), the chhatris, the mosque domes and their heights, walls 7 m, towers, pavilions and the gate's towers. OpenStreetMap draws the garden, its channels and the gate about 9 m east of the axis of the tomb, mosque and terrace; they were put back on the axis and made symmetric, with the south wall 296.3 m from the terrace (Koch). The minarets' slight outward lean, the inlay and carving, the forecourt (jilaukhana) south of the gate and the Mehtab Bagh are left out. y = 0 is the garden walks; the terrace is at +1.2 and its river face goes down to −10.",
+  "triangles": 80770,
+  "footprint": [
+    [
+      -157.0,
+      -61.0
+    ],
+    [
+      157.0,
+      -61.0
+    ],
+    [
+      157.0,
+      367.5
+    ],
+    [
+      22.0,
+      367.5
+    ],
+    [
+      22.0,
+      383.0
+    ],
+    [
+      -22.0,
+      383.0
+    ],
+    [
+      -22.0,
+      367.5
+    ],
+    [
+      -157.0,
+      367.5
+    ]
+  ]
+}

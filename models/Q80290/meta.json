@@ -1,0 +1,111 @@
+{
+  "id": "Q80290",
+  "name": "Forbidden City (Palace Museum)",
+  "heading": 177.89,
+  "position": {
+    "lat": 39.916703,
+    "lon": 116.390793,
+    "source": "https://www.openstreetmap.org/relation/9511883 (centre of the four corners of the wall, ways 638176319, 1341826249, 638252480 and 1341826250; heading = the smallest rectangle round them, the Meridian Gate facing south, the city turned ~2.1° anticlockwise like the whole Beijing axis)"
+  },
+  "authors": [
+    {
+      "name": "Álvaro C. Chulvi",
+      "url": "https://github.com/Aruvaro-Chulvi"
+    }
+  ],
+  "license": "CC-BY-4.0",
+  "rights": {
+    "status": "public_domain",
+    "architects": [
+      {
+        "name": "Kuai Xiang",
+        "wikidata": "Q10513613",
+        "died": 1481
+      }
+    ],
+    "built": 1420,
+    "note": "Built 1406–1420 for the Yongle Emperor (Kuai Xiang among the master builders); halls rebuilt after fires up to the Qing dynasty (the present Hall of Supreme Harmony 1695–1697, the Palace of Heavenly Purity 1798). Every author died centuries ago."
+  },
+  "sources": [
+    {
+      "title": "OpenStreetMap relation 9511883 — the Forbidden City and its wall (ways 638176319, 1341826249, 638252480, 1341826250), the moat (way 4845030) (© OpenStreetMap contributors, ODbL)",
+      "url": "https://www.openstreetmap.org/relation/9511883"
+    },
+    {
+      "title": "OpenStreetMap — ~1,080 building outlines inside the wall and the building:parts of the detailed 3D mapping of the main halls: relations 8854043 (Hall of Supreme Harmony), 8854349 (Hall of Central Harmony), 8854507 (Hall of Preserving Harmony), 8851737 (Gate of Supreme Harmony), 8849989 (Meridian Gate), 8858781 (Gate of Divine Prowess), 8858938 (East Glorious Gate), 8858329 and 8858355 (corner towers), 8859415, 8860936, 8860927, 8861202 (Inner Court) and the others",
+      "url": "https://www.openstreetmap.org/relation/8854043"
+    },
+    {
+      "title": "OpenStreetMap — the three-tiered terrace (ways 638449443, 638449444, 638449448, 638467898–638467900, relations 8854307–8854309), ramps and stairs, the Inner Golden Water River (ways 638204006, 685378549 …), its bridges (ways 638204001–638204005 …), barrier=wall lines, woods, gardens and 87 trees",
+      "url": "https://www.openstreetmap.org/way/638449443"
+    },
+    {
+      "title": "Forbidden City — Wikipedia (en): 961 × 753 m, wall 7.9–10 m with base 8.62 m and top 6.66 m, moat 52 m wide, the halls and gates",
+      "url": "https://en.wikipedia.org/wiki/Forbidden_City"
+    },
+    {
+      "title": "故宫 — Wikipedia (zh): city wall 10 m high, Gate of Supreme Harmony 23.8 m",
+      "url": "https://zh.wikipedia.org/wiki/%E6%95%85%E5%AE%AB"
+    },
+    {
+      "title": "太和殿 — Wikipedia (zh): 63.96 × 37 m, 26.92 m high, 35.05 m with the 8.13 m three-tiered terrace",
+      "url": "https://zh.wikipedia.org/wiki/%E5%A4%AA%E5%92%8C%E6%AE%BF"
+    },
+    {
+      "title": "午门 — Wikipedia (zh): platform 12.00 m, gate tower 60.05 × 25.00 m (total 37.95 m is the usual figure, not in the article)",
+      "url": "https://zh.wikipedia.org/wiki/%E5%8D%88%E9%97%A8_(%E5%8C%97%E4%BA%AC)"
+    },
+    {
+      "title": "神武门 — Wikipedia (zh): 31 m in all; 保和殿 — Wikipedia (zh): 29.50 m",
+      "url": "https://zh.wikipedia.org/wiki/%E7%A5%9E%E6%AD%A6%E9%97%A8"
+    },
+    {
+      "title": "Wikidata Q80290 — dates and builder",
+      "url": "https://www.wikidata.org/wiki/Q80290"
+    }
+  ],
+  "notes": "Built by code (model_sources/Q80290_forbidden_city.py, tools/meshkit.py) with AI assistance. Plan from OpenStreetMap: the wall, moat, terrace, river, bridges, walls and ~1,080 building outlines; the main halls and gates follow the building:parts of the detailed OSM 3D mapping (body, lower and upper eaves, top roof → single or double eaves). Every roof comes from one generic Chinese-roof builder (hip, hip-and-gable with red gable, gable, pyramidal with gilded finial; concave slopes, eaves curving up and out at the corners, ridges, hip ridges and ridge ornaments on the big halls); OSM roof:shape is used where present, otherwise the kind is chosen by size (hip-and-gable from 10 m depth, gable below, pyramidal for pavilions). Heights: published figures for the wall (10 m), Meridian Gate (platform 12 m; 37.95 m in all, the usual figure), Gate of Divine Prowess (31 m), Gate of Supreme Harmony (23.8 m; its platform ~3.4 m is an estimate), corner towers (27.5 m, usual figure, ±5 %), terrace (8.13 m), Hall of Supreme Harmony (35.05 m), Hall of Preserving Harmony (29.5 m); the OSM part heights of the other buildings run 16–19 % above the published ones and are scaled by 0.84 (±10 %), the marble platforms by 0.9; buildings without heights get one from their depth (±20 %). Outlines that are not rectangles (corridors round courtyards) are split into rectangles, each with its own roof. Uncertain: the West Glorious Gate and the two western corner towers, missing in OSM, are mirrored from the eastern ones (±10 m); the Hall of Central Harmony (~27 m) and the minor buildings' heights; the roof kinds of the minor buildings; green roofs for the Southern Three Lodges, black for the Wenyuan Pavilion, grey for the service houses, imperial yellow for the rest. The moat and the Inner Golden Water River are drawn as water just above the ground between stone kerbs and balustrades (Offlined levels the ground of the footprint to y = 0, which would hide a sunken channel). Not modelled: interiors, ridge beasts, bronze lions and vessels, Duanmen and Tiananmen to the south, the terrain. footprint: the moat and everything inside it, with the forecourt between the arms of the Meridian Gate.",
+  "triangles": 137781,
+  "footprint": [
+    [
+      -452.8,
+      -541.9
+    ],
+    [
+      -447.4,
+      -550.2
+    ],
+    [
+      -24.3,
+      -554.9
+    ],
+    [
+      444.6,
+      -558.0
+    ],
+    [
+      450.3,
+      546.9
+    ],
+    [
+      447.1,
+      552.3
+    ],
+    [
+      441.7,
+      554.5
+    ],
+    [
+      62.0,
+      564.4
+    ],
+    [
+      -64.2,
+      564.4
+    ],
+    [
+      -447.4,
+      559.5
+    ]
+  ]
+}

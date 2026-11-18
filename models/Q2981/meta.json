@@ -1,0 +1,237 @@
+{
+  "id": "Q2981",
+  "name": "Cathédrale Notre-Dame de Paris",
+  "heading": 295.2,
+  "position": {
+    "lat": 48.8529922,
+    "lon": 2.3499552,
+    "source": "https://www.openstreetmap.org/way/201611261 (the centre of the spire, building:part 1299835416; heading from the tower faces, the nave ridge and the mapped aisle roof directions 25.3°/205.2°)"
+  },
+  "authors": [
+    {
+      "name": "Álvaro C. Chulvi",
+      "url": "https://github.com/Aruvaro-Chulvi"
+    }
+  ],
+  "license": "CC-BY-4.0",
+  "rights": {
+    "status": "public_domain",
+    "architects": [
+      {
+        "name": "Jean de Chelles",
+        "died": 1265,
+        "wikidata": "Q374131"
+      },
+      {
+        "name": "Pierre de Montreuil",
+        "died": 1267,
+        "wikidata": "Q1314747"
+      },
+      {
+        "name": "Jean Ravy",
+        "died": 1345,
+        "wikidata": "Q16645563"
+      },
+      {
+        "name": "Jean-Baptiste Lassus",
+        "died": 1857
+      },
+      {
+        "name": "Eugène Viollet-le-Duc",
+        "died": 1879
+      }
+    ],
+    "built": 1345,
+    "note": "Begun in 1163 under bishop Maurice de Sully and essentially finished by 1345; restored in 1844–1864 by Lassus and Viollet-le-Duc (spire 1859, sacristy 1845–1850, the copper apostles by Geoffroy-Dechaume, died 1892). After the fire of 15 April 2019 the roofs, the spire and the vaults were rebuilt identically to the 19th-century state under Philippe Villeneuve and reopened on 7–8 December 2024; a faithful reconstruction of a public-domain design adds no new authorship to the volumes modelled here."
+  },
+  "sources": [
+    {
+      "title": "OpenStreetMap way 201611261 — outline of the cathedral and the sacristy (© OpenStreetMap contributors, ODbL)",
+      "url": "https://www.openstreetmap.org/way/201611261"
+    },
+    {
+      "title": "OpenStreetMap building:parts — clerestory 201611272, tribunes 201772730, chapels 201611267, west massif 201611270, Galerie de la Vierge 201754177, towers 201754180/201611269 and their roofs 201611273/201611274, stair turrets 201760114/201760116, nave/transept roofs 1299835415/1299835414, apse roof 1524308825, spire 1299835416, transept turrets 684165346–684165349, flying buttresses (2010667xx, 2210117xx, 6841222xx) and their piers (2010667xx), sacristy 1340842277, 201611264, 201611266",
+      "url": "https://www.openstreetmap.org/way/1299835416"
+    },
+    {
+      "title": "Cathédrale Notre-Dame de Paris — Wikipédia (fr): dimensions (128 m × 48 m, vaults 33 m, towers 69 m, spire 96 m, façade 41 m wide, roses 9.6 m and 12.9 m), history, restoration 2019–2024",
+      "url": "https://fr.wikipedia.org/wiki/Cath%C3%A9drale_Notre-Dame_de_Paris"
+    },
+    {
+      "title": "Notre-Dame de Paris — Wikipedia (en): west façade (portals, Gallery of Kings, rose, Grande Galerie with the chimeras), flying buttresses, spire and the 16 copper statues",
+      "url": "https://en.wikipedia.org/wiki/Notre-Dame_de_Paris"
+    },
+    {
+      "title": "Flèche de Notre-Dame de Paris — Wikipédia (fr): Viollet-le-Duc's spire, 96 m, oak and lead, rooster, rebuilt 2023",
+      "url": "https://fr.wikipedia.org/wiki/Fl%C3%A8che_de_Notre-Dame_de_Paris"
+    },
+    {
+      "title": "Wikimedia Commons — Category:Notre-Dame de Paris (exterior photos used for the façade levels, the chevet and the roofs)",
+      "url": "https://commons.wikimedia.org/wiki/Category:Notre-Dame_de_Paris"
+    },
+    {
+      "title": "Wikidata Q2981 — architects and dates",
+      "url": "https://www.wikidata.org/wiki/Q2981"
+    }
+  ],
+  "triangles": 37584,
+  "footprint": [
+    [
+      -27.4,
+      72.2
+    ],
+    [
+      27.4,
+      72.2
+    ],
+    [
+      27.4,
+      -8.6
+    ],
+    [
+      46.9,
+      -8.6
+    ],
+    [
+      46.9,
+      -15.8
+    ],
+    [
+      49.4,
+      -17.5
+    ],
+    [
+      49.4,
+      -23.1
+    ],
+    [
+      54.6,
+      -23.1
+    ],
+    [
+      54.6,
+      -37.6
+    ],
+    [
+      46.7,
+      -37.6
+    ],
+    [
+      46.7,
+      -42.3
+    ],
+    [
+      32.6,
+      -42.3
+    ],
+    [
+      32.6,
+      -36.3
+    ],
+    [
+      26.1,
+      -36.3
+    ],
+    [
+      26.4,
+      -40.08
+    ],
+    [
+      26.16,
+      -43.86
+    ],
+    [
+      25.38,
+      -47.56
+    ],
+    [
+      24.08,
+      -51.12
+    ],
+    [
+      22.29,
+      -54.45
+    ],
+    [
+      20.03,
+      -57.5
+    ],
+    [
+      17.37,
+      -60.18
+    ],
+    [
+      14.34,
+      -62.46
+    ],
+    [
+      11.02,
+      -64.29
+    ],
+    [
+      7.48,
+      -65.62
+    ],
+    [
+      3.78,
+      -66.43
+    ],
+    [
+      -0.0,
+      -66.7
+    ],
+    [
+      -3.78,
+      -66.43
+    ],
+    [
+      -7.48,
+      -65.62
+    ],
+    [
+      -11.02,
+      -64.29
+    ],
+    [
+      -14.34,
+      -62.46
+    ],
+    [
+      -17.37,
+      -60.18
+    ],
+    [
+      -20.03,
+      -57.5
+    ],
+    [
+      -22.29,
+      -54.45
+    ],
+    [
+      -24.08,
+      -51.12
+    ],
+    [
+      -25.38,
+      -47.56
+    ],
+    [
+      -26.16,
+      -43.86
+    ],
+    [
+      -26.4,
+      -40.08
+    ],
+    [
+      -26.1,
+      -36.3
+    ],
+    [
+      -27.4,
+      -9.0
+    ]
+  ],
+  "notes": "Built by code (model_sources/Q2981_notre_dame_de_paris.py, tools/meshkit.py) with AI assistance. The cathedral as restored and reopened in December 2024. Plan from the OpenStreetMap outline and building:parts: chapels to ±24.5 m, tribunes ±14 m, clerestory ±8.2 m with the transept to ±26 m, the chevet a half-circle about the apse centre, the west massif with the two towers and the projecting lower façade, the 28 flying buttresses and their piers exactly where OSM draws them, the sacristy on the south side. Heights: towers 69 m, Grande Galerie 45 m, spire to the rooster 96 m, eaves 33 m (OSM, Wikipedia); roof ridge 43 m (Wikipedia; OSM says 45 m); chapel walls 14 m, tribune walls 22 m, façade levels (portals to ~15 m, Gallery of Kings 18.6–23.6 m, Galerie de la Vierge 25 m, west rose centred at 31.5 m, 9.6 m across) estimated from photos and drawings (±5–15 %). Included: the three west portals with archivolts, doors, trumeaux and jamb statues, the 28 kings, the Virgin with two angels, Adam and Eve, the west rose with its tracery, the twin lancets of the towers at the rose level, the open arcade of the Grande Galerie with chimeras on the parapets, the belfry lancets on every tower face, the tower balustrades and low lead roofs, the north and south transept façades with their 12.9 m roses, portals and gables, the corner turrets, the clerestory and chapel windows with the gables of the chapels, pinnacled piers, the lead roofs with their ridge cresting and the apse half-cone, Viollet-le-Duc's spire (two open octagonal stages with gables and pinnacles, the needle with crockets, gilded ball, cross and rooster) and the 16 verdigris copper statues descending the four valleys at its foot, the sacristy with its hipped roofs and little flèche. Simplified: tracery and sculpture are flat panels or stylised figures; the nave flyers are drawn as one span (the intermediate piers are left out); the aisle roofs are two lean-tos; the tower buttresses keep their full projection to the top. Not included: the parvis (a separate square) and the Square Jean-XXIII east of the chevet (a public garden whose trees Offlined draws). footprint: the cathedral and the sacristy plus about 1 m, simplified, rounded around the chevet; it covers the small walled area between the sacristy and the transept."
+}

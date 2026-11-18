@@ -1,0 +1,320 @@
+{
+  "id": "Q10285",
+  "name": "Colosseo (Colosseum)",
+  "heading": 19.7,
+  "position": {
+    "lat": 41.890245,
+    "lon": 12.492325,
+    "source": "https://www.openstreetmap.org/relation/1834818 (centre of the ellipse fitted to its building:part relation 1834825, the 12 m ring of the cavea: 130.8 × 98.7 m, i.e. the 188 × 156 m outer ellipse offset by 28.6 m; long axis 109.7°/289.7°; heading = the intact north side, on the minor axis)"
+  },
+  "authors": [
+    {
+      "name": "Álvaro C. Chulvi",
+      "url": "https://github.com/Aruvaro-Chulvi"
+    }
+  ],
+  "license": "CC-BY-4.0",
+  "rights": {
+    "status": "public_domain",
+    "architects": [
+      {
+        "name": "Raffaele Stern",
+        "died": 1820,
+        "wikidata": "Q2415339"
+      },
+      {
+        "name": "Giuseppe Valadier",
+        "died": 1839,
+        "wikidata": "Q959688"
+      }
+    ],
+    "built": 80,
+    "note": "Roman amphitheatre begun under Vespasian (c. 70–72 AD), inaugurated by Titus in 80 AD and completed under Domitian; its architects are unknown. The two brick buttresses that hold the ends of the surviving outer wall are by Raffaele Stern (east, 1806–1807) and Giuseppe Valadier (west, 1823–1826). The wooden arena floor over the east end is a modern reconstruction (2000), a plain deck. Everything is in the public domain."
+  },
+  "sources": [
+    {
+      "title": "OpenStreetMap relation 1834818 (Colosseo, wikidata Q10285) and its building:part relations 1834825–1834831, 3371742 (hypogeum), 19666834–19666836 (arena floor): plan, rings, heights 12/15/24/36/48.5 m (© OpenStreetMap contributors, ODbL)",
+      "url": "https://www.openstreetmap.org/relation/1834818"
+    },
+    {
+      "title": "Colosseum — Wikipedia (en): 189 × 156 m, 48 m high, arena 87 × 55 m, 80 arches, Tuscan/Ionic/Corinthian orders and attic, velarium corbels, hypogeum, Stern and Valadier buttresses, arena floor reconstruction",
+      "url": "https://en.wikipedia.org/wiki/Colosseum"
+    },
+    {
+      "title": "Colosseo — Wikipedia (it): dimensions (asse maggiore 188 m, minore 156 m, altezza 48,5 m), numbered arches (XXIII–LIV survive), rings of piers, travertine, sperone dello Stern and del Valadier",
+      "url": "https://it.wikipedia.org/wiki/Colosseo"
+    },
+    {
+      "title": "Wikimedia Commons — Colosseum (category): elevations of the outer wall and photos of the south side, the buttresses and the arena (storey heights measured on near-frontal photos, ±5 %)",
+      "url": "https://commons.wikimedia.org/wiki/Category:Colosseum"
+    },
+    {
+      "title": "Parco archeologico del Colosseo — the monument, the hypogeum and the arena floor",
+      "url": "https://colosseo.it/en/area/the-colosseum/"
+    },
+    {
+      "title": "Wikidata Q10285",
+      "url": "https://www.wikidata.org/wiki/Q10285"
+    }
+  ],
+  "footprint": [
+    [
+      105.0,
+      0.0
+    ],
+    [
+      104.4,
+      9.9
+    ],
+    [
+      102.4,
+      19.5
+    ],
+    [
+      99.3,
+      28.9
+    ],
+    [
+      95.1,
+      37.7
+    ],
+    [
+      90.0,
+      45.9
+    ],
+    [
+      84.0,
+      53.5
+    ],
+    [
+      77.3,
+      60.3
+    ],
+    [
+      70.0,
+      66.4
+    ],
+    [
+      62.2,
+      71.8
+    ],
+    [
+      54.0,
+      76.4
+    ],
+    [
+      45.4,
+      80.3
+    ],
+    [
+      36.6,
+      83.4
+    ],
+    [
+      27.6,
+      85.9
+    ],
+    [
+      18.5,
+      87.6
+    ],
+    [
+      9.3,
+      88.7
+    ],
+    [
+      -0.0,
+      89.0
+    ],
+    [
+      -9.3,
+      88.7
+    ],
+    [
+      -18.5,
+      87.6
+    ],
+    [
+      -27.6,
+      85.9
+    ],
+    [
+      -36.6,
+      83.4
+    ],
+    [
+      -45.4,
+      80.3
+    ],
+    [
+      -54.0,
+      76.4
+    ],
+    [
+      -62.2,
+      71.8
+    ],
+    [
+      -70.0,
+      66.4
+    ],
+    [
+      -77.3,
+      60.3
+    ],
+    [
+      -84.0,
+      53.5
+    ],
+    [
+      -90.0,
+      45.9
+    ],
+    [
+      -95.1,
+      37.7
+    ],
+    [
+      -99.3,
+      28.9
+    ],
+    [
+      -102.4,
+      19.5
+    ],
+    [
+      -104.4,
+      9.9
+    ],
+    [
+      -105.0,
+      -0.0
+    ],
+    [
+      -104.4,
+      -9.9
+    ],
+    [
+      -102.4,
+      -19.5
+    ],
+    [
+      -99.3,
+      -28.9
+    ],
+    [
+      -95.1,
+      -37.7
+    ],
+    [
+      -90.0,
+      -45.9
+    ],
+    [
+      -84.0,
+      -53.5
+    ],
+    [
+      -77.3,
+      -60.3
+    ],
+    [
+      -70.0,
+      -66.4
+    ],
+    [
+      -62.2,
+      -71.8
+    ],
+    [
+      -54.0,
+      -76.4
+    ],
+    [
+      -45.4,
+      -80.3
+    ],
+    [
+      -36.6,
+      -83.4
+    ],
+    [
+      -27.6,
+      -85.9
+    ],
+    [
+      -18.5,
+      -87.6
+    ],
+    [
+      -9.3,
+      -88.7
+    ],
+    [
+      0.0,
+      -89.0
+    ],
+    [
+      9.3,
+      -88.7
+    ],
+    [
+      18.5,
+      -87.6
+    ],
+    [
+      27.6,
+      -85.9
+    ],
+    [
+      36.6,
+      -83.4
+    ],
+    [
+      45.4,
+      -80.3
+    ],
+    [
+      54.0,
+      -76.4
+    ],
+    [
+      62.2,
+      -71.8
+    ],
+    [
+      70.0,
+      -66.4
+    ],
+    [
+      77.3,
+      -60.3
+    ],
+    [
+      84.0,
+      -53.5
+    ],
+    [
+      90.0,
+      -45.9
+    ],
+    [
+      95.1,
+      -37.7
+    ],
+    [
+      99.3,
+      -28.9
+    ],
+    [
+      102.4,
+      -19.5
+    ],
+    [
+      104.4,
+      -9.9
+    ]
+  ],
+  "triangles": 69580,
+  "notes": "Built by code (model_sources/Q10285_colosseum.py, tools/meshkit.py) with AI assistance. The Colosseum as it stands today. Plan: the published 188 × 156 m ellipse (Wikipedia gives 189 × 156), placed and oriented by the low ring of the cavea in OpenStreetMap (an exact offset of that ellipse); the OSM trace of the tall outer wall lies 3–6 m inside it, probably traced on the leaning top of the wall in the imagery, so it was not used for the size. Every ring is an offset of the outer ellipse (constant depth), 80 bays of 6.77 m with the gates on the axes. Modelled: the outer wall on the north (33 travertine bays, arches XXIII–LIV and the north gate) with Tuscan, Ionic and Corinthian half-columns, entablatures, pedestal courses, the attic with pilasters, windows in every other bay and three velarium corbels per bay, to 48.5 m; Valadier's brick buttress at the west end repeating the arcades and stepping down (3 bays), Stern's sloping brick spur at the east end with the last arches walled up; behind the north wall the ambulatory vaults at each storey and the second ring to 39 m; on the south the second ring of travertine piers as the outside wall, broken at 26–34 m, with stubs of the radial walls of the lost outer ambulatory and the bases of its piers; the cavea as a ribbed ruin of radial walls and collapsed vaults (higher on the north), the praecinctio step, the axial passages at both ends; the podium; the exposed hypogeum (walls from OSM) and the reconstructed wooden floor over the east end; the hypogeum is drawn at ground level as its maze of walls over a dark floor, because Offlined and the viewers draw the ground at y = 0 over the footprint and would hide a pit (its real depth, about 6 m, is not modelled); the travertine paving 10 m wide around. Not modelled: seats (the small reconstructed section of seating), the cross, the lifts and the modern stairs, the boundary stones, the clamp holes in the travertine, the Arch of Constantine and the streets. Uncertain (estimated): storey heights ±5 %, the height of the ruined south ring and of the cavea ruins (±3 m, shaped after the OSM part heights), the exact extent and shape of the two buttresses, the line where the arena floor ends. Site: flat by default (ground: flatten); the ground rises a few metres to the north (Colle Oppio side), so walls and the paving edge go down to −4 m."
+}

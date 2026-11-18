@@ -1,0 +1,90 @@
+{
+  "id": "Q9188",
+  "name": "Empire State Building",
+  "heading": 299.0,
+  "position": {
+    "lat": 40.748442,
+    "lon": -73.9856588,
+    "source": "https://www.openstreetmap.org/way/34633854 (centroid of the outline of the lot; the Fifth Avenue front, the short side of the lot, faces 299.0°, at right angles to the long axis of the lot at 119.0°)"
+  },
+  "authors": [
+    {
+      "name": "Álvaro C. Chulvi",
+      "url": "https://github.com/Aruvaro-Chulvi"
+    }
+  ],
+  "license": "CC-BY-4.0",
+  "rights": {
+    "status": "protected",
+    "architects": [
+      {
+        "name": "Shreve, Lamb & Harmon",
+        "wikidata": "Q617190"
+      },
+      {
+        "name": "William F. Lamb",
+        "died": 1952
+      },
+      {
+        "name": "Richmond H. Shreve",
+        "died": 1946
+      },
+      {
+        "name": "Arthur Loomis Harmon",
+        "died": 1958
+      }
+    ],
+    "built": 1931,
+    "note": "Designed by Shreve, Lamb & Harmon (William F. Lamb, chief designer, d. 1952), built 1930–1931, opened 1 May 1931. In the United States, where it stands, the design is in the public domain: buildings finished before 1 December 1990 are not protected as architectural works (Architectural Works Copyright Protection Act, 1990). Marked \"protected\" only because the repository's rule counts 80 years from the architects' deaths (Lamb 1952, Harmon 1958), which ends in 2039. The name and the night-lighting images may be trademarks; this model uses neither."
+  },
+  "sources": [
+    {
+      "title": "OpenStreetMap way 34633854 — the lot (height 443.2, 102 levels) and relation 10872054 (5-storey base); building:part ways 137425131 (floors 6–20, 75 m), 137425133 (21–24, 90 m), 137425128 (25–29, 115 m), 137425127 (30–71, 255 m), 137425129 (72–80, 290 m), 137425125 (81–85, 310 m), 137425144 (86th floor, 320 m), 137425142 (observatory block, 330 m), 265932618 and 137425145 (mast and antenna octagons) (© OpenStreetMap contributors, ODbL)",
+      "url": "https://www.openstreetmap.org/way/34633854"
+    },
+    {
+      "title": "Empire State Building — Wikipedia (en): roof 381 m (1,250 ft), top floor 373 m, antenna 443.2 m (1,454 ft), 86th-floor observatory 320 m, setbacks at the 6th, 25th, 30th, 72nd and 81st floors, Indiana limestone with aluminium spandrels and chrome-nickel steel mullions, lot 197 × 424 ft",
+      "url": "https://en.wikipedia.org/wiki/Empire_State_Building"
+    },
+    {
+      "title": "Wikimedia Commons — Category:Empire State Building (the mast with its stepped buttresses, the 86th-floor deck fence, the Fifth Avenue entrance, the window columns)",
+      "url": "https://commons.wikimedia.org/wiki/Category:Empire_State_Building"
+    },
+    {
+      "title": "Wikidata Q9188 (architect, dates)",
+      "url": "https://www.wikidata.org/wiki/Q9188"
+    }
+  ],
+  "notes": "Built by code (model_sources/Q9188_empire_state_building.py, tools/meshkit.py) with AI assistance. Massing from the OpenStreetMap building:part ways with their heights: the five-storey base filling the lot (21 m, an estimate ±15 % — the OSM tag of 17 m is too low for five storeys with the three-storey lobby), the setbacks at the 6th, 21st, 25th, 30th, 72nd, 81st and 86th floors (75, 90, 115, 255, 290, 310 and 320 m per OSM; the published setbacks are the 6th, 25th, 30th, 72nd and 81st floors), the wings towards 33rd and 34th Streets and the deep notches of the shaft; the 86th-floor open deck at 320 m with its parapet and safety fence and the glazed observatory block to 330 m; the mooring mast (330 → 381 m, roof as published) as an octagonal aluminium shaft with vertical ribs, four stepped Art Deco buttresses on its diagonals, the lit glazing of the upper floors, the 102nd-floor glazed ring at 373 m and a stepped cap; the antenna to 443.2 m (diameters estimated ±30 %). Cladding stylised: limestone piers, one aluminium strip per window column with a dark pane per floor and two bright chrome-nickel mullion lines (not the 6,514 real windows). Fifth Avenue entrance as a projecting limestone frontispiece with the tall recessed portal, transom window, canopy and flagpoles; midblock entrances on 33rd and 34th Streets; shop fronts. Not modelled: signs, the interior, the setback roof equipment, the night lighting colours.",
+  "triangles": 28233,
+  "footprint": [
+    [
+      26.7,
+      65.8
+    ],
+    [
+      4.5,
+      65.7
+    ],
+    [
+      -0.7,
+      65.7
+    ],
+    [
+      -30.8,
+      65.6
+    ],
+    [
+      -30.7,
+      -65.8
+    ],
+    [
+      30.8,
+      -65.6
+    ],
+    [
+      30.7,
+      65.9
+    ]
+  ]
+}

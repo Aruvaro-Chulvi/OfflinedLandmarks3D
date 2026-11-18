@@ -1,0 +1,149 @@
+{
+  "id": "Q83125",
+  "name": "Tower Bridge",
+  "heading": 22.9,
+  "position": {
+    "lat": 51.5055172,
+    "lon": -0.0753697,
+    "source": "https://www.openstreetmap.org/relation/5641637 (the middle of the opening span, half-way between the centres of the two main towers, ways 367652791 (51.5051838, -0.0755953) and 367652787 (51.5058505, -0.0751441), 80.5 m apart; heading = the bearing from the south tower to the north tower, 22.9°)"
+  },
+  "ground": "keep",
+  "ground_at": [
+    0,
+    0
+  ],
+  "ground_low": 0,
+  "authors": [
+    {
+      "name": "Álvaro C. Chulvi",
+      "url": "https://github.com/Aruvaro-Chulvi"
+    }
+  ],
+  "license": "CC-BY-4.0",
+  "rights": {
+    "status": "public_domain",
+    "architects": [
+      {
+        "name": "Horace Jones",
+        "died": 1887,
+        "wikidata": "Q3140459"
+      },
+      {
+        "name": "John Wolfe Barry",
+        "died": 1918
+      },
+      {
+        "name": "Henry Marc Brunel",
+        "died": 1903
+      }
+    ],
+    "built": 1894,
+    "note": "Architect Sir Horace Jones (City Architect, died 1887) and engineer Sir John Wolfe Barry (died 1918), with Henry Marc Brunel (died 1903); after Jones's death George D. Stevenson revised the stone dress of the towers in Victorian Gothic. Built 1886–1894, opened 30 June 1894. All its designers died more than 100 years ago; the bridge has been in the public domain for a long time, and in the United Kingdom models and pictures of buildings standing in public places are free anyway (freedom of panorama, CDPA 1988 s. 62)."
+  },
+  "sources": [
+    {
+      "title": "OpenStreetMap relation 5641637 — Tower Bridge: the outline and its building:parts with heights (deck 7–9 m, tower bodies 9–47 m, pyramidal roofs 47–65 m, gables 39–54 and 47–57 m, walkways 40–45 m, abutment towers 22 m with hipped roofs to 30 m), the piers with their cutwaters (© OpenStreetMap contributors, ODbL)",
+      "url": "https://www.openstreetmap.org/relation/5641637"
+    },
+    {
+      "title": "OpenStreetMap way 378541210 (the bridge outline, 321 × 19.7 m, axis 22.6°) and ways 367652787 / 367652791 (north and south towers)",
+      "url": "https://www.openstreetmap.org/way/378541210"
+    },
+    {
+      "title": "Tower Bridge — Wikipedia (en): towers 213 ft (65 m), opening span 200 ft (61 m), side spans 270 ft (82 m), length 940 ft (290 m), piers 185 × 70 ft, walkways 143 ft (44 m) above high water with 55 ft cantilevers and 120 ft girders, clearance 29 ft closed, deck 60 ft between parapets (49 ft over the opening span), Cornish granite and Portland stone over steel, blue and white paint, designers and dates",
+      "url": "https://en.wikipedia.org/wiki/Tower_Bridge"
+    },
+    {
+      "title": "EU-DEM 25 m via OpenTopoData — the river (2.5 m) and the banks at the two ends (north 8–11 m, south 4–5.5 m above the water)",
+      "url": "https://www.opentopodata.org/datasets/eudem/"
+    },
+    {
+      "title": "Wikidata Q83125 — position, Horace Jones, dates",
+      "url": "https://www.wikidata.org/wiki/Q83125"
+    }
+  ],
+  "notes": "Built by code (model_sources/Q83125_tower_bridge.py, tools/meshkit.py) with AI assistance. Modelled: the two main towers to OSM's plan and levels (Portland stone over a granite base, 20 × 12 m, the Gothic road arch with its moulding, four octagonal corner turrets with slate spires and gilded finials, string courses, battlements, the steep central roof with its flèche to 65 m, the gables over the river faces (to 54 m) and the road faces (to 57 m), lancet windows); the piers with their rounded cutwaters and granite plinths, down to y = −6; the two high-level walkways (40–45 m) with white chords, blue lattice sides over glazing, the cantilever brackets and cross bracing; the two bascules closed (four girders per leaf deepening towards the piers, roadway, footways, railings); the side spans with their stiffening girders and the curved suspension chains (white chords, blue lattice web, hangers to the deck) running from the main towers over the abutment towers and down into the approaches; the two abutment towers (arch, corner turrets, hipped roof to 30 m, gables); the approaches to the ends of the bridge with their parapets; lamp standards. Not modelled: the Tower of London (a separate landmark), the engine rooms and accumulator buildings, the Tower Bridge Approach beyond the end of the bridge, vehicles. Estimated (±): road levels and grades (±1 m), walkway levels (±1.5 m), the road arches (±2 m), turrets, gables and flèche (±15 %), the curve of the chains (±2 m), the bascule girders, the pier top, the window layout (by eye). Axes: +Z along the bridge towards the north bank (City side, heading 22.9°), +X upstream (292.9°). y = 0 is the Thames at high water: the origin is on the water in the middle of the opening span. ground: keep — the banks at the ends are 4–11 m above the water and must not be levelled; ground_at [0, 0] (the water), ground_low 0; the abutments and approaches go down to y = −4. footprint: a 26 m strip along the bridge, 48 m wide at the piers.",
+  "footprint": [
+    [
+      13.0,
+      -160.5
+    ],
+    [
+      13.0,
+      -52.5
+    ],
+    [
+      24.0,
+      -52.5
+    ],
+    [
+      24.0,
+      -30.0
+    ],
+    [
+      13.0,
+      -30.0
+    ],
+    [
+      13.0,
+      30.0
+    ],
+    [
+      24.0,
+      30.0
+    ],
+    [
+      24.0,
+      52.5
+    ],
+    [
+      13.0,
+      52.5
+    ],
+    [
+      13.0,
+      164.0
+    ],
+    [
+      -13.0,
+      164.0
+    ],
+    [
+      -13.0,
+      52.5
+    ],
+    [
+      -24.0,
+      52.5
+    ],
+    [
+      -24.0,
+      30.0
+    ],
+    [
+      -13.0,
+      30.0
+    ],
+    [
+      -13.0,
+      -30.0
+    ],
+    [
+      -24.0,
+      -30.0
+    ],
+    [
+      -24.0,
+      -52.5
+    ],
+    [
+      -13.0,
+      -52.5
+    ],
+    [
+      -13.0,
+      -160.5
+    ]
+  ],
+  "triangles": 28748
+}

@@ -1,0 +1,357 @@
+{
+  "id": "Q44440",
+  "name": "Golden Gate Bridge",
+  "heading": 354.7,
+  "position": {
+    "lat": 37.8197586,
+    "lon": -122.4785624,
+    "source": "https://www.openstreetmap.org/relation/451971 (the middle of the main span, half-way between the centres of the two tower piers, ways 1329971884 (37.8140145, -122.4778912) and 1330832681 (37.8255027, -122.4792335), 1280.6 m apart; heading = the bearing from the south tower to the north tower, 354.70°)"
+  },
+  "ground": "keep",
+  "ground_at": [
+    0,
+    0
+  ],
+  "ground_low": 0,
+  "authors": [
+    {
+      "name": "Álvaro C. Chulvi",
+      "url": "https://github.com/Aruvaro-Chulvi"
+    }
+  ],
+  "license": "CC-BY-4.0",
+  "rights": {
+    "status": "protected",
+    "architects": [
+      {
+        "name": "Joseph Strauss",
+        "died": 1938,
+        "wikidata": "Q261174"
+      },
+      {
+        "name": "Irving Morrow",
+        "died": 1952
+      },
+      {
+        "name": "Charles Alton Ellis",
+        "died": 1949
+      },
+      {
+        "name": "Leon Moisseiff",
+        "died": 1943
+      }
+    ],
+    "built": 1937,
+    "note": "Chief engineer Joseph Strauss (d. 1938); Charles Ellis (d. 1949) did most of the structural calculations; Leon Moisseiff (d. 1943) championed the final suspension design; consulting architect Irving Morrow (d. 1952) drew the Art Deco towers, pylons, railings and lamps and chose the International Orange. Built 1933–1937, opened 27 May 1937. Marked «protected» only because of the project's 80-year rule (Ellis died 1949, Morrow 1952: met in 2030 and 2033). In fact the bridge is free to reproduce: in the United States, where it stands, buildings and other architectural works had no copyright at all until the Architectural Works Copyright Protection Act of 1990, which covers only works built after 1 December 1990 (or unbuilt designs); a structure finished in 1937 is not protected as architecture, and pictures and models of it are free. The maintainer may treat it as public domain."
+  },
+  "sources": [
+    {
+      "title": "OpenStreetMap relation 451971 — Golden Gate Bridge: outline of the deck and its curved ends, the tower piers (ways 1329971884, 1330832681), the legs, struts and sidewalks as building:parts with their heights (13, 21, 24–26, 50–52, 73–75, 111–121, 123, 151–161, 162, 185–193, 195, 215–223, 225 m), the pylons and anchorages at both ends (© OpenStreetMap contributors, ODbL)",
+      "url": "https://www.openstreetmap.org/relation/451971"
+    },
+    {
+      "title": "OpenStreetMap way 1358282761 — Fort Point Light, under the Fort Point arch",
+      "url": "https://www.openstreetmap.org/way/1358282761"
+    },
+    {
+      "title": "Golden Gate Bridge Highway & Transportation District — Design & construction stats: total length 8,981 ft (2,737 m), main span 4,200 ft (1,280 m), side spans 1,125 ft (343 m), towers 746 ft (227 m) above the water and 500 ft (152 m) above the roadway, legs 33 × 54 ft at the base, cables 36 3/8 in (0.92 m), 250 pairs of suspenders 50 ft apart, deck 90 ft wide, roadway 62 ft, sidewalks 10 ft, clearance 220 ft",
+      "url": "https://www.goldengate.org/bridge/history-research/statistics-data/design-construction-stats/"
+    },
+    {
+      "title": "Golden Gate Bridge — Wikipedia (en): designers and their roles, International Orange, the steel arch over Fort Point, the lateral bracing of 1953–54, opening 27 May 1937",
+      "url": "https://en.wikipedia.org/wiki/Golden_Gate_Bridge"
+    },
+    {
+      "title": "SRTM 30 m via OpenTopoData — the ground under the approach viaducts, pylons and anchorages (Presidio bluffs 15–55 m, Marin headland 22–69 m)",
+      "url": "https://www.opentopodata.org/datasets/srtm/"
+    },
+    {
+      "title": "Wikidata Q44440 — position, date, Joseph Strauss",
+      "url": "https://www.wikidata.org/wiki/Q44440"
+    }
+  ],
+  "notes": "Built by code (model_sources/Q44440_golden_gate_bridge.py, tools/meshkit.py) with AI assistance. Modelled: the two towers to OSM's plan and levels (legs stepping back at 74, 123, 162 and 195 m, corners notched in steps, vertical recesses, the four Art Deco portal struts above the deck with fluting and stepped corbels, saddle covers and beacons at 227 m, X bracing below the deck), the concrete tower piers and the fender round the south pier; the two main cables (0.92 m) with a parabolic sag of 144.8 m in the main span (low point 6 m above the roadway) and ≈ 10 m in the side spans, over the Fort Point arch and down into the anchorages; cable bands and suspender pairs every 15.24 m (50 ft; drawn 0.16 m thick, about twice the real ropes so they read from the air); the stiffening truss (7.7 m deep, 7.62 m panels, verticals, diagonals, floor beams and the bottom lateral bracing); roadway with lane lines and the movable median barrier, sidewalks passing outside the tower legs, railings, lamp posts every 100 ft; the Fort Point steel arch with its spandrel columns; the four concrete pylons S1, S2, N1, N2; the two anchorages with the cable housings; the approach viaducts on steel bents and the abutments, following the curves of the ends. Not modelled: Fort Point itself (a separate landmark, under the arch), the suicide-deterrent net (2024), the toll plaza, vehicles. Estimated (±): the sag (±3 m at mid-span), truss depth and panel length (±10 %), the pylons, the arch shape and the anchorage housings (±20 %), the fender (±30 %), the grade of the approaches (±4 m), the number and spacing of the approach bents. y = 0 is sea level: the origin is on the water at mid-span. ground: keep — the ends land on the Presidio bluffs and the Marin headlands (15–70 m above the sea), which must not be levelled; ground_at [0, 0] (the water), ground_low 0. The piers, pylons, anchorages and bents go 8 m below the SRTM ground. footprint: a 30 m strip along the deck, wider at the tower piers (the south fender), the pylons and the anchorages, and narrowed to a 2 m neck over Fort Point so the fort under the arch is not cleared.",
+  "triangles": 83668,
+  "footprint": [
+    [
+      -45.0,
+      -1312.5
+    ],
+    [
+      -27.3,
+      -1281.9
+    ],
+    [
+      -10.9,
+      -1249.8
+    ],
+    [
+      -6.6,
+      -1239.8
+    ],
+    [
+      -1.4,
+      -1224.5
+    ],
+    [
+      2.8,
+      -1209.4
+    ],
+    [
+      11.3,
+      -1206.2
+    ],
+    [
+      18.7,
+      -1170.2
+    ],
+    [
+      21.4,
+      -1148.8
+    ],
+    [
+      23.0,
+      -1091.8
+    ],
+    [
+      1.6,
+      -1086.8
+    ],
+    [
+      1.0,
+      -991.8
+    ],
+    [
+      22.5,
+      -986.8
+    ],
+    [
+      22.5,
+      -976.8
+    ],
+    [
+      15.0,
+      -971.8
+    ],
+    [
+      15.0,
+      -666.8
+    ],
+    [
+      47.0,
+      -661.8
+    ],
+    [
+      47.0,
+      -616.8
+    ],
+    [
+      15.0,
+      -611.8
+    ],
+    [
+      15.0,
+      628.2
+    ],
+    [
+      22.5,
+      633.2
+    ],
+    [
+      22.5,
+      648.2
+    ],
+    [
+      15.0,
+      653.2
+    ],
+    [
+      15.0,
+      978.2
+    ],
+    [
+      22.5,
+      983.2
+    ],
+    [
+      22.2,
+      1088.3
+    ],
+    [
+      14.7,
+      1093.3
+    ],
+    [
+      15.8,
+      1212.5
+    ],
+    [
+      18.9,
+      1245.8
+    ],
+    [
+      24.5,
+      1274.0
+    ],
+    [
+      34.5,
+      1311.6
+    ],
+    [
+      40.8,
+      1329.2
+    ],
+    [
+      50.9,
+      1350.6
+    ],
+    [
+      65.0,
+      1375.9
+    ],
+    [
+      78.5,
+      1395.6
+    ],
+    [
+      53.5,
+      1412.4
+    ],
+    [
+      39.5,
+      1391.6
+    ],
+    [
+      24.3,
+      1364.5
+    ],
+    [
+      13.1,
+      1340.6
+    ],
+    [
+      5.9,
+      1320.6
+    ],
+    [
+      -4.7,
+      1280.9
+    ],
+    [
+      -9.9,
+      1255.5
+    ],
+    [
+      -12.7,
+      1234.6
+    ],
+    [
+      -15.0,
+      1183.4
+    ],
+    [
+      -15.3,
+      1093.2
+    ],
+    [
+      -22.8,
+      1088.1
+    ],
+    [
+      -22.5,
+      983.2
+    ],
+    [
+      -15.0,
+      978.2
+    ],
+    [
+      -15.0,
+      653.2
+    ],
+    [
+      -22.5,
+      648.2
+    ],
+    [
+      -22.5,
+      633.2
+    ],
+    [
+      -15.0,
+      628.2
+    ],
+    [
+      -15.0,
+      -611.8
+    ],
+    [
+      -47.0,
+      -616.8
+    ],
+    [
+      -47.0,
+      -661.8
+    ],
+    [
+      -15.0,
+      -666.8
+    ],
+    [
+      -15.0,
+      -971.8
+    ],
+    [
+      -22.5,
+      -976.8
+    ],
+    [
+      -22.5,
+      -986.8
+    ],
+    [
+      -1.0,
+      -991.8
+    ],
+    [
+      -0.4,
+      -1086.8
+    ],
+    [
+      -22.0,
+      -1091.7
+    ],
+    [
+      -22.7,
+      -1135.5
+    ],
+    [
+      -25.7,
+      -1163.0
+    ],
+    [
+      -32.4,
+      -1195.5
+    ],
+    [
+      -26.3,
+      -1202.0
+    ],
+    [
+      -33.1,
+      -1224.8
+    ],
+    [
+      -38.1,
+      -1237.3
+    ],
+    [
+      -60.9,
+      -1280.2
+    ],
+    [
+      -71.0,
+      -1297.5
+    ]
+  ]
+}

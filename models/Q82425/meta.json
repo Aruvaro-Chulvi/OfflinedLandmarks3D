@@ -1,0 +1,128 @@
+{
+  "id": "Q82425",
+  "name": "Brandenburger Tor",
+  "heading": 83.5,
+  "position": {
+    "lat": 52.516272,
+    "lon": 13.3777022,
+    "source": "https://www.openstreetmap.org/way/518071791 (middle of the twelve OSM columns, 0.3 m from the outline's centroid; long axis at 173.5°)"
+  },
+  "authors": [
+    {
+      "name": "Álvaro C. Chulvi",
+      "url": "https://github.com/Aruvaro-Chulvi"
+    }
+  ],
+  "license": "CC-BY-4.0",
+  "rights": {
+    "status": "public_domain",
+    "architects": [
+      {
+        "name": "Carl Gotthard Langhans",
+        "died": 1808,
+        "wikidata": "Q313181"
+      },
+      {
+        "name": "Johann Gottfried Schadow",
+        "died": 1850
+      },
+      {
+        "name": "Heinrich Strack",
+        "died": 1880,
+        "wikidata": "Q72120"
+      }
+    ],
+    "built": 1791,
+    "note": "Quadriga by Johann Gottfried Schadow (1793); side colonnades by Heinrich Strack (1868); gatehouses rebuilt after the Second World War on the old design."
+  },
+  "sources": [
+    {
+      "title": "OpenStreetMap way 518071791 and relation 7288267 — outline, height 26 m, building:parts with every column, attic and roof heights (© OpenStreetMap contributors, ODbL)",
+      "url": "https://www.openstreetmap.org/relation/7288267"
+    },
+    {
+      "title": "Brandenburger Tor — Wikipedia (de), «Abmessungen»: 20.3 m high (≈26 m with the Quadriga), 62.5 m wide, 11 m deep, columns 13.5 m × 1.73 m, passages 5.65 m and 3.80 m, horses 12 Fuß, 16 metopes per side, the attic relief, materials",
+      "url": "https://de.wikipedia.org/wiki/Brandenburger_Tor"
+    },
+    {
+      "title": "Brandenburg Gate — Wikipedia (en)",
+      "url": "https://en.wikipedia.org/wiki/Brandenburg_Gate"
+    },
+    {
+      "title": "Denkmaldatenbank Berlin, object 09065019",
+      "url": "https://denkmaldatenbank.berlin.de/daobj.php?obj_dok_nr=09065019"
+    },
+    {
+      "title": "Structurae — Brandenburg Gate",
+      "url": "https://structurae.net/en/structures/brandenburg-gate"
+    }
+  ],
+  "footprint": [
+    [
+      -17.4,
+      -6.6
+    ],
+    [
+      17.4,
+      -6.6
+    ],
+    [
+      17.4,
+      -6.0
+    ],
+    [
+      33.4,
+      -6.0
+    ],
+    [
+      33.4,
+      6.0
+    ],
+    [
+      31.8,
+      6.0
+    ],
+    [
+      31.8,
+      23.8
+    ],
+    [
+      19.4,
+      23.8
+    ],
+    [
+      19.4,
+      6.6
+    ],
+    [
+      -19.4,
+      6.6
+    ],
+    [
+      -19.4,
+      23.8
+    ],
+    [
+      -31.8,
+      23.8
+    ],
+    [
+      -31.8,
+      6.0
+    ],
+    [
+      -33.4,
+      6.0
+    ],
+    [
+      -33.4,
+      -6.0
+    ],
+    [
+      -17.4,
+      -6.0
+    ]
+  ],
+  "triangles": 74952,
+  "notes": "Built by code (model_sources/Q82425_brandenburger_tor.py, tools/meshkit.py) with AI assistance. Plan from OpenStreetMap (column positions, walls, attic parts, Strack's colonnades and the two gatehouses towards Pariser Platz); heights of the gate from the published figures (columns 13.5 m, building 20.3 m, Quadriga to ≈26 m). Modelled: twelve fluted Doric columns with bases on granite plinths, transverse walls with relief panels in the passages, architrave, triglyph frieze with 16 metopes (centaurs and Lapiths, stylised) on each side, cornice with copper crown, stepped side attics and the central block with the relief «Folgen der Tapferkeit» on the east (the west panel is empty, as built), the Quadriga in green patina (Victoria with the staff, oak wreath, Iron Cross and eagle; four horses facing east), Strack's colonnades and the gatehouses with Doric peristyles. Estimated (±10–15 %): the subdivision of the order and of the attic steps, the heights of the colonnades and gatehouses (columns 8 m, flat roof at 11.2 m; OSM gives 10–12 m) and their roof colour; sculpture is stylised. Pariser Platz and the Platz des 18. März are not included."
+}

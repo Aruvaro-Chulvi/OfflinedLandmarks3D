@@ -1,0 +1,218 @@
+{
+  "id": "Q64436",
+  "name": "Arc de Triomphe de l'Étoile",
+  "heading": 115.04,
+  "position": {
+    "lat": 48.8737774,
+    "lon": 2.2950373,
+    "source": "https://www.openstreetmap.org/way/226413508 (centroid of the outline; the outline is square to heading 115.04° within 0.01 m — the Champs-Élysées façade faces east-south-east)"
+  },
+  "authors": [
+    {
+      "name": "Álvaro C. Chulvi",
+      "url": "https://github.com/Aruvaro-Chulvi"
+    }
+  ],
+  "license": "CC-BY-4.0",
+  "rights": {
+    "status": "public_domain",
+    "architects": [
+      {
+        "name": "Jean-François Chalgrin",
+        "died": 1811,
+        "wikidata": "Q525487"
+      },
+      {
+        "name": "Jean-Arnaud Raymond",
+        "died": 1811
+      },
+      {
+        "name": "Louis-Robert Goust",
+        "died": 1838,
+        "wikidata": "Q3260862"
+      },
+      {
+        "name": "Jean-Nicolas Huyot",
+        "died": 1840,
+        "wikidata": "Q3168208"
+      },
+      {
+        "name": "Guillaume Abel Blouet",
+        "died": 1853,
+        "wikidata": "Q3119629"
+      }
+    ],
+    "built": 1836,
+    "note": "Begun 1806 to Chalgrin's design, inaugurated 1836. Sculpture by François Rude (died 1855), Jean-Pierre Cortot (died 1843), Antoine Étex (died 1888), James Pradier (died 1852) and others of the 1830s. The Tomb of the Unknown Soldier dates from 1921 and the flame from 1923 (bronze by Edgar Brandt, died 1960, to Henri Favier's design): both are shown only as simple volumes (a slab, a small bronze rosette). Every author died more than 70 years ago."
+  },
+  "sources": [
+    {
+      "title": "OpenStreetMap way 226413508 and its building:parts 226413509–22, 226520145–46 — outline, part heights (pillars 32 m, terrace 47 m, raised centre 49–50 m), group pedestals (© OpenStreetMap contributors, ODbL)",
+      "url": "https://www.openstreetmap.org/way/226413508"
+    },
+    {
+      "title": "OpenStreetMap nodes 3462009689–92 — positions of the four high-relief groups (Le Départ, Le Triomphe, La Résistance, La Paix)",
+      "url": "https://www.openstreetmap.org/node/3462009691"
+    },
+    {
+      "title": "OpenStreetMap — Tomb of the Unknown Soldier (way 339016618), Flamme de la Nation (way 1222868263), chains under the arch (ways 339016604–05), the 294 bollards and the chains of the island (ways 339874145–48, 699674342–51, 1356427943), stair walls of the Passage du Souvenir (ways 339016611, 339016614)",
+      "url": "https://www.openstreetmap.org/way/339016618"
+    },
+    {
+      "title": "Arc de triomphe de l'Étoile — Wikipédia (fr): 49.54 × 44.82 × 22.21 m, great arch 29.19 × 14.62 m, small arches 18.68 × 8.44 m, the high reliefs and bas-reliefs and their places, 30 attic shields, Château-Landon limestone, the tomb, the flame, the hundred bollards",
+      "url": "https://fr.wikipedia.org/wiki/Arc_de_triomphe_de_l%27%C3%89toile"
+    },
+    {
+      "title": "Arc de Triomphe — Wikipedia (en)",
+      "url": "https://en.wikipedia.org/wiki/Arc_de_Triomphe"
+    },
+    {
+      "title": "Centre des monuments nationaux — teaching sheet on the Arc de triomphe (overall dimensions)",
+      "url": "https://www.monuments-nationaux.fr/var/cmn_inter/storage/original/application/8b8758daa9afa0ce5606f26088e0b928.pdf"
+    },
+    {
+      "title": "Wikidata Q64436 — architects and dates",
+      "url": "https://www.wikidata.org/wiki/Q64436"
+    },
+    {
+      "title": "EU-DEM 25 m via OpenTopoData — ground of the Place Charles-de-Gaulle (2–3 m slope across the island)",
+      "url": "https://www.opentopodata.org/datasets/eudem/"
+    },
+    {
+      "title": "Wikimedia Commons — photographs of the four faces, the attic and the terrace (heights of the frieze, cornice, attic and bas-reliefs estimated on them)",
+      "url": "https://commons.wikimedia.org/wiki/Category:Arc_de_Triomphe_de_l%27%C3%89toile"
+    }
+  ],
+  "notes": "Built by code (model_sources/Q64436_arc_de_triomphe.py, tools/meshkit.py) with AI assistance. Overall, arch and pillar dimensions are the published ones; the cadastre outline in OpenStreetMap (47.3 × 24.4 m) is read as the projecting cornice. The heights of the entablature, frieze, attic, bas-reliefs and group pedestals are estimated from photographs (±5 %). All sculpture is stylised (groups of figures, winged geniuses, Fames, a procession on the frieze, framed battle reliefs), not a likeness of the works. The 30 attic shields are split 10 + 5 + 10 + 5 and the engraved names are drawn as lines. The model includes the paved island (terre-plein) of the Place Charles-de-Gaulle out to its kerb (r ≈ 57.4 m) with the chained bollards placed from OpenStreetMap and the two stairways down to the Passage du Souvenir; the roundabout road is not included. The island is flat in the model; the real ground falls 2–3 m across it, so the kerb skirt goes down 4 m. Paving patterns are simplified.",
+  "triangles": 94962,
+  "footprint": [
+    [
+      58.4,
+      0.0
+    ],
+    [
+      57.3,
+      11.4
+    ],
+    [
+      54.0,
+      22.3
+    ],
+    [
+      48.6,
+      32.4
+    ],
+    [
+      41.3,
+      41.3
+    ],
+    [
+      32.4,
+      48.6
+    ],
+    [
+      22.3,
+      54.0
+    ],
+    [
+      11.4,
+      57.3
+    ],
+    [
+      0.0,
+      58.4
+    ],
+    [
+      -11.4,
+      57.3
+    ],
+    [
+      -22.3,
+      54.0
+    ],
+    [
+      -32.4,
+      48.6
+    ],
+    [
+      -41.3,
+      41.3
+    ],
+    [
+      -48.6,
+      32.4
+    ],
+    [
+      -54.0,
+      22.3
+    ],
+    [
+      -57.3,
+      11.4
+    ],
+    [
+      -58.4,
+      0.0
+    ],
+    [
+      -57.3,
+      -11.4
+    ],
+    [
+      -54.0,
+      -22.3
+    ],
+    [
+      -48.6,
+      -32.4
+    ],
+    [
+      -41.3,
+      -41.3
+    ],
+    [
+      -32.4,
+      -48.6
+    ],
+    [
+      -22.3,
+      -54.0
+    ],
+    [
+      -11.4,
+      -57.3
+    ],
+    [
+      -0.0,
+      -58.4
+    ],
+    [
+      11.4,
+      -57.3
+    ],
+    [
+      22.3,
+      -54.0
+    ],
+    [
+      32.4,
+      -48.6
+    ],
+    [
+      41.3,
+      -41.3
+    ],
+    [
+      48.6,
+      -32.4
+    ],
+    [
+      54.0,
+      -22.3
+    ],
+    [
+      57.3,
+      -11.4
+    ]
+  ]
+}

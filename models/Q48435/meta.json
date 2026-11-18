@@ -1,0 +1,161 @@
+{
+  "id": "Q48435",
+  "name": "Basílica de la Sagrada Família",
+  "heading": 134.0,
+  "position": {
+    "lat": 41.4035891,
+    "lon": 2.1743496,
+    "source": "https://www.openstreetmap.org/relation/9194723 (the centre of the crossing, within 0.4 m of the centre of the Tower of Jesus Christ, way 359084982; heading = the axis of the nave towards the Glory façade, from the rows of bell towers (313.3–314.7°) and the nave walls (314.4°))"
+  },
+  "authors": [
+    {
+      "name": "Álvaro C. Chulvi",
+      "url": "https://github.com/Aruvaro-Chulvi"
+    }
+  ],
+  "license": "CC-BY-4.0",
+  "rights": {
+    "status": "protected",
+    "architects": [
+      {
+        "name": "Francisco de Paula del Villar",
+        "died": 1901
+      },
+      {
+        "name": "Antoni Gaudí",
+        "died": 1926,
+        "wikidata": "Q25328"
+      },
+      {
+        "name": "Jordi Bonet i Armengol"
+      },
+      {
+        "name": "Jordi Faulí i Oller"
+      }
+    ],
+    "built": 1882,
+    "note": "Begun in 1882 (crypt by Francisco de Paula del Villar), designed by Antoni Gaudí from 1883 until his death in 1926 (crypt, apse, Nativity façade, the bell tower of Saint Barnabas finished 1925). Gaudí's own work is in the public domain, but the basilica is still being built by his successors (Domènec Sugrañes, Francesc Quintana, Isidre Puig i Boada, Lluís Bonet i Garí, Jordi Bonet i Armengol, and the present chief architect Jordi Faulí i Oller with the team of the Junta Constructora): the Passion façade (sculpture by Josep Maria Subirachs, died 2014), the nave, the sacristy and the six central towers (2016–2026) are recent works whose authors are alive or died recently, so the building as a whole is protected. Freedom of panorama in Spain (art. 35.2 LPI) covers works permanently in public places; the model is an original illustrated model made by code, not a copy of photographs or plans."
+  },
+  "sources": [
+    {
+      "title": "OpenStreetMap relation 9194723 — outline of the basilica, the portico columns (© OpenStreetMap contributors, ODbL)",
+      "url": "https://www.openstreetmap.org/relation/9194723"
+    },
+    {
+      "title": "OpenStreetMap building:parts — bell towers (ways 661321474, 1207779425–1207779428, 1207779447, 1207779448, 1207779469), Evangelists (relations 16329171–16329174), Virgin Mary (way 1207779418), Jesus Christ (way 359084982 and stages 359084980/83/90/91/93), crossing stages (ways 359084987, 359084975, relation 16329175), west sacristy (relation 16329170), cloister wing (relation 16329178) (© OpenStreetMap contributors, ODbL)",
+      "url": "https://www.openstreetmap.org/way/359084982"
+    },
+    {
+      "title": "Sagrada Família — Wikipedia (en): 90 × 60 m, nave 45 m wide, vaults 45/30/60/75 m, 7.5 m grid, Jesus Christ tower 172.5 m (full height 20 Feb 2026, blessed 10 Jun 2026), 14 of 18 towers finished, Glory façade under construction",
+      "url": "https://en.wikipedia.org/wiki/Sagrada_Fam%C3%ADlia"
+    },
+    {
+      "title": "Templo Expiatorio de la Sagrada Familia — Wikipedia (es): main floor 4 m above the street, plan, history",
+      "url": "https://es.wikipedia.org/wiki/Templo_Expiatorio_de_la_Sagrada_Familia"
+    },
+    {
+      "title": "Basílica de la Sagrada Família — history of the basilica (Virgin Mary tower 138 m, Evangelists 135 m, Jesus Christ 172.5 m)",
+      "url": "https://sagradafamilia.org/en/history-of-the-temple"
+    },
+    {
+      "title": "After 144 years, the Sagrada Família reaches its full height (final arm of the cross installed, 172.5 m)",
+      "url": "https://www.bdcnetwork.com/building-sector-reports/cultural-facilities/religious-facilities/article/55375216/after-144-years-barcelonas-sagrada-familia-church-finally-reaches-its-intended-full-height"
+    },
+    {
+      "title": "Inauguration of the towers of the Evangelists (135 m), 2022",
+      "url": "https://www.oursundayvisitor.com/sagrada-familia-basilica-in-barcelona-inaugurates-the-towers-of-the-evangelists/"
+    },
+    {
+      "title": "Wikidata — Q48435 (architect, dates)",
+      "url": "https://www.wikidata.org/wiki/Q48435"
+    }
+  ],
+  "footprint": [
+    [
+      -52.37,
+      7.56
+    ],
+    [
+      -52.15,
+      -10.47
+    ],
+    [
+      -41.66,
+      -51.15
+    ],
+    [
+      -40.63,
+      -53.02
+    ],
+    [
+      -39.97,
+      -53.72
+    ],
+    [
+      -37.55,
+      -54.57
+    ],
+    [
+      -21.34,
+      -54.3
+    ],
+    [
+      -19.79,
+      -54.21
+    ],
+    [
+      6.69,
+      -46.37
+    ],
+    [
+      15.95,
+      -41.91
+    ],
+    [
+      40.48,
+      -20.01
+    ],
+    [
+      42.52,
+      -6.83
+    ],
+    [
+      42.3,
+      8.02
+    ],
+    [
+      40.37,
+      21.03
+    ],
+    [
+      25.2,
+      53.07
+    ],
+    [
+      23.48,
+      56.03
+    ],
+    [
+      -1.07,
+      56.06
+    ],
+    [
+      -23.16,
+      56.03
+    ],
+    [
+      -41.62,
+      45.89
+    ],
+    [
+      -50.4,
+      17.08
+    ],
+    [
+      -52.36,
+      9.3
+    ]
+  ],
+  "triangles": 44915,
+  "notes": "Built by code (model_sources/Q48435_sagrada_familia.py, tools/meshkit.py) with AI assistance. The basilica as it stands in late 2026: plan from the OpenStreetMap outline and building:parts (Latin cross, nave to the south-east, apse to the north-west), the 14 finished towers at their published heights (Jesus Christ 172.5 m with its four-armed white cross, Virgin Mary 138 m with its 12-pointed glass star, Evangelists 135 m with their symbols, bell towers 98–112 m with their mosaic finials), the five-aisled nave and the transept with their stepped sections, fruit-basket pinnacles and ridge lanterns, the apse with its ring of chapels and pinnacles, the west sacristy with its ribbed cupola, the cloister wing, the Nativity façade (three sculpted portals, the green cypress with doves, the columns on turtles) and the Passion façade (porch on six leaning columns, frieze of bones, gable, the bridge with the Risen Christ). Heading 134° is the main façade, the Glory façade (south-east, towards Carrer de Mallorca), still under construction: only the end wall of the nave and a simplified grey concrete portico with the bases of its four towers are modelled; the Glory towers and the great stair do not exist yet. Uncertain (estimated from photos, ±10 %): the heights of the nave and transept walls and roofs (33/50/62 m, lanterns 68 m), the crossing stages (60 m from OSM, then 72 and 84 m where OSM says 80 and 100), the apse (chapels 27 m, pinnacles 45 m, body 48 m), the façade portals and porch, the sacristy pinnacle, and the present state of the Glory works. Simplified: the sculpture is a noise relief, the spiral openings of the bell towers are painted bands, the finials are stylised (stem, red body with white balls, gold mitre, cross), windows are flat dark panels, the interior and the crypt are not modelled. The footprint is the convex hull of the model plus 1 m: the church and its own grounds inside its Eixample block, not the streets nor the two squares (Plaça de la Sagrada Família, Plaça de Gaudí)."
+}

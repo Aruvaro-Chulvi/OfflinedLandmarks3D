@@ -1,0 +1,149 @@
+{
+  "id": "Q37200",
+  "name": "Great Pyramid of Giza",
+  "heading": 0,
+  "position": {
+    "lat": 29.9791687,
+    "lon": 31.1342125,
+    "source": "https://www.openstreetmap.org/way/4420397 (centroid of the outline of Khufu's pyramid; heading 0 = its north face, with the entrance, faces +Z; the sides are aligned to the cardinal points within ~3′ of arc)"
+  },
+  "ground": "keep",
+  "ground_at": [
+    0,
+    128
+  ],
+  "ground_low": -42,
+  "authors": [
+    {
+      "name": "Álvaro C. Chulvi",
+      "url": "https://github.com/Aruvaro-Chulvi"
+    }
+  ],
+  "license": "CC-BY-4.0",
+  "rights": {
+    "status": "public_domain",
+    "architects": [
+      {
+        "name": "Hemiunu",
+        "died": -2501,
+        "wikidata": "Q59087"
+      }
+    ],
+    "built": -2560,
+    "note": "Fourth Dynasty of Egypt: the pyramid of Khufu (c. 2560 BC, traditionally designed by his vizier Hemiunu), Khafre's and Menkaure's pyramids, temples and causeway, the queens' pyramids and the Great Sphinx (c. 2570–2500 BC). Some 4,500 years old: public domain."
+  },
+  "sources": [
+    {
+      "title": "OpenStreetMap way 4420397 — Great Pyramid of Giza, outline and centre (© OpenStreetMap contributors, ODbL)",
+      "url": "https://www.openstreetmap.org/way/4420397"
+    },
+    {
+      "title": "OpenStreetMap ways 4420396 (Khafre) and 4420398 (Menkaure) — centres of the outlines",
+      "url": "https://www.openstreetmap.org/way/4420396"
+    },
+    {
+      "title": "OpenStreetMap ways 198032492, 219797724, 219797726 (G1-a/b/c) and 25416060, 25416067, 25416093 (G3-a/b/c) — the queens' pyramids",
+      "url": "https://www.openstreetmap.org/way/198032492"
+    },
+    {
+      "title": "OpenStreetMap way 540058405 and parts 540058406, 540058407, 24585237 (relation 7728526) — the Great Sphinx: outline, paws, head, body",
+      "url": "https://www.openstreetmap.org/way/540058405"
+    },
+    {
+      "title": "OpenStreetMap ways 1238523832 (Valley Temple of Khafre), 1238523833 (Sphinx Temple), 97577625 and 251168393 (mortuary temples of Khafre and Menkaure)",
+      "url": "https://www.openstreetmap.org/way/1238523832"
+    },
+    {
+      "title": "Great Pyramid of Giza — Wikipedia (en): base 230.33 m, slope 51°50′40″, height 146.6 m originally and 138.5 m today, ~200 courses, entrance 17 m up and 7.3 m east of the centre with its gable of chevron blocks, al-Ma'mun's tunnel, the mast on the top",
+      "url": "https://en.wikipedia.org/wiki/Great_Pyramid_of_Giza"
+    },
+    {
+      "title": "Pyramid of Khafre — Wikipedia (en): base 215.25 m, slope 53°10′, 143.5 m originally and 136.4 m today, casing on the top third, bedrock 10 m higher than Khufu's, causeway 494.6 m, Valley Temple of limestone sheathed in red granite with granite pillars in a T-shaped hall and an alabaster floor",
+      "url": "https://en.wikipedia.org/wiki/Pyramid_of_Khafre"
+    },
+    {
+      "title": "Pyramid of Menkaure — Wikipedia (en): base 102.2 × 104.6 m, slope 51°20′, 65.5 m originally and 61 m today, granite casing (16 courses, seven left), the gash on the north face (1196); G3-a 84 cubits base and 25.4 m today, G3-b and G3-c four-stage step pyramids",
+      "url": "https://en.wikipedia.org/wiki/Pyramid_of_Menkaure"
+    },
+    {
+      "title": "Pyramid G1-a — Wikipedia (en): base 49.5 m, 30.25 m originally, two thirds lost",
+      "url": "https://en.wikipedia.org/wiki/Pyramid_G1-a"
+    },
+    {
+      "title": "Great Sphinx of Giza — Wikipedia (en): 73 m long, 20 m high, 19 m wide, facing east, the softer middle layers eroded, restoration blocks round the base, ~3 m between the paws",
+      "url": "https://en.wikipedia.org/wiki/Great_Sphinx_of_Giza"
+    },
+    {
+      "title": "SRTM 30 m and ASTER GDEM 30 m via OpenTopoData — levels of the plateau (Khufu ≈ 60 m, Khafre ≈ 70 m, Sphinx floor ≈ 20 m a.s.l.)",
+      "url": "https://www.opentopodata.org/datasets/srtm/"
+    },
+    {
+      "title": "Wikidata Q37200 — architect and date",
+      "url": "https://www.wikidata.org/wiki/Q37200"
+    }
+  ],
+  "notes": "Built by code (model_sources/Q37200_great_pyramid_of_giza.py, tools/meshkit.py) with AI assistance. The model is the Giza plateau as a flight sees it, filed under the Great Pyramid: Khufu (origin, centre of its base), Khafre, Menkaure, the six queens' pyramids, the Great Sphinx in its rock-cut enclosure, the Valley and Sphinx Temples, Khafre's causeway and the mortuary temples. The pyramids are true squares of their published sizes on the centres of their OSM outlines, aligned to the cardinal points; the core courses are drawn as steps (~1.45 m at the base to ~0.6 m at the top, fewer than the real ~200 at Khufu's base), with worn corners. Khafre's casing on its top third has an invented ragged lower edge. Menkaure's gash and granite remains are placed and sized from photographs (±30 %); the heights today of G1-b, G1-c, G3-b and G3-c are estimates (±30 %). The Sphinx is a simplified sculpture to its real length, height and width; its head, the enclosure (rock walls 7–10 m high) and the temple wall heights are estimates (±15–20 %); the inner plan of the temples is schematic. Ground: y = 0 is Khufu's base (≈ 60 m a.s.l.); Khafre +10, Menkaure +11, G3 queens +7, G1 queens −1, the Sphinx floor and the temples −40, from SRTM/ASTER read away from the monuments (±3 m); every base goes 6–14 m below its own level, so on Offlined's terrain the lower parts of the Sphinx enclosure may be buried where the 30 m elevation data smooth the pit.",
+  "triangles": 58879,
+  "footprint": [
+    [
+      -230.0,
+      140.0
+    ],
+    [
+      130.0,
+      140.0
+    ],
+    [
+      460.0,
+      -228.0
+    ],
+    [
+      650.0,
+      -662.0
+    ],
+    [
+      692.0,
+      -870.0
+    ],
+    [
+      540.0,
+      -872.0
+    ],
+    [
+      418.0,
+      -772.0
+    ],
+    [
+      220.0,
+      -485.0
+    ],
+    [
+      100.0,
+      -392.0
+    ],
+    [
+      -360.0,
+      -520.0
+    ],
+    [
+      -420.0,
+      -522.0
+    ],
+    [
+      -422.0,
+      -404.0
+    ],
+    [
+      -372.0,
+      -398.0
+    ],
+    [
+      -276.0,
+      -400.0
+    ],
+    [
+      -230.0,
+      -190.0
+    ]
+  ]
+}

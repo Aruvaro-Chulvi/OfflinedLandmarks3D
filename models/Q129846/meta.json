@@ -1,0 +1,130 @@
+{
+  "id": "Q129846",
+  "name": "Saint Basil's Cathedral (Cathedral of the Intercession on the Moat), with the Kremlin wall and the Spasskaya Tower",
+  "heading": 338.0,
+  "position": {
+    "lat": 55.7524933,
+    "lon": 37.6230884,
+    "source": "https://www.openstreetmap.org/relation/3030568 (centroid of the outline of the cathedral; +Z points up Red Square to 338°, the Kremlin wall runs along Z about 100 m away on +X)"
+  },
+  "ground": "keep",
+  "ground_at": [
+    40,
+    0
+  ],
+  "ground_low": -3,
+  "authors": [
+    {
+      "name": "Álvaro C. Chulvi",
+      "url": "https://github.com/Aruvaro-Chulvi"
+    }
+  ],
+  "license": "CC-BY-4.0",
+  "rights": {
+    "status": "public_domain",
+    "architects": [
+      {
+        "name": "Barma"
+      },
+      {
+        "name": "Postnik Yakovlev",
+        "wikidata": "Q2106252"
+      },
+      {
+        "name": "Pietro Antonio Solari",
+        "died": 1493,
+        "wikidata": "Q1394287"
+      },
+      {
+        "name": "Bazhen Ogurtsov"
+      },
+      {
+        "name": "Christopher Galloway"
+      }
+    ],
+    "built": 1561,
+    "note": "The cathedral was built 1555–1561 for Ivan IV by Barma and Postnik Yakovlev (16th-century masters; the dates of their deaths are not known, but both lived four and a half centuries ago); the chapel of St Basil 1588, the bell tower and the covered stairs in the 17th century. The Spasskaya Tower: Pietro Antonio Solari, 1491; its tiered top and tent by Bazhen Ogurtsov and Christopher Galloway, 1624–25 (both 17th century). Nabatnaya Tower 1495, Tsarskaya Tower 1680. The ruby star (1937) is modelled as a plain five-pointed star. All public domain."
+  },
+  "sources": [
+    {
+      "title": "OpenStreetMap relation 3030568 — outline of the cathedral and its ~510 building:part pieces with heights (drums, cornices, dome slices, crosses, galleries, stairs, porches, bell tower) (© OpenStreetMap contributors, ODbL)",
+      "url": "https://www.openstreetmap.org/relation/3030568"
+    },
+    {
+      "title": "OpenStreetMap relations 1360656 (Spasskaya Tower, height 71), 1360663 (Tsarskaya, 16), 1360661 (Nabatnaya, 38), 2470039 and 2470034 (Kremlin wall, height 12) (© OpenStreetMap contributors, ODbL)",
+      "url": "https://www.openstreetmap.org/relation/1360656"
+    },
+    {
+      "title": "Храм Василия Блаженного — Wikipedia (ru): central church 47.5 m to the top of the tent from the church floor and 65 m from the ground, brick with white-stone foundations, plinth and details, the eleven chapels, bell tower with green tiled tent and coloured ribs",
+      "url": "https://ru.wikipedia.org/wiki/%D0%A5%D1%80%D0%B0%D0%BC_%D0%92%D0%B0%D1%81%D0%B8%D0%BB%D0%B8%D1%8F_%D0%91%D0%BB%D0%B0%D0%B6%D0%B5%D0%BD%D0%BD%D0%BE%D0%B3%D0%BE"
+    },
+    {
+      "title": "Saint Basil's Cathedral — Wikipedia (en): plan of nine churches on one base, dates, architects",
+      "url": "https://en.wikipedia.org/wiki/Saint_Basil%27s_Cathedral"
+    },
+    {
+      "title": "Spasskaya Tower and Kremlin Clock — Wikipedia (en): 71 m with the star, clock dials 6.12 m across on four faces, the star 3.75 m across",
+      "url": "https://en.wikipedia.org/wiki/Spasskaya_Tower"
+    },
+    {
+      "title": "Wikimedia Commons — Saint Basil's Cathedral (photographs: colours and patterns of the domes, kokoshniks, tent, galleries, stairs)",
+      "url": "https://commons.wikimedia.org/wiki/Category:Saint_Basil%27s_Cathedral"
+    },
+    {
+      "title": "Wikidata Q129846 — titles, architect, dates",
+      "url": "https://www.wikidata.org/wiki/Q129846"
+    }
+  ],
+  "footprint": [
+    [
+      -28.1,
+      -9.7
+    ],
+    [
+      -27.0,
+      -19.1
+    ],
+    [
+      95.7,
+      -47.4
+    ],
+    [
+      106.7,
+      -46.5
+    ],
+    [
+      112.3,
+      47.9
+    ],
+    [
+      96.5,
+      54.3
+    ],
+    [
+      86.4,
+      55.9
+    ],
+    [
+      -14.3,
+      23.4
+    ],
+    [
+      -20.1,
+      18.5
+    ],
+    [
+      -20.8,
+      17.3
+    ],
+    [
+      -21.3,
+      16.0
+    ],
+    [
+      -22.5,
+      11.8
+    ]
+  ],
+  "triangles": 102282,
+  "notes": "Built by code (model_sources/Q129846_saint_basils_cathedral.py, tools/meshkit.py) with AI assistance. The cathedral is the star: the central tent-roofed church of the Intercession (octagon, three and a half tiers of keel kokoshniks, drum, tent with white lozenges and ribs, lantern, gilded onion, cross at 66.7 m), the four large octagonal axial churches (west — Entry into Jerusalem — the tallest, cross at 46 m; the others at 43 m) and the four small diagonal churches, each with its own painted onion dome (built band by band so that the spirals, stripes and chevrons have sharp edges; the faceted «pineapple» dome has raised knobs), the chapel of St Basil (green dome with gold studs), the bell tower with its open belfry and green tiled tent, the galleries and podklet in red brick with white-stone bands and arched windows, the metal gallery roofs, the apses, the two covered stairs on the west front with their tent-roofed porches on jug pillars. Plan and heights from the detailed OpenStreetMap 3D mapping of the cathedral (relation 3030568), simplified into lathes and prisms (±0.3 m). Which pattern and colours belong to which dome follows photographs only approximately (stylised). Also included, as part of what a flight over Red Square sees: the Kremlin wall from the Spasskaya to the Nabatnaya tower (12 m, swallowtail merlons), the Spasskaya Tower with its forward gate, white-stone tiers, four clock dials, open octagon, green tent and ruby star (71 m), the small Tsarskaya tower on the wall and the Nabatnaya tower; the tiers of these towers are estimated from photographs scaled to the OSM heights (±10 %). Not modelled: the Kremlin interior, the wall beyond these towers, Lenin's Mausoleum, GUM, Lobnoye Mesto, the Minin and Pozharsky monument, the square and the terrain. Ground: Red Square is nearly level here and the terrain data cannot resolve its small slope, so the ground is kept as it is and every wall goes down to y = −5. footprint: the convex outline of the cathedral and the wall with its towers, +1 m (only open square lies between them)."
+}

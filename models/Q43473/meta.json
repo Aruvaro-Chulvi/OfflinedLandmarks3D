@@ -1,0 +1,77 @@
+{
+  "id": "Q43473",
+  "name": "Angkor Wat",
+  "heading": 270.6,
+  "position": {
+    "lat": 13.4124485,
+    "lon": 103.8669307,
+    "source": "https://www.openstreetmap.org/way/888649880 (centre of the central sanctuary; heading = the west front, from the outlines of the moat (way 160675481, relation 10930344), the island (way 1113380295), the galleries (relations 1535019, 12094941, 1648455) and the axis sanctuary → west gopura (way 1092292990): 270.2–270.9°, taken as 270.6°)"
+  },
+  "authors": [
+    {
+      "name": "Álvaro C. Chulvi",
+      "url": "https://github.com/Aruvaro-Chulvi"
+    }
+  ],
+  "license": "CC-BY-4.0",
+  "rights": {
+    "status": "public_domain",
+    "architects": [],
+    "built": 1150,
+    "note": "Built for the Khmer king Suryavarman II (died c. 1150) in the first half of the 12th century; the architects are unknown. Public domain."
+  },
+  "sources": [
+    {
+      "title": "OpenStreetMap relations 1535019, 12094941, 1648455 (first, second and third galleries), ways 888649880 and 886790393–886790468 (central sanctuary, towers and gallery parts with heights), 888569856 (cruciform cloister), 642066967 and 513685091–513685094 (Terrace of Honour), 120320892/3 and 120324355/7 (inner libraries) (© OpenStreetMap contributors, ODbL)",
+      "url": "https://www.openstreetmap.org/relation/1535019"
+    },
+    {
+      "title": "OpenStreetMap ways 1113380295 (Angkor Wat, the island), 160675481 and relation 10930344 (moat), 513679283–513679288 (outer wall), 1092292990 (west gopura), 1092279918, 502932535, 1462271693 (north, south, east gopuras), 471925578 (west causeway), 1462276418 (east causeway), 240011220 and 39842240 (libraries), 39842237/8 (ponds), 446335238–447023796 and 513685035–513685070 (retaining walls of the temple terrace)",
+      "url": "https://www.openstreetmap.org/way/1113380295"
+    },
+    {
+      "title": "Angkor Wat — Wikipedia (en): outer wall 1,024 × 802 m and 4.5 m high, 30 m apron, moat 190 m wide (1.5 × 1.3 km), causeway 350 m, outer gallery 187 × 215 m, second enclosure 100 × 115 m, Bakan 60 m square, central tower 43 m above the Bakan and 65 m above the ground",
+      "url": "https://en.wikipedia.org/wiki/Angkor_Wat"
+    },
+    {
+      "title": "Wikidata Q43473 — coordinates, country",
+      "url": "https://www.wikidata.org/wiki/Q43473"
+    }
+  ],
+  "notes": "Built by code (model_sources/Q43473_angkor_wat.py, tools/meshkit.py) with AI assistance. The whole complex: the moat (water strip 190 m wide round the 897 × 1118 m island, outside 1281 × 1500 m) with stepped laterite and sandstone banks, the sandstone causeway from the west with its landings and lion terrace, the earthen causeway from the east; the laterite outer wall (4.5 m) with the 235 m west gopura (three ruined towers, colonnade, elephant gates) and the north, south and east gopuras; simple trees in the woods of the enclosure; the processional causeway (9.5 m wide, naga balustrades with hoods, side landings), the two libraries and the two ponds, the cruciform Terrace of Honour; the temple terrace; the first gallery with its pillared half-gallery, corner pavilions and gopuras (three towers on the west); the cruciform cloister with four basins; the libraries of the first and second courts; the second gallery on its high base with corner towers and gopuras; the Bakan with its twelve stairs, galleries, cross galleries, four corner towers (46 m) and the central sanctuary with porches and its lotus-bud tower 65 m above the ground. Plan from OpenStreetMap, made symmetric about the axis (the halves differ by 1–3 m in OSM). Heights: 65 m and the 43 m of the central tower above the Bakan and the 4.5 m outer wall from Wikipedia; the gallery floors and roofs (4/10, 10.6/17, 22.5/29.6 m) from the OSM building:parts; estimated (±15–30 %): the causeways, terraces and courts, the pavilion and gopura roofs, the ruined towers of the gopuras (14–22 m), the libraries, the stairs (drawn less steep than the real ~70°), the corner towers (OSM 43 m scaled to the 65 m of the central tower: 46 m). Flat site: because Offlined levels the ground inside the footprint, the moat water is at y = +0.15 and the island is raised 1.6 m with its stepped banks down to the water (in reality the water lies ~1.5–2 m below the ground); an outer kerb and a grass slope lead back to the plain at y = 0. Not modelled: reliefs, carvings, interiors, the modern monasteries inside the enclosure, the floating pontoon bridge, roads. footprint: the moat with its outer slope and the lion terrace.",
+  "triangles": 113938,
+  "footprint": [
+    [
+      -655.0,
+      -727.0
+    ],
+    [
+      655.0,
+      -727.0
+    ],
+    [
+      655.0,
+      803.0
+    ],
+    [
+      16.0,
+      803.0
+    ],
+    [
+      16.0,
+      812.0
+    ],
+    [
+      -16.0,
+      812.0
+    ],
+    [
+      -16.0,
+      803.0
+    ],
+    [
+      -655.0,
+      803.0
+    ]
+  ]
+}

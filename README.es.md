@@ -21,7 +21,7 @@ tamaño real con una persona, abre su artículo de Wikipedia, descarga el `.glb`
 
 | | |
 |---|---|
-| [`models/`](models/) | Los modelos 3D, una carpeta por id de Wikidata: `model.glb`, `meta.json` (autoría, licencia, fuentes, posición, orientación, derechos) y `preview.jpg`. Ya hay 24 monumentos: 20 de **Madrid**, de la [Puerta de Alcalá](models/Q1140634/) y el [Palacio Real](models/Q171517/) a las [Cuatro Torres](models/Q519568/), además de la [Torre Eiffel](models/Q243/), la [Estatua de la Libertad](models/Q9202/) y, en España, la [muralla de Ávila](models/Q3050235/) y el [Monasterio de El Escorial](models/Q28471/) con sus jardines. |
+| [`models/`](models/) | Los modelos 3D, una carpeta por id de Wikidata: `model.glb`, `meta.json` (autoría, licencia, fuentes, posición, orientación, derechos) y `preview.jpg`. Ya hay 49 monumentos: 20 de **Madrid**, de la [Puerta de Alcalá](models/Q1140634/) y el [Palacio Real](models/Q171517/) a las [Cuatro Torres](models/Q519568/); en el resto de España, la [muralla de Ávila](models/Q3050235/), el [Monasterio de El Escorial](models/Q28471/) con sus jardines, la [Alhambra](models/Q47476/) y la [Sagrada Família](models/Q48435/); y los grandes monumentos del mundo: el [Coliseo](models/Q10285/), [San Pedro del Vaticano](models/Q12512/) con su plaza, la [Piazza dei Miracoli de Pisa](models/Q39054/), la [Torre Eiffel](models/Q243/), [Notre-Dame](models/Q2981/), el [Arco de Triunfo](models/Q64436/), [Westminster y el Big Ben](models/Q62408/), el [Tower Bridge](models/Q83125/), [Stonehenge](models/Q39671/), la [Puerta de Brandeburgo](models/Q82425/), [Neuschwanstein](models/Q4152/), la [Acrópolis de Atenas](models/Q10288/), [Santa Sofía](models/Q12506/), [San Basilio y la torre Spasskaya](models/Q129846/), las [pirámides de Guiza](models/Q37200/), el [Taj Mahal](models/Q9141/) con su jardín, la [Ciudad Prohibida](models/Q80290/), [Angkor Wat](models/Q43473/), el [Burj Khalifa](models/Q12495/), la [Ópera de Sídney](models/Q45178/), la [Estatua de la Libertad](models/Q9202/), el [Empire State Building](models/Q9188/), el [Golden Gate](models/Q44440/), [Machu Picchu](models/Q676203/) y el [Cristo Redentor](models/Q79961/). |
 | [`model_sources/`](model_sources/) | Modelos hechos por código (Python + [`tools/meshkit.py`](tools/meshkit.py)): ejecutas el programa y sale el `.glb`. |
 | [`docs/MODEL_SPEC.es.md`](docs/MODEL_SPEC.es.md) | Las reglas que siguen todos los modelos: glTF `.glb`, metros, ejes, origen, límites, `meta.json`. |
 | [`site/`](site/) | La página web publicada en GitHub Pages. |
@@ -57,7 +57,7 @@ release: Offlined no descarga nada que no se haya publicado ahí. Ver [CONTRIBUT
 
 | | Modelos |
 |---|---:|
-| [Álvaro C. Chulvi](https://github.com/Aruvaro-Chulvi) | 24 |
+| [Álvaro C. Chulvi](https://github.com/Aruvaro-Chulvi) | 49 |
 
 ## Licencias
 

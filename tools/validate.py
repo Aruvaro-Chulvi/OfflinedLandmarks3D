@@ -204,7 +204,7 @@ def check_folder(d: Path, errors: list, warnings: list):
         if info and info["lo"]:
             lo, hi = info["lo"], info["hi"]
             w, hgt, dp = hi[0] - lo[0], hi[1] - lo[1], hi[2] - lo[2]
-            if max(w, dp) < 2 or max(w, dp) > 1500:
+            if max(w, dp) < 2 or max(w, dp) > 4000:            # up to 4 km: long bridges, temple precincts with moats
                 err(f"model is {w:.1f} × {dp:.1f} m seen from above: is it in metres?")
             if hi[1] < 1:
                 err("nothing above y = 1 m: +Y must be up, y = 0 the ground")

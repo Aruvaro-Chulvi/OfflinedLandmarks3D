@@ -1,0 +1,262 @@
+{
+  "id": "Q12495",
+  "name": "Burj Khalifa",
+  "heading": 185.7,
+  "position": {
+    "lat": 25.1972201,
+    "lon": 55.2741555,
+    "source": "https://www.openstreetmap.org/way/137147715 (centroid of the 828 m spire part of relation 7584462, the axis of the tower; heading = the south wing, mean of the 15 OSM wing-tip bearings modulo 120°, ±0.7°)"
+  },
+  "authors": [
+    {
+      "name": "Álvaro C. Chulvi",
+      "url": "https://github.com/Aruvaro-Chulvi"
+    }
+  ],
+  "license": "CC-BY-4.0",
+  "rights": {
+    "status": "protected",
+    "architects": [
+      {
+        "name": "Adrian Smith",
+        "wikidata": "Q374276"
+      },
+      {
+        "name": "Skidmore, Owings & Merrill",
+        "wikidata": "Q459464"
+      },
+      {
+        "name": "Marshall Strabala",
+        "wikidata": "Q13647155"
+      },
+      {
+        "name": "George J. Efstathiou",
+        "wikidata": "Q5540994"
+      },
+      {
+        "name": "William F. Baker",
+        "wikidata": "Q834854"
+      }
+    ],
+    "built": 2010,
+    "note": "Skidmore, Owings & Merrill (Chicago): Adrian Smith, design partner (alive), William F. Baker, structural engineer, with George J. Efstathiou and Marshall Strabala; 2004–2010, for Emaar Properties. A modern work by living architects, still under copyright: marked protected."
+  },
+  "sources": [
+    {
+      "title": "OpenStreetMap relation 7584462 (type=building), outline way 446646206 and its 36 building:part ways: the crescents of the setbacks with their heights, the spire part, the 15 m podium parts (© OpenStreetMap contributors, ODbL)",
+      "url": "https://www.openstreetmap.org/relation/7584462"
+    },
+    {
+      "title": "Burj Khalifa — Wikipedia (en): 828 m architectural, 829.8 m tip, roof 739.4 m, top floor 585.4 m, 154 + 9 floors, decks at 452 m (floor 124) and 555 m (floor 148), 27 setbacks in a spiral, Y-shaped plan with buttressed core, glass with stainless spandrels and vertical tubular fins, mechanical floors 17–18, 40–42, 73–75, 109–111, 136–138, 155, 160–163, Hymenocallis",
+      "url": "https://en.wikipedia.org/wiki/Burj_Khalifa"
+    },
+    {
+      "title": "Wikidata Q12495 (architects, coordinates)",
+      "url": "https://www.wikidata.org/wiki/Q12495"
+    },
+    {
+      "title": "Skidmore, Owings & Merrill — Burj Khalifa project page (tripartite plan, setbacks spiralling up, spire)",
+      "url": "https://www.som.com/projects/burj-khalifa/"
+    },
+    {
+      "title": "Wikimedia Commons — Burj Khalifa (category of photos, for the colours and the fins)",
+      "url": "https://commons.wikimedia.org/wiki/Category:Burj_Khalifa"
+    }
+  ],
+  "triangles": 19870,
+  "notes": "Built by code (model_sources/Q12495_burj_khalifa.py, tools/meshkit.py) with AI assistance. The Y-shaped «Hymenocallis» plan is parametric: three wings at 120° (straight arms 18–25 m wide with rounded, slightly pointed ends) round a hexagonal core, and three core lobes between the wings; their outline is the exact union of these convex lobes. The wings step back in a clockwise spiral at the heights of the OpenStreetMap building:parts (35, 70, 105, 130, 160, 200, 235, 270, 315, 360, 405, 460, 520, 605, 625, 645, 710 m), then the core lobes (545, 560, 580, 660, 680, 700, 720, 740, 760 m) — 28 tiers, close to the 27 setbacks of the published figures — and a tapering steel spire rises from 760 m to 828 m (tip 829.8 m). Silver-blue reflective glass (GLASS) with the stainless vertical fins as light stripes every 1.6 m; darker bands for the mechanical floors and the observation levels (floors 124–125 at 452 m, 148 at 555 m); light grey setback terraces; above the top floor (585.4 m) the crown tiers and the spire are METAL. The low podium pavilions round the foot (15 m) follow the OSM parts. Heading 185.7° = the south wing, towards the Burj Khalifa Lake, the Dubai Fountain and the Dubai Mall; origin on the axis of the spire. Not modelled: the lake, the fountain and the reflecting pools of the park (80–300 m away, left to the map), the Dubai Mall, the window-cleaning machines, the floor-by-floor spandrels. Uncertain: the OSM setback heights are round figures (±5 m); the last tier of the south and north-west wings (to 710 m) is assumed like the north-east one; the widths and end shapes of the wings are fitted to the OSM crescents (±1 m); the heights of the mechanical bands are interpolated from the floor count (±3 m); the diameter of the spire (5 m at its foot) is an estimate (±30 %); the podium height (15 m) is the OSM figure.",
+  "footprint": [
+    [
+      -15.3,
+      21.7
+    ],
+    [
+      -16.9,
+      32.4
+    ],
+    [
+      -23.0,
+      30.3
+    ],
+    [
+      -27.2,
+      27.8
+    ],
+    [
+      -30.6,
+      24.4
+    ],
+    [
+      -33.2,
+      20.5
+    ],
+    [
+      -35.4,
+      16.1
+    ],
+    [
+      -36.5,
+      11.4
+    ],
+    [
+      -36.6,
+      6.5
+    ],
+    [
+      -35.3,
+      0.2
+    ],
+    [
+      -25.8,
+      3.4
+    ],
+    [
+      -26.9,
+      4.5
+    ],
+    [
+      -65.9,
+      -22.2
+    ],
+    [
+      -81.0,
+      -47.5
+    ],
+    [
+      -51.3,
+      -46.2
+    ],
+    [
+      -9.8,
+      -25.2
+    ],
+    [
+      -10.4,
+      -23.4
+    ],
+    [
+      -18.6,
+      -30.9
+    ],
+    [
+      -13.1,
+      -35.2
+    ],
+    [
+      -8.3,
+      -37.5
+    ],
+    [
+      -3.1,
+      -38.7
+    ],
+    [
+      2.3,
+      -38.8
+    ],
+    [
+      7.5,
+      -37.7
+    ],
+    [
+      12.4,
+      -35.5
+    ],
+    [
+      17.9,
+      -31.3
+    ],
+    [
+      10.7,
+      -23.9
+    ],
+    [
+      10.3,
+      -25.5
+    ],
+    [
+      54.4,
+      -44.8
+    ],
+    [
+      84.0,
+      -44.1
+    ],
+    [
+      67.1,
+      -19.7
+    ],
+    [
+      26.6,
+      4.0
+    ],
+    [
+      25.6,
+      2.5
+    ],
+    [
+      35.1,
+      -0.6
+    ],
+    [
+      36.4,
+      5.5
+    ],
+    [
+      36.5,
+      10.2
+    ],
+    [
+      35.5,
+      14.9
+    ],
+    [
+      33.6,
+      19.2
+    ],
+    [
+      30.9,
+      23.1
+    ],
+    [
+      27.4,
+      26.3
+    ],
+    [
+      23.3,
+      28.8
+    ],
+    [
+      17.4,
+      30.8
+    ],
+    [
+      14.8,
+      20.5
+    ],
+    [
+      16.6,
+      21.1
+    ],
+    [
+      14.4,
+      71.8
+    ],
+    [
+      5.3,
+      89.2
+    ],
+    [
+      0.7,
+      97.9
+    ],
+    [
+      -13.9,
+      72.1
+    ],
+    [
+      -17.1,
+      22.9
+    ]
+  ]
+}

@@ -1,0 +1,208 @@
+{
+  "id": "Q39054",
+  "name": "Torre di Pisa (Leaning Tower of Pisa) and Piazza dei Miracoli",
+  "heading": 270.3,
+  "position": {
+    "lat": 43.7230034,
+    "lon": 10.3966327,
+    "source": "https://www.openstreetmap.org/way/35667218 (centre of the base of the tower, member of relation 12982355 «Torre di Pisa»; Wikidata gives 43.72301, 10.396624; heading = the façade of the cathedral, which faces due west, its nave squared to the axes within ~0.2 m)"
+  },
+  "authors": [
+    {
+      "name": "Álvaro C. Chulvi",
+      "url": "https://github.com/Aruvaro-Chulvi"
+    }
+  ],
+  "license": "CC-BY-4.0",
+  "rights": {
+    "status": "public_domain",
+    "architects": [
+      {
+        "name": "Bonanno Pisano",
+        "died": 1180,
+        "wikidata": "Q892084"
+      },
+      {
+        "name": "Guglielmo",
+        "wikidata": "Q95950894"
+      },
+      {
+        "name": "Diotisalvi",
+        "died": 1200,
+        "wikidata": "Q763522"
+      },
+      {
+        "name": "Giovanni di Simone"
+      },
+      {
+        "name": "Tommaso di Andrea Pisano"
+      },
+      {
+        "name": "Buscheto"
+      },
+      {
+        "name": "Rainaldo"
+      },
+      {
+        "name": "Nicola Pisano",
+        "died": 1284
+      },
+      {
+        "name": "Giovanni Pisano",
+        "died": 1315
+      }
+    ],
+    "built": 1372,
+    "note": "The tower was begun in 1173 (design attributed to Bonanno Pisano, Guglielmo or Diotisalvi), resumed by Giovanni di Simone in 1272 and finished with the belfry by Tommaso di Andrea Pisano in 1372. The cathedral is by Buscheto (1064) and Rainaldo (façade, 12th century), the baptistery by Diotisalvi (1152) with Gothic upper parts by Nicola and Giovanni Pisano (finished 1363), the Camposanto by Giovanni di Simone (1278–1464). The dome of the cathedral was rebuilt after the fire of 1595 and the Camposanto roofs after 1944, to the same shapes. Every author died centuries ago."
+  },
+  "sources": [
+    {
+      "title": "OpenStreetMap relation 12982355 / way 35667218 (Torre di Pisa, base) and the building:part relations 3381971–3382005 of the tower (storey levels, 30-column loggias, railings) (© OpenStreetMap contributors, ODbL)",
+      "url": "https://www.openstreetmap.org/relation/12982355"
+    },
+    {
+      "title": "OpenStreetMap way 22945163 (Cattedrale di Santa Maria Assunta) and its building:parts 263406583, 265815349–265815382 (nave, aisles, transept, apses, drum and dome, façade heights); way 265818616 (platform)",
+      "url": "https://www.openstreetmap.org/way/22945163"
+    },
+    {
+      "title": "OpenStreetMap way 22945162 (Battistero di San Giovanni) and its building:parts 252318078–252318327 and relations 3384306–3384315 (orders, loggia columns, dome, the lead and tiled faces of the cone, cupola)",
+      "url": "https://www.openstreetmap.org/way/22945162"
+    },
+    {
+      "title": "OpenStreetMap relation 154289 (Camposanto Monumentale: ways 35667219 and 35667220) and way 163739528 (Cappella dal Pozzo)",
+      "url": "https://www.openstreetmap.org/relation/154289"
+    },
+    {
+      "title": "OpenStreetMap ways 112723669–112723677, 115600052–115600063, 217906953 and 237169474–237169476 (the lawns of the square and of the Camposanto courtyard), 1209497564 (fence of the tower)",
+      "url": "https://www.openstreetmap.org/way/217906953"
+    },
+    {
+      "title": "Leaning Tower of Pisa — Wikipedia (en): 56.67 m on the high side, 55.86 m on the low side, base Ø 15.484 m, 8 storeys, lean 3.97° today (5.5° in 1990), top about 3.9 m off the vertical, leaning to the south",
+      "url": "https://en.wikipedia.org/wiki/Leaning_Tower_of_Pisa"
+    },
+    {
+      "title": "Pisa Baptistery — Wikipedia (en): Ø 34.13 m, 54.86 m high, the dome clad in lead on the south-east side (facing the cathedral) and in red tiles on the north-west side (facing the sea), Gothic gables",
+      "url": "https://en.wikipedia.org/wiki/Pisa_Baptistery"
+    },
+    {
+      "title": "Duomo di Pisa — Wikipedia (it): Latin cross, five naves, three-nave transept with apses, elliptical dome, façade with seven blind arches and four tiers of loggias, three bronze doors, statues on the façade",
+      "url": "https://it.wikipedia.org/wiki/Duomo_di_Pisa"
+    },
+    {
+      "title": "Camposanto Monumentale — Wikipedia (en): 43 blind arches on the outer wall, round-arched courtyard windows with mullions and tracery, the Ammannati, Aulla and Dal Pozzo chapels (the last with a small dome), lead roof",
+      "url": "https://en.wikipedia.org/wiki/Camposanto_Monumentale"
+    },
+    {
+      "title": "Stabilising the Leaning Tower of Pisa — Institution of Civil Engineers (the tower leans southwards; soil extracted under the north side)",
+      "url": "https://www.ice.org.uk/what-is-civil-engineering/infrastructure-projects/stabilising-the-leaning-tower-of-pisa"
+    },
+    {
+      "title": "Wikidata Q39054 — coordinates, architects and dates",
+      "url": "https://www.wikidata.org/wiki/Q39054"
+    }
+  ],
+  "triangles": 78870,
+  "notes": "Built by code (model_sources/Q39054_leaning_tower_of_pisa.py, tools/meshkit.py) with AI assistance. The model is filed under the tower and its origin is the centre of the tower's base, but it holds the whole Piazza dei Miracoli: the tower, the cathedral, the baptistery, the Camposanto and the lawns of the square (on a paved ground that stands for the paths). The tower is built upright (axial height 56.37 m, 8 storeys: ground storey with 15 blind arches, six loggias of 30 columns, belfry with 12 bell openings, railings) and then rotated about the centre of its base by today's lean, 3.97°, towards bearing 180° (south): the top stands 3.9 m south of the base and the belfry rim comes out at 56.67 m on the north side and 55.8 m on the south side (published 56.67 / 55.86 m). The exact azimuth of the lean is given only as «south» in the sources (±5°). Not modelled: the slight curve of the upper storeys, the «catino» round the base, the bells. Cathedral: plan and heights from the OpenStreetMap building:parts (aisles 22 m, clerestory 31 m, ridges 35 m, façade 35.4 m, dome to 45 m, lantern and cross to 48.4 m); the tiers of the façade, the side arcades and the windows are estimated on photos (±10 %); lead roofs and dome. Baptistery: Ø 34.13 m, 54.86 m to the statue; the dome half lead (bearings 37°–187°, facing the cathedral), half red tiles, as the OSM roof:material tags of its cone give it. Camposanto: the outline is squared to its four corners (the small projections of the north chapels are left out); walls 10.6 m and roof ridge 13.6 m estimated (±15 %); the doors and the tabernacle of the south front are placed approximately. Uncertain: the azimuth of the lean, the exact heights of the façade tiers, the number of arches of the side walls and of the courtyard windows of the Camposanto. footprint: the square with its lawns, the four monuments and the Cappella Dal Pozzo, not the museums, the Palazzo dell'Opera, the Archbishop's palace or the houses round the square.",
+  "footprint": [
+    [
+      34.0,
+      177.0
+    ],
+    [
+      13.0,
+      300.0
+    ],
+    [
+      -77.0,
+      302.0
+    ],
+    [
+      -84.0,
+      243.0
+    ],
+    [
+      -88.0,
+      229.0
+    ],
+    [
+      -148.0,
+      236.5
+    ],
+    [
+      -150.5,
+      228.0
+    ],
+    [
+      -150.5,
+      203.5
+    ],
+    [
+      -138.8,
+      203.4
+    ],
+    [
+      -136.0,
+      171.0
+    ],
+    [
+      -131.7,
+      118.0
+    ],
+    [
+      -129.6,
+      94.0
+    ],
+    [
+      -128.6,
+      84.5
+    ],
+    [
+      -125.4,
+      67.8
+    ],
+    [
+      -110.0,
+      61.5
+    ],
+    [
+      -96.5,
+      61.5
+    ],
+    [
+      -82.0,
+      73.0
+    ],
+    [
+      -70.0,
+      67.0
+    ],
+    [
+      -66.0,
+      30.0
+    ],
+    [
+      -66.0,
+      -66.0
+    ],
+    [
+      -14.0,
+      -73.0
+    ],
+    [
+      11.0,
+      -72.0
+    ],
+    [
+      47.0,
+      -10.0
+    ],
+    [
+      55.0,
+      24.0
+    ],
+    [
+      57.0,
+      55.0
+    ]
+  ]
+}

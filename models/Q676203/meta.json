@@ -1,0 +1,383 @@
+{
+  "id": "Q676203",
+  "name": "Machu Picchu",
+  "heading": 157.2,
+  "position": {
+    "lat": -13.1631723,
+    "lon": -72.5451661,
+    "source": "https://www.openstreetmap.org/way/942151344 (origin in the middle of the Main Plaza, landuse=grass of the archaeological site, way 157376572; heading = from there towards the Guardhouse, way 480263540, so that the main view is the classic one from the Guardhouse looking north-north-west to Huayna Picchu)"
+  },
+  "ground": "keep",
+  "ground_at": [
+    0,
+    0
+  ],
+  "ground_low": -45,
+  "authors": [
+    {
+      "name": "Álvaro C. Chulvi",
+      "url": "https://github.com/Aruvaro-Chulvi"
+    }
+  ],
+  "license": "CC-BY-4.0",
+  "rights": {
+    "status": "public_domain",
+    "architects": [],
+    "built": 1450,
+    "note": "Inca royal estate built for the Sapa Inca Pachacútec around 1450 (Wikidata P571), abandoned in the 16th century; no known architect. The thatched roofs of the Guardhouse and the storehouses are modern reconstructions of the Inca ones."
+  },
+  "sources": [
+    {
+      "title": "OpenStreetMap way 157376572 — the archaeological site «Ciudadela de Machu Picchu» (outline, cut 262 m south of the origin, before the Sanctuary Lodge; a bulge added for the Guardhouse) (© OpenStreetMap contributors, ODbL)",
+      "url": "https://www.openstreetmap.org/way/157376572"
+    },
+    {
+      "title": "OpenStreetMap — the 99 buildings (building=ruins/yes, e.g. ways 844863607–844863666, 844865406–844865424, 844988150–844988194, 1436032057–1436032059), the 161 retaining walls of the terraces (barrier=retaining_wall), 18 walls, 17 staircases and 40 grass areas inside the site, mapped by OSM contributors",
+      "url": "https://www.openstreetmap.org/way/844988184"
+    },
+    {
+      "title": "OpenStreetMap nodes of the named places: Templo del Sol 874540057, Tumba Real 874540031, Intihuatana 874540036, Templo Principal 4621573692, Templo de las Tres Ventanas 4621576989, Plaza Sagrada 5852235125, Casa del sacerdote 13198843222, Roca Sagrada 9726879350, Puerta de la Ciudad 874540069; the Guardhouse is way 480263540 (by the Funerary Rock and the «postcard» viewpoint)",
+      "url": "https://www.openstreetmap.org/node/874540057"
+    },
+    {
+      "title": "SRTM 30 m (NASA/USGS) via OpenTopoData — the ground of the ridge on a 15 m grid (Main Plaza ≈ 2441 m in SRTM), for the levels of the terraces and buildings",
+      "url": "https://www.opentopodata.org/datasets/srtm/"
+    },
+    {
+      "title": "Machu Picchu — Wikipedia (en): ~1450, Pachacútec, 2430 m, urban and agricultural sectors, Intihuatana, Temple of the Sun, Room of the Three Windows, dry-stone granite walls, trapezoidal doors and windows, terraces",
+      "url": "https://en.wikipedia.org/wiki/Machu_Picchu"
+    },
+    {
+      "title": "Machu Picchu — Wikipedia (es): sectors, Plaza Sagrada, Templo Principal, Templo de las Tres Ventanas, Torreón, Tumba Real, Casa del Guardián, andenes agrícolas, qolqas",
+      "url": "https://es.wikipedia.org/wiki/Machu_Picchu"
+    },
+    {
+      "title": "Wikidata Q676203 — date (~1450), country",
+      "url": "https://www.wikidata.org/wiki/Q676203"
+    }
+  ],
+  "notes": "Built by code (model_sources/Q676203_machu_picchu.py, tools/meshkit.py) with AI assistance. Plan from OpenStreetMap: every building, terrace wall, wall, staircase and grass area mapped inside the archaeological site. Terraces: each retaining wall is a granite wall going 2.5 m below the ground at its foot, with a grey coping and a flat grass terrace behind it up to the foot of the next wall (level with the ground there, SRTM, +0.35 m). Buildings: roofless granite walls 0.8 m thick, 2.4–3.1 m to the eaves, steep gable ends on the small rectangular houses (≤3.4 m), one trapezoidal door in a long side and small trapezoidal windows in the other; large enclosures as plain 2.3 m walls; Main Temple and Temple of the Three Windows three-walled and open to the Sacred Plaza (3.8 m, the three windows looking east); Torreón (Temple of the Sun) curved, 4.2 m, with two windows, on its boulder with the Royal Tomb as a dark cave; the Intihuatana stone on a small platform on the top of its hill; the Sacred Rock; the Guardhouse (three walls) and five storehouses with thatched roofs (modern reconstructions). Grass of the plazas and slopes laid 0.25 m over the SRTM ground near the ruins. Heights of the walls are estimates (±25 %). Uncertain: the levels — SRTM 30 m smooths the ridge (the Intihuatana hill was raised 5 m so it reads; the Main Plaza is not as sunken as in reality), so terraces and floors follow a smoothed ground and may stand a little off the terrain of a finer model; which side of the Guardhouse is open; the number and place of the doors and windows of the houses; the exact identity of the storehouses. Not modelled: Huayna Picchu and Machu Picchu mountains, the terrain, the modern buildings and paths, the Inca trail and bridge. ground: keep — y = 0 is the ground in the middle of the Main Plaza (ground_at [0, 0]); the agricultural terraces go down to y ≈ −35 and the east terraces to ≈ −45 (ground_low), the Guardhouse stands ≈ 20 m above the plaza. footprint: the archaeological site as OpenStreetMap draws it, cut before the hotel, with the Guardhouse.",
+  "triangles": 58940,
+  "footprint": [
+    [
+      -217.4,
+      184.1
+    ],
+    [
+      -217.0,
+      183.8
+    ],
+    [
+      -182.4,
+      174.9
+    ],
+    [
+      -185.5,
+      153.8
+    ],
+    [
+      -198.4,
+      135.0
+    ],
+    [
+      -193.4,
+      119.5
+    ],
+    [
+      -180.5,
+      21.9
+    ],
+    [
+      -149.6,
+      5.4
+    ],
+    [
+      -128.4,
+      4.8
+    ],
+    [
+      -114.7,
+      -1.0
+    ],
+    [
+      -96.5,
+      -5.7
+    ],
+    [
+      -80.2,
+      -30.9
+    ],
+    [
+      -81.7,
+      -48.3
+    ],
+    [
+      -79.2,
+      -70.9
+    ],
+    [
+      -73.3,
+      -78.8
+    ],
+    [
+      -71.2,
+      -89.6
+    ],
+    [
+      -70.3,
+      -102.1
+    ],
+    [
+      -69.8,
+      -114.3
+    ],
+    [
+      -72.5,
+      -126.2
+    ],
+    [
+      -75.7,
+      -139.4
+    ],
+    [
+      -77.2,
+      -149.6
+    ],
+    [
+      -81.4,
+      -159.3
+    ],
+    [
+      -88.9,
+      -176.3
+    ],
+    [
+      -76.7,
+      -174.5
+    ],
+    [
+      -73.6,
+      -173.6
+    ],
+    [
+      -65.2,
+      -173.6
+    ],
+    [
+      -59.9,
+      -170.0
+    ],
+    [
+      -60.1,
+      -198.6
+    ],
+    [
+      -50.4,
+      -199.4
+    ],
+    [
+      -45.3,
+      -178.9
+    ],
+    [
+      -32.7,
+      -173.8
+    ],
+    [
+      5.3,
+      -194.4
+    ],
+    [
+      20.9,
+      -177.2
+    ],
+    [
+      20.5,
+      -159.5
+    ],
+    [
+      21.6,
+      -151.1
+    ],
+    [
+      25.9,
+      -141.1
+    ],
+    [
+      31.1,
+      -130.8
+    ],
+    [
+      38.4,
+      -120.5
+    ],
+    [
+      46.0,
+      -121.2
+    ],
+    [
+      51.0,
+      -117.8
+    ],
+    [
+      72.9,
+      -87.1
+    ],
+    [
+      74.2,
+      -80.1
+    ],
+    [
+      86.8,
+      -74.0
+    ],
+    [
+      89.7,
+      -78.5
+    ],
+    [
+      94.5,
+      -93.4
+    ],
+    [
+      102.0,
+      -86.0
+    ],
+    [
+      105.1,
+      -55.0
+    ],
+    [
+      116.0,
+      -54.1
+    ],
+    [
+      132.2,
+      -33.8
+    ],
+    [
+      129.4,
+      -24.0
+    ],
+    [
+      137.4,
+      1.4
+    ],
+    [
+      132.9,
+      23.6
+    ],
+    [
+      112.4,
+      50.2
+    ],
+    [
+      78.2,
+      79.8
+    ],
+    [
+      71.8,
+      90.7
+    ],
+    [
+      75.0,
+      93.7
+    ],
+    [
+      89.0,
+      122.8
+    ],
+    [
+      80.3,
+      128.7
+    ],
+    [
+      90.5,
+      136.4
+    ],
+    [
+      100.5,
+      144.4
+    ],
+    [
+      112.0,
+      155.9
+    ],
+    [
+      124.5,
+      167.9
+    ],
+    [
+      113.5,
+      181.0
+    ],
+    [
+      120.5,
+      197.7
+    ],
+    [
+      124.0,
+      207.2
+    ],
+    [
+      121.5,
+      214.8
+    ],
+    [
+      111.8,
+      219.7
+    ],
+    [
+      124.2,
+      240.0
+    ],
+    [
+      100.9,
+      250.2
+    ],
+    [
+      92.3,
+      250.5
+    ],
+    [
+      69.2,
+      250.8
+    ],
+    [
+      59.9,
+      248.7
+    ],
+    [
+      30.3,
+      262.9
+    ],
+    [
+      14.0,
+      267.0
+    ],
+    [
+      -9.0,
+      267.0
+    ],
+    [
+      -13.2,
+      253.1
+    ],
+    [
+      -27.2,
+      237.9
+    ],
+    [
+      -75.8,
+      210.9
+    ],
+    [
+      -125.7,
+      206.6
+    ],
+    [
+      -129.5,
+      221.1
+    ]
+  ]
+}

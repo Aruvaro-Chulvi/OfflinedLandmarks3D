@@ -1,0 +1,159 @@
+{
+  "id": "Q12506",
+  "name": "Hagia Sophia (Ayasofya)",
+  "heading": 303.1,
+  "position": {
+    "lat": 41.0085238,
+    "lon": 28.9800537,
+    "source": "https://www.openstreetmap.org/way/109862851 (centre of the dome, building:part 776067032; heading = the west front (exonarthex), from the edges of the parts of the narthex, nave and buttress towers, 303.1° within 0.2°)"
+  },
+  "ground": "keep",
+  "ground_at": [
+    40,
+    62
+  ],
+  "ground_low": -5,
+  "authors": [
+    {
+      "name": "Álvaro C. Chulvi",
+      "url": "https://github.com/Aruvaro-Chulvi"
+    }
+  ],
+  "license": "CC-BY-4.0",
+  "rights": {
+    "status": "public_domain",
+    "architects": [
+      {
+        "name": "Anthemius of Tralles",
+        "died": 534,
+        "wikidata": "Q298226"
+      },
+      {
+        "name": "Isidore of Miletus",
+        "died": 537,
+        "wikidata": "Q310028"
+      },
+      {
+        "name": "Mimar Sinan",
+        "died": 1588,
+        "wikidata": "Q5600"
+      }
+    ],
+    "built": 537,
+    "note": "Built 532–537 for Justinian I by Anthemius of Tralles and Isidore of Miletus; dome rebuilt higher in 562; the Ottoman buttresses, the two western minarets and the tomb of Selim II by Mimar Sinan (1570s); the other minarets (15th c.), the tombs of Murad III (1599) and Mehmed III (1608) and the şadırvan (1740) by Ottoman court architects. Every author died centuries ago."
+  },
+  "sources": [
+    {
+      "title": "OpenStreetMap way 109862851 — outline of Hagia Sophia and its 56 building:parts (dome, drum, semi-domes, exedrae, nave, buttress towers, narthex, exonarthex, buttresses, apse, minarets) with heights (© OpenStreetMap contributors, ODbL)",
+      "url": "https://www.openstreetmap.org/way/109862851"
+    },
+    {
+      "title": "OpenStreetMap ways 709381141 (tomb of Selim II), 109836395 (Murad III), 109836394 (Mehmed III), 132277807 (Şehzadeler), 776211438–776211440 (their domes), 776086636 (baptistery), 109738930 (şadırvan), 109738926 (sıbyan mektebi), 109738924, 776274478 (skeuophylakion), 109794387 (railing) and 103339336 (north wall)",
+      "url": "https://www.openstreetmap.org/way/709381141"
+    },
+    {
+      "title": "Hagia Sophia — Wikipedia (en): 82 × 73 m, 55 m high; dome Ø 31.24/30.86 m (32.6 m), crown 55.6 m above the floor, 40 windows; western minarets by Sinan 60 m; south-east minaret in red brick; buttresses by Sinan; tombs of Selim II, Murad III, Mehmed III, Mustafa I (baptistery); şadırvan of Mahmud I (1740)",
+      "url": "https://en.wikipedia.org/wiki/Hagia_Sophia"
+    },
+    {
+      "title": "EU-DEM v1.1 25 m (Copernicus), via OpenTopoData: west courtyard ≈ 40 m, tombs ≈ 40.5–41.5 m, north-west corner ≈ 35.5 m, east front ≈ 46–48 m",
+      "url": "https://www.opentopodata.org/datasets/eudem/"
+    },
+    {
+      "title": "Wikidata Q12506 — architects and dates",
+      "url": "https://www.wikidata.org/wiki/Q12506"
+    }
+  ],
+  "notes": "Built by code (model_sources/Q12506_hagia_sophia.py, tools/meshkit.py) with AI assistance. Plan from the OpenStreetMap outline and its building:parts (heading 303.1° from the edges of the parts; origin at the centre of the dome). Modelled: the main body with two rows of windows, the raised nave, the square dome base with the north and south tympana (two rows of windows under a relieving arch), the four buttress towers, the main dome (Ø 33 m) on its ring of 40 windows and 40 small buttresses, its lead cap with 40 ribs to 56.3 m and the gilded alem; the east and west semi-domes on their window rings, the four exedra half-domes, the apse with its half-dome, the two little domed turrets of the west end; the Ottoman buttresses, the inner narthex and the exonarthex with the six buttresses of the west front and the Imperial Gate, the low annexes of the outline; the four minarets, each different (Sinan's two white western ones with two balconies, 60 m; Bayezid II's thicker north-eastern one; the red-brick south-eastern one of Mehmed II with a white stone top); in the precinct the tombs of Selim II, Murad III and Mehmed III with porches, drums and lead domes, the tomb of the princes, the baptistery (tomb of Mustafa I), the şadırvan of Mahmud I, the sıbyan mektebi, an Ottoman outbuilding beside the şadırvan, the round skeuophylakion, the railing on its low wall with the west and south gates, the north wall and trees. Heights from Wikipedia (dome crown 55.6 m above the floor, western minarets 60 m) and from the OSM parts (aisles 25 m, buttress towers 36 m, dome base 41 m, window ring 40–46 m, semi-domes to 39 m, exedrae to 30 m, narthex 25 m, exonarthex 9 m, tomb domes 16–23 m). Estimated (±10–25 %): the nave roof (26 m), the levels of the window rings and shells, the apse, the slopes of the Ottoman buttresses (24 → 16.5 m), the annexes (7 m), the heights of the eastern minarets (Bayezid II 55 m, Mehmed II 53 m) and of every balcony, the tomb drums, the şadırvan roof (9.5 m), the skeuophylakion (11 m), the walls and the trees. Windows are fewer and simpler than the real ones; the interiors, the archaeological remains in front of the west front and the modern ticket and security buildings are left out. ground: keep — the land falls about 8 m from the east front (≈ 46–48 m) to the west courtyard (≈ 40 m) and the north-west corner (≈ 35.5 m, EU-DEM, smoothed over 25 m); y = 0 is the courtyard by the şadırvan, level with the church floor (ground_at [40, 62]); the tombs stand 0.5 m higher; every wall goes down to −6 m. footprint: the church and its precinct inside the railing and the north wall, not the streets around.",
+  "triangles": 26410,
+  "footprint": [
+    [
+      -43.4,
+      -57.1
+    ],
+    [
+      -63.6,
+      -57.2
+    ],
+    [
+      -71.2,
+      -52.0
+    ],
+    [
+      -74.4,
+      -42.0
+    ],
+    [
+      -84.0,
+      26.3
+    ],
+    [
+      -85.5,
+      44.0
+    ],
+    [
+      -87.6,
+      68.0
+    ],
+    [
+      -90.7,
+      102.1
+    ],
+    [
+      -18.0,
+      100.8
+    ],
+    [
+      54.8,
+      97.0
+    ],
+    [
+      97.2,
+      86.0
+    ],
+    [
+      99.3,
+      50.0
+    ],
+    [
+      102.8,
+      -43.8
+    ],
+    [
+      92.5,
+      -44.3
+    ],
+    [
+      88.0,
+      -45.5
+    ],
+    [
+      61.4,
+      -46.0
+    ],
+    [
+      40.0,
+      -47.1
+    ],
+    [
+      40.0,
+      -50.8
+    ],
+    [
+      -14.2,
+      -52.7
+    ],
+    [
+      -13.7,
+      -62.8
+    ],
+    [
+      -36.1,
+      -64.3
+    ],
+    [
+      -37.1,
+      -57.0
+    ]
+  ]
+}

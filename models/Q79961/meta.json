@@ -1,0 +1,143 @@
+{
+  "id": "Q79961",
+  "name": "Cristo Redentor",
+  "heading": 80.9,
+  "position": {
+    "lat": -22.9519171,
+    "lon": -43.2104631,
+    "source": "https://www.openstreetmap.org/way/105667349 (centroid of the pedestal, mapped as the chapel of Nossa Senhora Aparecida inside it: an octagon on a 7.87 m square; its sides face 80.9° / 170.9° / 260.9° / 350.9°, and the statue faces east, so heading = 80.9°)"
+  },
+  "ground": "keep",
+  "ground_at": [
+    0,
+    10
+  ],
+  "ground_low": -36,
+  "authors": [
+    {
+      "name": "Álvaro C. Chulvi",
+      "url": "https://github.com/Aruvaro-Chulvi"
+    }
+  ],
+  "license": "CC-BY-4.0",
+  "rights": {
+    "status": "protected",
+    "architects": [
+      {
+        "name": "Paul Landowski",
+        "died": 1961,
+        "wikidata": "Q710530"
+      },
+      {
+        "name": "Heitor da Silva Costa",
+        "died": 1947
+      },
+      {
+        "name": "Albert Caquot",
+        "died": 1976,
+        "wikidata": "Q364292"
+      },
+      {
+        "name": "Gheorghe Leonida",
+        "died": 1942,
+        "wikidata": "Q17479338"
+      }
+    ],
+    "built": 1931,
+    "note": "Designed by the engineer Heitor da Silva Costa with the painter Carlos Oswald; sculpted by Paul Landowski, the face by Gheorghe Leonida; reinforced-concrete structure with Albert Caquot. Built 1922–1931, inaugurated 12 October 1931. The sculpture (including the face) remains under copyright in Brazil until 70 years after the death of its last author, Paul Landowski (1961) — i.e. until the end of 2031 — so it is marked protected. The 2003 escalators, walkways and lift and the 2006 chapel are modern works. This model is an independent, simplified rendering made from public photos and figures."
+  },
+  "footprint": [
+    [
+      -30.7,
+      -42.0
+    ],
+    [
+      -30.3,
+      -47.9
+    ],
+    [
+      -27.0,
+      -50.5
+    ],
+    [
+      1.2,
+      -59.5
+    ],
+    [
+      8.7,
+      -59.5
+    ],
+    [
+      13.6,
+      -56.5
+    ],
+    [
+      20.2,
+      -8.5
+    ],
+    [
+      16.0,
+      9.5
+    ],
+    [
+      3.9,
+      50.5
+    ],
+    [
+      2.2,
+      52.1
+    ],
+    [
+      -0.0,
+      52.7
+    ],
+    [
+      -2.1,
+      52.1
+    ],
+    [
+      -3.6,
+      50.6
+    ],
+    [
+      -4.2,
+      49.2
+    ],
+    [
+      -29.4,
+      -36.3
+    ]
+  ],
+  "sources": [
+    {
+      "title": "OpenStreetMap way 105667349 — the pedestal / chapel of Nossa Senhora Aparecida (octagon, 7.87 m square), and node 4919986733 (the monument, Q79961) (© OpenStreetMap contributors, ODbL)",
+      "url": "https://www.openstreetmap.org/way/105667349"
+    },
+    {
+      "title": "OpenStreetMap relation 16147269 (viewpoint, outer way 141708228: the platform round the statue and the terrace along the ridge in front of it); steps 1021319650, 1021319652, 1021319653; escalators 1021319646, 1021319648; footways 1021319647, 1021319649, 1021319651, 1027035331, 274557377, 274556230",
+      "url": "https://www.openstreetmap.org/relation/16147269"
+    },
+    {
+      "title": "OpenStreetMap ways 274554624 (lift tower, data.rio: ele 667.81 m, height 24.33 m; lift node 9468600313), 1021319645 (link building, 679.37 m, 11.49 m), 274554625 (shop, 686.24 m, 5.29 m), 274554621 (restaurant, 688.19 m, 2.94 m); node 1551149888 (Corcovado peak, 710 m); way 171552967 (bare rock of the summit)",
+      "url": "https://www.openstreetmap.org/way/274554624"
+    },
+    {
+      "title": "Cristo Redentor — Wikipedia (pt): 30 m without the pedestal, 38 m with it, arms 28 m, reinforced concrete clad in soapstone, front towards Guanabara Bay and back to the Tijuca Forest, chapel in the pedestal (2006), escalators and lifts (2003), authors",
+      "url": "https://pt.wikipedia.org/wiki/Cristo_Redentor"
+    },
+    {
+      "title": "Christ the Redeemer (statue) — Wikipedia (en): dimensions, facing east, designers and their roles",
+      "url": "https://en.wikipedia.org/wiki/Christ_the_Redeemer_(statue)"
+    },
+    {
+      "title": "Wikimedia Commons — «Christ the Redeemer-(Corcovado) front view.jpg» (front: pleats, mantle, sleeves, hands, the octagonal pedestal with its lighter cornice, the terraces), «Christ on Corcovado mountain.JPG» (back: the diagonal hem of the mantle, the chapel door, the platform, its curved walls and stairs), «Rio Larson 1.jpg» (side: the lift tower with its green top, the escalators)",
+      "url": "https://commons.wikimedia.org/wiki/File:Christ_the_Redeemer-(Corcovado)_front_view.jpg"
+    },
+    {
+      "title": "Wikidata Q79961 — authors, dates",
+      "url": "https://www.wikidata.org/wiki/Q79961"
+    }
+  ],
+  "triangles": 39617,
+  "notes": "Built by code (model_sources/Q79961_cristo_redentor.py, tools/meshkit.py) with AI assistance. The statue (30 m, arms 28 m fingertip to fingertip, hands 3.2 m) stands on its 8 m octagonal pedestal of pale grey-green stone with a lighter cornice and the door of the chapel at the back; the figure is lofted through superelliptic sections measured on photos scaled by the arm span (widths ±5 %, depths estimated ±15 %): the tunic with 26 vertical pleats, the mantle standing out at its hem (~7 m above the feet in front, rising diagonally across the back to ~14 m), broad folds, the mantle sloping over the shoulders into the wide sleeves hanging below the horizontal arms, open hands with fingers and thumb, the head bowed ~11° with hair to the shoulders and beard, the Sacred Heart on the chest; the face is reduced to brow, eyes, nose, moustache and beard. The summit: the paved platform (OSM outline) with its parapets and retaining walls, the terrace along the ridge in front of the statue, the walkway behind the platform (−2.5 m) with stairs up to the platform on both sides, the long stair down to the restaurant terrace (−13 m), the covered escalator on the north side with its green glass head, the escalator from the walkway to the lift, the walkways on piers, the lift tower (24.3 m, green glass top), its link building, the shop and the restaurant; the bare rock of the summit under it, roughened, down to −36 m. Levels: y = 0 is the platform, taken as ≈701 m (estimate ±3 m, from the data.rio building elevations and the escalators at ~30°); the bottom of the north escalator (−9.6 m) and the level of the front terrace (kept at the platform's level, as OSM maps one area) are uncertain. Not modelled: the train station, the road, the vents and lamp posts, the people. Heading: the sides of the OSM pedestal (80.9°), the statue facing east over the bay as Wikipedia says. ground: keep — the statue stands on the 700 m peak of Corcovado; y = 0 is the platform (ground_at [0, 10], in front of the pedestal); ground_low −36: the foot of the lift tower, where the web viewer draws its ground. footprint: the platform, terraces, stairs, escalators, lift tower and restaurant terrace + 2 m."
+}

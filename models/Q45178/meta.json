@@ -1,0 +1,252 @@
+{
+  "id": "Q45178",
+  "name": "Sydney Opera House",
+  "heading": 193.3,
+  "position": {
+    "lat": -33.8571126,
+    "lon": 151.2151244,
+    "source": "https://www.openstreetmap.org/relation/9596872 (centroid of the outline of the building; heading = the outward normal of the bottom edge of the Monumental Steps, OSM relation 4645750, whose edges run at 283.2–283.5°/103.2–103.3°: the steps face 193.3°, south-south-west towards the city)"
+  },
+  "authors": [
+    {
+      "name": "Álvaro C. Chulvi",
+      "url": "https://github.com/Aruvaro-Chulvi"
+    }
+  ],
+  "license": "CC-BY-4.0",
+  "rights": {
+    "status": "protected",
+    "architects": [
+      {
+        "name": "Jørn Utzon",
+        "died": 2008,
+        "wikidata": "Q180398"
+      },
+      {
+        "name": "Peter Hall",
+        "died": 1995,
+        "wikidata": "Q64797517"
+      }
+    ],
+    "built": 1973,
+    "note": "Designed by Jørn Utzon (competition 1957; the podium and the shells, with Ove Arup & Partners as engineers) and completed 1967–1973 by Peter Hall with Lionel Todd and David Littlemore (glass walls, interiors). Utzon died in 2008 and Hall in 1995, so the architecture is still protected by copyright in many countries; the model is published under CC BY 4.0 for the modelling work only and is offered on the same terms as the other modern buildings of this project (removal on request of the rights holders)."
+  },
+  "sources": [
+    {
+      "title": "OpenStreetMap relation 9596872 — outline of the Sydney Opera House; relations 9596870 (Upper Podium), 9596871 (Lower Podium), 4645750 (Monumental Steps), 9599723/9599724 (Northern/Western Broadwalk), 19933113 (eastern broadwalk), 17582116 (Forecourt); the shell building:part relations 9596873–9677509 (ridge lines of both halls) and ways 690624100/690624152 (the glass walls) (© OpenStreetMap contributors, ODbL)",
+      "url": "https://www.openstreetmap.org/relation/9596872"
+    },
+    {
+      "title": "M. Lewis (Ove Arup & Partners), «Roof cladding of the Sydney Opera House», Journal and Proceedings of the Royal Society of New South Wales 106, 1973: main shells A1–A4, side shells, louvre shells, every shell part of a sphere of radius 246 ft (75 m), ribs on great circles through the pole of the sphere 3.65° apart coalescing into the pedestal, ridge cut by a vertical plane, largest shell 179 ft (54.6 m) from its springing point, longest rib 210 ft (64 m), matt and glazed tiles in chevrons",
+      "url": "https://royalsoc.org.au/wp-content/uploads/2024/09/106_12_lewis.pdf"
+    },
+    {
+      "title": "Sydney Opera House — Wikipedia (en): 183 × 120 m, highest roof 67 m above sea level, sphere radius 75.2 m, 1,056,006 glossy white and matt cream tiles in a chevron pattern, pink granite aggregate cladding of the podium, Bennelong restaurant at the southernmost sail",
+      "url": "https://en.wikipedia.org/wiki/Sydney_Opera_House"
+    },
+    {
+      "title": "Sydney Opera House — «The spherical solution» (official site)",
+      "url": "https://sydneyoperahouse.com/our-story/the-spherical-solution"
+    },
+    {
+      "title": "Sydney Opera House — UNESCO World Heritage nomination: the podium steps, «a great ceremonial stairway nearly 100 metres wide and two storeys high»",
+      "url": "https://whc.unesco.org/en/list/166"
+    },
+    {
+      "title": "Photographs used to place the tips and pedestals of the shells and scale their heights (Wikimedia Commons): «Aerial view of the Sydney Opera House.jpg» (from the Harbour Bridge), «Sydney Opera House, botanic gardens 1.jpg» (from the east), «Sydney Opera House 2018-08-22 hires.jpg» (from the south-west)",
+      "url": "https://commons.wikimedia.org/wiki/File:Aerial_view_of_the_Sydney_Opera_House.jpg"
+    },
+    {
+      "title": "Esri World Imagery orthophoto (used only as a reference to place the tips and mouths of the shells; nothing copied)",
+      "url": "https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9"
+    },
+    {
+      "title": "Wikidata Q45178 — architects and dates",
+      "url": "https://www.wikidata.org/wiki/Q45178"
+    }
+  ],
+  "footprint": [
+    [
+      -72.1,
+      -72.9
+    ],
+    [
+      -72.1,
+      -84.7
+    ],
+    [
+      -72.0,
+      -88.9
+    ],
+    [
+      -71.2,
+      -90.7
+    ],
+    [
+      -70.1,
+      -92.2
+    ],
+    [
+      -67.6,
+      -92.7
+    ],
+    [
+      -65.6,
+      -92.8
+    ],
+    [
+      -61.8,
+      -92.4
+    ],
+    [
+      -61.8,
+      -89.6
+    ],
+    [
+      -61.7,
+      -88.6
+    ],
+    [
+      -53.5,
+      -88.7
+    ],
+    [
+      -53.6,
+      -91.7
+    ],
+    [
+      -51.6,
+      -93.3
+    ],
+    [
+      -44.1,
+      -98.0
+    ],
+    [
+      -33.0,
+      -104.6
+    ],
+    [
+      -27.5,
+      -107.6
+    ],
+    [
+      -20.0,
+      -110.5
+    ],
+    [
+      -14.1,
+      -112.0
+    ],
+    [
+      -5.8,
+      -113.4
+    ],
+    [
+      3.6,
+      -113.9
+    ],
+    [
+      14.7,
+      -113.5
+    ],
+    [
+      22.4,
+      -112.4
+    ],
+    [
+      28.2,
+      -110.5
+    ],
+    [
+      34.0,
+      -107.8
+    ],
+    [
+      39.5,
+      -104.0
+    ],
+    [
+      45.0,
+      -98.4
+    ],
+    [
+      49.0,
+      -92.9
+    ],
+    [
+      57.7,
+      -75.5
+    ],
+    [
+      62.2,
+      -75.6
+    ],
+    [
+      62.1,
+      -42.8
+    ],
+    [
+      53.3,
+      -23.0
+    ],
+    [
+      53.6,
+      -9.7
+    ],
+    [
+      54.4,
+      70.5
+    ],
+    [
+      56.9,
+      70.6
+    ],
+    [
+      63.9,
+      88.5
+    ],
+    [
+      65.2,
+      91.8
+    ],
+    [
+      68.7,
+      100.9
+    ],
+    [
+      73.0,
+      112.3
+    ],
+    [
+      76.2,
+      115.6
+    ],
+    [
+      78.4,
+      117.8
+    ],
+    [
+      82.9,
+      123.5
+    ],
+    [
+      78.4,
+      127.5
+    ],
+    [
+      -72.2,
+      127.5
+    ],
+    [
+      -72.2,
+      53.1
+    ],
+    [
+      -72.3,
+      -10.2
+    ]
+  ],
+  "triangles": 58219,
+  "notes": "Built by code (model_sources/Q45178_sydney_opera_house.py, tools/meshkit.py) with AI assistance. The shells follow Utzon's spherical solution literally: every half-shell is a spherical triangle of a sphere of radius 75.2 m, standing on its pedestal (a pole of the sphere), swept rib by rib along great circles through the pedestal, 3.65° apart, and cut at the top by the vertical plane of the hall axis; each is fixed by its pedestal, its tip and the rear end of its ridge, the centre of the sphere follows from them, and the other half is its mirror image. Concert Hall (west, axis 2.0° true): main shells A1–A3 facing the harbour, a louvre shell and the big shell A4 facing the steps, side shells between the pedestals; the Joan Sutherland Theatre (east, axis 24.4°) is the same family at 0.80 of the length, 0.88 of the height and 0.78 of the width; the Bennelong restaurant has two small shells back to back. Highest point 54.6 m above the podium (Lewis) = 67 m above sea level; the other heights were scaled on photographs: Concert Hall A1/A2/A3/C/A4 ≈ 34/44/54.6/40/31 m above the podium, Joan Sutherland Theatre ≈ 30/39/48/35/27 m, Bennelong ≈ 11.5 m (north shell, from the upper podium) and 18 m (south shell, from the lower podium); ±10 %. Tips and mouths placed on the OSM ridge lines and an orthophoto (±3 m, the tall tips lean in the imagery); pedestals estimated (±3 m, the A1 pedestals from the ends of the north glass walls in OSM). The underside of every shell is ribbed (one rib per 3.65°) so the ribs show at the open ends; the tiles are vertex colours (cream lid borders along the ribs, white fields with cream chevrons). Glass walls: the north walls hang from the shell rims and lean out to the podium edge (≈10 m at the Concert Hall's A1 tip, as the OSM glass ways show), the others are vertical; mullions as stripes. Podium: upper podium 9 m above the forecourt (≈ RL 12.4, from 67 − 54.6 m), lower podium and landings at 4.5 m, the monumental steps (≈ 52 m wide in the middle and the full 86 m in their lowest flight) with landings, stepped tiers under the north glass walls, strip windows, granite parapet; Bennelong Point's broadwalk and forecourt at y = 0 (≈ 3.5 m above sea level) with the sea walls going down to −6 m. Simplified: the side shells and the warped surfaces between them are lofted between the edges of the neighbouring shells, the folded geometry of the glass walls is a ruled surface, the vehicle concourse under the steps and the interiors are not modelled. Uncertain: the levels of the podium and the broadwalk (no survey found), the exact pedestal positions, the heights of the lower shells and of the Joan Sutherland Theatre. ground: the default (flatten) — Bennelong Point is low and surrounded by water, so the model sits on the lowest ground of the footprint (about sea level, the broadwalk ends up 2–3 m lower than in reality but nothing of the terrain can pierce the podium). footprint: the sea walls of Bennelong Point (the broadwalk around the building) and the forecourt as far as the end of Macquarie Street."
+}

@@ -1,0 +1,315 @@
+{
+  "id": "Q39671",
+  "name": "Stonehenge",
+  "heading": 49.9,
+  "position": {
+    "lat": 51.1788594,
+    "lon": -1.8261942,
+    "source": "https://www.openstreetmap.org/way/37118074 (centre of the sarsen circle, fitted to the OpenStreetMap stones; heading = the solstitial axis of the Avenue towards the Heel Stone, way 133262440, which lies at 50.6° from that centre)"
+  },
+  "ground": "keep",
+  "ground_at": [
+    0,
+    0
+  ],
+  "ground_low": -2.6,
+  "authors": [
+    {
+      "name": "Álvaro C. Chulvi",
+      "url": "https://github.com/Aruvaro-Chulvi"
+    }
+  ],
+  "license": "CC-BY-4.0",
+  "rights": {
+    "status": "public_domain",
+    "architects": [],
+    "built": -2500,
+    "note": "A prehistoric monument: the earthwork c. 3000 BC, the sarsen circle and trilithons c. 2500 BC, the bluestones rearranged until c. 1600 BC. No author; public domain. Some fallen stones were re-erected and set in concrete in 1901–1964, to their original places."
+  },
+  "sources": [
+    {
+      "title": "OpenStreetMap ways 99207713–99207761, 227236258 (Altar Stone), 227605772–227605776, 422721464–422721475 — the stones of the circle, the trilithons and the bluestones; 133262440 (Heel Stone), 133262443 (Slaughter Stone), 377365047 and 377367000 (Station Stones 91 and 93) (© OpenStreetMap contributors, ODbL)",
+      "url": "https://www.openstreetmap.org/way/99207728"
+    },
+    {
+      "title": "OpenStreetMap ways 377362073–377362116 (ditch, banks, North and South Barrows), 377366995 (Heelstone Ditch), 422721476–482721127 (Aubrey Holes 26–32), 37118074 (Stonehenge)",
+      "url": "https://www.openstreetmap.org/way/37118074"
+    },
+    {
+      "title": "Stonehenge — Wikipedia (en): sarsen circle 33 m across, uprights 4.1 m high, 2.1 m wide, 1.1 m thick, lintels 3.2 × 1.0 × 0.8 m; trilithons rising towards the south-west, stone 56 7.3 m; Heel Stone 4.7 m above ground; Altar Stone 4.9 × 1.0 × 0.5 m; the earthwork ~110 m across; the solstitial axis",
+      "url": "https://en.wikipedia.org/wiki/Stonehenge"
+    },
+    {
+      "title": "Heel Stone, Altar Stone, Slaughter Stone, Station Stones, Aubrey holes — Wikipedia (en)",
+      "url": "https://en.wikipedia.org/wiki/Heel_Stone"
+    },
+    {
+      "title": "English Heritage — History and plan of Stonehenge (the numbering of the stones; which stand, which have fallen)",
+      "url": "https://www.english-heritage.org.uk/visit/places/stonehenge/history-and-stories/history/"
+    },
+    {
+      "title": "Cleal, Walker & Montague (1995), Stonehenge in its Landscape: Twentieth-century Excavations, English Heritage — the general plan of the stones (Petrie numbering)",
+      "url": "https://historicengland.org.uk/images-books/publications/stonehenge-in-its-landscape/"
+    },
+    {
+      "title": "EU-DEM v1.1 25 m (Copernicus), via OpenTopoData: the slope of the site (101.4 m at the centre, ~2 % down to the north-east)",
+      "url": "https://www.opentopodata.org/datasets/eudem/"
+    },
+    {
+      "title": "Wikidata Q39671",
+      "url": "https://www.wikidata.org/wiki/Q39671"
+    }
+  ],
+  "notes": "Built by code (model_sources/Q39671_stonehenge.py, tools/meshkit.py) with AI assistance. The monument as it stands today, stone by stone: the 17–18 standing uprights of the sarsen circle with the six lintels still in place (over 29–30–1–2 across the entrance, 4–5, 6–7 and 21–22), curved to the circle; the fallen and broken sarsens where OpenStreetMap draws them; three complete trilithons, the Great Trilithon with stone 56 standing (7.3 m) and stone 55 broken across the Altar Stone beside the fallen lintel, the north-western trilithon with one upright; the bluestone circle and horseshoe (standing, leaning, fallen and stumps); the Altar, Slaughter and Heel Stones (leaning towards the circle, with its ring ditch), Station Stones 91 (fallen) and 93; the white markers of Aubrey Holes 1–32; the earthwork (inner bank ~0.5 m, ditch ~105 m across and ~0.7 m deep, outer counterscarp ~0.25 m) with its north-east and south entrances and the two «barrows» on the bank, and the grass inside. Every stone is a rough, crumpled block in sarsen grey with yellow-green and pale grey lichen; the bluestones darker, the Altar Stone greenish. Uncertain: the OpenStreetMap outlines of the stones are rough (the fitted circle has residuals up to 2.7 m), so standing sarsen uprights and lintels are set on the ideal circle at 12° steps; the bluestones not drawn in OSM (about half of them) and their states are filled in from the general plan and are approximate; the heights of fallen stones (±20 %), the lean of the Heel Stone (~25°, estimated) and the relief of the eroded earthwork (estimated). Not included: the Avenue beyond the earthwork, the visitor path. heading 49.9°: +Z points along the solstitial axis to the Heel Stone (midsummer sunrise). ground: keep — the site falls ~2 % to the north-east (EU-DEM); y = 0 is the turf at the centre of the circle, the grass surfaces follow the fitted plane 0.3 m above it and go down in a skirt to ground_low (−2.6, the turf around the Heel Stone). footprint: the earthwork out to the counterscarp (r ≈ 64 m) and a lobe to the Heel Stone.",
+  "triangles": 60612,
+  "footprint": [
+    [
+      -2.1,
+      -65.0
+    ],
+    [
+      -8.8,
+      -64.7
+    ],
+    [
+      -15.5,
+      -63.6
+    ],
+    [
+      -21.9,
+      -61.9
+    ],
+    [
+      -28.2,
+      -59.5
+    ],
+    [
+      -34.1,
+      -56.4
+    ],
+    [
+      -39.8,
+      -52.8
+    ],
+    [
+      -45.0,
+      -48.6
+    ],
+    [
+      -49.7,
+      -43.8
+    ],
+    [
+      -53.9,
+      -38.6
+    ],
+    [
+      -57.6,
+      -33.0
+    ],
+    [
+      -60.6,
+      -27.1
+    ],
+    [
+      -63.0,
+      -20.8
+    ],
+    [
+      -64.7,
+      -14.3
+    ],
+    [
+      -65.8,
+      -7.7
+    ],
+    [
+      -66.1,
+      -1.0
+    ],
+    [
+      -65.8,
+      5.7
+    ],
+    [
+      -64.7,
+      12.3
+    ],
+    [
+      -63.0,
+      18.8
+    ],
+    [
+      -60.6,
+      25.0
+    ],
+    [
+      -57.6,
+      31.0
+    ],
+    [
+      -53.9,
+      36.6
+    ],
+    [
+      -49.7,
+      41.8
+    ],
+    [
+      -45.0,
+      46.5
+    ],
+    [
+      -39.8,
+      50.8
+    ],
+    [
+      -34.1,
+      54.4
+    ],
+    [
+      -28.2,
+      57.4
+    ],
+    [
+      -21.9,
+      59.8
+    ],
+    [
+      -15.5,
+      61.6
+    ],
+    [
+      -8.8,
+      62.6
+    ],
+    [
+      -8.6,
+      62.6
+    ],
+    [
+      -8.3,
+      85.4
+    ],
+    [
+      6.7,
+      85.2
+    ],
+    [
+      6.4,
+      62.4
+    ],
+    [
+      11.2,
+      61.6
+    ],
+    [
+      17.6,
+      59.8
+    ],
+    [
+      23.9,
+      57.4
+    ],
+    [
+      29.9,
+      54.4
+    ],
+    [
+      35.5,
+      50.8
+    ],
+    [
+      40.7,
+      46.5
+    ],
+    [
+      45.4,
+      41.8
+    ],
+    [
+      49.6,
+      36.6
+    ],
+    [
+      53.3,
+      31.0
+    ],
+    [
+      56.3,
+      25.0
+    ],
+    [
+      58.7,
+      18.8
+    ],
+    [
+      60.5,
+      12.3
+    ],
+    [
+      61.5,
+      5.7
+    ],
+    [
+      61.9,
+      -1.0
+    ],
+    [
+      61.5,
+      -7.7
+    ],
+    [
+      60.5,
+      -14.3
+    ],
+    [
+      58.7,
+      -20.8
+    ],
+    [
+      56.3,
+      -27.1
+    ],
+    [
+      53.3,
+      -33.0
+    ],
+    [
+      49.6,
+      -38.6
+    ],
+    [
+      45.4,
+      -43.8
+    ],
+    [
+      40.7,
+      -48.6
+    ],
+    [
+      35.5,
+      -52.8
+    ],
+    [
+      29.9,
+      -56.4
+    ],
+    [
+      23.9,
+      -59.5
+    ],
+    [
+      17.6,
+      -61.9
+    ],
+    [
+      11.2,
+      -63.6
+    ],
+    [
+      4.5,
+      -64.7
+    ]
+  ]
+}

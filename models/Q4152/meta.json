@@ -1,0 +1,164 @@
+{
+  "id": "Q4152",
+  "name": "Schloss Neuschwanstein",
+  "heading": 246.6,
+  "position": {
+    "lat": 47.5575676,
+    "lon": 10.7496178,
+    "source": "https://www.openstreetmap.org/way/221601969 (centroid of the castle's area on the rock; heading = the west front of the Palas, square to the courtyard buildings, whose edges run at 66.6°/246.6°)"
+  },
+  "ground": "keep",
+  "ground_at": [
+    0,
+    0
+  ],
+  "ground_low": -15,
+  "authors": [
+    {
+      "name": "Álvaro C. Chulvi",
+      "url": "https://github.com/Aruvaro-Chulvi"
+    }
+  ],
+  "license": "CC-BY-4.0",
+  "rights": {
+    "status": "public_domain",
+    "architects": [
+      {
+        "name": "Eduard Riedel",
+        "died": 1885,
+        "wikidata": "Q106679"
+      },
+      {
+        "name": "Georg von Dollmann",
+        "died": 1895,
+        "wikidata": "Q77138"
+      },
+      {
+        "name": "Julius Hofmann",
+        "died": 1896,
+        "wikidata": "Q1712698"
+      },
+      {
+        "name": "Christian Jank",
+        "died": 1888,
+        "wikidata": "Q573740"
+      }
+    ],
+    "built": 1892,
+    "note": "Built 1869–1892 for King Ludwig II after designs by the stage painter Christian Jank and the architects Eduard Riedel, Georg von Dollmann and Julius Hofmann; never completed (the keep was not built). All the authors died more than 125 years ago."
+  },
+  "sources": [
+    {
+      "title": "OpenStreetMap way 221601969 — Schloss Neuschwanstein (Q4152): the castle's area on the rock, origin and footprint (© OpenStreetMap contributors, ODbL)",
+      "url": "https://www.openstreetmap.org/way/221601969"
+    },
+    {
+      "title": "OpenStreetMap ways 221599090 (Palas), 223311650 (Ritterhaus), 221599087 (Kemenate), 221599096 (Torbau), 221599098 (Viereckturm), 221599086, 223071829, 223110824 — outlines and heights",
+      "url": "https://www.openstreetmap.org/way/221599090"
+    },
+    {
+      "title": "OpenStreetMap building:part ways 223140032, 223110819, 223140028, 223140029, 223179003, 223179004, 223069512, 223145711–223145713, 1573767747 (Treppenturm), 221599097, 223116018, 1573692063–1573692065, 1573767740–1573767744, 223069511, 223069513–223069515, 223110818, 223110820, 223110823, 223110825, 951894999, 221599083, 221599084 — heights, levels, roof shapes and colours",
+      "url": "https://www.openstreetmap.org/way/1573767747"
+    },
+    {
+      "title": "OpenStreetMap ways 221600217 (Unterer Hof), 221600218 (Oberer Hof), 221599101 (courtyard platform), 221599099 (castle wall), 221599104, 221599100, 221599102, 221599103 (retaining walls), steps 221599092/93, 697869170–697869174",
+      "url": "https://www.openstreetmap.org/way/221600218"
+    },
+    {
+      "title": "Schloss Neuschwanstein — Wikipedia (de): ~150 m long, Treppenturm 65 m, Viereckturm 45 m, five-storey Palas, three-storey Kemenate and Ritterhaus, Throne Hall 20 × 12 × 13 m, Singers' Hall 27 × 10 m, unbuilt 90 m keep, white limestone (Alter Schrofen), red-brick gatehouse, yellow limestone in the courtyard, sandstone portals and oriels, dates",
+      "url": "https://de.wikipedia.org/wiki/Schloss_Neuschwanstein"
+    },
+    {
+      "title": "Neuschwanstein Castle — Wikipedia (en): architects, history, layout of the courtyards",
+      "url": "https://en.wikipedia.org/wiki/Neuschwanstein_Castle"
+    },
+    {
+      "title": "EU-DEM v1.1 25 m (Copernicus), via OpenTopoData: ≈949 m in the upper courtyard, ≈940 m at the lower courtyard, ≈934–936 m in front of the gatehouse",
+      "url": "https://www.opentopodata.org/datasets/eudem/"
+    },
+    {
+      "title": "Wikidata Q4152 — architects and dates",
+      "url": "https://www.wikidata.org/wiki/Q4152"
+    }
+  ],
+  "notes": "Built by code (model_sources/Q4152_schloss_neuschwanstein.py, tools/meshkit.py) with AI assistance. Plan from the OpenStreetMap outlines and building:parts (squared to the 66.6°/246.6° axis of the courtyard buildings; the west block of the Palas is turned ~13° as in OSM); heights from the OSM parts, which agree with de.wikipedia for the Treppenturm (65 m) and the Viereckturm (45 m): Palas 33–34 m to the eaves and 45–46 m to the ridges, south tower 42 + 10 m spire, Treppenturm shaft to 45 m, upper turret to 53 m and spire to 65 m, Viereckturm 28 m + corbelled crenellated platform to 33 m + round turret and spire to 45 m, Knights' House 27 + 4 m, Kemenate 13 + 5 m, Torbau 10.5–17.4 m to the eaves and 22 m to its central gable. Heading 246.6° = the west front of the Palas (the Throne Hall end, towards the Alpsee and the Pöllat gorge); the classic view from the Marienbrücke is at azimuth ≈63° from that front (due south of the castle, bearing ≈184°, ~290 m away), showing the west front and the south side (+X). Levels (EU-DEM 25 m smooths the rock, ±2 m): y = 0 the upper courtyard (≈949 m), the lower courtyard and the gate at y = −6 (the 6 m of the OSM courtyard platform), a rock ledge around the walls at −7.5 and a simple rock cliff flaring down to −42 under the castle area of OSM way 221601969, so no gap shows where the terrain falls (≈15 m lower at the gatehouse). Estimated: storey heights and window rows (round-arched windows, paired on the upper floors), the dormers of the Palas roofs, the oriel of the west front, the raised terrace in front of the Palas (1.2 m), the stair between the courtyards, the parapets and battlements, the gilded finials. OSM tags the two highest spires green; they are drawn in the same dark slate as the other roofs. Not modelled: interiors, the terrain around, the Marienbrücke, the access road.",
+  "triangles": 27115,
+  "footprint": [
+    [
+      -16.7,
+      75.2
+    ],
+    [
+      -24.5,
+      44.5
+    ],
+    [
+      -30.2,
+      23.2
+    ],
+    [
+      -37.3,
+      1.9
+    ],
+    [
+      -32.3,
+      -44.1
+    ],
+    [
+      -24.3,
+      -67.7
+    ],
+    [
+      -12.5,
+      -76.8
+    ],
+    [
+      7.4,
+      -75.2
+    ],
+    [
+      12.0,
+      -65.2
+    ],
+    [
+      23.3,
+      -64.6
+    ],
+    [
+      34.1,
+      -60.6
+    ],
+    [
+      36.6,
+      -51.6
+    ],
+    [
+      35.3,
+      -30.4
+    ],
+    [
+      32.3,
+      -7.9
+    ],
+    [
+      34.8,
+      12.1
+    ],
+    [
+      24.3,
+      34.5
+    ],
+    [
+      21.0,
+      57.9
+    ],
+    [
+      23.7,
+      82.3
+    ],
+    [
+      -12.4,
+      89.4
+    ]
+  ]
+}
