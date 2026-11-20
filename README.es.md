@@ -38,6 +38,9 @@ tamaño real con una persona, abre su artículo de Wikipedia, descarga el `.glb`
    1/8 de sus triángulos, hecha automáticamente). El modelo completo solo se dibuja de cerca, y solo unos pocos
    a la vez (2, 4 u 8 según la calidad); a más de 7 km, nada. Un modelo puede tener como mucho 150.000
    triángulos y 8 MB.
+   Un avión solo choca con lo que de verdad hay: cada release trae también un **volumen de choque** de cada
+   modelo (unos cientos de cajas hechas solas a partir de él), así que se puede pasar bajo los arcos, bajo el
+   tablero de un puente o entre torres; los huecos de menos de 6 m, por donde no cabe ningún avión, se cierran.
 4. Al cruzar el anillo de un monumento con modelo, su ficha enseña el modelo, quién lo hizo y cuántos modelos
    ha aportado esa persona. Los modelos se encuentran por su id de Wikidata, así que funciona en los diez
    idiomas de Offlined.

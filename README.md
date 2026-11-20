@@ -38,6 +38,9 @@ their real size against a person, open their Wikipedia article, download the `.g
 3. **It runs on modest computers.** Every release carries a far-away version of each model (about 1/8 of its
    triangles, made automatically). The full model is only drawn close by, and only a few at a time (2, 4 or 8
    depending on the quality setting); beyond 7 km, nothing. A model is limited to 150,000 triangles and 8 MB.
+   A plane crashes only against what is really there: each release also carries a **collision volume** for every
+   model (a few hundred boxes made automatically from it), so arches, the space under a bridge deck and the air
+   between towers can be flown through; gaps narrower than 6 m, where no plane fits, are closed.
 4. When you fly through the ring of a monument that has a model, its card shows the model, its author and how
    many models that author has contributed. The models are found by Wikidata id, so this works in all ten
    languages of Offlined.

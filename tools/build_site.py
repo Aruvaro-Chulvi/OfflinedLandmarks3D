@@ -3,7 +3,8 @@ Assemble the web page (GitHub Pages) in a folder:
 
     python tools/build_site.py _site
 
-site/* + models/ (model.glb, meta.json, preview.jpg) + models/index.json (every model with its authors,
+site/* + models/ (model.glb, meta.json, preview.jpg, collision.json — the collision volume, if numpy is installed)
++ models/index.json (every model with its authors,
 Wikipedia titles and the number of models of each author). Standard library only; the Wikipedia titles
 come from Wikidata (if it cannot be reached, the page links to Wikidata only).
 """
@@ -38,9 +39,19 @@ def main():
         for f in ("model.glb", "meta.json", "preview.jpg"):
             if (d / f).exists():
                 shutil.copy2(d / f, dst / f)
+        has_col = False
+        try:                                                # the collision volume, as in the release (needs numpy)
+            import glbtool
+            cm = m.get("collision") or {}
+            col = glbtool.collision(glbtool.read_glb(d / "model.glb"), voxel=cm.get("voxel"), close=float(cm.get("close", glbtool.CLOSE_M)),
+                                    add=cm.get("add", ()), remove=cm.get("remove", ()))
+            (dst / "collision.json").write_text(json.dumps(col, separators=(",", ":")), "utf-8")
+            has_col = True
+        except ImportError:
+            pass
         info = wd.get(d.name, {})
         models.append({k: m.get(k) for k in ("id", "name", "heading", "position", "authors", "license", "rights", "triangles", "sources", "notes", "ground", "ground_low")}
-                      | {"titles": info.get("titles", {}), "preview": (d / "preview.jpg").exists(),
+                      | {"titles": info.get("titles", {}), "preview": (d / "preview.jpg").exists(), "collision": has_col,
                          # ISO 3166-1 alpha-2, as in the release manifest (meta.json first, then Wikidata); "" if unknown
                          "country": str(m.get("country") or info.get("country") or "")})
         for a in m.get("authors", []):

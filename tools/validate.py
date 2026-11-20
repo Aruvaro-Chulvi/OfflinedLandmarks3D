@@ -196,6 +196,15 @@ def check_folder(d: Path, errors: list, warnings: list):
         err("ground_low: the level (y) of the lowest ground around the model, between -200 and 0")
     elif gl is not None and m.get("ground") != "keep":
         warn('ground_low is only used with "ground": "keep"')
+    co = m.get("collision")
+    if co is not None:
+        box = lambda b: isinstance(b, list) and len(b) == 6 and all(isinstance(v, (int, float)) for v in b) and all(b[i] < b[i + 3] for i in range(3))
+        if not (isinstance(co, dict) and set(co) <= {"voxel", "close", "add", "remove"}
+                and (co.get("voxel") is None or (isinstance(co["voxel"], (int, float)) and 0.25 <= co["voxel"] <= 20))
+                and (co.get("close") is None or (isinstance(co["close"], (int, float)) and 0 <= co["close"] <= 30))
+                and all(isinstance(co.get(k, []), list) and all(box(b) for b in co.get(k, [])) for k in ("add", "remove"))):
+            err('collision: {"voxel": 0.25–20 m, "close": 0–30 m, "add": [[x0, y0, z0, x1, y1, z1], ...], "remove": [...]} '
+                "(boxes in model metres, MODEL_SPEC §3)")
     fp = m.get("footprint")
     if fp is not None and not (isinstance(fp, list) and len(fp) >= 3 and all(isinstance(q, list) and len(q) == 2 and all(isinstance(v, (int, float)) for v in q) for q in fp)):
         err("footprint: a list of at least 3 [x, z] points in metres (model space)")

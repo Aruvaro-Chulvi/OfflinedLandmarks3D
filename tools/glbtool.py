@@ -353,3 +353,137 @@ def write_lod(scene, path, target):
 def radius(scene):
     P = np.vstack([p["pos"] for p in scene["prims"]])
     return float(math.sqrt(float(np.max(P[:, 0] ** 2 + P[:, 2] ** 2))))
+
+
+# ── Collision volume ─────────────────────────────────────────────────────────
+# What a plane can really hit: the model turned into cubes (voxels), the closed insides filled, and the cubes merged
+# into a few boxes. The air that is really open (arches, under a bridge deck, between towers) stays open.
+
+def _voxel_size(lo, hi, cells=1.5e6, vmin=1.5, vmax=4.0, per=110):
+    """About `per` cubes along the longest side (a plane does not need more) but between vmin and vmax metres, and
+    never so many cubes in all that it gets slow."""
+    ext = np.maximum(hi - lo, 1.0)
+    v = max(vmin, min(vmax, float(ext.max()) / per), float(np.prod(ext) / cells) ** (1 / 3))
+    return math.ceil(v * 4) / 4                                  # quarter metres
+
+
+def _surface(scene, lo, v, shape):
+    """Every voxel a triangle passes through (points sampled on each triangle every v/2)."""
+    occ = np.zeros(shape, bool)
+    for p in scene["prims"]:
+        T = p["pos"][p["idx"]]                                   # (n, 3, 3)
+        if not len(T):
+            continue
+        e = np.max(np.linalg.norm(T[:, [1, 2, 0]] - T, axis=2), axis=1)
+        steps = np.maximum(1, np.ceil(e / (v * 0.5))).astype(int)
+        for s in np.unique(steps):
+            tri = T[steps == s]
+            i, j = np.meshgrid(np.arange(s + 1), np.arange(s + 1), indexing="ij")
+            keep = i + j <= s
+            a, b = i[keep] / s, j[keep] / s                       # barycentric grid
+            w = np.stack([1 - a - b, a, b], 1)                     # (k, 3)
+            for c0 in range(0, len(tri), max(1, 400000 // len(w))):
+                pts = np.einsum("kv,nvd->nkd", w, tri[c0:c0 + max(1, 400000 // len(w))]).reshape(-1, 3)
+                q = np.floor((pts - lo) / v).astype(np.int64)
+                q = np.clip(q, 0, np.array(shape) - 1)
+                occ[q[:, 0], q[:, 1], q[:, 2]] = True
+    return occ
+
+
+def _dilate(a):
+    d = a.copy()
+    d[1:] |= a[:-1]; d[:-1] |= a[1:]
+    d[:, 1:] |= a[:, :-1]; d[:, :-1] |= a[:, 1:]
+    d[:, :, 1:] |= a[:, :, :-1]; d[:, :, :-1] |= a[:, :, 1:]
+    return d
+
+
+def _outside(wall):
+    """Air connected to the edge of the grid (6-neighbour flood fill, numpy only)."""
+    out = np.zeros_like(wall)
+    for ax in range(3):                                          # rays from the six sides: what they see before a wall
+        c = np.cumsum(wall, axis=ax)
+        out |= c == 0
+        out |= np.flip(np.cumsum(np.flip(wall, ax), axis=ax), ax) == 0
+    out &= ~wall
+    while True:                                                  # then round corners and into courtyards
+        n = _dilate(out) & ~wall
+        if n.sum() == out.sum():
+            return out
+        out = n
+
+
+def _boxes1(solid):
+    """Greedy merge of solid voxels into boxes: grow along axis 0, then 1, then 2. -> (n, 6) [a0 b0 c0 a1 b1 c1)"""
+    left = solid.copy()
+    A, B, C = solid.shape
+    out = []
+    for f in np.flatnonzero(left):
+        a, b, c = np.unravel_index(f, solid.shape)
+        if not left[a, b, c]:
+            continue
+        a1 = a + 1
+        while a1 < A and left[a1, b, c]:
+            a1 += 1
+        b1 = b + 1
+        while b1 < B and left[a:a1, b1, c].all():
+            b1 += 1
+        c1 = c + 1
+        while c1 < C and left[a:a1, b:b1, c1].all():
+            c1 += 1
+        left[a:a1, b:b1, c:c1] = False
+        out.append((a, b, c, a1, b1, c1))
+    return np.array(out, np.int64).reshape(-1, 6)
+
+
+def _boxes(solid):
+    """The fewest boxes of the six growth orders. -> (n, 6) [x0 y0 z0 x1 y1 z1)"""
+    best = None
+    for order in ((1, 0, 2), (1, 2, 0), (0, 2, 1), (2, 0, 1), (0, 1, 2), (2, 1, 0)):
+        b = _boxes1(np.ascontiguousarray(solid.transpose(order)))
+        inv = np.argsort(order)
+        b = np.hstack([b[:, :3][:, inv], b[:, 3:][:, inv]])
+        if best is None or len(b) < len(best):
+            best = b
+    return best
+
+
+# The smallest plane in Wiki Flight has a span of 8 m: no plane gets through a gap narrower than about 6 m (between
+# the beams of the Eiffel Tower, a window, a narrow arch), so those are closed — fewer boxes, smaller files.
+CLOSE_M = 6.0
+
+
+def collision(scene, cells=1.5e6, close=CLOSE_M, max_boxes=3000, voxel=None, add=(), remove=()):
+    """The collision volume: {"voxel": v, "origin": [x, y, z], "boxes": [x0, y0, z0, x1, y1, z1, ...]} with the boxes in
+    voxels from origin (model metres = origin + n * voxel). Gaps narrower than about `close` metres are closed (no
+    plane gets through there) and closed insides are solid. If there are too many boxes the voxels grow (unless
+    `voxel` is given). add / remove: boxes [x0, y0, z0, x1, y1, z1] in model metres made solid / open by hand."""
+    lo, hi = bounds(scene)
+    for a in add:
+        lo, hi = np.minimum(lo, a[:3]), np.maximum(hi, a[3:])
+    while True:
+        v = float(voxel) if voxel else _voxel_size(lo, hi, cells, vmin=1.5)
+        k = max(0, math.ceil(float(close) / (2 * v) - 0.05))     # dilations: each one closes about 2 voxels
+        o = lo - v * (k + 1)                                     # a margin of air around it
+        shape = tuple(int(n) for n in np.ceil((hi - o) / v) + k + 2)
+        wall = _surface(scene, o, v, shape)
+        grown = wall
+        for _ in range(k):
+            grown = _dilate(grown)
+        out = _outside(grown)
+        for _ in range(k):                                       # the air comes back up to the real walls
+            out = _dilate(out) & ~wall
+        solid = ~out
+
+        def cells_of(bx):
+            a = np.clip(np.floor((np.array(bx[:3], float) - o) / v).astype(int), 0, shape)
+            b = np.clip(np.ceil((np.array(bx[3:], float) - o) / v).astype(int), 0, shape)
+            return slice(a[0], b[0]), slice(a[1], b[1]), slice(a[2], b[2])
+        for bx in add:
+            solid[cells_of(bx)] = True
+        for bx in remove:
+            solid[cells_of(bx)] = False
+        b = _boxes(solid)
+        if voxel or len(b) <= max_boxes or cells < 2e4:
+            return {"voxel": v, "origin": [round(float(c), 3) for c in o], "boxes": b.reshape(-1).tolist()}
+        cells /= 2.5

@@ -21,6 +21,7 @@ const TX = {
     help2: "With a model", help2a: "Choose a landmark from the wanted list, or any other with a Wikidata id and a Wikipedia article, and book it in an issue.",
     help2b: "Build it as a .glb in metres, +Y up, main façade towards +Z (Blender is free).", help2c: "Get the real size and position from OpenStreetMap: tools/osm.py does it for you.",
     help2d: "Add models/<Q…>/model.glb and meta.json, check it with tools/validate.py and open a pull request.",
+    col: "Collision", colTip: "Show the boxes a plane can hit in Wiki Flight ({n} boxes of {v} m)",
     lGuide: "Full guide", lWanted: "Wanted list", lSpec: "Model specification", lRequest: "Request a model",
   },
   es: {
@@ -36,6 +37,7 @@ const TX = {
     help2: "Con un modelo", help2a: "Elige un monumento de la lista de deseos, u otro con id de Wikidata y artículo en Wikipedia, y resérvalo en un issue.",
     help2b: "Hazlo en .glb, en metros, +Y arriba y la fachada principal hacia +Z (Blender es gratis).", help2c: "Toma el tamaño y la posición reales de OpenStreetMap: tools/osm.py lo hace por ti.",
     help2d: "Añade models/<Q…>/model.glb y meta.json, compruébalo con tools/validate.py y abre un pull request.",
+    col: "Choque", colTip: "Enseña las cajas con las que choca un avión en Wiki Flight ({n} cajas de {v} m)",
     lGuide: "Guía completa", lWanted: "Lista de deseos", lSpec: "Especificación del modelo", lRequest: "Pedir un modelo",
   },
 };
@@ -160,7 +162,7 @@ function dispose(o) { o.traverse(x => { if (x.geometry) x.geometry.dispose(); if
 async function build(m) {
   if (model) { scene.remove(model); dispose(model); model = null; }
   const g = await gltf.loadAsync(`models/${m.id}/model.glb`);
-  model = new THREE.Group(); model.add(g.scene);
+  model = new THREE.Group(); model.add(g.scene); model.userData.inner = g.scene;
   g.scene.rotation.y = Math.PI - (m.heading || 0) * Math.PI / 180;
   model.traverse(o => { if (o.isMesh) { o.castShadow = true; o.receiveShadow = true; } });
   scene.add(model);
@@ -186,7 +188,36 @@ async function build(m) {
   controls.target.set(c.x, gy + (box.max.y - gy) * 0.4, c.z);
   camera.position.set(c.x + Math.sin(a) * R * 1.25, Math.max(R * 0.35, 3), c.z - Math.cos(a) * R * 1.25);
   controls.maxDistance = R * 6; controls.minDistance = Math.max(1, R * 0.05);
+  if (showCol) collisionOn(m);
   $("scale").textContent = `${fmt(size.x)} × ${fmt(size.z)} × ${fmt(size.y)} m · ${t("person")}`;
+}
+
+// The collision volume (models/<Q>/collision.json, made by build_site.py like in the release): red boxes
+let showCol = (() => { try { return localStorage.getItem("lm3d_col") === "1"; } catch { return false; } })(), colMesh = null;
+const colCache = {};
+async function collisionOn(m) {
+  collisionOff();
+  if (!m.collision || !model) return;
+  const c = colCache[m.id] || (colCache[m.id] = await fetch(`models/${m.id}/collision.json`).then(r => r.json()).catch(() => null));
+  if (!c || cur !== m || !model || !showCol) return;
+  const B = c.boxes, n = B.length / 6, v = c.voxel, [ox, oy, oz] = c.origin;
+  const mesh = new THREE.InstancedMesh(new THREE.BoxGeometry(1, 1, 1),
+    new THREE.MeshBasicMaterial({ color: 0xe0302a, transparent: true, opacity: 0.38, depthWrite: false }), n);
+  const M = new THREE.Matrix4(), P = new THREE.Vector3(), S = new THREE.Vector3(), Q = new THREE.Quaternion();
+  for (let i = 0; i < n; i++) {
+    const b = B.slice(i * 6, i * 6 + 6);
+    S.set((b[3] - b[0]) * v, (b[4] - b[1]) * v, (b[5] - b[2]) * v);
+    P.set(ox + (b[0] + b[3]) / 2 * v, oy + (b[1] + b[4]) / 2 * v, oz + (b[2] + b[5]) / 2 * v);
+    mesh.setMatrixAt(i, M.compose(P, Q, S));
+  }
+  mesh.renderOrder = 3;
+  colMesh = mesh; model.userData.inner.add(mesh);
+  c.n = n;
+  const b = $("b-col"); if (b) b.title = t("colTip", { n: fmt(n), v: fmt(v) });
+}
+function collisionOff() {
+  if (!colMesh) return;
+  colMesh.parent && colMesh.parent.remove(colMesh); colMesh.geometry.dispose(); colMesh.material.dispose(); colMesh = null;
 }
 
 function card(m) {
@@ -208,9 +239,15 @@ function card(m) {
     <div class="links">${wp ? `<a href="${wp}" target="_blank" rel="noopener">${t("wp")} (${wl})</a>` : ""}
       <a href="https://www.wikidata.org/wiki/${m.id}" target="_blank" rel="noopener">${t("wd")}</a>
       <a href="${REPO}/tree/main/models/${m.id}" target="_blank" rel="noopener">GitHub</a>
-      <a href="models/${m.id}/model.glb" download="${m.id}.glb">⬇ .glb</a></div>`;
+      <a href="models/${m.id}/model.glb" download="${m.id}.glb">⬇ .glb</a>
+      ${m.collision ? `<button type="button" id="b-col" class="lnkbtn${showCol ? " on" : ""}" aria-pressed="${showCol}">${t("col")}</button>` : ""}</div>`;
   $("card").hidden = false; resize();
   $("b-min").onclick = () => { $("card").classList.toggle("min"); card(m); };
+  if ($("b-col")) $("b-col").onclick = () => {
+    showCol = !showCol; try { localStorage.setItem("lm3d_col", showCol ? "1" : "0"); } catch { /* */ }
+    $("b-col").classList.toggle("on", showCol); $("b-col").setAttribute("aria-pressed", showCol);
+    if (showCol) collisionOn(m); else collisionOff();
+  };
 }
 
 async function show(m) {

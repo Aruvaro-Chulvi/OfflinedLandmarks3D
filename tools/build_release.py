@@ -16,6 +16,11 @@ manifest, "file", "size" and "sha256" describe the compressed file that is downl
 and "raw_size" is the size of the .glb inside. Offlined keeps them compressed and serves them with
 Content-Encoding: gzip, so the browser unpacks them.
 
+The collision volume goes in a file of its own, Q…-col.json.gz (entry "collision" in the manifest): the model
+turned into a few hundred or thousand boxes (glbtool.collision) — what a plane can really hit, with the open air of
+arches, bridges and gaps between towers left open. meta.json "collision" may tune it: {"voxel": metres, "close":
+metres (gaps narrower than this are closed; default 6, no plane fits), "add": [[x0, y0, z0, x1, y1, z1], ...], "remove": [...]} (boxes in model metres).
+
 Offlined reads https://github.com/Aruvaro-Chulvi/OfflinedLandmarks3D/releases/latest/download/manifest.json
 and downloads the files it lists (checking size and SHA-256).
 """
@@ -72,6 +77,11 @@ def main():
         ltris, _ = glbtool.write_lod(scene, lraw, target=max(600, min(8000, tris // 8)))
         m["lod"] = {**packed(lraw.read_bytes(), out / f"{d.name}-lod.glb.gz"), "triangles": ltris}
         lraw.unlink()
+        cm = meta.get("collision") or {}
+        col = glbtool.collision(scene, voxel=cm.get("voxel"), close=float(cm.get("close", glbtool.CLOSE_M)),
+                                add=cm.get("add", ()), remove=cm.get("remove", ()))
+        craw = json.dumps(col, separators=(",", ":")).encode()
+        m["collision"] = {**packed(craw, out / f"{d.name}-col.json.gz"), "boxes": len(col["boxes"]) // 6, "voxel": col["voxel"]}
         m["footprint"] = meta.get("footprint") or glbtool.footprint(scene)
         m["height"] = round(float(hi[1]), 2)
         m["base"] = round(float(lo[1]), 2)
@@ -89,19 +99,19 @@ def main():
                 e["url"] = a["url"]
         print(f"{d.name} {meta.get('name')}: {tris:,} tris ({m['raw_size'] / 2**20:.2f} MB, {m['size'] / 2**20:.2f} MB "
               f"gzipped), lod {ltris:,} tris ({m['lod']['size'] / 1024:.0f} KB gzipped), {len(m['footprint'])}-point "
-              f"footprint, {len(m['titles'])} titles")
+              f"footprint, {m['collision']['boxes']} collision boxes ({m['collision']['voxel']} m), {len(m['titles'])} titles")
     man = {
         "name": "Offlined Landmarks 3D", "format": 2, "version": tag, "generated": dt.date.today().isoformat(),
         "repository": REPO, "base_url": f"{REPO}/releases/download/{tag}/",
         "license": "Each model: its own licence (CC-BY-4.0 or CC0-1.0), authors in 'authors'.",
         "authors": dict(sorted(authors.items(), key=lambda kv: (-kv[1]["models"], kv[0]))),
         "countries": {c: {"models": sum(1 for m in models if m["country"] == c),
-                          "size": sum(m["size"] + m["lod"]["size"] for m in models if m["country"] == c)}
+                          "size": sum(m["size"] + m["lod"]["size"] + m["collision"]["size"] for m in models if m["country"] == c)}
                       for c in sorted({m["country"] for m in models})},
         "models": models,
     }
     (out / "manifest.json").write_text(json.dumps(man, ensure_ascii=False, indent=1), "utf-8")
-    total = sum(m["size"] + m["lod"]["size"] for m in models)
+    total = sum(m["size"] + m["lod"]["size"] + m["collision"]["size"] for m in models)
     print(f"{len(models)} model(s), {total / 2**20:.2f} MB -> {out}")
 
 
