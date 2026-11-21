@@ -50,6 +50,49 @@ Los modelos hechos por código guardan su programa en `model_sources/<Q…>_<nom
   punto de suelo despejado a la altura de `y = 0` (una plaza delante de la fachada principal), no el centro de
   los tejados. Entonces cada muro, terraza y muro de contención debe bajar lo bastante para tocar el terreno real.
 
+### 3.1 El terreno de Offlined y cómo asentar en él tu modelo
+
+**Cuánto detalle tiene el terreno.** Offlined dibuja el suelo con datos de altura, no con la colina real:
+
+| Dónde | Datos | Detalle |
+|---|---|---|
+| En todo el mundo | GEBCO 2026 | una altura cada ~450 m |
+| Donde el jugador ha descargado el relieve de detalle de ese país | Copernicus GLO-90 | una altura cada ~90 m |
+
+Así que todo lo que mide menos de unos cientos de metros — una cresta, un risco, un acantilado, un cerro, el
+talud de un río — sale redondeado, a menudo decenas de metros más bajo o más alto que en la realidad, y las
+cuestas de pocos metros ni se notan. Cuenta con que el suelo bajo tu modelo esté **±10 m desviado en cualquier
+ladera y ±50 m en una cresta o un acantilado**. Tu modelo no puede fiarse de que el terreno tenga la forma
+buena: tiene que traer él la forma que importa.
+
+**Elige una de las tres maneras de asentarlo (`ground` en `meta.json`):**
+
+1. **Llano** (por defecto, `"flatten"`) — un edificio en terreno llano: el suelo baja **menos de ~5 m** de un
+   lado a otro de la planta. Offlined allana la planta a su punto más bajo (con 20 m de transición al terreno
+   de alrededor) y pone ahí `y = 0`. Tu modelo: `y = 0` = el suelo de la entrada, y muros o un zócalo 2–5 m
+   por debajo. *No lo uses para un modelo que sigue una cuesta* (unas murallas que bajan por un cerro, un
+   palacio sobre un talud): todo el modelo se pondría en el punto más bajo y quedaría hundido.
+2. **En cuesta, en terrazas o en una cumbre** (`"ground": "keep"`) — el suelo baja más de ~5 m de un lado a
+   otro del modelo, o está sobre una cresta. `y = 0` se apoya en el suelo en `ground_at`, y **Offlined
+   moldea el terreno a tu modelo**: allí donde está el modelo (también fuera de su planta), el suelo se pone
+   justo debajo de la superficie más baja del modelo, y una rampa de 25–250 m (más larga cuanta más
+   diferencia) lo funde con la ladera. Lo que significa para ti:
+   - **Modela el suelo sobre el que está**: plazas, terrazas, escaleras, muros de contención y la roca del cerro
+     donde se ve. La superficie más baja de tu modelo *pasa a ser* el suelo: un patio sin suelo o una terraza
+     sin su relleno dejan un agujero por el que asoma el terreno basto.
+   - **En una cresta o un acantilado, añade un faldón de roca** 20–50 m por debajo del suelo más bajo
+     (`ground_low`): así la rampa sale de la roca y los lados empinados parecen montaña, no un talud de hierba.
+   - Pon en `ground_low` el suelo real más bajo alrededor del modelo (el visor web dibuja ahí su suelo).
+3. **Sin tocar el terreno** (`"ground": "keep"` y `"ground_fit": false`) — puentes, presas, muelles, todo lo
+   que está sobre agua o sobre el vacío: el terreno se deja exactamente como está (ajustarlo subiría el suelo
+   hasta el tablero).
+
+**Errores típicos** (`tools/validate.py` avisa de ellos):
+- Un modelo cuya base baja mucho por debajo de `y = 0` (sigue una cuesta) dejado en **llano**: se hunde. Usa `keep`.
+- Un modelo `keep` con grandes huecos en su base dentro de su contorno.
+- Un puente o algo sobre el agua sin `"ground_fit": false`.
+- Un `y = 0` que no es el suelo real en `ground_at` (por ejemplo, el piso de una terraza elevada o un tejado).
+
 ## 4. `meta.json`
 
 ```json
@@ -83,6 +126,7 @@ Los modelos hechos por código guardan su programa en `model_sources/<Q…>_<nom
 | `ground_low` | no | Con `"ground": "keep"`: el nivel (y, ≤ 0) del suelo más bajo alrededor del modelo, p. ej. la huerta bajo un jardín en terrazas. El visor web y la vista previa dibujan ahí su suelo plano, para que se vea lo que queda por debajo de `y = 0` (por defecto 0). |
 | `collision` | no | Solo para retocar el volumen de choque, que se hace solo a partir del modelo al preparar la release: el modelo convertido en cajas (cubos de 1,5–4 m unidos), lo que un avión puede tocar de verdad — los arcos, el hueco bajo el tablero de un puente y el aire entre torres quedan abiertos, los interiores cerrados son macizos. `{"voxel": metros, "close": metros, "add": [[x0, y0, z0, x1, y1, z1], …], "remove": […]}`: tamaño del cubo, huecos de menos de `close` metros que se cierran (por defecto 6: el avión más pequeño de Wiki Flight mide 8 m de punta a punta, así que ninguno pasa), y cajas en metros del modelo que se hacen macizas o se abren a mano. El visor web lo enseña con «Choque». |
 | `based_on` | no | Si el modelo adapta el trabajo de otra persona: `{ "title", "author", "url", "license" }` — esa licencia también tiene que ser CC-BY-4.0 o CC0-1.0. |
+| `ground_fit` | no | Con `"ground": "keep"`: `false` para puentes, presas y todo lo que está sobre agua o sobre el vacío — Offlined no moldea el terreno al modelo (§3.1). Por defecto `true`. |
 | `country` | no | El país, como código ISO 3166-1 alfa-2 (`ES`, `CN`…). Normalmente no se pone: la release lo toma de Wikidata (el *país* del monumento, P17). Offlined permite descargar solo los monumentos de un país. |
 | `triangles` | no | Lo rellena el comprobador si falta. |
 | `notes` | no | Lo que convenga saber (qué está simplificado, qué es dudoso). |

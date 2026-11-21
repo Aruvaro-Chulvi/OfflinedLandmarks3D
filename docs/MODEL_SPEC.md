@@ -49,6 +49,48 @@ Models built by code keep their script in `model_sources/<Q…>_<name>.py` (see 
   open ground at the level of `y = 0` (a square in front of the main façade), not the middle of the roofs. Then
   every wall, terrace and retaining wall must go down far enough to meet the real terrain.
 
+### 3.1 The terrain in Offlined, and how to make your model sit on it
+
+**How detailed the terrain is.** Offlined draws the ground from elevation data, not from the real hill:
+
+| Where | Data | Detail |
+|---|---|---|
+| Everywhere | GEBCO 2026 | one height every ~450 m |
+| Where the player downloaded the detailed relief of that country | Copernicus GLO-90 | one height every ~90 m |
+
+So anything narrower than a few hundred metres — a ridge, a crag, a cliff, a small hill, a river bluff — comes out
+rounded, often tens of metres lower or higher than in reality, and slopes of a few metres do not show at all.
+Count on the ground under your model being **±10 m off on any hillside and ±50 m off on a ridge or a cliff**.
+Your model cannot rely on the terrain having the right shape; it has to bring the shape that matters.
+
+**Pick one of three ways to sit (`ground` in `meta.json`):**
+
+1. **Flat** (default, `"flatten"`) — a building on flat ground: the ground falls **less than ~5 m** across the
+   footprint. Offlined levels the footprint to its lowest point (with a 20 m blend to the terrain around) and sets
+   `y = 0` there. Your model: `y = 0` = the ground at the entrance, and walls or a plinth 2–5 m below it.
+   *Do not use it for a model that follows a slope* (city walls going down a hill, a palace on a bluff): the
+   whole model would be set at the lowest point and sink.
+2. **On a slope, on terraces or on a hilltop** (`"ground": "keep"`) — the ground falls more than ~5 m across the
+   model, or it stands on a crest. `y = 0` is set on the ground at `ground_at`, and **Offlined reshapes the
+   terrain to fit your model**: wherever the model is (also outside its footprint), the ground is put just under
+   the model's lowest surface, and a ramp of 25–250 m (longer the bigger the difference) blends it into the hill.
+   What this means for you:
+   - **Model the ground you stand on**: squares, terraces, steps, retaining walls, and the rock of the hill where
+     it shows. The lowest surface of your model *becomes* the ground — a courtyard without a floor or a terrace
+     without its fill leaves a hole where the coarse terrain shows through.
+   - **On a crest or a cliff, add a rock skirt** 20–50 m below the lowest ground (`ground_low`): the ramp then
+     starts from rock, and the steep sides look like a mountain, not like a grassy bank.
+   - Set `ground_low` to the lowest real ground around the model (the web viewer draws its floor there).
+3. **Not touching the terrain** (`"ground": "keep"` and `"ground_fit": false`) — bridges, dams, piers,
+   anything standing over water or over a void: the terrain is left exactly as it is (fitting it would raise
+   the ground up to the deck).
+
+**Common mistakes** (`tools/validate.py` warns about them):
+- A model whose base goes far below `y = 0` (it follows a slope) left on **flat**: it sinks. Use `keep`.
+- A `keep` model whose base has large holes inside its outline.
+- A bridge or anything over water without `"ground_fit": false`.
+- `y = 0` that is not the real ground at `ground_at` (for example the floor of a raised terrace, or a roof).
+
 ## 4. `meta.json`
 
 ```json
@@ -82,6 +124,7 @@ Models built by code keep their script in `model_sources/<Q…>_<name>.py` (see 
 | `ground_low` | no | With `"ground": "keep"`: the level (y, ≤ 0) of the lowest ground around the model, e.g. the orchard below a terraced garden. The web viewer and the preview draw their flat ground there, so what stands below `y = 0` can be seen (default 0). |
 | `collision` | no | Only to tune the collision volume, which is made by itself from the model when the release is built: the model turned into boxes (cubes of about 1.5–4 m merged), what a plane can really hit — arches, the space under a bridge deck and the gaps between towers stay open, closed insides are solid. `{"voxel": metres, "close": metres, "add": [[x0, y0, z0, x1, y1, z1], …], "remove": […]}`: cube size, gaps narrower than `close` metres that are closed (default 6: the smallest plane in Wiki Flight has a span of 8 m, so none gets through), and boxes in model metres made solid or open by hand. The web viewer shows it with «Collision». |
 | `based_on` | no | If the model adapts someone else's work: `{ "title", "author", "url", "license" }` — that licence must be CC-BY-4.0 or CC0-1.0 too. |
+| `ground_fit` | no | With `"ground": "keep"`: `false` for bridges, dams and anything over water or a void — Offlined does not reshape the terrain to the model (§3.1). Default `true`. |
 | `country` | no | The country as an ISO 3166-1 alpha-2 code (`ES`, `CN`…). Normally left out: the release takes it from Wikidata (the landmark's *country*, P17). Offlined lets people download only the landmarks of one country. |
 | `triangles` | no | Filled in by the checker if missing. |
 | `notes` | no | Anything worth knowing (what is simplified, what is uncertain). |

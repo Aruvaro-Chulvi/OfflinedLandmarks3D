@@ -7,6 +7,12 @@
     "lon": -3.7144271,
     "source": "https://www.openstreetmap.org/relation/75658 (centroid of the outline; nave axis and main façade at 4.9°)"
   },
+  "ground": "keep",
+  "ground_at": [
+    0,
+    0
+  ],
+  "ground_low": -13,
   "authors": [
     {
       "name": "Álvaro C. Chulvi",

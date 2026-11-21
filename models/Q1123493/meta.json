@@ -7,6 +7,12 @@
     "lon": -3.7073762,
     "source": "https://www.openstreetmap.org/relation/16657232 (centroid of the square's outline, way 4263036; heading = the Casa de la Panadería, north side, facing south into the square)"
   },
+  "ground": "keep",
+  "ground_at": [
+    0,
+    0
+  ],
+  "ground_low": -6,
   "authors": [
     {
       "name": "Álvaro C. Chulvi",

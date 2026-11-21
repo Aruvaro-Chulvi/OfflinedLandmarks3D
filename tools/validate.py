@@ -140,6 +140,100 @@ def check_rights(r, err, warn):
             warn("rights: add a 'note' (who holds the rights, any known objection, why it should be fine)")
 
 
+BRIDGE = re.compile(r"\b(bridge|puente|pont|ponte|brücke|brug|most|köprü|viaduct|viaducto|aqueduct|acueducto|dam|presa|pier|muelle)\b", re.I)
+UNDER_CELL = 4.0     # metres: the grid of the ground check
+
+
+def _triangles(p: Path):
+    """The model's triangles ((x, y, z) × 3) with each node's translation, rotation and scale."""
+    b = p.read_bytes()
+    jl = struct.unpack_from("<I", b, 12)[0]
+    j = json.loads(b[20:20 + jl])
+    o = 20 + jl
+    binc = b[o + 8:o + 8 + struct.unpack_from("<I", b, o)[0]]
+    acc, bvs = j.get("accessors", []), j.get("bufferViews", [])
+    CT = {5126: ("f", 4), 5125: ("I", 4), 5123: ("H", 2), 5121: ("B", 1)}
+
+    def read(ai, nc):
+        a = acc[ai]; bv = bvs[a["bufferView"]]; fmt, sz = CT[a["componentType"]]
+        st = bv.get("byteOffset", 0) + a.get("byteOffset", 0); stride = bv.get("byteStride") or sz * nc
+        return [struct.unpack_from("<" + fmt * nc, binc, st + i * stride) for i in range(a["count"])]
+
+    def rot(q, v):
+        x, y, z, w = q; tx, ty, tz = 2 * (y * v[2] - z * v[1]), 2 * (z * v[0] - x * v[2]), 2 * (x * v[1] - y * v[0])
+        return (v[0] + w * tx + y * tz - z * ty, v[1] + w * ty + z * tx - x * tz, v[2] + w * tz + x * ty - y * tx)
+    nodes, out = j.get("nodes", []), []
+
+    def walk(ni, chain):
+        n = nodes[ni]; chain = chain + [n]
+        for pr in (j["meshes"][n["mesh"]].get("primitives", []) if "mesh" in n else []):
+            if pr.get("mode", 4) != 4 or "POSITION" not in pr.get("attributes", {}):
+                continue
+            pts = []
+            for v in read(pr["attributes"]["POSITION"], 3):
+                for nd in reversed(chain):
+                    if nd.get("scale"): v = tuple(a * s for a, s in zip(v, nd["scale"]))
+                    if nd.get("rotation"): v = rot(nd["rotation"], v)
+                    if nd.get("translation"): v = tuple(a + t for a, t in zip(v, nd["translation"]))
+                pts.append(v)
+            idx = [i[0] for i in read(pr["indices"], 1)] if "indices" in pr else list(range(len(pts)))
+            for i in range(0, len(idx) - 2, 3):
+                out.append((pts[idx[i]], pts[idx[i + 1]], pts[idx[i + 2]]))
+        for ch in n.get("children", []):
+            walk(ch, chain)
+    sc = (j.get("scenes") or [{"nodes": list(range(len(nodes)))}])[j.get("scene", 0)]
+    for ni in sc.get("nodes", []):
+        walk(ni, [])
+    return out
+
+
+def check_ground(p: Path, m: dict, warn):
+    """How the model will sit on Offlined's terrain (MODEL_SPEC §3.1): the lowest surface of the model on a
+    4 m grid seen from above — with "ground": "keep" Offlined fits the terrain to it."""
+    try:
+        T = _triangles(p)
+    except Exception:                                       # noqa: BLE001 — check_glb already reports a bad file
+        return
+    c, g = UNDER_CELL, {}
+    for a, b, q in T:
+        d = (b[2] - q[2]) * (a[0] - q[0]) + (q[0] - b[0]) * (a[2] - q[2])
+        xs, zs = (a[0], b[0], q[0]), (a[2], b[2], q[2])
+        i0, i1, j0, j1 = int(min(xs) // c), int(max(xs) // c), int(min(zs) // c), int(max(zs) // c)
+        for jj in range(j0, j1 + 1):
+            for ii in range(i0, i1 + 1):
+                if abs(d) < 1e-9 or (i0 == i1 and j0 == j1):
+                    y = min(a[1], b[1], q[1])
+                else:
+                    px, pz = (ii + 0.5) * c, (jj + 0.5) * c
+                    l1 = ((b[2] - q[2]) * (px - q[0]) + (q[0] - b[0]) * (pz - q[2])) / d
+                    l2 = ((q[2] - a[2]) * (px - q[0]) + (a[0] - q[0]) * (pz - q[2])) / d
+                    if l1 < -0.02 or l2 < -0.02 or 1 - l1 - l2 < -0.02:
+                        continue
+                    y = l1 * a[1] + l2 * b[1] + (1 - l1 - l2) * q[1]
+                if y < g.get((ii, jj), 1e9):
+                    g[(ii, jj)] = y
+    if not g:
+        return
+    ys = sorted(g.values())
+    low = ys[len(ys) // 20]                                  # the lowest 5 % (not one deep pile)
+    mode = m.get("ground", "flatten")
+    if mode == "flatten" and low < -8:
+        warn(f"the base goes down to about {low:.0f} m below y = 0 over part of the model, as if it followed a slope: "
+             'with the default "flatten" Offlined sets the whole model at the lowest ground and it sinks — '
+             'use "ground": "keep" (MODEL_SPEC §3.1)')
+    if mode == "keep" and m.get("ground_fit") is not False:
+        # holes: cells with nothing between two cells with model, along x
+        rows: dict = {}
+        for (ii, jj) in g:
+            rows.setdefault(jj, []).append(ii)
+        span = sum(max(v) - min(v) + 1 for v in rows.values())
+        holes = span - len(g)
+        if span and holes / span > 0.3:
+            warn(f"about {100 * holes / span:.0f} % of the area under the model has nothing (courtyards without a "
+                 "floor, gaps between buildings): there Offlined only blends the coarse terrain towards the model — "
+                 "if that ground matters (a paved courtyard, a terrace, a square), model it (MODEL_SPEC §3.1)")
+
+
 def check_folder(d: Path, errors: list, warnings: list):
     rel = d.relative_to(ROOT).as_posix() if d.is_relative_to(ROOT) else str(d)
     err = lambda m: errors.append(f"{rel}: {m}")
@@ -196,6 +290,13 @@ def check_folder(d: Path, errors: list, warnings: list):
         err("ground_low: the level (y) of the lowest ground around the model, between -200 and 0")
     elif gl is not None and m.get("ground") != "keep":
         warn('ground_low is only used with "ground": "keep"')
+    gf = m.get("ground_fit")
+    if gf is not None and not isinstance(gf, bool):
+        err('ground_fit: true or false (MODEL_SPEC §3.1)')
+    elif gf is not None and m.get("ground") != "keep":
+        warn('ground_fit is only used with "ground": "keep"')
+    if m.get("ground") == "keep" and gf is not False and BRIDGE.search(str(m.get("name", ""))):
+        warn('it looks like a bridge: add "ground_fit": false, or Offlined will raise the ground up to the deck (MODEL_SPEC §3.1)')
     co = m.get("collision")
     if co is not None:
         box = lambda b: isinstance(b, list) and len(b) == 6 and all(isinstance(v, (int, float)) for v in b) and all(b[i] < b[i + 3] for i in range(3))
@@ -219,6 +320,7 @@ def check_folder(d: Path, errors: list, warnings: list):
                 err("nothing above y = 1 m: +Y must be up, y = 0 the ground")
             if lo[1] < -60:
                 warn(f"the model goes {-lo[1]:.0f} m below the ground: foundations of a few metres are enough")
+            check_ground(d / "model.glb", m, warn)
             if not (lo[0] <= 0 <= hi[0] and lo[2] <= 0 <= hi[2]):
                 err("the origin (0, 0, 0) is outside the model: it must be on the ground, inside it (MODEL_SPEC §3)")
             if "triangles" not in m:

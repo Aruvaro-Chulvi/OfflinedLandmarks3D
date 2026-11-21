@@ -13,6 +13,7 @@
     0
   ],
   "ground_low": 0,
+  "ground_fit": false,
   "authors": [
     {
       "name": "Álvaro C. Chulvi",

@@ -7,6 +7,12 @@
     "lon": -4.7017856,
     "source": "https://www.openstreetmap.org/way/45976728 (centroid of the walled town, i.e. of the inner face of the wall closed across the cimorro; heading = the east front, Puerta del Alcázar – cimorro – Puerta de San Vicente, facing the plain to the east)"
   },
+  "ground": "keep",
+  "ground_at": [
+    0,
+    0
+  ],
+  "ground_low": -51,
   "authors": [
     {
       "name": "Álvaro C. Chulvi",

@@ -7,6 +7,12 @@
     "lon": -3.714237,
     "source": "https://www.openstreetmap.org/relation/30399 (centroid of the palace block; the whole relation also takes in the galleries of the Plaza de la Armería, whose centroid would fall on the south wing; long axis at 4.6°)"
   },
+  "ground": "keep",
+  "ground_at": [
+    0,
+    0
+  ],
+  "ground_low": -20,
   "authors": [
     {
       "name": "Álvaro C. Chulvi",
