@@ -1,0 +1,63 @@
+{
+  "id": "Q1752772",
+  "name": "Monasterio de Santa María de El Paular",
+  "heading": 253.1,
+  "position": {
+    "lat": 40.8886314,
+    "lon": -3.8879097,
+    "source": "https://www.openstreetmap.org/relation/531354 (centroid of the monastery outline; heading = the west front of the church, along the axis of the nave, OSM way 928933129)"
+  },
+  "ground": "keep",
+  "ground_at": [
+    -30,
+    12
+  ],
+  "ground_low": -4,
+  "authors": [
+    {
+      "name": "Álvaro C. Chulvi",
+      "url": "https://github.com/Aruvaro-Chulvi"
+    }
+  ],
+  "license": "CC-BY-4.0",
+  "rights": {
+    "status": "public_domain",
+    "architects": [
+      {
+        "name": "Juan Guas",
+        "died": 1496,
+        "wikidata": "Q3140999"
+      },
+      {
+        "name": "Francisco Hurtado Izquierdo",
+        "died": 1725
+      }
+    ],
+    "built": 1390,
+    "note": "Carthusian monastery founded in 1390 by John I of Castile and built over the 15th–18th centuries: the church, its portal and atrium and the templete of the great cloister are attributed to Juan Guas (died 1496); the Baroque Sagrario and Transparente by Francisco Hurtado Izquierdo (died 1725), begun 1718; the patio of the Ave María portal is attributed to Rodrigo Gil de Hontañón (died 1577). Later repairs and restorations (19th–20th centuries) kept the old forms. All its authors died long ago."
+  },
+  "sources": [
+    {
+      "title": "OpenStreetMap relation 531354 — Monasterio de Santa María de El Paular (Q1752772): outline (way 53011735), church (way 928933129), courtyards (ways 53011748, 53011750, 53011739, 53011747, 53011745), templete (way 928933130) (© OpenStreetMap contributors, ODbL)",
+      "url": "https://www.openstreetmap.org/relation/531354"
+    },
+    {
+      "title": "OpenStreetMap relation 531355 — the south-east cloister (ways 53011736, 53011738) (© OpenStreetMap contributors, ODbL)",
+      "url": "https://www.openstreetmap.org/relation/531355"
+    },
+    {
+      "title": "Monasterio de Santa María de El Paular — Wikipedia (es): history, Juan Guas, the templete of the cloister, the Sagrario of Francisco Hurtado Izquierdo (1718)",
+      "url": "https://es.wikipedia.org/wiki/Monasterio_de_Santa_Mar%C3%ADa_de_El_Paular"
+    },
+    {
+      "title": "Wikimedia Commons photographs used for heights and forms: 'Monasterio de El Paular desde el Puente del Perdón.jpg' (nave, tower, drum and dome), 'Kloster El Paular, Rascafria, Spanien.jpg' (nave and tower), 'Monasterio Paular.jpg', 'Rascafria Monasterio Paular.jpg' (west front), 'Monasterio de El Paular.JPG' (courtyard and ranges)",
+      "url": "https://commons.wikimedia.org/wiki/Category:Monastery_of_El_Paular"
+    },
+    {
+      "title": "EU-DEM 25 m (Copernicus) via OpenTopoData — ground levels round the monastery",
+      "url": "https://www.opentopodata.org/datasets/eudem/"
+    }
+  ],
+  "notes": "Built by code (model_sources/Q1752772_monasterio_de_el_paular.py, tools/meshkit.py) with AI assistance. Plan from OpenStreetMap; heights measured on photographs (±10–15 %): nave eaves 17 m and ridge 20.5 m, bell tower to 36.5 m (lantern), drum of the Transparente to 21.5 m, Sagrario dome to 22 m, other ranges 8.5 m to the eaves. Simplified: every range of the monastery has the same height and a hipped tile roof made as a height field over the OSM outline (the real roofs vary in height and pitch, some are gabled), the cloister arcades are dark arches, windows are evenly spaced, no cell gardens, precinct walls, Puente del Perdón or farm buildings. Uncertain: the position of the bell tower on the nave (east end, from photographs), the Sagrario's plan (a cross of wings round the domed octagon, fitted to the bay east of the drum), the drum's height, the ranges' heights. y = 0 is the ground at the origin; the valley floor falls about 5 m to the east across the complex.",
+  "triangles": 24613
+}

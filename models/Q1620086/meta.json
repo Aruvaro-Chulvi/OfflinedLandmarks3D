@@ -1,0 +1,177 @@
+{
+  "id": "Q1620086",
+  "name": "Hipódromo de la Zarzuela",
+  "heading": 87.7,
+  "position": {
+    "lat": 40.4665972,
+    "lon": -3.7586329,
+    "source": "https://www.openstreetmap.org/way/24542681 (centroid of the row of grandstands; its long side faces 87.7°, the track)"
+  },
+  "authors": [
+    {
+      "name": "Álvaro C. Chulvi",
+      "url": "https://github.com/Aruvaro-Chulvi"
+    }
+  ],
+  "license": "CC-BY-4.0",
+  "rights": {
+    "status": "protected",
+    "architects": [
+      {
+        "name": "Carlos Arniches Moltó",
+        "died": 1958,
+        "wikidata": "Q5749741"
+      },
+      {
+        "name": "Martín Domínguez Esteban",
+        "died": 1970,
+        "wikidata": "Q6002599"
+      },
+      {
+        "name": "Eduardo Torroja Miret (engineer)",
+        "died": 1961,
+        "wikidata": "Q517006"
+      }
+    ],
+    "built": 1941,
+    "note": "Grandstands by the architects Carlos Arniches and Martín Domínguez with the engineer Eduardo Torroja, who designed the shell roofs; built 1935–1936, finished after the Civil War and opened in 1941; rehabilitated 2004–2016. Bien de Interés Cultural (Real Decreto 1611/2009). Martín Domínguez died in 1970; authors who died before 1987 keep 80 years of protection in Spain, so the work is protected until the end of 2050 (public domain from 2051)."
+  },
+  "sources": [
+    {
+      "title": "OpenStreetMap way 24542681 (building=yes): the row of grandstands, 231.7 × 29.3 m, long side facing 87.7°; way 24531561 (leisure=sports_centre, wikidata Q1620086) and relation 52312 (the main track) (© OpenStreetMap contributors, ODbL)",
+      "url": "https://www.openstreetmap.org/way/24542681"
+    },
+    {
+      "title": "PNOA orthophoto, Instituto Geográfico Nacional (CC BY 4.0, scne.es), WMS pnoa-ma at 0.2 m/px — looked at only: the three shells 59 × 26.5 m, 30 × 28 m and 60 × 29.6 m, their front edges, 5 m modules (12, 6 and 12), the round stair towers, the rail of the turf course",
+      "url": "https://www.ign.es/wms-inspire/pnoa-ma"
+    },
+    {
+      "title": "Martínez, I. et al. (2018), «Más allá de la rehabilitación en una obra emblemática: monitorización de las cubiertas del hipódromo de la Zarzuela», Anales de Edificación 4(3): hyperboloid shells 65 cm thick at the columns and 6 cm at the edges, slightly curved V section cantilevered on a single column, steel ties at the back; three roofs: Tribuna Norte, Central and Sur",
+      "url": "https://polired.upm.es/index.php/anales_de_edificacion/article/download/3780/3868/14048"
+    },
+    {
+      "title": "Hipódromo de la Zarzuela — Wikipedia (es/en): architects, dates, BIC 2009, the protected parts (tribuna sur, central and norte, the paddock galleries…)",
+      "url": "https://es.wikipedia.org/wiki/Hip%C3%B3dromo_de_la_Zarzuela"
+    },
+    {
+      "title": "ArchDaily — Architecture Classic: The Zarzuela Hippodrome: asymmetric section balancing the canopy and the rear arm, the guyed cover over the betting booths and upper gallery, reinforced concrete",
+      "url": "https://www.archdaily.com/942985/architecture-classic-the-zarzuela-hippodrome-carlos-arniches-martin-dominguez-and-eduardo-torroja"
+    },
+    {
+      "title": "Wikimedia Commons — «Hipódromo de la Zarzuela-1.JPG» (the canopy from below, the arcade at the back) and «Hipódromo de la Zarzuela-2.JPG» (the profile of a shell from the end, a stair tower), used to measure heights",
+      "url": "https://commons.wikimedia.org/wiki/Category:Hip%C3%B3dromo_de_la_Zarzuela"
+    }
+  ],
+  "triangles": 23130,
+  "footprint": [
+    [
+      -82.2,
+      -17.8
+    ],
+    [
+      -25.61,
+      -17.8
+    ],
+    [
+      -25.61,
+      -15.24
+    ],
+    [
+      -21.39,
+      -7.0
+    ],
+    [
+      -1.72,
+      -7.0
+    ],
+    [
+      -1.92,
+      -21.5
+    ],
+    [
+      31.18,
+      -21.5
+    ],
+    [
+      31.29,
+      -9.91
+    ],
+    [
+      33.0,
+      -9.31
+    ],
+    [
+      33.0,
+      2.5
+    ],
+    [
+      55.63,
+      2.6
+    ],
+    [
+      58.11,
+      -1.6
+    ],
+    [
+      58.86,
+      -16.6
+    ],
+    [
+      118.53,
+      -16.6
+    ],
+    [
+      117.67,
+      15.46
+    ],
+    [
+      55.34,
+      11.43
+    ],
+    [
+      55.53,
+      8.49
+    ],
+    [
+      32.8,
+      8.21
+    ],
+    [
+      33.0,
+      10.4
+    ],
+    [
+      -0.33,
+      10.4
+    ],
+    [
+      -0.03,
+      7.94
+    ],
+    [
+      -22.46,
+      8.76
+    ],
+    [
+      -22.36,
+      10.93
+    ],
+    [
+      -84.44,
+      15.47
+    ],
+    [
+      -84.63,
+      12.31
+    ],
+    [
+      -112.05,
+      15.4
+    ],
+    [
+      -115.23,
+      -7.15
+    ]
+  ],
+  "notes": "Built by code (model_sources/Q1620086_hipodromo_de_la_zarzuela.py, tools/meshkit.py) with AI assistance. The three grandstands of the racecourse, facing the track (+Z, east). Each roof is a row of 5 m modules (12, 6 and 12, sizes and positions from the PNOA orthophoto), each module a thin shell vaulting upwards between two frames, so the edges are rows of arches; in section a V: the 12.8 m cantilever over the terraces rising to ≈ 13.6 m at the front edge, a rear arm rising to ≈ 12.6 m over the upper gallery, one column under the low point (≈ 11 m) on every frame and a steel tie behind it; the shell is 65 cm thick at the column and 6 cm at the edges (the vaults are simplified to parabolic arches, rise 0.55 m at the column to 1.3 m at the edges; the true hyperboloid geometry is not reproduced exactly). Under each roof: 16 concrete terraces (the first rows with green seats) up to 7.5 m, the upper gallery with glazed booths, the base building with one arch per module on its back (paddock) wall, and round stair towers at both ends. Low white blocks fill the OSM building between the grandstands and at its south end (bars and passages, simplified). The white rail in front is the near rail of the turf course (from the orthophoto); the course, the pelouse and the paddock are left to the map. Heights from photos (±1 m). The central grandstand is set back about 4 m from the other two, as in the orthophoto. Not modelled: the paddock galleries, restaurants and other buildings of the complex, signs and furniture."
+}

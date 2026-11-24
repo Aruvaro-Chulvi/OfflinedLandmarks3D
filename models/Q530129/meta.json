@@ -1,0 +1,218 @@
+{
+  "id": "Q530129",
+  "name": "Palacio Real de Aranjuez",
+  "heading": 273.7,
+  "position": {
+    "lat": 40.0363601,
+    "lon": -3.6083692,
+    "source": "https://www.openstreetmap.org/relation/2610430 (centroid of the outline of the palace; heading = the main front on the Plaza de Armas, square to the long sides of the wings, bearing 93.7°)"
+  },
+  "authors": [
+    {
+      "name": "Álvaro C. Chulvi",
+      "url": "https://github.com/Aruvaro-Chulvi"
+    }
+  ],
+  "license": "CC-BY-4.0",
+  "rights": {
+    "status": "public_domain",
+    "architects": [
+      {
+        "name": "Juan Bautista de Toledo",
+        "died": 1567,
+        "wikidata": "Q1363098"
+      },
+      {
+        "name": "Juan de Herrera",
+        "died": 1597,
+        "wikidata": "Q363914"
+      },
+      {
+        "name": "Santiago Bonavía",
+        "died": 1759,
+        "wikidata": "Q7420227"
+      },
+      {
+        "name": "Francesco Sabatini",
+        "died": 1797,
+        "wikidata": "Q2454966"
+      }
+    ],
+    "built": 1777,
+    "note": "Begun in 1564 to Juan Bautista de Toledo's design for Philip II and continued by Juan de Herrera; finished for Ferdinand VI by Santiago Bonavía (main façade, 1752); the two wings of the Plaza de Armas by Francesco Sabatini for Charles III (1771–1777). The Parterre (Étienne Boutelou, 1728, redrawn in the 19th century), the Jardín de la Isla (16th–17th centuries) and their fountains (the latest, Hercules and Antaeus, by Isidro González Velázquez, 1827, died 1840) are of the same royal site. Every author died long ago: public domain."
+  },
+  "sources": [
+    {
+      "title": "OpenStreetMap relation 2610430 — outline and courtyard of the palace (© OpenStreetMap contributors, ODbL)",
+      "url": "https://www.openstreetmap.org/relation/2610430"
+    },
+    {
+      "title": "OpenStreetMap way 998116032 (Jardín del Parterre) with its beds (barrier=hedge), lawns and walks; ways 912598480 (Fuente de Hércules y Anteo), 912598483 (Fuente de Ceres), 912598484–912598486 (Nereids and small fountains), 745349594–745349595 (the moat), 235634990 (Jardín del Rey), 725305119 (Jardín de la Reina)",
+      "url": "https://www.openstreetmap.org/way/998116032"
+    },
+    {
+      "title": "OpenStreetMap relation 18353809 (Jardín de la Isla) with its hedged blocks, lawns and walks; ways 663984603–663984607 and 663989753 (fountains of the Boticaria, Hercules and the Hydra, Apollo, the Clock, the Niño de la Espina, Venus), 737713469–737713472 (ponds of the Hydra), 652628468 (Salón de los Reyes Católicos), 1443938333 and 1443938337 (bridges over the Ría)",
+      "url": "https://www.openstreetmap.org/relation/18353809"
+    },
+    {
+      "title": "Palacio Real de Aranjuez — Wikipedia (es)",
+      "url": "https://es.wikipedia.org/wiki/Palacio_Real_de_Aranjuez"
+    },
+    {
+      "title": "Royal Palace of Aranjuez — Wikipedia (en): two floors and a third over the central body, five-arch portico, statues of Philip II, Philip V and Ferdinand VI by Pedro Martinengo, corner towers with domes on drums, red brick and white stone of Colmenar de Oreja, Sabatini's wings",
+      "url": "https://en.wikipedia.org/wiki/Royal_Palace_of_Aranjuez"
+    },
+    {
+      "title": "Wikimedia Commons: Fachada oeste, Palacio Real de Aranjuez 01.jpg (heights of the west front, central body and towers)",
+      "url": "https://commons.wikimedia.org/wiki/File:Fachada_oeste,_Palacio_Real_de_Aranjuez_01.jpg"
+    },
+    {
+      "title": "Wikimedia Commons: Palacio Real, Aranjuez, Madrid.jpg (the whole Plaza de Armas front, scaled on the plan)",
+      "url": "https://commons.wikimedia.org/wiki/File:Palacio_Real,_Aranjuez,_Madrid.jpg"
+    },
+    {
+      "title": "Wikimedia Commons: Palacio Real de Aranjuez, fachada sur.jpg (corner tower, drum, dome and lantern)",
+      "url": "https://commons.wikimedia.org/wiki/File:Palacio_Real_de_Aranjuez,_fachada_sur.jpg"
+    }
+  ],
+  "notes": "Built by code (model_sources/Q530129_palacio_real_de_aranjuez.py, tools/meshkit.py) with AI assistance. The palace with its gardens on the royal site: the west range on the Plaza de Armas with Bonavía's central body (five-arch portico, balcony, attic with the arms of Ferdinand VI, curved pediment, three royal statues), the two corner towers with drum, lead dome, lantern and cross, the block round the courtyard, Sabatini's two wings with their arcades on the plaza and three arches at their ends, balustrades with urns, slate hipped roofs, chimneys, windows and balconies; the Parterre (beds with box edging and lawn as OpenStreetMap draws them, sandy walks, the fountains of Hercules and Antaeus, Ceres and the two Nereids, the ha-ha moat), the small Jardín del Rey and Jardín de la Reina, and the part of the Jardín de la Isla within ~330 m (hedged blocks with plane trees, lawns, walks, the fountains of Hercules and the Hydra with its four ponds, Apollo, the Boticaria, the Clock, the Niño de la Espina and Venus, the two small bridges over the Ría, and the Salón de los Reyes Católicos with four rows of plane trees). Simplified or uncertain: heights are measured on photographs scaled on the OSM plan (ranges 17 m to the cornice, central body 24.5 m and pediment 27.5 m, towers 24 m and cross at 40.5 m, wings 12.8 m), ±10 %; the brick panels and stone frames are reduced to a brick wall with stone pilaster strips, cornices and window frames; the façades other than the west front are generic (bays every 4.6 m); the wings' roofs are drawn flat behind their balustrades; the trees of the Isla are placed on a jittered grid inside each hedged block (OpenStreetMap does not map them one by one) and the Salón's rows follow its axis; the statues and fountain groups are stylised figures (the Hercules and Antaeus pedestal is a ring of columns round a drum); the flower beds are plain lawn. The Tagus and the Ría are not modelled (Offlined draws the water); the island garden goes on further west beyond x = −330 m. y = 0 is the Plaza de Armas: the whole site is flat (≈ 490 m), garden surfaces lie a few centimetres above it.",
+  "triangles": 72061,
+  "footprint": [
+    [
+      -330.0,
+      262.0
+    ],
+    [
+      -228.1,
+      262.0
+    ],
+    [
+      -224.7,
+      252.0
+    ],
+    [
+      -182.2,
+      194.8
+    ],
+    [
+      -138.7,
+      141.0
+    ],
+    [
+      -103.6,
+      96.0
+    ],
+    [
+      -103.4,
+      78.9
+    ],
+    [
+      -97.0,
+      -1.1
+    ],
+    [
+      -61.6,
+      12.0
+    ],
+    [
+      -60.6,
+      90.4
+    ],
+    [
+      61.9,
+      90.4
+    ],
+    [
+      61.9,
+      12.0
+    ],
+    [
+      57.3,
+      12.0
+    ],
+    [
+      57.3,
+      -20.0
+    ],
+    [
+      56.2,
+      -21.0
+    ],
+    [
+      57.6,
+      -82.0
+    ],
+    [
+      57.5,
+      -260.0
+    ],
+    [
+      38.2,
+      -261.0
+    ],
+    [
+      33.8,
+      -268.0
+    ],
+    [
+      29.0,
+      -273.5
+    ],
+    [
+      23.0,
+      -278.0
+    ],
+    [
+      15.0,
+      -281.5
+    ],
+    [
+      5.5,
+      -284.0
+    ],
+    [
+      -8.0,
+      -282.0
+    ],
+    [
+      -15.0,
+      -278.5
+    ],
+    [
+      -22.0,
+      -273.0
+    ],
+    [
+      -28.0,
+      -265.0
+    ],
+    [
+      -39.0,
+      -263.0
+    ],
+    [
+      -52.0,
+      -71.5
+    ],
+    [
+      -58.5,
+      -72.5
+    ],
+    [
+      -63.4,
+      -83.3
+    ],
+    [
+      -81.3,
+      -83.7
+    ],
+    [
+      -150.2,
+      -62.2
+    ],
+    [
+      -330.0,
+      -11.6
+    ]
+  ]
+}

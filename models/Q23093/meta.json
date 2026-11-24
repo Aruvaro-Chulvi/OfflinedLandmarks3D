@@ -1,0 +1,48 @@
+{
+  "id": "Q23093",
+  "name": "Estación de Atocha",
+  "heading": 330.7,
+  "position": {
+    "lat": 40.4070594,
+    "lon": -3.6913902,
+    "source": "https://www.openstreetmap.org/way/255246387 «Atocha (Histórica)» (centroid of the outline; the north front on the Glorieta del Emperador Carlos V faces 330.7°)"
+  },
+  "authors": [
+    {
+      "name": "Álvaro C. Chulvi",
+      "url": "https://github.com/Aruvaro-Chulvi"
+    }
+  ],
+  "license": "CC-BY-4.0",
+  "rights": {
+    "status": "protected",
+    "architects": [
+      {
+        "name": "Alberto de Palacio",
+        "died": 1939,
+        "wikidata": "Q982959"
+      },
+      {
+        "name": "Rafael Moneo"
+      }
+    ],
+    "built": 1892,
+    "note": "The historic station (1888–1892) by Alberto de Palacio with the engineer Henri Saint-James is in the public domain since 2020 (80 years after Palacio's death). Its conversion (1985–1992: the tropical garden in the shed, the clock tower) is by Rafael Moneo, who is living, so the model as a whole is protected. Moneo's new terminal and platforms are not included."
+  },
+  "sources": [
+    {
+      "title": "OpenStreetMap way 255246387 — outline and building:part ways with heights (shed 307557629, lantern 307557632, clock tower 307557636…) (© OpenStreetMap contributors, ODbL)",
+      "url": "https://www.openstreetmap.org/way/255246387"
+    },
+    {
+      "title": "Estación de Madrid Puerta de Atocha — Wikipedia (es): shed 152 m long, 27 m high, 48 m span; brick; tropical garden; Moneo's tower",
+      "url": "https://es.wikipedia.org/wiki/Estaci%C3%B3n_de_Madrid_Puerta_de_Atocha"
+    },
+    {
+      "title": "PNOA orthophoto, Instituto Geográfico Nacional (roof layout)",
+      "url": "https://www.ign.es/wms-inspire/pnoa-ma"
+    }
+  ],
+  "triangles": 12512,
+  "notes": "Built by code (model_sources/Q23093_estacion_de_atocha.py, tools/meshkit.py) with AI assistance. The historic station only: the iron shed (48 m span, walls to 13 m, a circular-arc vault to 27 m, iron arches every 12 m), its glazed ridge lantern (25–27 m, from OSM), glazed end walls with iron mullions and the clock on the north gable, the brick side buildings with tiled hipped roofs (12 + 2 m), the north pavilions (17 m + 4 m roofs), the low north porch (8 m), the south corner blocks (10 m) and Rafael Moneo's 35 m brick clock tower of 1992 (part of the same OSM building). Moneo's 1992 terminal, the dome of the Cercanías hall and the platforms are separate buildings and are left out. The tropical garden is generic: a noisy green canopy 4–15 m high and 46 palms; the lantern is glazed in slats with gaps so that the garden shows from above (glass is opaque in Wiki Flight). Simplified: the window rhythm, the terracotta ornament, the griffins (two plain blocks), the De Dion trusses (tubes). Uncertain: the exact arch profile of the shed and the porch façade."
+}

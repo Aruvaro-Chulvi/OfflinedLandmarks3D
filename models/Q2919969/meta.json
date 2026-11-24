@@ -1,0 +1,57 @@
+{
+  "id": "Q2919969",
+  "name": "Torres de Colón",
+  "heading": 197.5,
+  "position": {
+    "lat": 40.4258018,
+    "lon": -3.6911589,
+    "source": "https://www.openstreetmap.org/way/336755231 (centroid of the outline; long axis at 107.5°)"
+  },
+  "authors": [
+    {
+      "name": "Álvaro C. Chulvi",
+      "url": "https://github.com/Aruvaro-Chulvi"
+    }
+  ],
+  "license": "CC-BY-4.0",
+  "rights": {
+    "status": "protected",
+    "architects": [
+      {
+        "name": "Antonio Lamela",
+        "died": 2017,
+        "wikidata": "Q8201368"
+      },
+      {
+        "name": "Luis Vidal (Luis Vidal + Architects)",
+        "wikidata": "Q25414578"
+      }
+    ],
+    "built": 1976,
+    "note": "Antonio Lamela, 1967–1976 (opened as Torres de Jerez), hung structure by Carlos Fernández Casado, Leonardo Fernández Troyano and Javier Manterola. The towers were joined and given the green «enchufe» crown by Carlos Lamela in the 1990s; rebuilt 2020–2024 for Mutua Madrileña by Luis Vidal + Architects, who replaced that crown with two glass volumes of four floors, keeping the height. The model shows the building after that reform."
+  },
+  "sources": [
+    {
+      "title": "OpenStreetMap way 336755231 and its building:parts (the two shafts with the hanger rhythm, the cores, the podium; the crowns mapped are the 1990s ones) (© OpenStreetMap contributors, ODbL)",
+      "url": "https://www.openstreetmap.org/way/336755231"
+    },
+    {
+      "title": "Torres de Colón — Wikipedia (es): 116–117 m, hung structure with 18 hangers per tower from head beams about 6 m deep, two cores, 1990s crown, Luis Vidal reform 2020–2024 replacing it with four floors",
+      "url": "https://es.wikipedia.org/wiki/Torres_de_Colón"
+    },
+    {
+      "title": "Arquitectura Viva — Reforma de las Torres de Colón (Luis Vidal's double prismatic volume keeps the crown line)",
+      "url": "https://arquitecturaviva.com/articulos/reforma-de-las-torres-de-colon"
+    },
+    {
+      "title": "El Mundo (24 April 2024), «Torres Colón» — structural height 86 m, 18 prestressed hangers per tower (PDF on luisvidal.com)",
+      "url": "https://luisvidal.com/wp-content/uploads/240425_El-Mundo_Gran-Madrid_Torres-Colon_Alemany-3-hojas.pdf"
+    },
+    {
+      "title": "Wikimedia Commons — photos of the towers after the reform («Torres de Colon - Plaza de Colon 2 - Madrid 01.jpg», «Torres de Colón - Madrid - 001/013/015.jpg»; proportions measured on them)",
+      "url": "https://commons.wikimedia.org/wiki/File:Torres_de_Colon_-_Plaza_de_Colon_2_-_Madrid_01.jpg"
+    }
+  ],
+  "triangles": 1916,
+  "notes": "Built by code (model_sources/Q2919969_torres_de_colon.py, tools/meshkit.py) with AI assistance. The towers as they are after Luis Vidal's 2020–2024 reform (the green 1990s crown is gone). Plan from OpenStreetMap: two hung towers of 17.5 × 19.4 m, one turned 90° to the other, 7 m apart and 9.6 m out of line, each with 18 concrete hangers standing proud of the light blue-green glass (5 on the long faces, 4 on the short ones, 3.6 m apart), a dark glass link between them, and the podium over the whole plot. At the top of each tower the head slab (coffered underside, frosted glass parapet of the terrace), a dark recessed floor and a four-storey cube of dark blue glass; a lower glass link joins the two cubes. Main façade (+Z) = the Calle de Génova side, where the towers stand side by side; the Paseo de la Castellana and the Plaza de Colón are on +X. Heights measured on 2025–2026 photos (±5 %) and fitted to the published 116–117 m: podium 13 m, hung shafts 14–86 m (the 86 m structural height), terrace parapet to 92.5 m, cubes 96.5–116.5 m. Uncertain: the podium height (OSM, mapped before the reform, says 9 m), the exact size and overhang of the cubes, the height of the link between them, the floor count of the shafts (drawn with 21 floor lines). Simplified: the chamfered corner bays of the shafts, the rooftop plant and antennas."
+}

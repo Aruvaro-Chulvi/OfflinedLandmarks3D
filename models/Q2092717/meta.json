@@ -1,0 +1,57 @@
+{
+  "id": "Q2092717",
+  "name": "Edificio Telefónica",
+  "heading": 185.8,
+  "position": {
+    "lat": 40.4204031,
+    "lon": -3.7019224,
+    "source": "https://www.openstreetmap.org/way/192107181 (centroid of the outline; long axis at 95.8°, the Gran Vía front faces 185.8°)"
+  },
+  "authors": [
+    {
+      "name": "Álvaro C. Chulvi",
+      "url": "https://github.com/Aruvaro-Chulvi"
+    }
+  ],
+  "license": "CC-BY-4.0",
+  "rights": {
+    "status": "protected",
+    "architects": [
+      {
+        "name": "Ignacio de Cárdenas Pastor",
+        "died": 1979,
+        "wikidata": "Q5913633"
+      }
+    ],
+    "built": 1929,
+    "note": "Designed by Ignacio de Cárdenas Pastor for the Compañía Telefónica Nacional de España, built 1926–1929 (steel frame, Novelda limestone over a granite base). The architect died in 1979; under Spanish law authors who died before December 1987 are protected for 80 years after death: free in 2060."
+  },
+  "sources": [
+    {
+      "title": "OpenStreetMap way 192107181 — outline (2,286 m²) and its 20 building:part pieces with heights 11–89 m (© OpenStreetMap contributors, ODbL)",
+      "url": "https://www.openstreetmap.org/way/192107181"
+    },
+    {
+      "title": "Edificio Telefónica — Wikipedia (es): 89.30 m, floors, Gran Vía / Fuencarral / Valverde frontages, Novelda stone and Segovia granite, Baroque portal, shield and clock, antennas removed in 2017",
+      "url": "https://es.wikipedia.org/wiki/Edificio_Telef%C3%B3nica"
+    },
+    {
+      "title": "Telefónica — «Historia de la Gran Vía de Madrid» (89–90 m, 1929)",
+      "url": "https://www.telefonica.com/es/sala-comunicacion/blog/gran-via-madrid/"
+    },
+    {
+      "title": "Wikimedia Commons — «Telefónica - Gran Vía 28 - Madrid.jpg»: floors counted (two-storey granite base, the 8-floor street ring with its Baroque crests, the set-backs, the tower)",
+      "url": "https://commons.wikimedia.org/wiki/File:Telef%C3%B3nica_-_Gran_V%C3%ADa_28_-_Madrid.jpg"
+    },
+    {
+      "title": "Wikimedia Commons — «Parte superior del Edificio Telefonica en Madrid.jpg» (clock stage, buttresses, pinnacles, crest), «Madrid - Edificio Telefónica, perspectiva.jpg», «Edificio Telefonica - Madrid 01.jpg» (east side and roofs), «1930 ARQUITECTURA 45.jpg» (period view of the building's model)",
+      "url": "https://commons.wikimedia.org/wiki/Category:Edificio_Telef%C3%B3nica,_Madrid"
+    },
+    {
+      "title": "Wikidata Q2092717 (architect, dates)",
+      "url": "https://www.wikidata.org/wiki/Q2092717"
+    }
+  ],
+  "triangles": 8743,
+  "notes": "Built by code (model_sources/Q2092717_edificio_telefonica.py, tools/meshkit.py) with AI assistance. The massing is the OpenStreetMap building:part pieces extruded to their heights: the 28–32 m ring on the three streets (8–9 floors, Baroque crests on its parapet), the set-back ring at 43 m, the core at 50 m, lift pavilions at 53 m, the 11 m light court, the tower on the Gran Vía axis (14 × 14 m) to 73 m and the clock stage (9 × 9 m) to the quoted 89 m at the top of its crest and finial. The thin 46 m strip OSM puts in front of the tower is taken as the tower's own front (the photos show the tower flush with the street), a tiny 46 m triangle at the back as 43 m. Granite base 0–9 m (shop floor and mezzanine), floors of 3.4 m above; windows are dark quads on a ~3.2 m grid; the Baroque portal, the shield (no crown), the clock faces (on all four sides), crests, pinnacles, corner pilasters and cornices are stylised. No signs or logos: the shop fronts are plain dark glazing; the antennas (removed in 2017) are not modelled. Uncertain: the vertical split of the tower above 53 m — on some photos the shaft looks only a couple of floors higher than the core, which would put the crown lower than 89 m; the OSM heights and the published 89 m were kept. The back (north) façades are shown plainer and slightly darker, as on the photos, without checking their real window pattern."
+}

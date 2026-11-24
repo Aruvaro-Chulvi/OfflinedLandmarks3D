@@ -1,0 +1,80 @@
+{
+  "id": "Q211250",
+  "name": "Teatro Real",
+  "heading": 272.0,
+  "position": {
+    "lat": 40.4182254,
+    "lon": -3.7105376,
+    "source": "https://www.openstreetmap.org/way/4328975 (centroid of the outline; long axis at 92.0°, the Plaza de Oriente front faces 272°)"
+  },
+  "authors": [
+    {
+      "name": "Álvaro C. Chulvi",
+      "url": "https://github.com/Aruvaro-Chulvi"
+    }
+  ],
+  "license": "CC-BY-4.0",
+  "rights": {
+    "status": "protected",
+    "architects": [
+      {
+        "name": "Antonio López Aguado",
+        "died": 1831,
+        "wikidata": "Q3781231"
+      },
+      {
+        "name": "Custodio Teodoro Moreno",
+        "died": 1854,
+        "wikidata": "Q5795088"
+      },
+      {
+        "name": "José Manuel González-Valcárcel",
+        "died": 1992
+      },
+      {
+        "name": "Francisco Rodríguez de Partearroyo"
+      },
+      {
+        "name": "Jaime González-Valcárcel"
+      }
+    ],
+    "built": 1850,
+    "note": "Designed by Antonio López Aguado (from 1818), finished by Custodio Teodoro Moreno and opened in 1850: the 19th-century façades are in the public domain. The 1988–1997 refurbishment (José Manuel González-Valcárcel, who died in 1992, then Francisco Rodríguez de Partearroyo; the stage block led by Jaime González-Valcárcel) rebuilt the roofs and the stage tower, which are most of what is seen from the air and are still protected — hence «protected» for the whole."
+  },
+  "sources": [
+    {
+      "title": "OpenStreetMap way 4328975, relation 4099455 and building:parts 307023007, 307023010, 307023011, 307025222, 307025223, 307025224 — outline, heights 10–42 m, roof shapes (© OpenStreetMap contributors, ODbL)",
+      "url": "https://www.openstreetmap.org/way/4328975"
+    },
+    {
+      "title": "Teatro Real — Wikipedia (es)",
+      "url": "https://es.wikipedia.org/wiki/Teatro_Real_(Madrid)"
+    },
+    {
+      "title": "Teatro Real — History of the theatre (1818 project, 1850 opening, 1925–1966 and 1988–1997 works)",
+      "url": "https://www.teatroreal.es/en/history-theatre"
+    },
+    {
+      "title": "Arquitectura Viva — «Ópera de Oriente» (1997): the refurbishment by González-Valcárcel and Partearroyo",
+      "url": "https://arquitecturaviva.com/articulos/1997-opera-de-oriente"
+    },
+    {
+      "title": "Metalocus — «Inner workings of the Royal Theatre»: the stage block crossing the building from the base to the crown",
+      "url": "https://www.metalocus.es/en/news/inner-workings-royal-theatre"
+    },
+    {
+      "title": "Wikimedia Commons — «Teatro Real-fachada plaza de Oriente.jpg» (west front: arcaded porch, two storeys between pilasters, balustrade; heights measured), «Fachada Este - Teatro Real - Madrid 01.jpg» (east front: five arches, giant columns, attic colonnade, rounded lead roof), «Teatro Real (5184908481).jpg» (side front)",
+      "url": "https://commons.wikimedia.org/wiki/File:Teatro_Real-fachada_plaza_de_Oriente.jpg"
+    },
+    {
+      "title": "Wikimedia Commons — «Madrid cathedral 2020 - view from the dome.jpg»: the stage tower (pediments, pilasters, arched gable windows, lead roof) and the curved roofs seen from above",
+      "url": "https://commons.wikimedia.org/wiki/File:Madrid_cathedral_2020_-_view_from_the_dome.jpg"
+    },
+    {
+      "title": "Wikidata Q211250 (architects)",
+      "url": "https://www.wikidata.org/wiki/Q211250"
+    }
+  ],
+  "triangles": 16778,
+  "notes": "Built by code (model_sources/Q211250_teatro_real.py, tools/meshkit.py) with AI assistance. Plan from OpenStreetMap: the elongated hexagon of the outer range (walls to 26 m, a rounded lead roof whose crest reaches the OSM 30 m, computed across the varying width of the range), the inner block with a flat roof at 27 m and a few plant rooms, the auditorium roof (low gable, 31 m), the stage tower (walls 35 m, gabled to 40 m, ridge east–west as OSM says, a raised strip along it to 42 m) and the arcaded porch on the Plaza de Oriente (9.5 m, carrying the balcony); the west front follows the shallow concave arc of the OSM outline. Elevations measured on near-frontal photos (±5 %): granite ground storey to 9.5 m, main floor to 17.5 m, cornice 26 m; an attic colonnade on the east and side fronts, large windows between pilasters and a balustrade on the west front. Stylised: windows with flat pediments and balconies, 8-sided columns, oculi, pilasters and the big arched windows of the stage-tower gables; window counts are approximate. Uncertain: the exact profile of the curved roofs, the height of the stage-tower walls (35 m, from the OSM roof height) and the plant rooms on the inner roof (placed by eye)."
+}

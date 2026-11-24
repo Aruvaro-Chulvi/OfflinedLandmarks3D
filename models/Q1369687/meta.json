@@ -1,0 +1,63 @@
+{
+  "id": "Q1369687",
+  "name": "Estadio Metropolitano",
+  "heading": 260.6,
+  "position": {
+    "lat": 40.4362037,
+    "lon": -3.5994778,
+    "source": "https://www.openstreetmap.org/way/4409945 (centre of the pitch; long axis 170.6°, so the west side, La Peineta, faces 260.6°); outline of the roof from https://www.openstreetmap.org/relation/7525256"
+  },
+  "authors": [
+    {
+      "name": "Álvaro C. Chulvi",
+      "url": "https://github.com/Aruvaro-Chulvi"
+    }
+  ],
+  "license": "CC-BY-4.0",
+  "rights": {
+    "status": "protected",
+    "architects": [
+      {
+        "name": "Cruz y Ortiz Arquitectos (Antonio Cruz and Antonio Ortiz)",
+        "wikidata": "Q5190332"
+      },
+      {
+        "name": "schlaich bergermann partner (roof engineering)"
+      }
+    ],
+    "built": 2017,
+    "note": "Designed by Cruz y Ortiz Arquitectos (Antonio Cruz and Antonio Ortiz, both alive): the athletics stadium La Peineta (competition 1989, opened 1994) and its conversion into the present football stadium (works 2011–2017, opened 16 September 2017); roof engineered by schlaich bergermann partner. Protected in Spain."
+  },
+  "sources": [
+    {
+      "title": "OpenStreetMap relation 7525256 (building=stadium, multipolygon): outer ring 287.0 × 249.1 m = the roof seen from above, inner ring = the roof opening 141 × 101 m (© OpenStreetMap contributors, ODbL)",
+      "url": "https://www.openstreetmap.org/relation/7525256"
+    },
+    {
+      "title": "OpenStreetMap way 4409945 (leisure=pitch): 109.1 × 70.0 m, long axis 170.6°; way 458731140 (leisure=stadium, wikidata Q1369687): the stadium grounds (© OpenStreetMap contributors, ODbL)",
+      "url": "https://www.openstreetmap.org/way/4409945"
+    },
+    {
+      "title": "e-architect — Wanda Metropolitano Stadium: roof about 286 × 248 m, 46,500 m², 57 m between the compression and tension rings, 45–57 m above the pitch, double outer compression ring and double inner tension ring, PTFE-coated glass-fibre membrane, membranes cantilevered to the outer perimeter of the old stand with a wavy shape and variable height, red outer gutter, three tiers, middle tier entered at level 0.00, concrete as the visible finish",
+      "url": "https://www.e-architect.com/spain/wanda-metropolitano-stadium-in-madrid"
+    },
+    {
+      "title": "Arquitectura Viva — Wanda Metropolitano Stadium (project): rings 57 m apart, two groups of radial cables, three new tiers added to La Peineta, the new field about 10 m below the former one",
+      "url": "https://arquitecturaviva.com/works/wanda-metropolitano-stadium-madrid-in-project"
+    },
+    {
+      "title": "Atlético de Madrid — Una cubierta impresionante para hacer del Wanda Metropolitano una olla a presión: roof between 45 and 57 m high, double compression ring and tension ring, spokes crossing halfway, PTFE radial panels",
+      "url": "https://www.atleticodemadrid.com/noticias/una-cubierta-impresionante-para-hacer-del-wanda-metropolitano-una-olla-a-presion"
+    },
+    {
+      "title": "Estadio Metropolitano (Madrid) — Wikipedia (es): architects, dates, three tiers forming continuous rings, pitch 105 × 68 m",
+      "url": "https://es.wikipedia.org/wiki/Estadio_Metropolitano_(Madrid)"
+    },
+    {
+      "title": "Wikimedia Commons — photos used to measure heights and read the shape: «Wanda Metropolitano - 2017-09.jpg» (west side), «Madrid - Estadio Wanda Metropolitano 03.jpg», «Madrid - Estadio Wanda Metropolitano 26.jpg», «Estadio Metropolitano - Madrid 001.jpg», «Wanda-Metropolitano.jpg» and «Estadio Wanda Metropolitano (2018).jpg» (inside)",
+      "url": "https://commons.wikimedia.org/wiki/Category:Estadio_Metropolitano,_Madrid"
+    }
+  ],
+  "triangles": 47626,
+  "notes": "Built by code (model_sources/Q1369687_estadio_metropolitano.py, tools/meshkit.py) with AI assistance. Origin at the centre of the pitch (within 1 m of the centroid of the OSM roof outline); +Z faces west, the old Peineta main stand. Every piece is lofted along 192 rays from the centre through the rim of the opening (OSM inner ring), so the plan follows both OSM rings: the roof is a spoked wheel, the tension ring round the opening (46 m at its top, 39 m at its foot, with a strip of floodlights), the compression ring 57 m further out (34 m at the ends, 41 m on the long sides; the white concrete band at the back of the upper tier 9 m below it), a zig-zag white membrane of 96 radial panels between them (ridges and valleys ±1.5 m), a pale lower skin under it, and the membrane cantilevered 14–21 m beyond the ring, curving down to the red gutter of the rim: 12 m at the ends, 38 m in the middle of the long sides, which gives the white lens seen from the city. Under the roof: the white concrete band at the back of the upper tier, the dark zone of the raking beams, and the beige concrete blocks of the outer buildings (16 m, 25 m along La Peineta) as a ring with horizontal slits and dark gaps — the real blocks are separate volumes of different sizes. Inside: three tiers of red seats as stepped bands (no single seats, no lettering) with a glazed box level, and the pitch with stripes, lines and goals. The real pitch lies about 10 m below the street; it is drawn at street level (y = +0.3) because Offlined draws the ground at y = 0 over the footprint and would hide a sunken pitch, so the bowl is about 10 m shallower than the real one while the outside keeps its heights above the street. Uncertain (estimated on photos, ±3–4 m): every height (the published 45–57 m above the pitch minus ~10 m), the way the rim falls towards the ends, the depth of the pleats, the extent of the beige blocks and of the stands under the roof. Not modelled: names, crests, sponsors, the giant flag, the video boards, the outer plazas, stairs, ramps and car parks, the kiosks around the stadium."
+}

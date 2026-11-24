@@ -1,0 +1,67 @@
+{
+  "id": "Q1013093",
+  "name": "Castillo nuevo de Manzanares el Real",
+  "heading": 156.1,
+  "position": {
+    "lat": 40.7271639,
+    "lon": -3.8620304,
+    "source": "https://www.openstreetmap.org/relation/1266539 (centroid of the castle outline; heading = the south front with the gallery of Juan Guas, perpendicular to the long axis of the outline at 66.1°/246.1°)"
+  },
+  "ground": "keep",
+  "ground_at": [
+    -18.5,
+    1.0
+  ],
+  "ground_low": -6,
+  "authors": [
+    {
+      "name": "Álvaro C. Chulvi",
+      "url": "https://github.com/Aruvaro-Chulvi"
+    }
+  ],
+  "license": "CC-BY-4.0",
+  "rights": {
+    "status": "public_domain",
+    "architects": [
+      {
+        "name": "Juan Guas",
+        "died": 1496,
+        "wikidata": "Q3140999"
+      }
+    ],
+    "built": 1475,
+    "note": "Begun in 1475 for Diego Hurtado de Mendoza, first Duke of the Infantado, around an older Romanesque-Mudéjar church; the Isabelline Gothic upper works (the southern gallery, the ball-studded caballeros) are attributed to Juan Guas (died 1496). Restored 1965–1975 following the original design. Its authors died more than 500 years ago."
+  },
+  "sources": [
+    {
+      "title": "OpenStreetMap relation 1266539 — Castillo Nuevo de Manzanares El Real (Q1013093): outline (way 84686467) and courtyard (way 84686469) (© OpenStreetMap contributors, ODbL)",
+      "url": "https://www.openstreetmap.org/relation/1266539"
+    },
+    {
+      "title": "OpenStreetMap way 55261701 — the barrier (barrera) round the castle (© OpenStreetMap contributors, ODbL)",
+      "url": "https://www.openstreetmap.org/way/55261701"
+    },
+    {
+      "title": "OpenStreetMap way 84686470 — the eastern body with the apse of the old church (© OpenStreetMap contributors, ODbL)",
+      "url": "https://www.openstreetmap.org/way/84686470"
+    },
+    {
+      "title": "Castillo nuevo de Manzanares el Real — Wikipedia (es): plan, keep with octagonal top at the south-east corner, southern gallery, barrier about 5 m high, chapel in the eastern body, granite",
+      "url": "https://es.wikipedia.org/wiki/Castillo_nuevo_de_Manzanares_el_Real"
+    },
+    {
+      "title": "New Castle of Manzanares el Real — Wikipedia (en)",
+      "url": "https://en.wikipedia.org/wiki/New_Castle_of_Manzanares_el_Real"
+    },
+    {
+      "title": "Wikimedia Commons photographs used for heights and details: 'Castillo nuevo de Manzanares el Real - Manzanares el Real 01.jpg' (west front and barrier gate), 'Manzanares el Real castillo torres.jpg' (south gallery, keep), 'Castillo Manzanares el Real.JPG' (tower caballero)",
+      "url": "https://commons.wikimedia.org/wiki/Category:Castillo_de_los_Mendoza"
+    },
+    {
+      "title": "EU-DEM 25 m (Copernicus) via OpenTopoData — ground levels round the castle",
+      "url": "https://www.opentopodata.org/datasets/eudem/"
+    }
+  ],
+  "notes": "Built by code (model_sources/Q1013093_castillo_de_manzanares_el_real.py, tools/meshkit.py) with AI assistance. Plan from OpenStreetMap (castle, courtyard, eastern body, barrier); heights measured on photographs with the tower diameters as scale (±10–15 %): curtain parapet 19.2 m, towers 21.2 m with caballeros to 28.7 m, keep with its gallery and octagonal caballero to 33.5 m, barrier about 5 m outside. Simplified: the courtyard arcades are dark arches, the tracery of the gallery and the friezes are plain bands, the balls are on the caballeros and below the tower machicolation only, no coats of arms, no interiors. Uncertain: the keep's exact extent inside the main body and the size of its octagon, the flat roof terraces over the ranges, the height and ruined state of the eastern body over the chapel (its cover is drawn flat), the old apse drawn as a crenellated round tower, the ground outside the barrier (from a 25 m DEM). y = 0 is the liza (the ground inside the barrier).",
+  "triangles": 28852
+}

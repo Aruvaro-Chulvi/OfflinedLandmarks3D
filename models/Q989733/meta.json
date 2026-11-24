@@ -1,0 +1,53 @@
+{
+  "id": "Q989733",
+  "name": "Torrespaña (El Pirulí)",
+  "heading": 180.0,
+  "position": {
+    "lat": 40.4205164,
+    "lon": -3.664196,
+    "source": "https://www.openstreetmap.org/way/309746187 (centre of the round head, over the axis of the shaft)"
+  },
+  "authors": [
+    {
+      "name": "Álvaro C. Chulvi",
+      "url": "https://github.com/Aruvaro-Chulvi"
+    }
+  ],
+  "license": "CC-BY-4.0",
+  "rights": {
+    "status": "protected",
+    "architects": [
+      {
+        "name": "Emilio Fernández Martínez de Velasco",
+        "died": 2014,
+        "wikidata": "Q26707837"
+      }
+    ],
+    "built": 1982,
+    "note": "Telecommunications tower of RTVE, built from 17 February 1981 in thirteen months by Dragados and Agroman, opened 7 June 1982 for the football World Cup; now owned by Cellnex Telecom. The architect died in 2014: protected in Spain until 2094."
+  },
+  "sources": [
+    {
+      "title": "OpenStreetMap way 309746187 and its building:parts (shaft, head, platforms, mast) (© OpenStreetMap contributors, ODbL)",
+      "url": "https://www.openstreetmap.org/way/309746187"
+    },
+    {
+      "title": "Torrespaña — Wikipedia (es): 232 m with the antenna, 220 m without, shaft 120 m, four-floor control centre clad in steel panels, four antenna platforms, 45 m antenna",
+      "url": "https://es.wikipedia.org/wiki/Torrespaña"
+    },
+    {
+      "title": "Torrespaña — Wikipedia (en): 220 m reinforced concrete tower, 232 m with the antenna",
+      "url": "https://en.wikipedia.org/wiki/Torrespaña"
+    },
+    {
+      "title": "Cellnex — «Ni gigante ni molino: el Pirulí cumple 40 años»",
+      "url": "https://cellnex.com/es/trends/ni-gigante-ni-molino-piruli-cumple-40-anos"
+    },
+    {
+      "title": "Wikimedia Commons — photos of the tower («Torrespaña - 2008.jpg», «Torrespaña (Madrid) 01.jpg», «Torrespana-Tower-Madrid.jpg», «Torrespaña - Madrid 01.jpg», «El Piruli close view.jpg»; proportions measured on them)",
+      "url": "https://commons.wikimedia.org/wiki/Category:Torrespaña"
+    }
+  ],
+  "triangles": 14088,
+  "notes": "Built by code (model_sources/Q989733_torrespana.py, tools/meshkit.py) with AI assistance. Round concrete shaft tapering from Ø 12 m to 8.4 m, a concrete bowl, the open steel gallery with dish antennas (129.8–134.8 m), the dark metal drum of the control centre with its strip of windows (138–145.3 m), a light grey dome, a ring and four antenna platforms with railings and dishes round the core, a cylinder in a lattice cage and the red-and-white lattice mast to 231 m. Heights from the published total (231–232 m, antenna about 45 m, shaft about 120 m) and proportions measured on straight-on telephotos, which agree with one another and with those figures. Uncertain: OpenStreetMap maps the same parts some 20–25 % smaller (drum Ø 24 m against 31.7 m here, tip at 200 m); the published heights were preferred, so the head is wider than the OSM outline. Simplified: the dishes are fewer and generic, the lattice mast has four legs with simple bracing, the base buildings of the RTVE complex are not included; heading 180 is arbitrary (the tower is round)."
+}

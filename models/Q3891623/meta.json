@@ -1,0 +1,49 @@
+{
+  "id": "Q3891623",
+  "name": "Palacio de Velázquez",
+  "heading": 164.8,
+  "position": {
+    "lat": 40.4151835,
+    "lon": -3.6819881,
+    "source": "https://www.openstreetmap.org/way/23595002 (centroid of the outline; the main portico, with its stair and winged lions, faces 164.8°)"
+  },
+  "authors": [
+    {
+      "name": "Álvaro C. Chulvi",
+      "url": "https://github.com/Aruvaro-Chulvi"
+    }
+  ],
+  "license": "CC-BY-4.0",
+  "rights": {
+    "status": "public_domain",
+    "architects": [
+      {
+        "name": "Ricardo Velázquez Bosco",
+        "died": 1923,
+        "wikidata": "Q2877777"
+      }
+    ],
+    "built": 1883,
+    "note": "Built 1881–1883 by Ricardo Velázquez Bosco for the Exposición Nacional de Minería of 1883; glazed ceramics by Daniel Zuloaga (died 1921). Public domain."
+  },
+  "sources": [
+    {
+      "title": "OpenStreetMap way 23595002 — outline (© OpenStreetMap contributors, ODbL)",
+      "url": "https://www.openstreetmap.org/way/23595002"
+    },
+    {
+      "title": "Palacio de Velázquez — Wikipedia (es): 73.80 × 28.75 m, two-tone brick, iron and glass vaults, tiles",
+      "url": "https://es.wikipedia.org/wiki/Palacio_de_Vel%C3%A1zquez"
+    },
+    {
+      "title": "Wikimedia Commons — photos of the south and north porticos and the south-west corner used for heights («037 Palacio de Velázquez … façana sud.jpg», «053 … façana nord.jpg», «051 … angle sud-oest.jpg»)",
+      "url": "https://commons.wikimedia.org/wiki/Category:Palacio_de_Vel%C3%A1zquez"
+    },
+    {
+      "title": "PNOA orthophoto, Instituto Geográfico Nacional (roof layout)",
+      "url": "https://www.ign.es/wms-inspire/pnoa-ma"
+    }
+  ],
+  "triangles": 18556,
+  "notes": "Built by code (model_sources/Q3891623_palacio_de_velazquez.py, tools/meshkit.py) with AI assistance. Outline from OpenStreetMap; the roof layout from the PNOA orthophoto: the north–south glass barrel vault over the central hall (17 m span, to about 21.9 m), three east–west metal barrel vaults with glazed strips on each wing, four corner pavilions with metal cloister vaults and a skylight, a flat terrace with skylights along the north. Heights measured on photos (±8 %): wing cornice 10.5 m, central pylons 13 m with a balustrade, pavilions 12.5 m. The brickwork is drawn as alternating red and buff bands; Zuloaga's tiles as a blue frieze under the cornices and blue/white panels round the pavilion arches; the triple-arched porticos (south with its stair and two stylised winged lions, north on its forecourt) are simplified, and the window rhythm of the wings is regular (3.2 m bays), not the real one. Uncertain: the exact division of the wing vaults, the interior walls (not modelled), the vault heights (±1 m)."
+}

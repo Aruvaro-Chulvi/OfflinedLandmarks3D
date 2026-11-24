@@ -1,0 +1,69 @@
+{
+  "id": "Q166276",
+  "name": "Aeropuerto Adolfo Suárez Madrid-Barajas — Terminal 4",
+  "heading": 270.0,
+  "position": {
+    "lat": 40.4913798,
+    "lon": -3.5915745,
+    "source": "https://www.openstreetmap.org/way/8031397 (centroid of the outline of Terminal 4; the pier is aligned with true north, so the landside façade faces 270°)"
+  },
+  "ground": "keep",
+  "ground_at": [0, -100],
+  "authors": [
+    {
+      "name": "Álvaro C. Chulvi",
+      "url": "https://github.com/Aruvaro-Chulvi"
+    }
+  ],
+  "license": "CC-BY-4.0",
+  "rights": {
+    "status": "protected",
+    "architects": [
+      { "name": "Richard Rogers (Richard Rogers Partnership, now Rogers Stirk Harbour + Partners)", "died": 2021, "wikidata": "Q237412" },
+      { "name": "Antonio Lamela (Estudio Lamela)", "died": 2017, "wikidata": "Q8201368" },
+      { "name": "Carlos Lamela (Estudio Lamela)" }
+    ],
+    "built": 2006,
+    "note": "Terminal 4 and its satellite T4S, competition 1997, built 2000–2006, opened 5 February 2006 (Stirling Prize 2006). Designed by Richard Rogers Partnership with Estudio Lamela (Antonio and Carlos Lamela; Luis Vidal was project director at RRP); engineering TPS/Initec, Anthony Hunt Associates and Arup. All authors died after 1955 or are alive: protected in Spain (freedom of panorama applies to buildings on public view, art. 35.2 TRLPI). The Wikidata item of the building itself, Q63229912, has no Wikipedia article, so the model is filed under the airport, Q166276."
+  },
+  "sources": [
+    {
+      "title": "OpenStreetMap way 8031397 (aeroway=terminal, building=transportation, «Terminal 4»): outline 1,190 × 377 m, 158,296 m²; pier 67.1 m wide, fixed link-bridges as T-shaped stubs (© OpenStreetMap contributors, ODbL)",
+      "url": "https://www.openstreetmap.org/way/8031397"
+    },
+    {
+      "title": "PNOA orthophoto, Instituto Geográfico Nacional (WMS pnoa-ma), looked at only: 72 m roof bays, 9 m wings, roof-light rows and sizes, saw-toothed eaves, recessed glass façades",
+      "url": "https://www.ign.es/wms-inspire/pnoa-ma"
+    },
+    {
+      "title": "RSHP — Terminal 4, Barajas Airport: 18 × 9 m grid, 72 m beams, roof of repeated wing modules, Y-shaped props at the ends of the modules holding the overhangs, canyons with roof lights, bamboo-clad underside",
+      "url": "https://rshp.com/projects/transport/terminal-4-barajas-airport/"
+    },
+    {
+      "title": "Madrid–Barajas Airport — Wikipedia (en): architects, opening 5 February 2006, T4 470,000 m² and T4S 2 km away",
+      "url": "https://en.wikipedia.org/wiki/Madrid%E2%80%93Barajas_Airport"
+    },
+    {
+      "title": "Aeropuerto Adolfo Suárez Madrid-Barajas — Wikipedia (es): T4 and T4S by Estudio Lamela and Richard Rogers Partnership, six floors (three above ground)",
+      "url": "https://es.wikipedia.org/wiki/Aeropuerto_Adolfo_Su%C3%A1rez_Madrid-Barajas"
+    },
+    {
+      "title": "Aena — La Terminal T4 cumple 20 años: the colour gradient of the structure, from blue in the north to red in the south, as a guide to the gates",
+      "url": "https://www.aena.es/es/prensa/la-terminal-t4-del-aeropuerto-adolfo-suarez-madrid-barajas-cumple-20---anos.html"
+    },
+    {
+      "title": "El Español — ¿Sabías que puedes orientarte por los colores de la T4?: blue at the north (K gates), yellow in the centre (J), red at the south (H)",
+      "url": "https://www.elespanol.com/madrid/sociedad/sabias-puedes-orientar-colores-t4-aeropuerto-madrid-adolfo-suarez-barajas/713179000_0.html"
+    },
+    {
+      "title": "Wikimedia Commons — Category:Aeropuerto de Madrid-Barajas T4 (exterior photos: «Exterior - Aeropuerto de Madrid-Barajas T4 - Madrid 01/02», «Madrid Barajas T4 1/2», «MAD-LEMD T4 y cabecera 36L desde TWR», «Aeropuerto de Madrid-Barajas T4 Gates S Outside 1»): Y props, saw-toothed eaves, heights against A320 tails",
+      "url": "https://commons.wikimedia.org/wiki/Category:Aeropuerto_de_Madrid-Barajas_T4"
+    },
+    {
+      "title": "EU-DEM 25 m via OpenTopoData: ~613–617 m on the apron east of the pier, ~620–622 m on the landside to the west",
+      "url": "https://www.opentopodata.org/datasets/eudem/"
+    }
+  ],
+  "triangles": 49408,
+  "notes": "Built by code (model_sources/Q166276_barajas_terminal_4.py, tools/meshkit.py) with AI assistance. Filed under the airport (Q166276) because the item of the building, Q63229912, has no Wikipedia article in any language. The model is the main T4 building only: the pier (dique, 1,168 × 67 m) and the processor with its forecourt canopy, following the OSM outline of way 8031397; the satellite T4S (2.5 km east, between the runways, a separate building) is not included. Roof: 241 aluminium-clad wings 9 m wide in six rows (the pier in three runs, two inner bays of the processor and the forecourt canopy, bays of ~70 m from the PNOA orthophoto), each rising from the light lines to a crown, with a pillow-shaped bamboo underside and, on the outer façades, pointed tips that make the saw-toothed eaves; two small round roof lights per wing and one big oval roof light per wing over each of the three canyons of the processor. Y props (one every two wings, ~18 m) on the outer façades of the pier and the forecourt, coloured in the rainbow gradient along the building (blue north, yellow centre, red south, Aena). Glass façades set back 8 m under the overhangs over a concrete plinth; the fixed link-bridges of the OSM outline as raised glass corridors on legs. Uncertain: all heights (eaves ~16.5 m, crowns 20.5 m on the pier and 22.5 m on the processor, light lines 18 m) are estimates from photographs (±2 m), as are the exact section of the wings, the 8 m set-back of the glass and the number and exact shape of the Y props; the interior trees of the canyons and the props at the ends of the processor are not modelled. Simplified or left out: the movable jet bridges, the low annexes at the two ends of the processor (not in OSM), the control tower, the car park (its roof is a flat planted deck) and the roads. Ground: the landside to the west is ~5–8 m higher than the apron (EU-DEM), so \"ground\": \"keep\" with y = 0 at the apron east of the pier (ground_at); the whole footprint, overhangs and bridges included, is a flat paved platform at y = 0, so Offlined cuts the landside slope down to the building's level with its ramp."
+}

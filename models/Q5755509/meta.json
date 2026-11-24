@@ -1,0 +1,348 @@
+{
+  "id": "Q5755509",
+  "name": "Casa del Labrador",
+  "heading": 149.9,
+  "position": {
+    "lat": 40.0413033,
+    "lon": -3.5869279,
+    "source": "https://www.openstreetmap.org/way/389892208 (centroid of the outline of the house; heading = the court of honour, square to the long sides, bearing 59.9°)"
+  },
+  "authors": [
+    {
+      "name": "Álvaro C. Chulvi",
+      "url": "https://github.com/Aruvaro-Chulvi"
+    }
+  ],
+  "license": "CC-BY-4.0",
+  "rights": {
+    "status": "public_domain",
+    "architects": [
+      {
+        "name": "Juan de Villanueva",
+        "died": 1811,
+        "wikidata": "Q2429525"
+      },
+      {
+        "name": "Isidro González Velázquez",
+        "died": 1840,
+        "wikidata": "Q3821024"
+      }
+    ],
+    "built": 1803,
+    "note": "Built for the future Charles IV by Juan de Villanueva (1791–1794) and enlarged with the wings and the court of honour by Isidro González Velázquez (1798–1803; the plaque on the court front reads «Reinando Carlos IV. Año de MDCCCIII»). Both architects died long ago: public domain. Some damaged exterior stone was replaced by false-stone cladding in the 1964–1968 restoration, to the same shapes."
+  },
+  "sources": [
+    {
+      "title": "OpenStreetMap way 389892208 — outline of the Casa del Labrador (© OpenStreetMap contributors, ODbL)",
+      "url": "https://www.openstreetmap.org/way/389892208"
+    },
+    {
+      "title": "OpenStreetMap ways 389892211 and 389892212 — the two arcades of the court; way 1448321444 and node 13288274017 — the railing and the gate",
+      "url": "https://www.openstreetmap.org/way/389892211"
+    },
+    {
+      "title": "OpenStreetMap way 1448324505 (the sanded plaza), ways 803123388–803123400 (planted beds), 803123387, 803123395, 1448324502, 1448324504, 803396668, 803396669 (hedges), nodes 12386637433–12386637442 (trees)",
+      "url": "https://www.openstreetmap.org/way/1448324505"
+    },
+    {
+      "title": "Casa del Labrador — Wikipedia (es): three storeys, brick with granite plinths and arcades, slate roofs, arms with two angels, plaque of 1803, niches with statues, busts on the terraces and on the pillars of the railing",
+      "url": "https://es.wikipedia.org/wiki/Casa_del_Labrador"
+    },
+    {
+      "title": "Wikimedia Commons: Real Casa del Labrador. Aranjuez.jpg (the court of honour and the railing; heights scaled on the plan)",
+      "url": "https://commons.wikimedia.org/wiki/File:Real_Casa_del_Labrador._Aranjuez.jpg"
+    },
+    {
+      "title": "Wikimedia Commons: Casa del Labrador, trasera.jpg (the back and side fronts, dormers and chimneys)",
+      "url": "https://commons.wikimedia.org/wiki/File:Casa_del_Labrador,_trasera.jpg"
+    },
+    {
+      "title": "Wikimedia Commons: Ala del patio de la Casa del Labrador, Aranjuez.jpg (the arcade with its terrace, busts and niches)",
+      "url": "https://commons.wikimedia.org/wiki/File:Ala_del_patio_de_la_Casa_del_Labrador,_Aranjuez.jpg"
+    }
+  ],
+  "notes": "Built by code (model_sources/Q5755509_casa_del_labrador.py, tools/meshkit.py) with AI assistance. The house as OpenStreetMap draws it (main block 48.5 × 11 m and two wings 10 m wide round the court of honour), with its white stone ground storey, brick upper storeys with stone frames, balconies, niches with statues in the court, the frieze of relief panels, hipped slate roofs with dormers and chimneys, the royal arms with two angels and the plaque over the court front; the two arcades of the court with their terraces, iron railings and busts; the paved court; the railing with stone pillars, busts and the gate; the sanded plaza round the house and the planted beds with box edging, their trees and the hedges along its flanks. Simplified or uncertain: heights are measured on photographs scaled on the plan (cornice 12 m, ridge 15.6 m), ±10 % — OSM gives 9 m, too low for three storeys; window bays are spaced evenly (about 4.2 m) on every front; the statues, busts and angels are stylised figures and the reliefs flat panels; the plan keeps OSM's slight asymmetry of the west wing and arcade; the brick is drawn in one warm tone (it shows from red brick to ochre on the photos); the trees of the beds are generic. y = 0 is the court; the site is flat.",
+  "triangles": 15015,
+  "footprint": [
+    [
+      -47.0,
+      -51.4
+    ],
+    [
+      -44.2,
+      -52.3
+    ],
+    [
+      -36.8,
+      -39.3
+    ],
+    [
+      -35.8,
+      -37.4
+    ],
+    [
+      -28.0,
+      -51.6
+    ],
+    [
+      -4.0,
+      -51.5
+    ],
+    [
+      1.8,
+      -51.4
+    ],
+    [
+      24.6,
+      -50.7
+    ],
+    [
+      33.1,
+      -38.4
+    ],
+    [
+      34.4,
+      -40.6
+    ],
+    [
+      42.2,
+      -54.0
+    ],
+    [
+      46.5,
+      -52.1
+    ],
+    [
+      50.2,
+      -50.3
+    ],
+    [
+      49.7,
+      17.2
+    ],
+    [
+      49.9,
+      18.8
+    ],
+    [
+      50.1,
+      20.5
+    ],
+    [
+      50.6,
+      20.6
+    ],
+    [
+      51.6,
+      21.3
+    ],
+    [
+      52.5,
+      22.7
+    ],
+    [
+      52.7,
+      24.5
+    ],
+    [
+      52.1,
+      26.2
+    ],
+    [
+      50.9,
+      27.5
+    ],
+    [
+      50.0,
+      27.8
+    ],
+    [
+      50.1,
+      29.5
+    ],
+    [
+      42.5,
+      29.4
+    ],
+    [
+      39.4,
+      29.8
+    ],
+    [
+      35.2,
+      30.3
+    ],
+    [
+      34.4,
+      29.7
+    ],
+    [
+      33.3,
+      29.4
+    ],
+    [
+      25.7,
+      29.2
+    ],
+    [
+      25.0,
+      29.4
+    ],
+    [
+      24.7,
+      29.8
+    ],
+    [
+      22.2,
+      33.5
+    ],
+    [
+      19.0,
+      36.9
+    ],
+    [
+      17.2,
+      38.4
+    ],
+    [
+      15.1,
+      40.0
+    ],
+    [
+      11.7,
+      41.8
+    ],
+    [
+      10.6,
+      43.0
+    ],
+    [
+      -0.6,
+      42.7
+    ],
+    [
+      -12.5,
+      42.5
+    ],
+    [
+      -13.3,
+      41.6
+    ],
+    [
+      -15.6,
+      40.4
+    ],
+    [
+      -18.8,
+      38.2
+    ],
+    [
+      -20.7,
+      36.5
+    ],
+    [
+      -22.2,
+      35.0
+    ],
+    [
+      -23.7,
+      33.2
+    ],
+    [
+      -24.9,
+      31.4
+    ],
+    [
+      -25.8,
+      30.0
+    ],
+    [
+      -26.2,
+      29.3
+    ],
+    [
+      -26.7,
+      29.1
+    ],
+    [
+      -33.8,
+      28.9
+    ],
+    [
+      -35.6,
+      29.1
+    ],
+    [
+      -36.0,
+      29.3
+    ],
+    [
+      -36.9,
+      30.2
+    ],
+    [
+      -41.0,
+      29.3
+    ],
+    [
+      -44.0,
+      28.7
+    ],
+    [
+      -51.1,
+      28.7
+    ],
+    [
+      -51.1,
+      27.4
+    ],
+    [
+      -51.6,
+      27.2
+    ],
+    [
+      -53.1,
+      25.9
+    ],
+    [
+      -53.7,
+      24.7
+    ],
+    [
+      -53.7,
+      23.5
+    ],
+    [
+      -53.3,
+      21.9
+    ],
+    [
+      -52.3,
+      20.6
+    ],
+    [
+      -50.9,
+      19.8
+    ],
+    [
+      -50.7,
+      19.8
+    ],
+    [
+      -51.0,
+      18.3
+    ],
+    [
+      -49.9,
+      15.8
+    ],
+    [
+      -49.1,
+      13.8
+    ],
+    [
+      -49.8,
+      -50.6
+    ]
+  ]
+}

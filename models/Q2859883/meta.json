@@ -1,0 +1,70 @@
+{
+  "id": "Q2859883",
+  "name": "Arco de la Victoria",
+  "heading": 124.5,
+  "position": {
+    "lat": 40.4359063,
+    "lon": -3.7201974,
+    "source": "https://www.openstreetmap.org/way/193326001 (centroid of the outline; long axis at 34.5°, the south-east front with the «MVNIFICENTIA REGIA CONDITA» inscription faces 124.5°)"
+  },
+  "authors": [
+    {
+      "name": "Álvaro C. Chulvi",
+      "url": "https://github.com/Aruvaro-Chulvi"
+    }
+  ],
+  "license": "CC-BY-4.0",
+  "rights": {
+    "status": "protected",
+    "architects": [
+      {
+        "name": "Modesto López Otero",
+        "died": 1962,
+        "wikidata": "Q6020297"
+      },
+      {
+        "name": "Pascual Bravo Sanfeliú",
+        "died": 1984,
+        "wikidata": "Q6065410"
+      },
+      {
+        "name": "Moisés de Huerta",
+        "died": 1962
+      },
+      {
+        "name": "José Ortells",
+        "died": 1961
+      },
+      {
+        "name": "Julián Lozano",
+        "died": 1992
+      }
+    ],
+    "built": 1956,
+    "note": "Built 1950–1956 to the design of Modesto López Otero and Pascual Bravo Sanfeliú; attic reliefs by Moisés de Huerta, keystone Victories by José Ortells, sculpture also by Julián Lozano; the quadriga of Minerva by Ramón Arregui. Pascual Bravo died in 1984 (80 years under Spanish law): free in 2065."
+  },
+  "sources": [
+    {
+      "title": "OpenStreetMap way 193326001 and building:parts 335507047, 335507337 (piers) and 335507048 (span) — outline 23.6 × 8.8 m, heights 41 / 43 m (© OpenStreetMap contributors, ODbL)",
+      "url": "https://www.openstreetmap.org/way/193326001"
+    },
+    {
+      "title": "PNOA orthophoto (Instituto Geográfico Nacional, CC BY 4.0): the top of the arch measures about 22–24 × 8–9 m",
+      "url": "https://www.ign.es/wms-inspire/pnoa-ma"
+    },
+    {
+      "title": "Arco de la Victoria — Wikipedia (es): 42 m + 7 m quadriga, sculptors, inscriptions, dates",
+      "url": "https://es.wikipedia.org/wiki/Arco_de_la_Victoria"
+    },
+    {
+      "title": "Wikimedia Commons — «Arco de la Victoria - Madrid 01.jpg» (frontal view of the south-east front: elevation measured; the piers and the span match OSM), «Arco de la Victoria (Madrid) 05.jpg», «Madrid - Arco de la Victoria y Faro de Moncloa.jpg» (the quadriga)",
+      "url": "https://commons.wikimedia.org/wiki/File:Arco_de_la_Victoria_-_Madrid_01.jpg"
+    },
+    {
+      "title": "Wikidata Q2859883 (architects)",
+      "url": "https://www.wikidata.org/wiki/Q2859883"
+    }
+  ],
+  "triangles": 5376,
+  "notes": "Built by code (model_sources/Q2859883_arco_de_la_victoria.py, tools/meshkit.py) with AI assistance. Footprint from OpenStreetMap (two piers of 6.9 m and a 9.8 m span, 8.8 m deep), checked on the PNOA orthophoto. The elevation was measured on a near-frontal photo scaled by that width (the piers, the archivolt and two people sitting at the base all agree): plinth 1.3 m, a round arch 7.8 m wide with its crown at 16.2 m and a coffered vault, the archivolt and the year medallions, the Victory keystones, impost 19.7 m, cornice 23.1 m, the attic with the inscription panel between two relief panels to 27.8 m, top 29.1 m, the bronze quadriga of Minerva to about 34.7 m. DOUBTFUL: the published heights (40–42 m for the arch, 49 m with the quadriga, also tagged in OSM as 41 / 43 m) do not fit the OSM and orthophoto footprint with the proportions seen on every photo (height ≈ 1.23 × width); the measured proportions were kept, so the model is about 30 % lower than the published figures. If a survey shows the arch is really 42 m high, the OSM footprint is too small and both must be scaled together. Stylised: the reliefs (rows of figures), the lettering (incised lines), the Victories, the quadriga (four horses, the chariot and Minerva with spear and shield). The paved terrace and its steps are not modelled. The Faro de Moncloa (models/Q386413) stands about 200 m to the north-west; the two footprints do not touch."
+}

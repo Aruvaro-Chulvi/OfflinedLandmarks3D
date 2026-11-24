@@ -1,0 +1,55 @@
+{
+  "id": "Q22970105",
+  "name": "Caleido (Torre Caleido)",
+  "heading": 191.6,
+  "position": {
+    "lat": 40.477715,
+    "lon": -3.6890897,
+    "source": "https://www.openstreetmap.org/way/762323937 (centroid of the outline of the whole complex; long axis of the podium at 11.6°)"
+  },
+  "authors": [
+    {
+      "name": "Álvaro C. Chulvi",
+      "url": "https://github.com/Aruvaro-Chulvi"
+    }
+  ],
+  "license": "CC-BY-4.0",
+  "rights": {
+    "status": "protected",
+    "architects": [
+      {
+        "name": "Fenwick Iribarren Architects",
+        "wikidata": "Q111663169"
+      },
+      {
+        "name": "Serrano-Suñer Arquitectura"
+      }
+    ],
+    "built": 2021,
+    "note": "Fenwick Iribarren Architects with Serrano-Suñer Arquitectura, for Grupo Villar Mir and Megaworld; built by OHL from April 2017 on the foundations of the unfinished Centro Internacional de Convenciones, completed in 2020 and opened on 19 October 2021; occupied mainly by IE University."
+  },
+  "sources": [
+    {
+      "title": "OpenStreetMap way 762323937 and its building:parts (tower 181 m, the two glass blocks, the 20 m podium with its 15 m parts) (© OpenStreetMap contributors, ODbL)",
+      "url": "https://www.openstreetmap.org/way/762323937"
+    },
+    {
+      "title": "Caleido — Wikipedia (es): 181 m, 36 floors, 20 m base of four floors, inverted T, 1:4:9 proportions, black double-skin glass",
+      "url": "https://es.wikipedia.org/wiki/Caleido"
+    },
+    {
+      "title": "Fenwick Iribarren Architects — Torre Caleido (T-shaped building, slender black tower, 17 m span, 1 : 4 : 9)",
+      "url": "https://www.fenwickiribarren.com/project/torre-caleido/"
+    },
+    {
+      "title": "Arquitectura Viva — Caleido Tower in Madrid (base about 250 m long, two concrete cores, ventilated double-glass façade)",
+      "url": "https://arquitecturaviva.com/works/torre-caleido-en-madrid"
+    },
+    {
+      "title": "Wikimedia Commons — photos of the tower («Madrid - CTBA, Torre Caleido 01.jpg», «Torre Caleido - CTBA - Madrid 01/02/03.jpg»; fins, blocks and their height measured on them)",
+      "url": "https://commons.wikimedia.org/wiki/File:Madrid_-_CTBA,_Torre_Caleido_01.jpg"
+    }
+  ],
+  "triangles": 3580,
+  "notes": "Built by code (model_sources/Q22970105_torre_caleido.py, tools/meshkit.py) with AI assistance. The whole inverted T from the OpenStreetMap parts: the 20 m podium, 69.6 × 256 m, with garden roofs and two sunken parts at 15 m, and the black tower across its middle, 69.4 × 16.9 × 181 m, ribbed by thin vertical fins about 1.15 m apart that rise 1.6 m above the roof as a serrated edge, with the two smooth glass blocks standing out 5 m on the broad faces. Main façade (+Z) = the south broad face, like the Torre Moeve next to it. Uncertain: the top of the blocks (OSM 150 m; about 132 m on photos, used here) and their bottom (OSM 40 m, hidden by trees on the photos); the podium façades (glass, white bands and brown cladding) and gardens are generalised. The IE logo is left out. Not modelled: the A-shaped steel props of the lobby, the pergolas and paths of the park round the podium."
+}

@@ -1,0 +1,117 @@
+{
+  "id": "Q1431985",
+  "name": "Aeródromo de Cuatro Vientos",
+  "heading": 28.3,
+  "position": {
+    "lat": 40.3678143,
+    "lon": -3.7781218,
+    "source": "https://www.openstreetmap.org/way/394043499 (centroid of Torroja's hangar of the Real Aero Club, today the air unit of the Policía Nacional; its door front faces 28.3°)"
+  },
+  "authors": [
+    {
+      "name": "Álvaro C. Chulvi",
+      "url": "https://github.com/Aruvaro-Chulvi"
+    }
+  ],
+  "license": "CC-BY-4.0",
+  "rights": {
+    "status": "protected",
+    "architects": [
+      {
+        "name": "Eduardo Torroja Miret (engineer of the hangar)",
+        "died": 1961,
+        "wikidata": "Q517006"
+      },
+      {
+        "name": "Leopoldo Jiménez García (engineer officer, Torre de Señales)"
+      },
+      {
+        "name": "Enrique Sierra (builder of the Torre de Señales)"
+      }
+    ],
+    "built": 1949,
+    "note": "Two pieces: the hangar of the Real Aero Club de España (1949), engineer Eduardo Torroja, steelwork by Obras Metálicas Electro-Soldadas (OMES) — Torroja died in 1961; authors who died before 1987 keep 80 years of protection in Spain, so the hangar is protected until the end of 2041 (public domain from 2042). The Torre de Señales (project 1919, built 1920) by the Army engineer Leopoldo Jiménez García (date of death not found), precast in Enrique Sierra's workshop; Bien de Interés Cultural (16 December 2021). The model is marked protected for the hangar."
+  },
+  "sources": [
+    {
+      "title": "OpenStreetMap way 394043499 (building, «Policía Nacional - Unidad de Medios Aéreos»): the hangar, 60.0 × 46.0 m, long side facing 28.3°; way 793000951 (Real Aero Club de España) beside it; node 13654243055 (historic=memorial, «Torre de Señales de Cuatro Vientos», BIC) (© OpenStreetMap contributors, ODbL)",
+      "url": "https://www.openstreetmap.org/way/394043499"
+    },
+    {
+      "title": "CEHOPU/CEDEX, Archivo Eduardo Torroja, ETM-346-002: «Hangar de 54 x 45 x 6,50 metros para el Aero Club, en Cuatro Vientos» (1949, OMES): calculations and drawings, lean-tos along the sides (adosados laterales)",
+      "url": "https://cehopu.cedex.es/etm/pdf/expt/ETM-346-002.pdf"
+    },
+    {
+      "title": "CEHOPU/CEDEX, Archivo Eduardo Torroja, ETM-303-001: «Hangar metálico de 59 x 46», dismountable hangar for Cuatro Vientos (1945–1946, OMES) — an earlier project, not modelled",
+      "url": "https://cehopu.cedex.es/etm/pdf/expt/ETM-303-001.pdf"
+    },
+    {
+      "title": "IETcc (CSIC), exhibition panel «Hangares»: Cuatro Vientos 1949 — three-hinged arches of variable depth crossing to form a rigid triangulated beam, on brackets of the side columns; archive photo of the interior",
+      "url": "https://www.ietcc.csic.es/wp-content/uploads/2019/05/10.-hangares.pdf"
+    },
+    {
+      "title": "Informes de la Construcción — article on the Cuatro Vientos hangar (could not be opened: the site's certificate failed; cited by the brief)",
+      "url": "https://informesdelaconstruccion.revistas.csic.es/index.php/informesdelaconstruccion/article/download/4939/5745/8785"
+    },
+    {
+      "title": "J. A. Toledano Mancheño (ACAMI, 2025), «La primera torre de control de aeródromo del mundo: Cuatro Vientos»: project 1919 by Leopoldo Jiménez García, finished 1920, precast reinforced concrete by Enrique Sierra, Mediterranean white, square base with basement and main floor, a tower of five stages 16.86 m above the ground, octagonal at the foot, spiral stair, observation terrace, glass dome, windsock holder; BIC 16 December 2021",
+      "url": "https://www.acami.es/wp-content/uploads/2025/06/La-primera-torre-de-control-del-mundo-Cuatro-Vientos-web.pdf"
+    },
+    {
+      "title": "PNOA orthophoto, Instituto Geográfico Nacional (CC BY 4.0, scne.es), WMS pnoa-ma, 0.1–0.2 m/px — looked at only: the barrel vault of the hangar and its axis, the base and orientation of the Torre de Señales",
+      "url": "https://www.ign.es/wms-inspire/pnoa-ma"
+    },
+    {
+      "title": "Aeródromo de Cuatro Vientos — Wikipedia (es): the first control tower, BIC 2021; Real Aero Club de España established there in 1947 (Aena, history)",
+      "url": "https://es.wikipedia.org/wiki/Aer%C3%B3dromo_de_Cuatro_Vientos"
+    }
+  ],
+  "triangles": 2160,
+  "footprint": [
+    [
+      -31.0,
+      -23.8
+    ],
+    [
+      31.0,
+      -23.8
+    ],
+    [
+      31.0,
+      -0.05
+    ],
+    [
+      1159.18,
+      326.56
+    ],
+    [
+      1166.19,
+      315.67
+    ],
+    [
+      1175.45,
+      321.61
+    ],
+    [
+      1168.42,
+      332.55
+    ],
+    [
+      1159.15,
+      326.66
+    ],
+    [
+      31.0,
+      0.05
+    ],
+    [
+      31.0,
+      23.8
+    ],
+    [
+      -31.0,
+      23.8
+    ]
+  ],
+  "notes": "Built by code (model_sources/Q1431985_aerodromo_de_cuatro_vientos.py, tools/meshkit.py) with AI assistance. The aerodrome has no building with its own Wikidata item, so the model carries its two historic buildings at their real places, 1.2 km apart, and nothing else (no runways, taxiways, aprons or other buildings: Offlined draws those from the map). (1) Origin: Torroja's 1949 hangar of the Real Aero Club (now the Policía Nacional air unit): a barrel vault spanning 54 m across the door front (facing the apron, +Z), 45.6 m deep, on side walls 7.5 m high, with 3 m lean-tos along both sides filling the OSM outline (60 × 46 m); sliding doors 6.5 m high under a door beam, glazed tympana under the arch at both ends. The vault is drawn as flat-shaded strips of sheeting; the crossing three-hinged arches inside are not modelled. Uncertain: the rise of the vault (crown 16 m, springing 7.5 m — estimated from the archive photo, not published in the sources found), the door leaves, the windows. The brief mentioned arches of ~115 m span; the Torroja archive gives 54 × 45 m for this hangar, and the 115 m figure seems to belong to another structure, so 54 m is used. (2) The Torre de Señales (1920), 1.2 km to the north-west in the Air Force base (OSM node 13654243055): a white square base (basement and main floor, 10.6 × 8.6 m, flat terrace with a parapet) and the tower on its back half, 16.86 m to the top of the glass dome — octagonal foot, two cylindrical stages with cornices, an observation terrace with an iron railing, the glazed lantern and dome, a windsock mast; stage heights are estimates (±1 m); the base orientation (front to 151°) is read on the orthophoto. footprint: the hangar + 1 m and the tower base + 1.2 m, joined by a 0.1 m slit, so nothing between them is cleared. The tower stands on ground a few metres different from the hangar's; its walls go down to −8 m so it never floats."
+}

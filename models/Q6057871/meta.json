@@ -1,0 +1,54 @@
+{
+  "id": "Q6057871",
+  "name": "Palacio de Biblioteca y Museos Nacionales",
+  "heading": 289.2,
+  "position": {
+    "lat": 40.4235473,
+    "lon": -3.6894204,
+    "source": "https://www.openstreetmap.org/relation/4099126 (centroid of the outline; the Recoletos front faces 289.2°)"
+  },
+  "authors": [
+    {
+      "name": "Álvaro C. Chulvi",
+      "url": "https://github.com/Aruvaro-Chulvi"
+    }
+  ],
+  "license": "CC-BY-4.0",
+  "rights": {
+    "status": "public_domain",
+    "architects": [
+      {
+        "name": "Francisco Jareño y Alarcón",
+        "died": 1892,
+        "wikidata": "Q5866077"
+      },
+      {
+        "name": "Antonio Ruiz de Salces",
+        "died": 1899,
+        "wikidata": "Q5699789"
+      }
+    ],
+    "built": 1892,
+    "note": "Begun in 1866 to designs by Francisco Jareño, finished by Antonio Ruiz de Salces (1884–1892). Sculpture of the Recoletos front by Agustín Querol (pediment, died 1909), José Alcoverro (San Isidoro, Alfonso X) and others, all dead for more than 80 years. The 20th-century interior conversions (extra floors, covered courts) appear only as plain volumes and roofs. Public domain."
+  },
+  "sources": [
+    {
+      "title": "OpenStreetMap relation 4099126 — outline, courtyards and 19 building:part ways with levels and roof shapes (© OpenStreetMap contributors, ODbL)",
+      "url": "https://www.openstreetmap.org/relation/4099126"
+    },
+    {
+      "title": "Palacio de Biblioteca y Museos Nacionales — Wikipedia (es): history, courtyards, Serrano portal",
+      "url": "https://es.wikipedia.org/wiki/Palacio_de_Biblioteca_y_Museos_Nacionales"
+    },
+    {
+      "title": "Wikimedia Commons — photos of the Recoletos portico used for heights and the column count («National Library of Spain.jpg», «Biblioteca Nacional de Madrid.jpg»)",
+      "url": "https://commons.wikimedia.org/wiki/File:National_Library_of_Spain.jpg"
+    },
+    {
+      "title": "PNOA orthophoto, Instituto Geográfico Nacional (roof layout)",
+      "url": "https://www.ign.es/wms-inspire/pnoa-ma"
+    }
+  ],
+  "triangles": 11654,
+  "notes": "Built by code (model_sources/Q6057871_biblioteca_y_museos_nacionales.py, tools/meshkit.py) with AI assistance. Outline, the three open courtyards and the inner blocks from the OpenStreetMap relation and its building:part ways; OSM levels mapped to heights (3 → 16 m, 4 → 22 m, 5 → 25 m for the corner pavilions); the roof layout from the PNOA orthophoto (hipped metal roofs on the perimeter ranges and inner blocks, curved slate roofs with lanterns on the pavilions, glass hipped roofs over the two rear courts, the pyramidal roof with a glazed apex over the central hall). Recoletos front measured on photos (±8 %): doors on a 3 m podium, ground storey to 10.6 m, eight Corinthian columns 11.4–20.4 m, entablature to 22.3 m, pediment apex 28.3 m; the stair, the two seated statues (San Isidoro, Alfonso X), the four standing statues and the pediment sculpture are stylised. Simplified: one window rhythm (4.3 m bays) on every front, a generic portal with four columns on Calle de Serrano, no garden, railings or Altamira replica. Uncertain: the heights of the inner blocks and pavilion roofs (±2 m), the column count (eight assumed, two hidden in the photos). y = 0 is the street level on Recoletos; the ground rises towards Serrano, so the foundations go 4 m down."
+}
