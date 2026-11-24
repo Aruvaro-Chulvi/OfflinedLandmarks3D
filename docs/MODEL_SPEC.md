@@ -25,8 +25,9 @@ Models built by code keep their script in `model_sources/<Q…>_<name>.py` (see 
 
 - **glTF 2.0 binary** (`.glb`), one file with everything inside (no external `.bin` or textures).
 - Extensions allowed: `KHR_mesh_quantization`, `KHR_texture_transform`, `KHR_materials_emissive_strength`,
-  `EXT_texture_webp`. **Not allowed:** Draco, meshopt and KTX2/Basis compression (they need decoders that
-  Offlined does not ship).
+  `EXT_texture_webp`. **Not allowed in the repository:** Draco, meshopt and KTX2/Basis compression (contributed
+  models stay plain and easy to open). The release adds a meshopt copy of each model by itself
+  (`tools/build_release.py` with `tools/meshopt/compress.mjs`: "mo" in the manifest), which Offlined 4.x downloads.
 - Materials: PBR metallic-roughness (the glTF default). Vertex colours (`COLOR_0`) are welcome: they cost
   nothing and fit the illustrated look of Wiki Flight. No lights, cameras or animations.
 - Textures: JPEG, PNG or WebP, **2048 × 2048 px at most**, and no more than two of that size in all.
