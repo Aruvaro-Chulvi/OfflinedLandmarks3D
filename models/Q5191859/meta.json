@@ -1,0 +1,59 @@
+{
+  "id": "Q5191859",
+  "name": "Cuartel del Conde-Duque",
+  "heading": 116.7,
+  "position": {
+    "lat": 40.4275149,
+    "lon": -3.7110537,
+    "source": "https://www.openstreetmap.org/relation/73436 (centroid of the outline; long sides at 26.7°, the main front on calle del Conde Duque faces 116.7°)"
+  },
+  "authors": [
+    {
+      "name": "Álvaro C. Chulvi",
+      "url": "https://github.com/Aruvaro-Chulvi"
+    }
+  ],
+  "license": "CC-BY-4.0",
+  "rights": {
+    "status": "public_domain",
+    "architects": [
+      {
+        "name": "Pedro de Ribera",
+        "died": 1742,
+        "wikidata": "Q3049047"
+      }
+    ],
+    "built": 1717,
+    "note": "Barracks of the Royal Guardias de Corps, begun in 1717 to Pedro de Ribera's design (portal and works until c. 1730). Upper floors burnt in 1869; restored as a cultural centre by Julio Cano Lasso (from 1969) and Carlos de Riaño (2009–2011). The design is in the public domain; the model follows the restored building."
+  },
+  "sources": [
+    {
+      "title": "OpenStreetMap relation 73436 — outline and the three courtyards; building:part ways 306995684 (rear range, tiles) and 306995688 (the rest, metal roof), 4 levels + 1 roof level (© OpenStreetMap contributors, ODbL)",
+      "url": "https://www.openstreetmap.org/relation/73436"
+    },
+    {
+      "title": "Cuartel del Conde-Duque — Wikipedia (es): Ribera, 1717, rectangular plan with three courtyards (the central one the largest), the portal on the east front, the fire of 1869 and the tower of the west range",
+      "url": "https://es.wikipedia.org/wiki/Cuartel_del_Conde-Duque"
+    },
+    {
+      "title": "PNOA orthophoto, © Instituto Geográfico Nacional de España, CC BY 4.0 (scne.es) — roofs (zinc and tiles), the attic of the central body, the podium of the main courtyard; colours of the courtyard floors (model_sources/Q5191859_pnoa.jpg)",
+      "url": "https://www.ign.es/wms-inspire/pnoa-ma"
+    },
+    {
+      "title": "Wikimedia Commons — «Cuartel del Conde-Duque (Madrid) 01–05, 07, 09.jpg», «Portada churrigueresca del Cuartel del Conde-Duque. Madrid, España, Spain.jpg», «Antiguo cuartel del Conde Duque. Madrid. España.jpg», «Patio principal del Cuartel de Conde Duque.jpg», «Cuartel del Conde Duque 01.jpg», «Cuartel del Conde Duque 03.jpg», «Cuartel de Conde Duque in Madrid Spain.jpg»: façades, portal, central body; heights measured on them (±10 %)",
+      "url": "https://commons.wikimedia.org/wiki/Category:Cuartel_del_Conde-Duque"
+    },
+    {
+      "title": "Terrain: MDT05, © Instituto Geográfico Nacional de España, CC BY 4.0 (tools/terrain.py) — front street +2 to −4 m, rear street −3 to −11 m",
+      "url": "https://centrodedescargas.cnig.es"
+    }
+  ],
+  "triangles": 34384,
+  "notes": "Built by code (model_sources/Q5191859_cuartel_del_conde_duque.py, tools/meshkit.py) with AI assistance. The whole block on the OSM plan: red brick on a granite plinth, rusticated granite quoins at the outer corners, four rows of openings (windows, oculi) with granite frames, moulded cornice at 17 m; on the west the street lies 3–11 m lower and the granite basement with small windows shows. Ribera's portal on calle del Conde Duque is stylised (stacked carved piers, door 4.4 × 7 m, cartouche with garlands, broken pediment, the royal arms with crown and cross at 15.8 m). Main courtyard: the white central body of the rear range (giant pilasters, attic with the arms, curved shoulders, urns and four pinnacles to ~32.5 m) and the stone podium with its steps; courtyard walls brick below, cream render on the top floor. Grey zinc roofs, red tiles on the rear range (as on the orthophoto), hipped at the outer corners, 30°/24° pitches estimated. Courtyard floors level at y = 0, coloured from the PNOA orthophoto (it shows the temporary stage and tents of the summer events in the main courtyard). Uncertain: heights (±10 %), exact window count and rhythm (regular 4.5 m bays), the portal's carving, the roof pitches.",
+  "ground": "keep",
+  "ground_at": [
+    0,
+    46
+  ],
+  "ground_low": -12
+}

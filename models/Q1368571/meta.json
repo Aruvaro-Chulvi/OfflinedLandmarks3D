@@ -1,0 +1,105 @@
+{
+  "id": "Q1368571",
+  "name": "Palacio Real de El Pardo",
+  "heading": 159.7,
+  "position": {
+    "lat": 40.5212919,
+    "lon": -3.7750616,
+    "source": "https://www.openstreetmap.org/relation/18324181 (centroid of the outline; long sides at 69.7°, the main front with Sabatini's central pavilion and the gate faces 159.7°, checked on the PNOA orthophoto)"
+  },
+  "authors": [
+    {
+      "name": "Álvaro C. Chulvi",
+      "url": "https://github.com/Aruvaro-Chulvi"
+    }
+  ],
+  "license": "CC-BY-4.0",
+  "rights": {
+    "status": "public_domain",
+    "architects": [
+      {
+        "name": "Luis de Vega",
+        "died": 1562,
+        "wikidata": "Q2686751"
+      },
+      {
+        "name": "Juan Bautista de Toledo",
+        "died": 1567,
+        "wikidata": "Q1363098"
+      },
+      {
+        "name": "Francisco de Mora",
+        "died": 1610,
+        "wikidata": "Q3776367"
+      },
+      {
+        "name": "François Carlier",
+        "died": 1760,
+        "wikidata": "Q5868736"
+      },
+      {
+        "name": "Francesco Sabatini",
+        "died": 1797,
+        "wikidata": "Q2454966"
+      }
+    ],
+    "built": 1773,
+    "note": "Habsburg palace begun in 1547 for Charles V to Luis de Vega's design, slate roofs under Philip II (Juan Bautista de Toledo, from 1563), rebuilt after the fire of 1604 by Francisco de Mora; towers lowered with mansard caps by François Carlier (1739–1743); doubled to the east round the Patio de los Borbones by Francesco Sabatini for Charles III (1772–1773). A royal residence managed by Patrimonio Nacional. Every author died long ago: public domain."
+  },
+  "sources": [
+    {
+      "title": "OpenStreetMap relation 18324181 — outline 119.8 × 55.3 m with the Austrias and Borbones courtyards, and building:part ways 1337369925–1337369929 (the four corner towers and the south central pavilion) (© OpenStreetMap contributors, ODbL)",
+      "url": "https://www.openstreetmap.org/relation/18324181"
+    },
+    {
+      "title": "PNOA orthophoto, © Instituto Geográfico Nacional de España, CC BY 4.0 — the Patio Central, the roofs, the moat and its bridges, the gallery to the Capilla Real",
+      "url": "https://www.ign.es/wms-inspire/pnoa-ma"
+    },
+    {
+      "title": "Terrain: MDT05, © Instituto Geográfico Nacional de España, CC BY 4.0 (tools/terrain.py) — the forecourt at ≈ 611 m and the floor of the moat 4 m lower",
+      "url": "https://centrodedescargas.cnig.es"
+    },
+    {
+      "title": "Palacio Real de El Pardo — Wikipedia (es): history, square alcázar with corner towers and moat, Carlier's mansards, Sabatini's enlargement, the three courtyards (covered 1983 and 2001–2002), cream render",
+      "url": "https://es.wikipedia.org/wiki/Palacio_Real_de_El_Pardo"
+    },
+    {
+      "title": "Wikimedia Commons — «Palacio Real de El Pardo - 01.jpg» (frontal panorama of the south front: heights and bays measured on it, scaled by the 119.8 m between the towers, ±8 %)",
+      "url": "https://commons.wikimedia.org/wiki/File:Palacio_Real_de_El_Pardo_-_01.jpg"
+    },
+    {
+      "title": "Wikimedia Commons — «Madrid - El Pardo, Palacio Real, fachada principal 01.jpg», «Palacio Real de El Pardo Madrid.jpg» (towers, dormers, chimneys, pavilion)",
+      "url": "https://commons.wikimedia.org/wiki/File:Madrid_-_El_Pardo,_Palacio_Real,_fachada_principal_01.jpg"
+    },
+    {
+      "title": "Wikimedia Commons — «Palacio de El Pardo foso.jpg», «Palacio de El Pardo fachada lateral.jpg», «Madrid - El Pardo, Palacio Real 20.jpg», «Palacio Real de El Pardo portada.jpg» (the moat, the two-arch bridges, the Habsburg portal of 1547)",
+      "url": "https://commons.wikimedia.org/wiki/File:Palacio_de_El_Pardo_foso.jpg"
+    }
+  ],
+  "ground": "keep",
+  "ground_at": [
+    0.0,
+    40.0
+  ],
+  "ground_low": -4.0,
+  "triangles": 22025,
+  "footprint": [
+    [
+      -67.4,
+      -35.4
+    ],
+    [
+      67.4,
+      -35.4
+    ],
+    [
+      67.4,
+      35.4
+    ],
+    [
+      -67.4,
+      35.4
+    ]
+  ],
+  "notes": "Built by code (model_sources/Q1368571_palacio_real_de_el_pardo.py, tools/meshkit.py) with AI assistance. The whole palace: the ring of two-storey ranges round the three courtyards (Austrias west, Central, Borbones east) with cream render, white trim, granite plinth, 10 bays on each half of the long fronts, balconies on the main floor, slate mansards with a dormer per bay and tall brick chimneys; the four corner towers (17 m to the cornice) with Carlier's slate bell caps, oculus dormers and finials (24.4 m); the narrow four-floor bodies beside them; Sabatini's two central pavilions with attic, oculi, pediment with the arms and hipped roof; the south gate with its sentry boxes; the Habsburg portal of 1547 on the west front; the dry moat all round (4 m deep, granite walls and parapet) with its three two-arch bridges and the head of the covered gallery to the Capilla Real (only the part over the moat). y = 0 is the forecourt outside the moat; the moat floor is at −4 m (ground: keep, so the game keeps the moat open). Simplified or uncertain: the three courtyards are left open with paved floors, as wanted for Wiki Flight, although today they have iron-and-glass roofs (1983, 2001–2002); the chamfered corners of the Patio de los Austrias are square here; the north pavilion is drawn like the south one; the window count of the side and courtyard fronts and the heights (±8 %) come from photographs; the gallery's continuation to the chapel and the Casa de Oficios is left out."
+}

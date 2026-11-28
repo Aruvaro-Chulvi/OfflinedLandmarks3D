@@ -1,0 +1,65 @@
+{
+  "id": "Q3848635",
+  "name": "Casita del Príncipe",
+  "heading": 96.6,
+  "position": {
+    "lat": 40.5843748,
+    "lon": -4.1365466,
+    "source": "https://www.openstreetmap.org/way/86425434 (on the axis of the portico, in the middle of the main block; long sides at 6.6°)"
+  },
+  "authors": [
+    {
+      "name": "Álvaro C. Chulvi",
+      "url": "https://github.com/Aruvaro-Chulvi"
+    }
+  ],
+  "license": "CC-BY-4.0",
+  "rights": {
+    "status": "public_domain",
+    "architects": [
+      {
+        "name": "Juan de Villanueva",
+        "died": 1811,
+        "wikidata": "Q2429525"
+      }
+    ],
+    "built": 1775,
+    "note": "Built 1771–1775 for the Prince of Asturias, the future Carlos IV, enlarged with the rear wing in 1781–1784; a residence of the Spanish royal family managed by Patrimonio Nacional."
+  },
+  "sources": [
+    {
+      "title": "OpenStreetMap way 86425434 with its building:parts 891230443–50, and way 891450370 — outline 83.8 × 25.6 m, main block, portico, tower, rear wing and its porch, bridges and end wings, orientation (© OpenStreetMap contributors, ODbL)",
+      "url": "https://www.openstreetmap.org/way/86425434"
+    },
+    {
+      "title": "OpenStreetMap — the garden (way 983016149), its walls (231916286, 231916324) and hedges (231916327, 996507112–19, 891230428–39, 996177394/95), the paths, the fountains (231916287, 891230440) and the mapped trees with their species, heights and crowns (nodes 7895989406–09, 7895737867, 9201302786/87) (© OpenStreetMap contributors, ODbL)",
+      "url": "https://www.openstreetmap.org/way/983016149"
+    },
+    {
+      "title": "PNOA orthophoto, © Instituto Geográfico Nacional de España, CC BY 4.0 — the roofs, and the planting of the parterres",
+      "url": "https://www.ign.es/wms-inspire/pnoa-ma"
+    },
+    {
+      "title": "Casita del Príncipe (El Escorial) — Wikipedia (es, en): façade of 27 m, two floors, rear wing of 1781–1784, porticoes of Tuscan columns, gardens on several levels with box hedges and exotic conifers",
+      "url": "https://es.wikipedia.org/wiki/Casita_del_Pr%C3%ADncipe_(El_Escorial)"
+    },
+    {
+      "title": "Wikimedia Commons — «Casita del Príncipe 1.jpg» and «El Escorial - Casa del Príncipe Don Carlos (Casita del Príncipe) 04.jpg» (main façade), «… 02.jpg» (rear porch), «Casita del Príncipe 2.jpg» (side), «Casita del Príncipe. El Escorial.jpg» and «Casita de Abajo. El Escorial.jpg» (the fountain and the axis); heights measured on them (±5–8 %)",
+      "url": "https://commons.wikimedia.org/wiki/File:Casita_del_Pr%C3%ADncipe_1.jpg"
+    },
+    {
+      "title": "Terrain and garden levels: MDT05, © Instituto Geográfico Nacional de España, CC BY 4.0 (tools/terrain.py)",
+      "url": "https://centrodedescargas.cnig.es"
+    }
+  ],
+  "triangles": 85012,
+  "notes": "Built by code (model_sources/Q3848635_casita_del_principe.py, tools/meshkit.py) with AI assistance. Main façade (east): granite main block of two floors (the upper one low, with small windows), the portico of four Tuscan columns carrying the balcony with its iron railing, and the central tower with three windows, a low lead roof, the spire, ball and vane. Rear (west): the wing of 1781–84 under a hipped roof, ending in a porch with two Tuscan columns in antis between broad piers, an arched door and an attic. Low bridges over the passages to the rear garden, and the long one-floor end wings in ochre render with granite pilasters; slate hipped roofs with chimneys. The gardens are included: the walk in front (0 m); the front garden with eight parterres between paths radiating from the round fountain with its stone pine cone, going down to −1.0 m at the fountain and −2.2 m at its east end; the rear garden at the floor of the house (+1.0 m) with twelve parterres (clipped shrubs, lavender, lawn, small trees, from the orthophoto) and its small fountain; and the two boxwood broderie parterres at the end of the axis, on ground rising to +2.6 m. Levels from the IGN MDT05 (8 m grid: the slopes and steps inside the gardens are approximate). Garden walls and gates from OSM. The trees are the mapped ones only: two giant sequoias of 39 and 41.5 m, two more without a mapped height (about 34 m, estimated), two Nordmann firs (31, 32 m) and the pinsapo (29 m), each with the habit of its species; unmapped trees (the cedars by the façade, those of the rear garden) are left out. The two lodges closing the front garden on the east and the side broderie gardens beyond the rear grid are not modelled. Heights measured on photos are ±5–8 %; the bridges over the passages (OSM min_level 1) are a guess.",
+  "ground": "keep",
+  "ground_at": [0, 12],
+  "ground_low": -2.5,
+  "terrain_radius": 600,
+  "footprint": [
+    [-47.0, 73.0], [-47.0, -94.0], [-16.5, -94.0], [-16.5, -122.5], [16.5, -122.5], [16.5, -94.0],
+    [49.0, -94.0], [49.0, 73.0]
+  ]
+}

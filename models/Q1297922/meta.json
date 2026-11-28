@@ -1,0 +1,71 @@
+{
+  "id": "Q1297922",
+  "name": "Presa de El Gasco",
+  "heading": 187.9,
+  "position": {
+    "lat": 40.5513211,
+    "lon": -3.9454223,
+    "source": "https://www.openstreetmap.org/way/724280364 (centroid of the outline of the dam; the downstream wall, way 672259124, runs at 97.9°)"
+  },
+  "authors": [
+    {
+      "name": "Álvaro C. Chulvi",
+      "url": "https://github.com/Aruvaro-Chulvi"
+    }
+  ],
+  "license": "CC-BY-4.0",
+  "rights": {
+    "status": "public_domain",
+    "architects": [
+      {
+        "name": "Carlos Lemaur",
+        "died": 1785,
+        "wikidata": "Q30047422"
+      }
+    ],
+    "built": 1799,
+    "note": "Project of Carlos Lemaur (1785) for the Canal del Guadarrama of the Banco de San Carlos; built 1787–1799 under his sons Carlos and Manuel Lemaur and left unfinished after the storm of 14 May 1799. A ruin in the Parque Regional del curso medio del río Guadarrama."
+  },
+  "sources": [
+    {
+      "title": "OpenStreetMap way 724280364 — outline of the dam (waterway=dam), its centroid and orientation (© OpenStreetMap contributors, ODbL)",
+      "url": "https://www.openstreetmap.org/way/724280364"
+    },
+    {
+      "title": "OpenStreetMap ways 672259124 (the downstream wall), 672259125–672259130 (the cell walls in the breach) and 202587589 (the Guadarrama through the outlet) (© OpenStreetMap contributors, ODbL)",
+      "url": "https://www.openstreetmap.org/way/672259124"
+    },
+    {
+      "title": "Presa de El Gasco — Wikipedia (es): 53 m left of the planned 92 m, 154 m of wall, 72 m wide at the base and 32 m at the top, two granite walls (2.8 and 3.5 m) with transverse walls into cells of 8.5 × 10 m filled with earth and stones, upstream face at 60°, downstream face almost vertical, the collapse of 1799",
+      "url": "https://es.wikipedia.org/wiki/Presa_de_El_Gasco"
+    },
+    {
+      "title": "Wikimedia Commons — «Presa de El Gasco y bóveda de desagüe.jpg» (drone, from downstream) and «Presa de El Gasco Molino de la Hoz.jpg»: the breach, the cell walls, the lower wall and the outlet, measured on them scaled by the OSM cell walls (±10 %)",
+      "url": "https://commons.wikimedia.org/wiki/Category:Presa_de_El_Gasco"
+    },
+    {
+      "title": "Wikimedia Commons — «2011-02-12 Presa del Gasco (en ruinas) - panoramio.jpg» (along the downstream face from the west wing) and «Presa de El Gasco.jpg» (the upstream face)",
+      "url": "https://commons.wikimedia.org/wiki/File:2011-02-12_Presa_del_Gasco_(en_ruinas)_-_panoramio.jpg"
+    },
+    {
+      "title": "PNOA orthophoto, © Instituto Geográfico Nacional de España, CC BY 4.0 — the breach, the outlet, the trees and the remains of the cells on the top",
+      "url": "https://www.ign.es/wms-inspire/pnoa-ma"
+    },
+    {
+      "title": "Terrain: MDT05, © Instituto Geográfico Nacional de España, CC BY 4.0 (tools/terrain.py) — the river at 644.5 m, the crest at 700.5 m, the slope of the upstream face and the ground of the gorge",
+      "url": "https://centrodedescargas.cnig.es"
+    }
+  ],
+  "triangles": 18444,
+  "notes": "Built by code (model_sources/Q1297922_presa_de_el_gasco.py, tools/meshkit.py) with AI assistance. The ruin as it stands: the two wings of granite masonry, the downstream face almost vertical (no steps: Wikipedia says the downstream wall had neither steps nor buttresses), the upstream face battered at 60°, the top 32 m wide with low remains of the cell walls and holm oaks; the breach of 1799 in the middle (38.5 m between two cell walls), with the earth fill slumped to about 47 m, three cell walls standing out of it and the lower 19 m of the downstream wall still across it; the vaulted outlet of the river at its foot (drawn as a dark tunnel 10 m deep, not right through the dam), the two long cracks of the east wing. y = 0 is the river below the dam (644.5 m, ground_elev), the crest at 56 m. The rock of the gorge is drawn around the dam (a rock skirt following the MDT05 with the dam's own hump taken out; its rim dips 14 m into the ground). ground: keep with ground_fit false (a dam across a gorge). Uncertain: the batter of the downstream face (1:16 taken), the height of the lower wall and the level of the fill in the breach (±3 m), the size of the outlet (±1 m), the ends of the wings inside the hillsides. Note: the MDT05 (and so terrain.json) still carries the dam as a smooth hump; with ground_fit false the game does not cut it, so near the foot of the downstream face, around the outlet and in the breach the detailed terrain may show a few metres above the model.",
+  "ground": "keep",
+  "ground_fit": false,
+  "ground_at": [
+    4.5,
+    46
+  ],
+  "ground_low": -1,
+  "ground_elev": 644.5,
+  "terrain_radius": 800,
+  "footprint": [[-86.0, 30.9], [-86.0, -8.9], [-70.0, -15.0], [-56.0, -19.2], [-42.0, -24.1], [-28.0, -29.8], [-14.0, -35.6], [0.0, -40.7], [14.0, -40.4], [28.0, -34.8], [42.0, -27.4], [56.0, -21.6], [70.0, -17.8], [86.0, -11.9], [86.0, 30.9]]
+}
