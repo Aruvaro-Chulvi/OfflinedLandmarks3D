@@ -16,6 +16,9 @@ manifest, "file", "size" and "sha256" describe the compressed file that is downl
 and "raw_size" is the size of the .glb inside. Offlined keeps them compressed and serves them with
 Content-Encoding: gzip, so the browser unpacks them.
 
+The detailed terrain of the model's area (models/Q…/terrain.json, made by tools/terrain.py) goes in Q…-ter.json.gz
+(entry "terrain" in the manifest, with its source and attribution); Offlined uses it instead of its 90 m relief.
+
 The collision volume goes in a file of its own, Q…-col.json.gz (entry "collision" in the manifest): the model
 turned into a few hundred or thousand boxes (glbtool.collision) — what a plane can really hit, with the open air of
 arches, bridges and gaps between towers left open. meta.json "collision" may tune it: {"voxel": metres, "close":
@@ -48,7 +51,7 @@ import wikidata  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
 REPO = "https://github.com/Aruvaro-Chulvi/OfflinedLandmarks3D"
-META_KEYS = ("name", "heading", "position", "authors", "license", "rights", "based_on", "ground", "ground_at", "ground_low", "ground_fit")
+META_KEYS = ("name", "heading", "position", "authors", "license", "rights", "based_on", "ground", "ground_at", "ground_low", "ground_fit", "ground_elev", "surround")
 
 
 def sha(b: bytes) -> str:
@@ -97,6 +100,12 @@ def main():
                                 add=cm.get("add", ()), remove=cm.get("remove", ()))
         craw = json.dumps(col, separators=(",", ":")).encode()
         m["collision"] = {**packed(craw, out / f"{d.name}-col.json.gz"), "boxes": len(col["boxes"]) // 6, "voxel": col["voxel"]}
+        # the detailed terrain of its area (tools/terrain.py), if it has one: Offlined uses it instead of its 90 m relief
+        if (d / "terrain.json").exists():
+            traw = (d / "terrain.json").read_bytes()
+            t = json.loads(traw)
+            m["terrain"] = {**packed(traw, out / f"{d.name}-ter.json.gz"), "source": t.get("source"), "cell": t.get("c"),
+                            "attribution": t.get("attribution")}
         m["footprint"] = meta.get("footprint") or glbtool.footprint(scene)
         m["height"] = round(float(hi[1]), 2)
         m["base"] = round(float(lo[1]), 2)
@@ -123,7 +132,8 @@ def main():
         "license": "Each model: its own licence (CC-BY-4.0 or CC0-1.0), authors in 'authors'.",
         "authors": dict(sorted(authors.items(), key=lambda kv: (-kv[1]["models"], kv[0]))),
         "countries": {c: {"models": sum(1 for m in models if m["country"] == c),
-                          "size": sum(m["size"] + m["lod"]["size"] + m["collision"]["size"] for m in models if m["country"] == c)}
+                          "size": sum(m["size"] + m["lod"]["size"] + m["collision"]["size"] + m.get("terrain", {}).get("size", 0)
+                                   for m in models if m["country"] == c)}
                       for c in sorted({m["country"] for m in models})},
         "models": models,
     }

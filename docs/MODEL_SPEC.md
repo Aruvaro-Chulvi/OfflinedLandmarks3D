@@ -73,9 +73,11 @@ Your model cannot rely on the terrain having the right shape; it has to bring th
    whole model would be set at the lowest point and sink.
 2. **On a slope, on terraces or on a hilltop** (`"ground": "keep"`) — the ground falls more than ~5 m across the
    model, or it stands on a crest. `y = 0` is set on the ground at `ground_at`, and **Offlined reshapes the
-   terrain to fit your model**: wherever the model is (also outside its footprint), the ground is put just under
-   the model's lowest surface, and a ramp of 25–250 m (longer the bigger the difference) blends it into the hill.
-   What this means for you:
+   terrain to fit your model**, but only as much as needed: at the model's edge the ground cannot stay below its
+   foot (it would be seen floating) and nowhere above what is seen from the sky (courtyards, terraces, roofs). If
+   the relief already falls between the two, it is left alone. What moves goes back to the hillside in a short,
+   steep ramp of 10–90 m (the game paints it as rock). Whatever your model has below `ground_low` (foundation
+   slabs, basements) is taken as buried. What this means for you:
    - **Model the ground you stand on**: squares, terraces, steps, retaining walls, and the rock of the hill where
      it shows. The lowest surface of your model *becomes* the ground — a courtyard without a floor or a terrace
      without its fill leaves a hole where the coarse terrain shows through.
@@ -85,6 +87,8 @@ Your model cannot rely on the terrain having the right shape; it has to bring th
 3. **Not touching the terrain** (`"ground": "keep"` and `"ground_fit": false`) — bridges, dams, piers,
    anything standing over water or over a void: the terrain is left exactly as it is (fitting it would raise
    the ground up to the deck).
+
+**The real ground of its area.** `python tools/terrain.py Q…` saves in `terrain.json` the detailed terrain around it (IGN MDT05 in Spain, 3DEP in the USA, SRTM elsewhere) and `python tools/review_ground.py Q…` tells how much your model floats or is buried on it (report for all of them in [GROUND_REVIEW.md](GROUND_REVIEW.md)).
 
 **Common mistakes** (`tools/validate.py` warns about them):
 - A model whose base goes far below `y = 0` (it follows a slope) left on **flat**: it sinks. Use `keep`.
@@ -122,7 +126,11 @@ Your model cannot rely on the terrain having the right shape; it has to bring th
 | `footprint` | no | The area, seen from above, where Offlined clears the generated buildings, trees and street furniture: `[[x, z], …]` in metres in the model's own axes. By default, the outline of the model seen from above plus 1 m. Give it for buildings with courtyards or L shapes, where the default would also clear a neighbour. |
 | `ground` | no | `"flatten"` (default): Offlined levels the ground inside the footprint to its lowest point and sets the model there. `"keep"`: the terrain is left as it is, for models on a slope or on terraces (§3). |
 | `ground_at` | no | With `"ground": "keep"`: `[x, z]` in the model's axes where `y = 0` meets the ground (default `[0, 0]`, the origin). |
-| `ground_low` | no | With `"ground": "keep"`: the level (y, ≤ 0) of the lowest ground around the model, e.g. the orchard below a terraced garden. The web viewer and the preview draw their flat ground there, so what stands below `y = 0` can be seen (default 0). |
+| `ground_low` | no | With `"ground": "keep"`: the level (y, ≤ 0) of the lowest ground around the model, e.g. the orchard below a terraced garden. The web viewer and the preview draw their flat ground there, so what stands below `y = 0` can be seen (default 0). Anything below it (foundations, basements) Offlined keeps buried. |
+| `ground_elev` | no | The height above sea level (m) of the ground where `y = 0` goes (at `ground_at` with `"keep"`, at the lowest point of the footprint with `"flatten"`), actually measured: a 1–5 m DTM (IGN, USGS 3DEP…) or a survey. Give it where Offlined's relief (90 m, or 450 m where there is no detailed relief) is far off: crests, cliffs, summits. Cite where it comes from in `sources`. |
+| `terrain_radius` | no | Half-width (m, 300–5000; default 1200) of the detailed terrain `tools/terrain.py` makes around the model (`terrain.json`). Larger for a monument in the mountains (Machu Picchu: 2500). |
+| `surround` | no | The vegetation around it even where the map does not have it: `{"kind": "rainforest" \| "forest" \| "conifer" \| "woodland" \| "palms" \| "garden", "radius": m, "clear"?: m, "density"?: 0–1}`. Offlined paints the ground in that colour and plants those trees in a circle of `radius` (full up to half of it, fading out to the edge), with a clearing of `clear` m next to the model; roads, buildings and water still take them out. Only where it really is like that (Machu Picchu in its mountain forest); not in a city. |
+| `terrain_cut` | no | `false` so that `tools/terrain.py` does not cut the building out of a surface model (SRTM): only for models that follow a hill with no building to remove. Default `true`. |
 | `collision` | no | Only to tune the collision volume, which is made by itself from the model when the release is built: the model turned into boxes (cubes of about 1.5–4 m merged), what a plane can really hit — arches, the space under a bridge deck and the gaps between towers stay open, closed insides are solid. `{"voxel": metres, "close": metres, "add": [[x0, y0, z0, x1, y1, z1], …], "remove": […]}`: cube size, gaps narrower than `close` metres that are closed (default 6: the smallest plane in Wiki Flight has a span of 8 m, so none gets through), and boxes in model metres made solid or open by hand. The web viewer shows it with «Collision». |
 | `based_on` | no | If the model adapts someone else's work: `{ "title", "author", "url", "license" }` — that licence must be CC-BY-4.0 or CC0-1.0 too. |
 | `ground_fit` | no | With `"ground": "keep"`: `false` for bridges, dams and anything over water or a void — Offlined does not reshape the terrain to the model (§3.1). Default `true`. |

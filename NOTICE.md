@@ -59,6 +59,21 @@ This is not legal advice; it is how the project chooses to work.
   contributors, [ODbL 1.0](https://opendatacommons.org/licenses/odbl/); facts taken from it are cited in each
   `meta.json`.
 - Each model lists its own sources (plans, surveys, photos) in its `meta.json`.
+- **IGN PNOA orthophoto** (© Instituto Geográfico Nacional de España, [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/),
+  scne.es, WMS https://www.ign.es/wms-inspire/pnoa-ma) — measured to model the paving of the Plaza Mayor of Madrid,
+  and (`model_sources/Q47476_pnoa.jpg`) the colour of the open ground and the position of the trees of the Alhambra;
+  `tools/ground_fill.py` colours the floors of the open courtyards of other Spanish models from it
+  (`model_sources/Q…_pnoa.jpg`: Banco de España, Almudena, Palacio Real de Aranjuez).
+- **Terrain around each model** (`terrain.json`, made by `tools/terrain.py`; each file names its source and
+  attribution, and Offlined shows it while flying there):
+  - Spain — **MDT05 © Instituto Geográfico Nacional de España**, [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+    (scne.es), from the WCS https://servicios.idee.es/wcs-inspire/mdt.
+  - United States — **USGS 3D Elevation Program (3DEP)**, public domain: "3DEP data courtesy of the U.S. Geological Survey".
+  - Elsewhere — **Terrain Tiles** on AWS Open Data (https://registry.opendata.aws/terrain-tiles/, Tilezen joerd): "SRTM,
+    GMTED2010 and 3DEP courtesy of the U.S. Geological Survey; ETOPO1 U.S. National Oceanic and Atmospheric
+    Administration"; in Europe also "EU-DEM produced using Copernicus data and information funded by the European
+    Union". Required attributions: https://github.com/tilezen/joerd/blob/master/docs/attribution.md
+  - Copernicus DEM GLO-30 is not used (its licence does not allow every use Offlined needs).
 
 ---
 

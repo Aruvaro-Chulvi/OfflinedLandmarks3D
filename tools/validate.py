@@ -23,7 +23,7 @@ LICENSES = {"CC-BY-4.0", "CC0-1.0"}
 RIGHTS = {"public_domain", "protected"}
 PD_YEARS = 80                     # the longest term that applies in Spain (authors who died before 1987); elsewhere 70
 QID = re.compile(r"^Q[1-9][0-9]*$")
-FILES_OK = {"model.glb", "meta.json", "preview.jpg"}
+FILES_OK = {"model.glb", "meta.json", "preview.jpg", "terrain.json"}   # terrain.json: tools/terrain.py
 
 
 def image_size(b: bytes):
@@ -290,6 +290,23 @@ def check_folder(d: Path, errors: list, warnings: list):
         err("ground_low: the level (y) of the lowest ground around the model, between -200 and 0")
     elif gl is not None and m.get("ground") != "keep":
         warn('ground_low is only used with "ground": "keep"')
+    su = m.get("surround")
+    KINDS = ("rainforest", "forest", "conifer", "woodland", "palms", "garden")
+    if su is not None:
+        num = lambda v: isinstance(v, (int, float)) and not isinstance(v, bool)
+        ok = (isinstance(su, dict) and su.get("kind") in KINDS and num(su.get("radius")) and 50 <= su["radius"] <= 5000
+              and (su.get("clear") is None or (num(su["clear"]) and 0 <= su["clear"] < su["radius"]))
+              and (su.get("density") is None or (num(su["density"]) and 0 <= su["density"] <= 1)))
+        if not ok:
+            err(f'surround: {{"kind": one of {", ".join(KINDS)}, "radius": 50–5000 m, "clear"?: m, "density"?: 0–1}}')
+    tr = m.get("terrain_radius")
+    if tr is not None and not (isinstance(tr, (int, float)) and not isinstance(tr, bool) and 300 <= tr <= 5000):
+        err("terrain_radius: half-width in metres of the detailed terrain (tools/terrain.py), between 300 and 5000")
+    if m.get("terrain_cut") is not None and not isinstance(m.get("terrain_cut"), bool):
+        err("terrain_cut: true or false (tools/terrain.py)")
+    ge = m.get("ground_elev")
+    if ge is not None and not (isinstance(ge, (int, float)) and not isinstance(ge, bool) and -450 <= ge <= 8900):
+        err("ground_elev: the measured height above sea level (m) of the ground at y = 0, between -450 and 8900")
     gf = m.get("ground_fit")
     if gf is not None and not isinstance(gf, bool):
         err('ground_fit: true or false (MODEL_SPEC §3.1)')
@@ -327,6 +344,18 @@ def check_folder(d: Path, errors: list, warnings: list):
                 warn(f"{info['triangles']:,} triangles (you can add \"triangles\" to meta.json)")
             elif abs(m["triangles"] - info["triangles"]) > 0.02 * info["triangles"] + 10:
                 warn(f"meta.json says {m['triangles']:,} triangles, the model has {info['triangles']:,}")
+    tj = d / "terrain.json"
+    if tj.exists():
+        try:
+            t = json.loads(tj.read_text("utf-8"))
+            import base64
+            n = int(t["n"])
+            if not (2 <= n <= 1200 and float(t["c"]) > 0 and len(base64.b64decode(t["h"])) == n * n * 2 and t.get("attribution")):
+                raise ValueError
+        except Exception:
+            err("terrain.json: not a valid terrain grid — make it again with tools/terrain.py")
+    else:
+        warn("no terrain.json (run tools/terrain.py: the game fits the model to the real ground of its area)")
     pv = d / "preview.jpg"
     if pv.exists():
         sz = image_size(pv.read_bytes()[:65536])

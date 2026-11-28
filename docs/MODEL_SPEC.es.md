@@ -75,9 +75,11 @@ buena: tiene que traer él la forma que importa.
    palacio sobre un talud): todo el modelo se pondría en el punto más bajo y quedaría hundido.
 2. **En cuesta, en terrazas o en una cumbre** (`"ground": "keep"`) — el suelo baja más de ~5 m de un lado a
    otro del modelo, o está sobre una cresta. `y = 0` se apoya en el suelo en `ground_at`, y **Offlined
-   moldea el terreno a tu modelo**: allí donde está el modelo (también fuera de su planta), el suelo se pone
-   justo debajo de la superficie más baja del modelo, y una rampa de 25–250 m (más larga cuanta más
-   diferencia) lo funde con la ladera. Lo que significa para ti:
+   moldea el terreno a tu modelo**, pero solo lo justo: en el borde del modelo el suelo no puede quedar por
+   debajo de su pie (se vería flotar) y en ningún sitio por encima de lo que se ve desde el cielo (patios,
+   terrazas, tejados). Si el relieve ya cae entre los dos, no se toca. Lo que se mueve vuelve a la ladera en una
+   rampa corta y empinada de 10–90 m (el juego la pinta de roca). Lo que tu modelo tenga por debajo de
+   `ground_low` (losas de cimentación, sótanos) se da por enterrado. Lo que significa para ti:
    - **Modela el suelo sobre el que está**: plazas, terrazas, escaleras, muros de contención y la roca del cerro
      donde se ve. La superficie más baja de tu modelo *pasa a ser* el suelo: un patio sin suelo o una terraza
      sin su relleno dejan un agujero por el que asoma el terreno basto.
@@ -87,6 +89,8 @@ buena: tiene que traer él la forma que importa.
 3. **Sin tocar el terreno** (`"ground": "keep"` y `"ground_fit": false`) — puentes, presas, muelles, todo lo
    que está sobre agua o sobre el vacío: el terreno se deja exactamente como está (ajustarlo subiría el suelo
    hasta el tablero).
+
+**El suelo real de su zona.** `python tools/terrain.py Q…` guarda en `terrain.json` el relieve de detalle de alrededor (MDT05 del IGN en España, 3DEP en EE. UU., SRTM en el resto) y `python tools/review_ground.py Q…` dice cuánto flota o queda enterrado tu modelo sobre él (informe de todos en [GROUND_REVIEW.md](GROUND_REVIEW.md)).
 
 **Errores típicos** (`tools/validate.py` avisa de ellos):
 - Un modelo cuya base baja mucho por debajo de `y = 0` (sigue una cuesta) dejado en **llano**: se hunde. Usa `keep`.
@@ -124,7 +128,11 @@ buena: tiene que traer él la forma que importa.
 | `footprint` | no | La zona, vista desde arriba, donde Offlined quita los edificios generados, árboles y mobiliario urbano: `[[x, z], …]` en metros en los ejes del propio modelo. Si no se da, el contorno del modelo visto desde arriba más 1 m. Conviene darla en edificios con patio o en L, donde el contorno quitaría también un vecino. |
 | `ground` | no | `"flatten"` (por defecto): Offlined allana el suelo dentro de la planta a su punto más bajo y apoya ahí el modelo. `"keep"`: el terreno se deja como está, para modelos en cuesta o en terrazas (§3). |
 | `ground_at` | no | Con `"ground": "keep"`: `[x, z]` en los ejes del modelo donde `y = 0` toca el suelo (por defecto `[0, 0]`, el origen). |
-| `ground_low` | no | Con `"ground": "keep"`: el nivel (y, ≤ 0) del suelo más bajo alrededor del modelo, p. ej. la huerta bajo un jardín en terrazas. El visor web y la vista previa dibujan ahí su suelo plano, para que se vea lo que queda por debajo de `y = 0` (por defecto 0). |
+| `ground_low` | no | Con `"ground": "keep"`: el nivel (y, ≤ 0) del suelo más bajo alrededor del modelo, p. ej. la huerta bajo un jardín en terrazas. El visor web y la vista previa dibujan ahí su suelo plano, para que se vea lo que queda por debajo de `y = 0` (por defecto 0). Lo que quede por debajo (cimientos, sótanos) Offlined lo deja enterrado. |
+| `ground_elev` | no | La altura sobre el mar (m) del suelo donde va `y = 0` (en `ground_at` con `"keep"`, en el punto más bajo de la planta con `"flatten"`), medida de verdad: un MDT de 1–5 m (IGN, USGS 3DEP…) o un levantamiento. Ponla cuando el relieve de Offlined (90 m, o 450 m donde no hay relieve de detalle) se equivoca mucho ahí: crestas, acantilados, cumbres. Cita de dónde sale en `sources`. |
+| `terrain_radius` | no | Media anchura (m, 300–5000; por defecto 1200) del relieve de detalle que hace `tools/terrain.py` alrededor del modelo (`terrain.json`). Más grande para un monumento en montaña (Machu Picchu: 2500). |
+| `surround` | no | La vegetación que tiene alrededor aunque el mapa no la traiga: `{"kind": "rainforest" \| "forest" \| "conifer" \| "woodland" \| "palms" \| "garden", "radius": m, "clear"?: m, "density"?: 0–1}`. Offlined pinta el suelo de ese color y planta esos árboles en un círculo de `radius` (pleno hasta la mitad, desvaneciéndose hasta el borde), con un claro de `clear` m junto al modelo; carreteras, edificios y agua los siguen quitando. Solo donde es así de verdad (Machu Picchu en su selva de montaña); no en una ciudad. |
+| `terrain_cut` | no | `false` para no quitar el edificio del relieve de superficie (SRTM) en `tools/terrain.py`: solo en modelos que siguen un cerro sin edificio que quitar. Por defecto `true`. |
 | `collision` | no | Solo para retocar el volumen de choque, que se hace solo a partir del modelo al preparar la release: el modelo convertido en cajas (cubos de 1,5–4 m unidos), lo que un avión puede tocar de verdad — los arcos, el hueco bajo el tablero de un puente y el aire entre torres quedan abiertos, los interiores cerrados son macizos. `{"voxel": metros, "close": metros, "add": [[x0, y0, z0, x1, y1, z1], …], "remove": […]}`: tamaño del cubo, huecos de menos de `close` metros que se cierran (por defecto 6: el avión más pequeño de Wiki Flight mide 8 m de punta a punta, así que ninguno pasa), y cajas en metros del modelo que se hacen macizas o se abren a mano. El visor web lo enseña con «Choque». |
 | `based_on` | no | Si el modelo adapta el trabajo de otra persona: `{ "title", "author", "url", "license" }` — esa licencia también tiene que ser CC-BY-4.0 o CC0-1.0. |
 | `ground_fit` | no | Con `"ground": "keep"`: `false` para puentes, presas y todo lo que está sobre agua o sobre el vacío — Offlined no moldea el terreno al modelo (§3.1). Por defecto `true`. |
