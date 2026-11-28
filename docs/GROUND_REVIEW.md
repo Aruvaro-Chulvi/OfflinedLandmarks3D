@@ -25,24 +25,30 @@ Best fit: the height of y = 0 (as "keep") that leaves the least edge floating an
 | ✓ | Q4152 Schloss Neuschwanstein | keep | 960.0 | ground_elev | tiles | 29.4 | -4.8 | 0% | 6.5 | 1% | 960.5 m: 0% / 0% ✓ |
 | ✓ | Q3050235 Murallas de Ávila | keep | 1118.9 | terrain at ground_at | ign | 62.7 | -3.4 | 0% | 5.9 | 0% | 1118.9 m: 0% / 0% ✓ |
 | ✓ | Q47476 Alhambra | keep | 773.7 | terrain at ground_at | ign | 63.6 | 1.4 | 0% | 8.8 | 0% | 774.2 m: 0% / 0% ✓ |
+| ✓ | Q1326589 Alcázar de Toledo | keep | 546.5 | terrain at ground_at | ign | 15.0 | 2.0 | 0% | 3.1 | 0% | 546.5 m: 0% / 0% ✓ |
 | ✓ | Q12506 Hagia Sophia (Ayasofya) | keep | 39.3 | terrain at ground_at | tiles | 12.9 | -0.0 | 0% | 4.3 | 0% | 39.3 m: 0% / 0% ✓ |
 | ✓ | Q676203 Machu Picchu | keep | 2441.0 | terrain at ground_at | tiles | 87.2 | 0.6 | 0% | 3.0 | 0% | 2441.0 m: 0% / 0% ✓ |
 | ✓ | Q1063195 Torre de Madrid | flatten | 638.1 | median terrain of the footprint | ign | 4.6 | – | – | – | – | 638.1 m: 0% / 0% ✓ |
+| ✓ | Q1123180 Catedral Primada de Toledo | keep | 514.1 | terrain at ground_at | ign | 14.8 | -1.1 | 0% | 1.2 | 0% | 514.1 m: 0% / 0% ✓ |
 | ✓ | Q1123493 Plaza Mayor de Madrid | keep | 651.0 | terrain at ground_at | ign | 5.0 | 0.0 | 0% | 1.1 | 0% | 651.0 m: 0% / 0% ✓ |
 | ✓ | Q1140249 Templo de Debod | flatten | 645.9 | median terrain of the footprint | ign | 2.0 | – | – | – | – | 645.9 m: 0% / 0% ✓ |
 | ✓ | Q1140634 Puerta de Alcalá | flatten | 656.0 | median terrain of the footprint | ign | 0.1 | – | – | – | – | 656.0 m: 0% / 0% ✓ |
 | ✓ | Q1141262 Puerta de Europa (Torres KIO) | flatten | 729.0 | median terrain of the footprint | ign | 1.0 | – | – | – | – | 729.0 m: 0% / 0% ✓ |
 | ✓ | Q12495 Burj Khalifa | flatten | 5.4 | median terrain of the footprint | tiles | 7.8 | – | – | – | – | 5.4 m: 0% / 0% ✓ |
+| ✓ | Q1289106 Monasterio de San Juan de los Reyes | keep | 502.7 | terrain at ground_at | ign | 9.3 | -1.6 | 0% | 0.9 | 0% | 502.7 m: 0% / 0% ✓ |
 | ✓ | Q129846 Saint Basil's Cathedral (Cathedral of the Intercession on the Moat), with the Kremlin wall and the Spasskaya Tower | keep | 149.7 | terrain at ground_at | tiles | 7.3 | -2.5 | 0% | -4.3 | 0% | 149.7 m: 0% / 0% ✓ |
+| ✓ | Q1324080 Mezquita del Cristo de la Luz | keep | 507.4 | terrain at ground_at | ign | 9.5 | -3.4 | 0% | 2.7 | 0% | 507.4 m: 0% / 0% ✓ |
 | ✓ | Q1364354 Torre Emperador Castellana (Torre Espacio) | flatten | 732.0 | median terrain of the footprint | ign | 6.4 | – | – | – | – | 732.0 m: 0% / 0% ✓ |
 | ✓ | Q1364394 Torre Picasso | flatten | 684.2 | median terrain of the footprint | ign | 7.7 | – | – | – | – | 684.2 m: 0% / 0% ✓ |
 | ✓ | Q1368571 Palacio Real de El Pardo | keep | 610.5 | terrain at ground_at | ign | 4.3 | -0.2 | 0% | 1.9 | 0% | 610.5 m: 0% / 0% ✓ |
 | ✓ | Q1431985 Aeródromo de Cuatro Vientos | flatten | 688.0 | median terrain of the footprint | ign | 4.0 | – | – | – | – | 688.0 m: 0% / 0% ✓ |
+| ✓ | Q1568115 Santa María la Blanca | keep | 507.2 | terrain at ground_at | ign | 5.1 | -2.1 | 0% | 2.3 | 0% | 507.2 m: 0% / 0% ✓ |
 | ✓ | Q160112 Museo del Prado | flatten | 634.8 | median terrain of the footprint | ign | 8.1 | – | – | – | – | 634.8 m: 0% / 0% ✓ |
 | ✓ | Q1620086 Hipódromo de la Zarzuela | flatten | 604.7 | median terrain of the footprint | ign | 5.5 | – | – | – | – | 604.7 m: 0% / 0% ✓ |
 | ✓ | Q166276 Aeropuerto Adolfo Suárez Madrid-Barajas — Terminal 4 | keep | 614.0 | ground_elev | ign | 6.0 | 2.7 | 0% | 2.9 | 0% | 614.0 m: 0% / 0% ✓ |
 | ✓ | Q171517 Palacio Real de Madrid | keep | 640.0 | terrain at ground_at | ign | 10.1 | 0.0 | 0% | -0.0 | 0% | 640.0 m: 0% / 0% ✓ |
 | ✓ | Q1752772 Monasterio de Santa María de El Paular | keep | 1154.2 | terrain at ground_at | ign | 7.4 | -1.9 | 0% | 0.8 | 0% | 1154.2 m: 0% / 0% ✓ |
+| ✓ | Q1811506 Sinagoga del Tránsito | keep | 507.2 | terrain at ground_at | ign | 3.4 | -3.7 | 0% | 0.3 | 0% | 507.2 m: 0% / 0% ✓ |
 | ✓ | Q1849031 Palacio de Cibeles | flatten | 645.0 | median terrain of the footprint | ign | 5.6 | – | – | – | – | 645.0 m: 0% / 0% ✓ |
 | ✓ | Q2092717 Edificio Telefónica | flatten | 661.6 | median terrain of the footprint | ign | 4.0 | – | – | – | – | 661.6 m: 0% / 0% ✓ |
 | ✓ | Q211250 Teatro Real | flatten | 638.9 | median terrain of the footprint | ign | 1.5 | – | – | – | – | 621.4 m: 0% / 4% ✓ |
