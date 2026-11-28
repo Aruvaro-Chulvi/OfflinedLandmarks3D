@@ -1,0 +1,58 @@
+{
+  "id": "Q1818061",
+  "name": "Presa de Proserpina",
+  "heading": 96.3,
+  "position": {
+    "lat": 38.96963,
+    "lon": -6.3667,
+    "source": "https://www.openstreetmap.org/way/509714147 (the point given for the guided tour, on the top of the dam's embankment 25 m behind the water face of the wall; heading = the water face, 90° from the line between the two ends of the OSM dam, 6.3°)"
+  },
+  "ground": "keep",
+  "ground_fit": false,
+  "ground_at": [0, 0],
+  "ground_low": -16.0,
+  "ground_elev": 244.0,
+  "terrain_radius": 800,
+  "footprint": [[-206.4, -6.5], [-152.5, 4.0], [31.1, 35.2], [157.7, 8.0], [204.6, -6.6], [189.6, -54.8], [144.9, -40.9], [30.0, -16.2], [-143.4, -45.6], [-196.8, -56.0]],
+  "authors": [
+    {
+      "name": "Álvaro C. Chulvi",
+      "url": "https://github.com/Aruvaro-Chulvi"
+    }
+  ],
+  "license": "CC-BY-4.0",
+  "rights": {
+    "status": "public_domain",
+    "architects": [],
+    "built": 100,
+    "note": "Dam of the reservoir of Proserpina on the Arroyo de las Pardillas, Roman in origin (1st–2nd century AD) and raised and repaired in late-antique, medieval and 17th-century works; still in use. Builders unknown. Bien de Interés Cultural (1912) and part of the UNESCO World Heritage site «Archaeological Ensemble of Mérida» (1993)."
+  },
+  "sources": [
+    {
+      "title": "OpenStreetMap way 509714147 (waterway=dam: the water face of the wall, 417.5 m, its bends) (© OpenStreetMap contributors, ODbL)",
+      "url": "https://www.openstreetmap.org/way/509714147"
+    },
+    {
+      "title": "Embalse de Proserpina — Wikipedia (es): 427.8 m long, 21.6 m high, the screen wall of granite ashlar with a stepped batter on the water side and nine stepped buttresses against it, the earth embankment on the downstream side, the two intake towers on the downstream face",
+      "url": "https://es.wikipedia.org/wiki/Embalse_de_Proserpina"
+    },
+    {
+      "title": "U.S. Bureau of Reclamation, «Proserpina Dam, plan and cross section» (Wikimedia Commons «Proserpina Dam.png»): 19 m high, 2.30 m at the top, about 5 m at the base, water face 1:10, buttresses with pinnacles, earthfill, the stretches of 227.9, 106.5 and 92.3 m, the two intake towers",
+      "url": "https://commons.wikimedia.org/wiki/File:Proserpina_Dam.png"
+    },
+    {
+      "title": "Wikimedia Commons — «Embalse de Proserpina, Mérida (2015).JPG», «Proserpina dam - 1984.jpg», «Photo Prosperpina Dam Merida Spain 1955 - Touring Club Italiano 2 6269.jpg»: the stepped water face, the buttresses and their pinnacles",
+      "url": "https://commons.wikimedia.org/wiki/File:Proserpina_dam_-_1984.jpg"
+    },
+    {
+      "title": "PNOA orthophoto, © Instituto Geográfico Nacional de España, CC BY 4.0 — the crest, the embankment behind it, the tops of the two towers and of the buttresses",
+      "url": "https://www.ign.es/wms-inspire/pnoa-ma"
+    },
+    {
+      "title": "Terrain: MDT05, © Instituto Geográfico Nacional de España, CC BY 4.0 (tools/terrain.py) — the reservoir at 244.0 m, the crest at 245.5 m, the surface of the embankment and the valley below it",
+      "url": "https://centrodedescargas.cnig.es"
+    }
+  ],
+  "triangles": 7574,
+  "notes": "Built by code (model_sources/Q1818061_presa_de_proserpina.py, tools/meshkit.py) with AI assistance. The wall lofted along the OSM line (its water face): 2.3 m at the top, the water face stepped at 1:10, from the crest at 245.5 m (y = 1.5) down to its foundation (19 m at the deepest, following the valley towards the ends); nine stepped buttresses on the water face, evenly spaced (about 46 m), with small pinnacles above the crest (USBR section); the two intake towers on the downstream face of the wall, their tops just above the crest (x = −48 and +156, from the orthophoto); the earth embankment behind the wall, 45 m deep, its surface taken from the MDT05 (paths and trees left out). The origin is the point given for the guided tour (on the embankment), not on the wall itself: the water face is 25 m in front of it. Note: the buttresses stand on the water side and the towers on the dry side, as in Wikipedia, the USBR drawing and the orthophoto. With the reservoir at 244 m only the top 1.5 m of the water face shows; everything below is under water. Uncertain: the spacing of the buttresses and their size (±1 m), the positions and the shape of the towers' tops, the foundation. ground: keep with ground_fit false (a dam)."
+}

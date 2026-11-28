@@ -1,0 +1,62 @@
+{
+  "id": "Q2360379",
+  "name": "Anfiteatro de Mérida",
+  "heading": 316.0,
+  "position": {
+    "lat": 38.916176,
+    "lon": -6.337929,
+    "source": "https://www.openstreetmap.org/relation/1316311 (centre of the ellipses fitted to the outer way 89067879 and to the arena walls, ways 89067885, 1206491700 and 1206491716; long axis at 134–137°, the main gate at its north-west end)"
+  },
+  "authors": [
+    {
+      "name": "Álvaro C. Chulvi",
+      "url": "https://github.com/Aruvaro-Chulvi"
+    }
+  ],
+  "license": "CC-BY-4.0",
+  "rights": {
+    "status": "public_domain",
+    "architects": [],
+    "built": -8,
+    "note": "Roman amphitheatre inaugurated in 8 BC (inscriptions of the tribunes), planned together with the theatre beside it; architects unknown. Excavated from 1919; the lower seats were partly rebuilt by José Menéndez-Pidal in the mid 20th century. Part of the Archaeological Ensemble of Mérida (UNESCO World Heritage)."
+  },
+  "sources": [
+    {
+      "title": "OpenStreetMap relation 1316311 (outer way 89067879; arena walls 89067885, 1206491700, 1206491716) — ellipses 124 × 105 m and 68 × 40 m, centre and long axis (© OpenStreetMap contributors, ODbL)",
+      "url": "https://www.openstreetmap.org/relation/1316311"
+    },
+    {
+      "title": "OpenStreetMap ways 261488526, 260417196–260417199 (the fossa), 261488524 (praecinctio), 1206491701–1206491714 (radial walls of the passages), 1206491715 (passage under the west tribune) (© OpenStreetMap contributors, ODbL)",
+      "url": "https://www.openstreetmap.org/way/261488526"
+    },
+    {
+      "title": "Anfiteatro de Mérida — Wikipedia (es): 126 × 102 m, arena 64 × 41 m, sixteen doors, main gate at the western end of the long axis, the two tribunes on the minor axis, podium, cross-shaped fossa, long galleries on the long axis",
+      "url": "https://es.wikipedia.org/wiki/Anfiteatro_de_M%C3%A9rida"
+    },
+    {
+      "title": "Amphitheatre of Mérida — Wikipedia (en): 126 × 102 m, arena 64 × 44 m, fossa bestiaria",
+      "url": "https://en.wikipedia.org/wiki/Amphitheatre_of_M%C3%A9rida"
+    },
+    {
+      "title": "Wikimedia Commons — «Mérida - Anfiteatro - 01 - Panorámica.jpg», «Anfiteatro de Mérida, España, 2017 01.jpg» (arena, podium, fossa with its wooden decks, rebuilt seats, grassy ruined cavea) and «J29 320 Amphitheater Mérida, Hauptzugang.jpg» (gallery with brick transverse arches)",
+      "url": "https://commons.wikimedia.org/wiki/File:M%C3%A9rida_-_Anfiteatro_-_01_-_Panor%C3%A1mica.jpg"
+    },
+    {
+      "title": "PNOA orthophoto, © Instituto Geográfico Nacional de España, CC BY 4.0 — the fossa, the rebuilt sectors of the ima cavea, the passages and the galleries",
+      "url": "https://www.ign.es/wms-inspire/pnoa-ma"
+    },
+    {
+      "title": "Terrain: MDT05, © Instituto Geográfico Nacional de España, CC BY 4.0 (tools/terrain.py) — the arena at about 227.0 m (sampled between the fossa and the podium, «ground_elev»; the 8 m grid of terrain.json smooths the pit into it), the lowest point; the ground round the outer wall is 7–9 m above it on the north-east and at the ends, 3–4 m on the south-west",
+      "url": "https://centrodedescargas.cnig.es"
+    }
+  ],
+  "notes": "Built by code (model_sources/Q2360379_anfiteatro_de_merida.py, tools/meshkit.py) with AI assistance. The amphitheatre as it stands today: the sanded arena with its podium wall; the cross-shaped fossa in the middle, its central basin and short south-west arm open, the long arms under the present wooden decks; the ima cavea (nine rows) rebuilt by the gates and the tribunes and rough elsewhere, the praecinctio and the balteus; the two tribunes on the minor axis (the editor's on the east with its two stairs, the west one over the passage to the outside); the two long galleries on the long axis, open to the sky with brick transverse arches, and the low walls of the rooms beside them; the lost media and summa cavea as a grassy slope of rubble crossed by the radial walls of the fourteen other passages, higher on the east, where the cavea leans on the hill of San Albín; the outer wall standing only in parts. Simplified or uncertain: the rows are drawn as offset curves of the outer ellipse (published sizes, not a survey); which stretches of the outer wall stand and how high (approximate, from the orthophoto and photos); the inner vaults, rooms and stairs (not modelled); the depth of the fossa (about 2.8 m).",
+  "ground": "keep",
+  "ground_at": [
+    -15,
+    0
+  ],
+  "ground_low": -2.9,
+  "ground_elev": 227.0,
+  "triangles": 11334
+}

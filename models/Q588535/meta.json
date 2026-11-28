@@ -1,0 +1,53 @@
+{
+  "id": "Q588535",
+  "name": "Puente romano de Mérida",
+  "heading": 321.45,
+  "position": {
+    "lat": 38.9128561,
+    "lon": -6.3514497,
+    "source": "https://www.openstreetmap.org/way/1075066789 (the middle of the footway on the bridge, ways 25024396 + 1075066789 + 391413815, 783.7 m; heading = the downstream face, 90° from the axis between the two ends, 51.45°)"
+  },
+  "ground": "keep",
+  "ground_fit": false,
+  "ground_at": [0, 0],
+  "ground_low": 0,
+  "ground_elev": 202.0,
+  "terrain_radius": 900,
+  "authors": [
+    {
+      "name": "Álvaro C. Chulvi",
+      "url": "https://github.com/Aruvaro-Chulvi"
+    }
+  ],
+  "license": "CC-BY-4.0",
+  "rights": {
+    "status": "public_domain",
+    "architects": [],
+    "built": -25,
+    "note": "Roman bridge of Augusta Emerita, built with the founding of the colony (late 1st century BC); repaired in 483, the middle stretch rebuilt in 1603–1611 and repaired again after 1812, 1823 and 1860. Builders unknown. Bien de Interés Cultural (1912) and part of the UNESCO World Heritage site «Archaeological Ensemble of Mérida» (1993)."
+  },
+  "sources": [
+    {
+      "title": "OpenStreetMap way 770843480 (man_made=bridge: the deck 7.1 m wide, the round balconies, the descendederos del Humilladero and de San Antonio) and ways 25024396, 1075066789, 391413815 (the footway, 783.7 m, with 29 nodes tagged bridge:support=pier) (© OpenStreetMap contributors, ODbL)",
+      "url": "https://www.openstreetmap.org/way/770843480"
+    },
+    {
+      "title": "Puente romano de Mérida — Wikipedia (es): 790 m, 60 arches, 12 m above the mean water, the three stretches (Roman with semicircular cutwaters and relief arches; the five larger arches of 1611 with sharp cutwaters with pyramidal caps and buttresses downstream; the Roman stretch over the dry bank without relief arches, its deck falling), the descendederos",
+      "url": "https://es.wikipedia.org/wiki/Puente_romano_de_M%C3%A9rida"
+    },
+    {
+      "title": "Wikimedia Commons — «Mérida - Puente romano sobre el Guadiana - DSC 2172 W.jpg», «Mérida 2024-08-19 - Puente Romano del Guadiana 03.jpg», «J29 284 Puente romano.jpg», «Mérida. Roman bridge. Guadiana river. Badajoz. Extremadura. Spain (4923945969).jpg»: arches, relief arches, piers and footings, parapet (heights by proportion, ±10 %)",
+      "url": "https://commons.wikimedia.org/wiki/File:M%C3%A9rida_-_Puente_romano_sobre_el_Guadiana_-_DSC_2172_W.jpg"
+    },
+    {
+      "title": "PNOA orthophoto, © Instituto Geográfico Nacional de España, CC BY 4.0 — the deck, the cutwaters upstream, the balconies and the two descendederos",
+      "url": "https://www.ign.es/wms-inspire/pnoa-ma"
+    },
+    {
+      "title": "Terrain: MDT05, © Instituto Geográfico Nacional de España, CC BY 4.0 (tools/terrain.py) — the water at 202.0 m, the banks and the ends of the bridge",
+      "url": "https://centrodedescargas.cnig.es"
+    }
+  ],
+  "triangles": 18344,
+  "notes": "Built by code (model_sources/Q588535_puente_romano_de_merida.py, tools/meshkit.py) with AI assistance. 60 semicircular granite arches built procedurally along the OSM axis (it bends only about 0.3°, at San Antonio): 31 piers where OSM has them (two long gaps split in two) and 29 evenly spaced arches over the south-western bank, where OSM has none. The Roman stretches have semicircular cutwaters upstream up to the springing; the middle one (Humilladero to San Antonio) sharp cutwaters with pyramidal caps and buttresses downstream; relief arches over the piers except over the dry bank; voussoirs, cornice band, parapets with coping, the two round balconies at x = −157 and the two descendederos (Humilladero down to the island, San Antonio with its pointed end). y = 0 is the water (202.0 m, MDT05); deck from 8.8 m at the city end to 12 m over the river and 5.3 m at the far end. Uncertain: the spacing and size of the arches of the south-western stretch (no piers in OSM: 10.7 m bays taken), the height profile of the deck (±1 m), the exact sizes of the piers (4.2/5.0/4.0/3.6 m by stretch), the footings, the descendederos' slopes. Street lamps left out. ground: keep with ground_fit false (a bridge over water)."
+}

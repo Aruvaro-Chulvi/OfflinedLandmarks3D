@@ -1,0 +1,58 @@
+{
+  "id": "Q3774528",
+  "name": "Acueducto de los Milagros",
+  "heading": 98.75,
+  "position": {
+    "lat": 38.923946,
+    "lon": -6.3478975,
+    "source": "https://www.openstreetmap.org/way/202213492 (the middle of the standing arcade, 188.6 m, on its axis; heading = the east face, 90° from the axis, 8.75°)"
+  },
+  "ground": "keep",
+  "ground_fit": false,
+  "ground_at": [0, 0],
+  "ground_low": -1.0,
+  "ground_elev": 205.0,
+  "terrain_radius": 700,
+  "footprint": [[95.6, -3.6], [95.6, 3.6], [-95.6, 3.6], [-95.6, 0.4], [-173.5, 0.4], [-176.8, 4.0], [-212.7, -25.4], [-208.1, -31.0], [-172.2, -1.6], [-95.6, -0.4], [-95.6, -3.6]],
+  "authors": [
+    {
+      "name": "Álvaro C. Chulvi",
+      "url": "https://github.com/Aruvaro-Chulvi"
+    }
+  ],
+  "license": "CC-BY-4.0",
+  "rights": {
+    "status": "public_domain",
+    "architects": [],
+    "built": 50,
+    "note": "Roman aqueduct of Augusta Emerita (1st century AD; the arcades rebuilt or repaired around 300 AD), bringing water from Proserpina over the valley of the Albarregas. Builders unknown. Bien de Interés Cultural (1912) and part of the UNESCO World Heritage site «Archaeological Ensemble of Mérida» (1993)."
+  },
+  "sources": [
+    {
+      "title": "OpenStreetMap way 202213492 (man_made=bridge, bridge=aqueduct: the standing arcade, 188.6 × 3.66 m, axis 8.75°), way 202213494 (the row of lower piers south of the railway) and way 37859139 (the course of the aqueduct) (© OpenStreetMap contributors, ODbL)",
+      "url": "https://www.openstreetmap.org/way/202213492"
+    },
+    {
+      "title": "Acueducto de los Milagros — Wikipedia (es): 830 m of arcades, 25 m high at the bottom of the valley, piers of five courses of granite ashlar alternating with five of brick, brick arches at different heights (granite voussoirs over the river), 73 piers left",
+      "url": "https://es.wikipedia.org/wiki/Acueducto_de_los_Milagros"
+    },
+    {
+      "title": "Aqueduct of the Miracles — Wikipedia (en): 38 arched pillars standing, 25 m high, opus mixtum, double arcade",
+      "url": "https://en.wikipedia.org/wiki/Acueducto_de_los_Milagros"
+    },
+    {
+      "title": "Wikimedia Commons — «Mérida-Acueducto de los Milagros-1.jpg», «Acueducto de los Milagros (Mérida, España).jpg», «J29 276 Acueducto de los Milagros, Storchennester.jpg», «Mérida - Acueducto Los Milagros - DSC 2122 W.jpg»: piers, buttresses, the three tiers of brick arches, the courses, the storks' nests (heights by proportion, ±10 %)",
+      "url": "https://commons.wikimedia.org/wiki/File:Acueducto_de_los_Milagros_(M%C3%A9rida,_Espa%C3%B1a).jpg"
+    },
+    {
+      "title": "PNOA orthophoto, © Instituto Geográfico Nacional de España, CC BY 4.0 — the number and spacing of the piers, the buttresses, the southern row",
+      "url": "https://www.ign.es/wms-inspire/pnoa-ma"
+    },
+    {
+      "title": "Terrain: MDT05, © Instituto Geográfico Nacional de España, CC BY 4.0 (tools/terrain.py) — the bed of the Albarregas at 204.0 m, the ground under the arcade and the southern row",
+      "url": "https://centrodedescargas.cnig.es"
+    }
+  ],
+  "triangles": 21530,
+  "notes": "Built by code (model_sources/Q3774528_acueducto_de_los_milagros.py, tools/meshkit.py) with AI assistance. The standing arcade of OSM way 202213492 (27 piers, bays of 7.14 m) and the row of 7 lower piers of way 202213494 south of the railway; the scattered single piers further towards the city are left out. Piers 2.9 × 3.66 m faced with alternating bands of granite (2.2 m) and brick (0.4 m), stepped buttresses on both faces, brick arches in three tiers (springing 7.5, 14.5 and 20.5 m; the top tier with its spandrel), granite voussoirs over the Albarregas, broken tops, storks' nests on nine piers. Which arches and how much of each pier survive is drawn by a fixed random choice (seed 1993) close to the photos, not pier by pier; heights ±1.5 m. y = 0 is the ground at the origin (205.0 m, MDT05); the river bed under the arcade at −1 m. ground: keep with ground_fit false (an arcade over a valley and a river)."
+}

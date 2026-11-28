@@ -1,0 +1,58 @@
+{
+  "id": "Q1984155",
+  "name": "Circo romano de Mérida",
+  "heading": 267.8,
+  "position": {
+    "lat": 38.9200756,
+    "lon": -6.3316119,
+    "source": "https://www.openstreetmap.org/way/152837480 (the spina, ways 260581757 and 260581758: the middle of its central gap; heading along the spina)"
+  },
+  "authors": [
+    {
+      "name": "Álvaro C. Chulvi",
+      "url": "https://github.com/Aruvaro-Chulvi"
+    }
+  ],
+  "license": "CC-BY-4.0",
+  "rights": {
+    "status": "public_domain",
+    "architects": [],
+    "built": 20,
+    "note": "Roman circus of Augusta Emerita, early 1st century AD (time of Tiberius), restored 337–340, architect unknown; an archaeological site. Monumento nacional 1912, UNESCO World Heritage (Archaeological Ensemble of Mérida) 1993."
+  },
+  "sources": [
+    {
+      "title": "OpenStreetMap way 152837480 (the site, 436 × 119 m), ways 260581680 / 260581678 (the wall of the track), 260581757 / 260581758 (the spina), 260581753 (the western meta), 260581677 / 260581755 (the tribune), 260581675–261 and 260581737–752 (the outer wall of the southern stands, buttresses, the passages of the eastern curve) (© OpenStreetMap contributors, ODbL)",
+      "url": "https://www.openstreetmap.org/way/152837480"
+    },
+    {
+      "title": "Circo romano de Mérida — Wikipedia (es): about 440 × 115 m, spina 240 × 8.5 m with the metae at its ends, twelve carceres with the porta pompae at the west end, stands on the southern slope and on vaults on the north",
+      "url": "https://es.wikipedia.org/wiki/Circo_romano_de_M%C3%A9rida"
+    },
+    {
+      "title": "Roman circus of Mérida — Wikipedia (en): porta pompae, porta triumphalis, spina, tribunal iudicium",
+      "url": "https://en.wikipedia.org/wiki/Roman_circus_of_M%C3%A9rida"
+    },
+    {
+      "title": "PNOA orthophoto, © Instituto Geográfico Nacional de España, CC BY 4.0 — the eastern meta, the bands of the stands, the carceres end",
+      "url": "https://www.ign.es/wms-inspire/pnoa-ma"
+    },
+    {
+      "title": "Wikimedia Commons — «Circo Romano de Mérida, 2016 (01).jpg», «(02)», «(03)», «Mérida - Circo romano - 01.jpg» to «05», «J29 333 Circo romano, Mittelinsel und Zuschauerränge.jpg», «J29 334 Circo romano, Zuschauereingang.jpg», «Mérida 2024-08-21 - Circo Romano 01.jpg»: heights of the spina, the wall of the track and the remains of the stands (±30 %)",
+      "url": "https://commons.wikimedia.org/wiki/Category:Roman_circus_of_M%C3%A9rida"
+    },
+    {
+      "title": "Terrain: MDT05, © Instituto Geográfico Nacional de España, CC BY 4.0 (tools/terrain.py) — the slope of the stands and ground_elev",
+      "url": "https://centrodedescargas.cnig.es"
+    }
+  ],
+  "notes": "Built by code (model_sources/Q1984155_circo_romano_de_merida.py, tools/meshkit.py) with AI assistance; the outlines are the OpenStreetMap ways in the model's axes. Ruins on the ground: the sand of the track (about 400 × 93 m); the spina in two halves of 104 m, a granite platform 0.8 m high and 8 m wide with a gap of 13 m in the middle; the two metae as semicircular foundations with three cone stumps; the wall of the track (1–2 m, rubble), a corridor behind it and the rubble core of the stands (2–3 m); the stands as an earth and rubble bank whose outer edge follows the real ground (IGN MDT05), rising to 3–5 m on the southern slope and the eastern curve; the outer wall of the southern stands with its buttresses, the block of the tribune on the north side, the paired walls of the passages in the eastern curve, the porta triumphalis in the middle of the curve (two ashlar jambs and the passage) and, at the west end, the foundations of the twelve carceres with the two big piers of the porta pompae. The interpretation centre is a separate OSM element (way 525559342) and is not included. Uncertain: the eastern meta (not in OSM, placed symmetric to the western one from the orthophoto), the layout of the carceres (only their foundations survive; drawn as 12 equal stalls), the heights of every ruin (from photos), the porta triumphalis (position at the apex of the curve).",
+  "triangles": 17524,
+  "ground": "keep",
+  "ground_at": [
+    0,
+    0
+  ],
+  "ground_low": -0.5,
+  "ground_elev": 214.9
+}

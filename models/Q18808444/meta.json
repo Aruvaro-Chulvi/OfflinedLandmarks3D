@@ -1,0 +1,74 @@
+{
+  "id": "Q18808444",
+  "name": "Templo de Diana (Mérida)",
+  "heading": 143.1,
+  "position": {
+    "lat": 38.9165374,
+    "lon": -6.3443654,
+    "source": "https://www.openstreetmap.org/way/202213495 (centroid of the podium; long axis at 143.1°, the front with the base of the stair to the south-east)"
+  },
+  "authors": [
+    {
+      "name": "Álvaro C. Chulvi",
+      "url": "https://github.com/Aruvaro-Chulvi"
+    }
+  ],
+  "license": "CC-BY-4.0",
+  "rights": {
+    "status": "public_domain",
+    "architects": [],
+    "built": 25,
+    "note": "Roman temple of the imperial cult, time of Tiberius (14–37 AD), architect unknown; the palace of the Conde de los Corbos inside it is of the 16th century. Monumento nacional 1912, UNESCO World Heritage (Archaeological Ensemble of Mérida) 1993."
+  },
+  "sources": [
+    {
+      "title": "OpenStreetMap way 202213495 — the podium 32.4 × 18.1 m and its orientation; ways 1206491734 and 1206491736 (the two pools on the long sides) and 1206491735 (the excavation in front) (© OpenStreetMap contributors, ODbL)",
+      "url": "https://www.openstreetmap.org/way/202213495"
+    },
+    {
+      "title": "Templo de Diana (Mérida) — Wikipedia (es): podium 3.23 m, plan 32 × 18.5 m, peripteral hexastyle with 11 columns on the flanks, Corinthian granite columns 8 m high, rebuilt relieving arch, palace of the Conde de los Corbos in the cella, pools on both long sides",
+      "url": "https://es.wikipedia.org/wiki/Templo_de_Diana_(M%C3%A9rida)"
+    },
+    {
+      "title": "PNOA orthophoto, © Instituto Geográfico Nacional de España, CC BY 4.0 — the palace roof, the empty rear of the podium, the pools, the walkway over the excavation and the precinct",
+      "url": "https://www.ign.es/wms-inspire/pnoa-ma"
+    },
+    {
+      "title": "Wikimedia Commons — «Templo de Diana (Mérida).jpg», «Templo de Diana Merida Vista Frontal.JPG», «Mérida - Templo de Diana - 01.jpg/02/03», «Pórtico del Templo de Diana, Mérida.jpg», «J29 307 Dianatempel, Palacio del Conde los Corbos.jpg»: which columns stand, heights of the entablature, attic, arch and palace (±10 %)",
+      "url": "https://commons.wikimedia.org/wiki/Category:Temple_of_Diana_(M%C3%A9rida)"
+    },
+    {
+      "title": "Terrain: MDT05, © Instituto Geográfico Nacional de España, CC BY 4.0 (tools/terrain.py)",
+      "url": "https://centrodedescargas.cnig.es"
+    }
+  ],
+  "notes": "Built by code (model_sources/Q18808444_templo_de_diana_merida.py, tools/meshkit.py) with AI assistance. Granite podium 3.23 m with moulded base and cornice, ashlar in courses and rubble where the facing is lost. Corinthian columns of 8 m (Attic base, fluted shaft in drums, acanthus capital) on the 3.18 × 3.02 m grid of a hexastyle peripteros with 11 columns per flank. Standing: the six front columns with their architrave, the rebuilt attic and relieving arch; a second row one bay behind (pronaos) joined to the front by beams; the south-west flank with nine columns (architrave over the first seven); the north-east flank with three free columns at the front, three half-sunk in the palace wall and one at the palace's rear corner; stumps and loose drums on the rear of the podium. The palace of the Conde de los Corbos (16th c.) in the cella: two floors, cream render, a two-storey Renaissance loggia on the front, arched windows on the south-west side, two Mudéjar twin windows in brick frames and two arched doors on the north-east side, hipped tile roof. Around: the sandy precinct with a granite band round the podium, the two Roman pools (dry, excavated, with railings) and the excavation of the stair in front with its steel walkway. Uncertain: exactly which flank columns survive at the rear (from photos), the inner pronaos columns, the palace windows and roof height (±1 m), the depth of the pools and of the excavation.",
+  "triangles": 29356,
+  "ground": "flatten",
+  "footprint": [
+    [
+      -25.5,
+      -21.5
+    ],
+    [
+      25.5,
+      -21.5
+    ],
+    [
+      25.5,
+      14.5
+    ],
+    [
+      12.5,
+      14.5
+    ],
+    [
+      12.5,
+      31.0
+    ],
+    [
+      -25.5,
+      31.0
+    ]
+  ]
+}

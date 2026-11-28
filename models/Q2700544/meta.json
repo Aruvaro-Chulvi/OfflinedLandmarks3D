@@ -1,0 +1,60 @@
+{
+  "id": "Q2700544",
+  "name": "Teatro romano de Mérida",
+  "heading": 136.0,
+  "position": {
+    "lat": 38.915363,
+    "lon": -6.338658,
+    "source": "https://www.openstreetmap.org/relation/1316310 (centre of the circle fitted to the outer arc of the cavea, way 37858767, r = 42.8 m; the frons line of way 89067888 runs at 46°)"
+  },
+  "authors": [
+    {
+      "name": "Álvaro C. Chulvi",
+      "url": "https://github.com/Aruvaro-Chulvi"
+    }
+  ],
+  "license": "CC-BY-4.0",
+  "rights": {
+    "status": "public_domain",
+    "architects": [],
+    "built": -15,
+    "note": "Roman theatre promoted by Marcus Vipsanius Agrippa, inaugurated 16–15 BC; scaenae frons of the late 1st century AD, reformed 333–337 AD; architects unknown. Excavated from 1910 by José Ramón Mélida; the frons and parts of the seats and of the peristyle were re-erected from 1962 under José Menéndez-Pidal by anastylosis of the Roman pieces found on site. Part of the Archaeological Ensemble of Mérida (UNESCO World Heritage)."
+  },
+  "sources": [
+    {
+      "title": "OpenStreetMap relation 1316310 (outer way 37858767, inner way 89067888) and way 261488525 — cavea, orchestra, pulpitum and scaena, the praecinctio of the ima cavea (© OpenStreetMap contributors, ODbL)",
+      "url": "https://www.openstreetmap.org/relation/1316310"
+    },
+    {
+      "title": "OpenStreetMap ways 260417182–260417187 and 260417193 — the beds, lawns and round basin of the porticus post scaenam garden (© OpenStreetMap contributors, ODbL)",
+      "url": "https://www.openstreetmap.org/way/260417184"
+    },
+    {
+      "title": "Teatro romano de Mérida — Wikipedia (es): proedria, 22 rows of the ima cavea in five cunei, media and summa cavea of five rows each, vomitoria, «Las siete sillas», pulpitum 60 × 7 m, scaenae frons 17 m high with two Corinthian orders, peristyle with double colonnade",
+      "url": "https://es.wikipedia.org/wiki/Teatro_romano_de_M%C3%A9rida"
+    },
+    {
+      "title": "Roman Theatre (Mérida) — Wikipedia (en): diameter about 86 m, frons 63 m long, 7.5 m deep, 17.5 m high, blue-veined marble shafts and white capitals",
+      "url": "https://en.wikipedia.org/wiki/Roman_Theatre_(M%C3%A9rida)"
+    },
+    {
+      "title": "Wikimedia Commons — «Teatro Romano de Mérida (Badajoz, España) 02.jpg» and «Teatro Romano de Mérida (1).JPG» (near-frontal views of the frons, heights measured on them, ±5 %), «Teatro romano de Mérida, España.jpg» (podium, statues, pulpitum front), «Teatro romano de Mérida. España-2.jpg» (cavea), «Visión panorámica del conjunto arqueológico de anfiteatro y teatro romano.jpg» (peristyle garden)",
+      "url": "https://commons.wikimedia.org/wiki/File:Teatro_Romano_de_M%C3%A9rida_(Badajoz,_Espa%C3%B1a)_02.jpg"
+    },
+    {
+      "title": "PNOA orthophoto, © Instituto Geográfico Nacional de España, CC BY 4.0 — plan of the frons, the garden, the rebuilt portico and the hall of the imperial cult",
+      "url": "https://www.ign.es/wms-inspire/pnoa-ma"
+    },
+    {
+      "title": "Terrain: MDT05, © Instituto Geográfico Nacional de España, CC BY 4.0 (tools/terrain.py) — the orchestra is the lowest point, the street round the top of the cavea 10–12 m above it",
+      "url": "https://centrodedescargas.cnig.es"
+    }
+  ],
+  "notes": "Built by code (model_sources/Q2700544_teatro_romano_de_merida.py, tools/meshkit.py) with AI assistance. The theatre as it stands today: the orchestra with its white and bluish marble slabs, the three seats of honour and the marble parapet; the ima cavea (22 rows, six stairways) with the vomitoria in its balteus, the media cavea (5 rows), and the summa cavea as seven ruined masses of Roman concrete between the vomitoria («Las Siete Sillas») behind a broken outer wall; the cavea ends and the parodoi with their arched outer gates; the pulpitum with its front of rectangular and semicircular niches and the small stairs; the restored scaenae frons — podium, two Corinthian orders with blue-grey shafts and white capitals and entablatures, statues between the lower columns, the semicircular exedra with the valva regia and the two valvae hospitales, the broken pediment, the upper order complete only on the north-east half and free-standing columns on the south-west end; the rooms of the postscaenium; the porticus post scaenam garden with its beds, lawns, round basin and trees, the stumps of the double colonnade, the rebuilt roofed stretch and the hall of the imperial cult. Simplified or uncertain: the exact layout of the columns of the frons (from photos, not from a survey), the heights of the seats (published row counts; the MDT05 smooths the cavea), the inner vaults and corridors of the cavea (not modelled), the festival equipment (left out), the ruined tops of the walls (approximate). Neighbouring ruins (Casa-basílica, latrines) are not included.",
+  "ground": "keep",
+  "ground_at": [
+    0,
+    6
+  ],
+  "triangles": 37344
+}
