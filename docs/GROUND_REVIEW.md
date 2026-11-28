@@ -36,6 +36,7 @@ Best fit: the height of y = 0 (as "keep") that leaves the least edge floating an
 | ✓ | Q129846 Saint Basil's Cathedral (Cathedral of the Intercession on the Moat), with the Kremlin wall and the Spasskaya Tower | keep | 149.7 | terrain at ground_at | tiles | 7.3 | -2.5 | 0% | -4.3 | 0% | 149.7 m: 0% / 0% ✓ |
 | ✓ | Q1364354 Torre Emperador Castellana (Torre Espacio) | flatten | 732.0 | median terrain of the footprint | ign | 6.4 | – | – | – | – | 732.0 m: 0% / 0% ✓ |
 | ✓ | Q1364394 Torre Picasso | flatten | 684.2 | median terrain of the footprint | ign | 7.7 | – | – | – | – | 684.2 m: 0% / 0% ✓ |
+| ✓ | Q1368571 Palacio Real de El Pardo | keep | 610.5 | terrain at ground_at | ign | 4.3 | -0.2 | 0% | 1.9 | 0% | 610.5 m: 0% / 0% ✓ |
 | ✓ | Q1431985 Aeródromo de Cuatro Vientos | flatten | 688.0 | median terrain of the footprint | ign | 4.0 | – | – | – | – | 688.0 m: 0% / 0% ✓ |
 | ✓ | Q160112 Museo del Prado | flatten | 634.8 | median terrain of the footprint | ign | 8.1 | – | – | – | – | 634.8 m: 0% / 0% ✓ |
 | ✓ | Q1620086 Hipódromo de la Zarzuela | flatten | 604.7 | median terrain of the footprint | ign | 5.5 | – | – | – | – | 604.7 m: 0% / 0% ✓ |
@@ -51,12 +52,14 @@ Best fit: the height of y = 0 (as "keep") that leaves the least edge floating an
 | ✓ | Q28471 Real Monasterio de San Lorenzo de El Escorial | keep | 1026.0 | terrain at ground_at | ign | 12.9 | -1.0 | 0% | 2.8 | 0% | 1026.0 m: 0% / 0% ✓ |
 | ✓ | Q2859883 Arco de la Victoria | flatten | 654.9 | median terrain of the footprint | ign | 1.3 | – | – | – | – | 654.9 m: 0% / 0% ✓ |
 | ✓ | Q2919969 Torres de Colón | flatten | 654.7 | median terrain of the footprint | ign | 2.0 | – | – | – | – | 654.7 m: 0% / 0% ✓ |
+| ✓ | Q3848635 Casita del Príncipe | keep | 937.5 | terrain at ground_at | ign | 8.2 | 0.4 | 0% | 1.5 | 0% | 937.5 m: 0% / 0% ✓ |
 | ✓ | Q386413 Faro de Moncloa | flatten | 658.0 | median terrain of the footprint | ign | 4.2 | – | – | – | – | 658.0 m: 0% / 0% ✓ |
 | ✓ | Q3891623 Palacio de Velázquez | flatten | 661.2 | median terrain of the footprint | ign | 2.1 | – | – | – | – | 661.2 m: 0% / 0% ✓ |
 | ✓ | Q39054 Torre di Pisa (Leaning Tower of Pisa) and Piazza dei Miracoli | flatten | 5.9 | median terrain of the footprint | tiles | 3.1 | – | – | – | – | 5.9 m: 0% / 0% ✓ |
 | ✓ | Q39671 Stonehenge | keep | 101.8 | terrain at ground_at | tiles | 2.9 | -0.1 | 0% | 0.0 | 0% | 101.8 m: 0% / 0% ✓ |
 | ✓ | Q48435 Basílica de la Sagrada Família | flatten | 30.9 | median terrain of the footprint | ign | 5.8 | – | – | – | – | 30.9 m: 0% / 0% ✓ |
 | ✓ | Q4889526 Banco de España | flatten | 641.0 | median terrain of the footprint | ign | 5.0 | – | – | – | – | 625.5 m: 0% / 9%  |
+| ✓ | Q5191859 Cuartel del Conde-Duque | keep | 660.0 | terrain at ground_at | ign | 13.3 | -2.8 | 0% | 0.6 | 0% | 660.0 m: 0% / 0% ✓ |
 | ✓ | Q519568 Torre Moeve (Torre Cepsa) | flatten | 731.5 | median terrain of the footprint | ign | 1.8 | – | – | – | – | 731.5 m: 0% / 0% ✓ |
 | ✓ | Q530129 Palacio Real de Aranjuez | flatten | 488.2 | median terrain of the footprint | ign | 5.8 | – | – | – | – | 488.2 m: 0% / 0% ✓ |
 | ✓ | Q5755509 Casa del Labrador | flatten | 491.0 | median terrain of the footprint | ign | 0.0 | – | – | – | – | 491.0 m: 0% / 0% ✓ |
