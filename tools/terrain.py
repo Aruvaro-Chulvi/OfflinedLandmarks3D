@@ -260,7 +260,7 @@ def main():
             t = build(q)
         except Exception as ex:                                     # noqa: BLE001
             print(f"{q}: ERROR {ex}"); bad += 1; continue
-        out.write_text(json.dumps(t, separators=(",", ":")) + "\n", "utf-8")
+        out.write_text(json.dumps(t, separators=(",", ":")) + "\n", "utf-8", newline="\n")
         print(f"{q}: {t['source']} ({t['source_res']} m) -> {t['n']}x{t['n']} cells of {t['c']:g} m, "
               f"{t['min']}–{t['max']} m, {out.stat().st_size / 1024:.0f} KB"
               + (f", building cut out ({t['building_cut']} cells)" if t.get("building_cut") else ""))

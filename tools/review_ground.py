@@ -242,7 +242,7 @@ def main():
     if missing:
         out += ["", f"Without terrain.json yet ({len(missing)}): " + ", ".join(missing)]
     if not sys.argv[1:]:
-        (ROOT / "docs" / "GROUND_REVIEW.md").write_text("\n".join(out) + "\n", "utf-8")
+        (ROOT / "docs" / "GROUND_REVIEW.md").write_text("\n".join(out) + "\n", "utf-8", newline="\n")
         print("-> docs/GROUND_REVIEW.md")
 
 
