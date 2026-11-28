@@ -1,0 +1,72 @@
+{
+  "id": "Q5830463",
+  "name": "Presa de El Villar",
+  "heading": 189.9,
+  "position": {
+    "lat": 40.94744,
+    "lon": -3.56323,
+    "source": "https://www.openstreetmap.org/way/57902521 (on the dam, waterway=dam, on the downstream face just below the crest: the stop of the guided tour; the dam is an arch of about 151 m radius fitted to the upstream edge of this outline and to the crest road, way 204487178; its middle faces 189.9°)"
+  },
+  "authors": [
+    {
+      "name": "Álvaro C. Chulvi",
+      "url": "https://github.com/Aruvaro-Chulvi"
+    }
+  ],
+  "license": "CC-BY-4.0",
+  "rights": {
+    "status": "public_domain",
+    "architects": [
+      {
+        "name": "José Morer",
+        "died": 1906,
+        "wikidata": "Q25423445"
+      },
+      {
+        "name": "Elzeario Boix",
+        "died": 1896,
+        "wikidata": "Q28024362"
+      }
+    ],
+    "built": 1873,
+    "note": "Curved masonry gravity dam of the Canal de Isabel II on the river Lozoya, projected and directed by the engineers Elzeario Boix and José Morer; begun 1869, inaugurated 1873, works finished 1882; the first curved gravity dam in Spain. A 19th-century work whose authors died more than 70 years ago: public domain. The round intake tower of the 1994 mini hydro plant, modelled too, is a later utilitarian addition."
+  },
+  "sources": [
+    {
+      "title": "OpenStreetMap way 57902521 — the dam (waterway=dam): its upstream edge and its extent (© OpenStreetMap contributors, ODbL)",
+      "url": "https://www.openstreetmap.org/way/57902521"
+    },
+    {
+      "title": "OpenStreetMap ways 204487178 (road M-127 on the crest and over the spillway), 1111008470 (the round intake tower) and 1111008471 (its footbridge) (© OpenStreetMap contributors, ODbL)",
+      "url": "https://www.openstreetmap.org/way/204487178"
+    },
+    {
+      "title": "Embalse de El Villar — Wikipedia (es): Boix and Morer, 1869–1873, first curved gravity dam, 107 m long, 5 m wide at the crest, 50.5 m high, masonry with ashlar facings, independent intake tower, fixed-lip spillway on the right bank, mini hydro plant of 1994",
+      "url": "https://es.wikipedia.org/wiki/Embalse_de_El_Villar"
+    },
+    {
+      "title": "Talsperre El Villar — Wikipedia (de): crest at 906 m, normal water level 904 m, bottom outlet and spillway on the right bank",
+      "url": "https://de.wikipedia.org/wiki/Talsperre_El_Villar"
+    },
+    {
+      "title": "Wikimedia Commons — «Presa del Villar - panoramio.jpg» and «Presa de El Villar Madrid.jpg» (the downstream face, its curved profile, the frieze of small arches under the parapet, the stepped walls of the spillway), «El Villar 1992 04.jpg» (the half-round tower on the upstream face), «VillarPresaMinicentral.jpg» (the crest, the spillway bridge, the hut on the old intake tower), «Embalse de El Villar, 02.jpg» and «El Villar.jpg» (the intake towers and the footbridge)",
+      "url": "https://commons.wikimedia.org/wiki/Category:El_Villar_Dam"
+    },
+    {
+      "title": "PNOA orthophoto, © Instituto Geográfico Nacional de España, CC BY 4.0 — the crest, the towers, the outlets, the spillway apron, basin and cascade",
+      "url": "https://www.ign.es/wms-inspire/pnoa-ma"
+    },
+    {
+      "title": "Terrain: MDT05, © Instituto Geográfico Nacional de España, CC BY 4.0 (tools/terrain.py) — the pool below the dam at 860 m, the reservoir at 903 m, the downstream face and the gorge",
+      "url": "https://centrodedescargas.cnig.es"
+    }
+  ],
+  "triangles": 10484,
+  "notes": "Built by code (model_sources/Q5830463_presa_de_el_villar.py, tools/meshkit.py) with AI assistance. This model is the dam (Presa de El Villar); the id is the reservoir's (Embalse de El Villar), which the guided tour uses. The reservoir water and the pool below are drawn by the game. The arch of the dam (107 m of crest on a radius of about 151 m), the upstream face nearly vertical, the downstream face of pale granite ashlar on a curved profile (vertical under the crest, flaring to about 29 m of batter at the pool), the crest road between the upstream parapet and the downstream parapet over a frieze of small arches on corbels; the half-round tower on the upstream face; two outlets at the toe; on the right bank the fixed-lip spillway: the lip under the bridge of the road, the sloping apron towards the reservoir, the basin west of the road with its sill and retaining wall and the stepped walls down the gorge next to the dam; at the left abutment the old square intake tower with the white hut on it; in the reservoir the round intake tower of the 1994 mini hydro plant with its footbridge. y = 0 is the pool below the dam (860 m, ground_elev), the crest road at 46 m (906 m). The foundation follows the MDT05 4 m below the lowest ground of each section. Uncertain: the exact downstream profile (fitted to the MDT05 and the photos), the crest width (5 m quoted; 6.2 m taken with the parapets), the layout and levels of the spillway basin and of the stepped walls (±3 m, orthophoto and MDT05), the heights of the intake towers (±2 m), the depth of the bottom of the reservoir under the towers. Not modelled: the cavern of the mini hydro plant, the old canal works downstream. Note: the MDT05 has the downstream face of the dam in it (it matches the model within 2–3 m) but not the crest, which comes out about 5 m low (900–903 m instead of 906 m) along the crest road.",
+  "ground": "keep",
+  "ground_fit": false,
+  "ground_at": [14.8, 38.0],
+  "ground_low": -1,
+  "ground_elev": 860.0,
+  "terrain_radius": 900
+}

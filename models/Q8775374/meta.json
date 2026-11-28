@@ -1,0 +1,61 @@
+{
+  "id": "Q8775374",
+  "name": "Presa de Puentes Viejas",
+  "heading": 109.9,
+  "position": {
+    "lat": 40.99317,
+    "lon": -3.57107,
+    "source": "https://www.openstreetmap.org/way/57902519 (on the dam, waterway=dam, on the downstream face: the stop of the guided tour; the curve of the dam follows the crest road, way 20677334, moved 3 m upstream; +Z is the downstream normal halfway along the dam, 109.9°)"
+  },
+  "authors": [
+    {
+      "name": "Álvaro C. Chulvi",
+      "url": "https://github.com/Aruvaro-Chulvi"
+    }
+  ],
+  "license": "CC-BY-4.0",
+  "rights": {
+    "status": "protected",
+    "architects": [],
+    "built": 1939,
+    "note": "Curved gravity dam of the Canal de Isabel II on the river Lozoya: project of 1910 under the direction of Ramón de Aguinaga (director of the Canal), first stage 1914–1925, raised 1932–1936, finished 1939; the spillway gates are of the early 1960s and the mini hydro plant of 1995 (Wikipedia). The engineers who designed and raised it are not named in the sources consulted. A 20th-century engineering work: taken as protected."
+  },
+  "sources": [
+    {
+      "title": "OpenStreetMap way 57902519 — the dam (waterway=dam): its extent and the toe (© OpenStreetMap contributors, ODbL)",
+      "url": "https://www.openstreetmap.org/way/57902519"
+    },
+    {
+      "title": "OpenStreetMap way 20677334 — the road M-135 on the crest and over the spillway, which gives the curve of the dam (© OpenStreetMap contributors, ODbL)",
+      "url": "https://www.openstreetmap.org/way/20677334"
+    },
+    {
+      "title": "Embalse de Puentes Viejas — Wikipedia (es): history of the two stages, curved gravity dam, 66 m, concrete between facings of artificial ashlar, gates of the spillway, mini hydro plant and new intake tower",
+      "url": "https://es.wikipedia.org/wiki/Embalse_de_Puentes_Viejas"
+    },
+    {
+      "title": "Talsperre Puentes Viejas — Wikipedia (de): crest at 955 m, 324 m long, 5 m wide, 66 m high, spillway on the left bank",
+      "url": "https://de.wikipedia.org/wiki/Talsperre_Puentes_Viejas"
+    },
+    {
+      "title": "Wikimedia Commons — «Presa de Puentes Viejas.jpg» (the downstream face and the power house), «PViejasAliviadero.jpg» and «Embalse de Puentes Viejas (Puentes Viejas) - 004 (30083991693).jpg» (the gated spillway and its gantry), «Embalse de Puentes Viejas (Puentes Viejas) - 001 (30630098431).jpg» and «Embalse Puentes Viejas (Madrid).jpg» (the arcade under the crest, the curved profile), «La torre de toma del embalse Puentes Viejas (Madrid).jpg» (the intake tower and its footbridge)",
+      "url": "https://commons.wikimedia.org/wiki/Category:Puentes_Viejas_Dam"
+    },
+    {
+      "title": "PNOA orthophoto, © Instituto Geográfico Nacional de España, CC BY 4.0 — the crest, the spillway piers, the esplanade, the power house, the valve chamber, the intake tower and its footbridge",
+      "url": "https://www.ign.es/wms-inspire/pnoa-ma"
+    },
+    {
+      "title": "Terrain: MDT05, © Instituto Geográfico Nacional de España, CC BY 4.0 (tools/terrain.py) — the reservoir at 952 m, the pool below at 904 m, the esplanade at 909–911 m, the abutments",
+      "url": "https://centrodedescargas.cnig.es"
+    }
+  ],
+  "triangles": 14559,
+  "notes": "Built by code (model_sources/Q8775374_presa_de_puentes_viejas.py, tools/meshkit.py) with AI assistance. This model is the dam (Presa de Puentes Viejas); the id is the reservoir's (Embalse de Puentes Viejas), which the guided tour uses (the dam also has its own item, Q110209252). The reservoir water and the pool below (the tail of El Villar) are drawn by the game. The arch of the dam along the crest road (266 m of curved wall, about 181–187 m of radius in the middle, straighter to the south), the upstream face nearly vertical, the downstream face of artificial ashlar on a curved profile (about 33 m of batter down to the esplanade), the crest road between the upstream parapet and the arcade of tall blind arches on corbels that carries the downstream parapet; on the left bank (north) the gated spillway: seven bays with red steel gates between round-nosed piers, the deck and the road bridge, the steel gantry with the hoists and lamp masts, the stepped ogee falling east between two training walls; at the toe the curved esplanade with the power house of 1995 and the valve chamber; in the reservoir the round intake tower with its pillared top and its footbridge of about 97 m to the south-west shore. y = 0 is the pool below the dam (904 m, ground_elev), the crest road at 51 m (955 m). The foundation follows the MDT05 4 m below the lowest ground of each section. Uncertain: the downstream profile (fitted to the orthophoto and the MDT05), the number and size of the spillway bays (7 taken) and the gate levels (sill 946.5 m, top 951.2 m, ±1 m), the shape of the spillway chute beyond the ogee (unlined rock, left to the terrain), the heights of the power house and the intake tower (±2 m), the south end of the dam (Wikipedia gives 324 m of crest; the model's wall stops where the road leaves it, about 295 m with the spillway). Not modelled: the bottom outlet valves and their jet, the old works of the first stage. Note: in the MDT05 the crest (955–956 m) comes out about 8 m further upstream (west) than in OSM and the orthophoto, so the terrain ridge of the dam lies against the upstream face; with ground_fit false the game does not cut it, so a narrow strip of terrain may show above the water against the upstream face.",
+  "ground": "keep",
+  "ground_fit": false,
+  "ground_at": [-17.5, 57.4],
+  "ground_low": -1,
+  "ground_elev": 904.0,
+  "terrain_radius": 900
+}

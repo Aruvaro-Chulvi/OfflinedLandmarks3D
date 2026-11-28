@@ -1,0 +1,378 @@
+{
+  "id": "Q2834413",
+  "name": "Presa de Riosequillo",
+  "heading": 38.2,
+  "position": {
+    "lat": 40.9854,
+    "lon": -3.64937,
+    "source": "https://www.openstreetmap.org/way/57907231 (on the dam, waterway=dam, just downstream of the crest of its main wing: the stop of the guided tour; the main wing's upstream edge runs at 128.2°, so its downstream face faces 38.2°)"
+  },
+  "authors": [
+    {
+      "name": "Álvaro C. Chulvi",
+      "url": "https://github.com/Aruvaro-Chulvi"
+    }
+  ],
+  "license": "CC-BY-4.0",
+  "rights": {
+    "status": "protected",
+    "architects": [],
+    "built": 1958,
+    "note": "Gravity dam of the Canal de Isabel II on the river Lozoya; project approved in 1947, in service in 1958 (Wikipedia). The designers are not given in the sources consulted. A 20th-century engineering work: taken as protected."
+  },
+  "sources": [
+    {
+      "title": "OpenStreetMap way 57907231 — outline of the dam (waterway=dam): the two wings, the angle between them, the upstream face, the toe of the high part (© OpenStreetMap contributors, ODbL)",
+      "url": "https://www.openstreetmap.org/way/57907231"
+    },
+    {
+      "title": "OpenStreetMap ways 199011585 (the crest road) and 57907227 (the Lozoya through the bottom outlet) (© OpenStreetMap contributors, ODbL)",
+      "url": "https://www.openstreetmap.org/way/199011585"
+    },
+    {
+      "title": "Embalse de Riosequillo — Wikipedia (es): gravity dam of concrete with ashlar facing, 56 m high, 1060 m long, in service 1958",
+      "url": "https://es.wikipedia.org/wiki/Embalse_de_Riosequillo"
+    },
+    {
+      "title": "Talsperre Riosequillo — Wikipedia (de): crest at 1010 m, 56 m over the foundation, 62 m wide at the base and 5 m at the top, 1060 m of crest, bottom outlet and spillway",
+      "url": "https://de.wikipedia.org/wiki/Talsperre_Riosequillo"
+    },
+    {
+      "title": "Wikimedia Commons — «Presa de Riosequillo.jpg» (the downstream face with both chutes spilling, the arcaded parapet, the gate towers, the abutment building), «Sierra Norte 1993 06.jpg» (the flip bucket from above), «Unnamed2 - panoramio (4363).jpg» (the gate towers in the reservoir), «Presa y embalse de Riosequillo.jpg» (aerial view of 1958: the two wings)",
+      "url": "https://commons.wikimedia.org/wiki/Category:Riosequillo_Dam"
+    },
+    {
+      "title": "PNOA orthophoto, © Instituto Geográfico Nacional de España, CC BY 4.0 — the gate towers, the chutes, the valve house, the abutment building and the crest road",
+      "url": "https://www.ign.es/wms-inspire/pnoa-ma"
+    },
+    {
+      "title": "Terrain: MDT05, © Instituto Geográfico Nacional de España, CC BY 4.0 (tools/terrain.py) — the river below the dam at 961 m, the crest at 1010–1011 m, the ground along both wings",
+      "url": "https://centrodedescargas.cnig.es"
+    }
+  ],
+  "triangles": 16645,
+  "notes": "Built by code (model_sources/Q2834413_presa_de_riosequillo.py, tools/meshkit.py) with AI assistance. This model is the dam (Presa de Riosequillo); the id is the reservoir's (Embalse de Riosequillo), which has no separate item for the dam. The reservoir water is drawn by the game. Both wings of the gravity dam (main wing 637 m across the gorge of the Lozoya, west wing 360 m over the right bank, mitred at the angle), the upstream face nearly vertical (0.05:1) in concrete, the downstream face in ashlar at 0.8:1 below a 10.2 m crest, the crest road between a plain upstream parapet and the arcaded parapet on corbels over the downstream face; the two gated spillways of the main wing, each with two gate towers on the upstream face, a steel gate, the road bridge, a chute down the downstream face and a flip bucket throwing the water into the natural plunge pool of the river (there is no concrete stilling basin: the bucket deck and a concrete apron at the bottom outlet are modelled); the valve house between the spillways, the long abutment building with arched windows at the left end of the high part, the portal of the bottom outlet. y = 0 is the river below the dam (961 m, ground_elev), the crest road at 49 m (1010 m). The foundation follows the MDT05 4 m below the lowest ground of each section. Uncertain: the downstream slope (0.8 taken; the quoted 62 m base includes the foundation), the crest width and the height of the gate towers (±1.5 m), the positions of the towers and buildings (±3 m, orthophoto), the size of the gates and the height of the bucket lips (±3 m), the 1990s mini hydro plant and its tailrace are not modelled. Note: in the MDT05 the crest and the reservoir next to it come out about 8–10 m further upstream than in OSM and the orthophoto, and the water surface by the upstream face is at 1007–1012 m; with ground_fit false the game does not cut it, so a narrow strip of terrain may show above the water against the upstream face.",
+  "ground": "keep",
+  "ground_fit": false,
+  "ground_at": [
+    -77.0,
+    80.0
+  ],
+  "ground_low": -1,
+  "ground_elev": 961.0,
+  "terrain_radius": 900,
+  "footprint": [
+    [
+      -496.8,
+      -20.2
+    ],
+    [
+      -470.2,
+      -20.2
+    ],
+    [
+      -443.7,
+      -20.2
+    ],
+    [
+      -417.1,
+      -20.2
+    ],
+    [
+      -390.6,
+      -20.2
+    ],
+    [
+      -364.0,
+      -20.2
+    ],
+    [
+      -337.5,
+      -20.2
+    ],
+    [
+      -311.0,
+      -20.2
+    ],
+    [
+      -284.4,
+      -20.2
+    ],
+    [
+      -257.9,
+      -20.2
+    ],
+    [
+      -231.3,
+      -20.2
+    ],
+    [
+      -204.8,
+      -20.2
+    ],
+    [
+      -178.3,
+      -20.2
+    ],
+    [
+      -151.7,
+      -20.2
+    ],
+    [
+      -125.2,
+      -20.2
+    ],
+    [
+      -98.6,
+      -20.3
+    ],
+    [
+      -72.1,
+      -20.3
+    ],
+    [
+      -45.5,
+      -20.3
+    ],
+    [
+      -19.0,
+      -20.3
+    ],
+    [
+      7.5,
+      -20.3
+    ],
+    [
+      34.1,
+      -20.3
+    ],
+    [
+      60.6,
+      -20.3
+    ],
+    [
+      87.2,
+      -20.3
+    ],
+    [
+      113.4,
+      -20.3
+    ],
+    [
+      137.3,
+      -20.3
+    ],
+    [
+      151.4,
+      -38.7
+    ],
+    [
+      166.8,
+      -58.8
+    ],
+    [
+      182.4,
+      -79.2
+    ],
+    [
+      198.1,
+      -99.7
+    ],
+    [
+      213.7,
+      -120.1
+    ],
+    [
+      229.4,
+      -140.5
+    ],
+    [
+      245.0,
+      -160.9
+    ],
+    [
+      260.7,
+      -181.4
+    ],
+    [
+      276.3,
+      -201.8
+    ],
+    [
+      292.0,
+      -222.2
+    ],
+    [
+      307.6,
+      -242.7
+    ],
+    [
+      323.3,
+      -263.1
+    ],
+    [
+      338.9,
+      -283.5
+    ],
+    [
+      354.6,
+      -304.0
+    ],
+    [
+      369.5,
+      -292.6
+    ],
+    [
+      353.8,
+      -272.1
+    ],
+    [
+      338.2,
+      -251.7
+    ],
+    [
+      322.5,
+      -231.3
+    ],
+    [
+      306.9,
+      -210.8
+    ],
+    [
+      291.2,
+      -190.4
+    ],
+    [
+      278.0,
+      -168.1
+    ],
+    [
+      263.6,
+      -146.7
+    ],
+    [
+      247.9,
+      -126.3
+    ],
+    [
+      233.5,
+      -104.9
+    ],
+    [
+      219.1,
+      -83.6
+    ],
+    [
+      204.7,
+      -62.2
+    ],
+    [
+      189.0,
+      -41.8
+    ],
+    [
+      170.1,
+      -22.2
+    ],
+    [
+      151.9,
+      9.3
+    ],
+    [
+      115.1,
+      9.3
+    ],
+    [
+      87.2,
+      10.8
+    ],
+    [
+      60.6,
+      12.3
+    ],
+    [
+      34.1,
+      13.9
+    ],
+    [
+      7.6,
+      15.4
+    ],
+    [
+      -19.0,
+      18.5
+    ],
+    [
+      -45.5,
+      24.7
+    ],
+    [
+      -72.1,
+      33.9
+    ],
+    [
+      -98.6,
+      30.8
+    ],
+    [
+      -125.2,
+      18.5
+    ],
+    [
+      -151.7,
+      13.9
+    ],
+    [
+      -178.2,
+      10.8
+    ],
+    [
+      -204.8,
+      9.3
+    ],
+    [
+      -231.3,
+      6.2
+    ],
+    [
+      -257.9,
+      3.2
+    ],
+    [
+      -284.4,
+      1.6
+    ],
+    [
+      -311.0,
+      0.1
+    ],
+    [
+      -337.5,
+      0.1
+    ],
+    [
+      -364.0,
+      0.1
+    ],
+    [
+      -390.6,
+      -1.4
+    ],
+    [
+      -417.1,
+      -1.4
+    ],
+    [
+      -443.7,
+      -1.4
+    ],
+    [
+      -470.2,
+      -1.4
+    ],
+    [
+      -496.8,
+      -1.4
+    ]
+  ]
+}

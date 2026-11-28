@@ -1,0 +1,62 @@
+{
+  "id": "Q5803317",
+  "name": "Depósito elevado de Chamberí",
+  "heading": 191.0,
+  "position": {
+    "lat": 40.4394767,
+    "lon": -3.70136,
+    "source": "https://www.openstreetmap.org/way/48238313 (centroid of the outline of the tower, building=water_tower; the orientation of its twelve sides from the PNOA orthophoto)"
+  },
+  "authors": [
+    {
+      "name": "Álvaro C. Chulvi",
+      "url": "https://github.com/Aruvaro-Chulvi"
+    }
+  ],
+  "license": "CC-BY-4.0",
+  "rights": {
+    "status": "protected",
+    "architects": [
+      {
+        "name": "Luis Moya Idígoras",
+        "wikidata": "Q14309017"
+      },
+      {
+        "name": "Ramón de Aguinaga Arrechea",
+        "died": 1933,
+        "wikidata": "Q105757147"
+      }
+    ],
+    "built": 1911,
+    "note": "Elevated water tank of the Canal de Isabel II, idea of Diego Martín Montalvo (1900), designed by the engineer Luis Moya Idígoras (date of death not known) with the pumping plant by Ramón de Aguinaga; built 1907–1911, in service 1912–1952. Converted into an exhibition hall (Sala Canal de Isabel II) in 1986 by the architects Antonio Lopera and Javier Alau. A 20th-century work: taken as protected."
+  },
+  "sources": [
+    {
+      "title": "OpenStreetMap way 48238313 — outline of the tower (a circle 24 m across), its centroid (© OpenStreetMap contributors, ODbL)",
+      "url": "https://www.openstreetmap.org/way/48238313"
+    },
+    {
+      "title": "Depósito elevado de Chamberí — Wikipedia (es): history, authors, twelve-sided red brick body, cylindrical tank of 1500 m³ raised to 36 m",
+      "url": "https://es.wikipedia.org/wiki/Dep%C3%B3sito_elevado_de_Chamber%C3%AD"
+    },
+    {
+      "title": "Wikimedia Commons — «Depósito elevado, sección vertical, Madrid.jpg» (the vertical section of 1911–1912): heights of the plinth, the shaft, the gallery, the tank and its roof, the batter of the shaft, scaled by the 24 m of the OSM outline",
+      "url": "https://commons.wikimedia.org/wiki/File:Dep%C3%B3sito_elevado,_secci%C3%B3n_vertical,_Madrid.jpg"
+    },
+    {
+      "title": "Wikimedia Commons — «Depósito elevado de Chamberí (Madrid) 01.jpg», «Depósito Canal Isabel II-Chamberí.jpg», «Depósito de agua de Santa Engracia.JPG», «Depósito elevado de Chamberí, Madrid.jpg», «Sala exposiciones Canal Isabel II (4078983447).jpg» and «Depósito elevado, vista general, Madrid.jpg»: the piers, the window bays, the gallery, the zinc tank with its round windows, the dome and the plinth with its pavilions",
+      "url": "https://commons.wikimedia.org/wiki/Category:Water_tower,_Santa_Engracia,_Madrid"
+    },
+    {
+      "title": "PNOA orthophoto, © Instituto Geográfico Nacional de España, CC BY 4.0 — the twelve pavilions round the foot (the orientation of the sides) and the top of the tank",
+      "url": "https://www.ign.es/wms-inspire/pnoa-ma"
+    },
+    {
+      "title": "Terrain: MDT05, © Instituto Geográfico Nacional de España, CC BY 4.0 (tools/terrain.py)",
+      "url": "https://centrodedescargas.cnig.es"
+    }
+  ],
+  "triangles": 21929,
+  "notes": "Built by code (model_sources/Q5803317_deposito_elevado_de_chamberi.py, tools/meshkit.py) with AI assistance. The twelve-sided battered brick shaft with a pier on every corner, the recessed window bays (pale panels, brick mullions, bowed transoms and hoods), the gallery of slit openings with brick crosses under a corbelled cornice, the zinc-clad tank (radius 9.25 m) with two round windows a side, its cornice, the ribbed dome with the ventilation ring and the finial; round the foot the plinth on a granite socle with slate lean-to roofs, twelve small pavilions with tiled gables and the arched door. Heights from the 1911 section scaled by the OSM outline (±5 %): the tank roof at about 35 m, the finial to 38 m. Uncertain: which side has the door (taken facing the square, 191°), the exact orientation of the twelve sides (±5°, from the orthophoto), the profile of the dome (photos), the depth of the bays. The garden round it is not part of the OSM element and is not modelled.",
+  "terrain_radius": 400
+}

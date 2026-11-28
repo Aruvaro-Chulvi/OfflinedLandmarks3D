@@ -1,0 +1,76 @@
+{
+  "id": "Q5678588",
+  "name": "Presa del Pontón de la Oliva",
+  "heading": 157.0,
+  "position": {
+    "lat": 40.88341,
+    "lon": -3.44195,
+    "source": "https://www.openstreetmap.org/way/312065377 (a point on the dam wall, 0.6 m from the centroid of the outline of the dam; its long sides run at 66.4°–68°)"
+  },
+  "authors": [
+    {
+      "name": "Álvaro C. Chulvi",
+      "url": "https://github.com/Aruvaro-Chulvi"
+    }
+  ],
+  "license": "CC-BY-4.0",
+  "rights": {
+    "status": "public_domain",
+    "architects": [
+      {
+        "name": "Juan Rafo",
+        "died": 1867,
+        "wikidata": "Q5952166"
+      },
+      {
+        "name": "Juan de Ribera Piferrer",
+        "died": 1880,
+        "wikidata": "Q5953417"
+      }
+    ],
+    "built": 1858,
+    "note": "First dam of the Canal de Isabel II, on the Lozoya, after the project of the engineers Juan Rafo and Juan de Ribera (1848); first stone 11 August 1851, works finished 1856, inaugurated 24 June 1858. Abandoned a few years later because of the leaks through the limestone of the gorge."
+  },
+  "sources": [
+    {
+      "title": "OpenStreetMap way 312065377 — outline of the dam (waterway=dam), its position and orientation (© OpenStreetMap contributors, ODbL)",
+      "url": "https://www.openstreetmap.org/way/312065377"
+    },
+    {
+      "title": "OpenStreetMap ways 1533207225 (the intake tower), 1533207190 (the gate house on the crest), 1533207209 (the Lozoya through the culvert of the west abutment) (© OpenStreetMap contributors, ODbL)",
+      "url": "https://www.openstreetmap.org/way/1533207225"
+    },
+    {
+      "title": "Pontón de la Oliva — Wikipedia (es): gravity dam of ashlar with lime mortar, 27 m high, 39 m wide at the base and 6.72 m at the crest, crest 72.44 m long, the upstream face stepped; history 1851–1858",
+      "url": "https://es.wikipedia.org/wiki/Pont%C3%B3n_de_la_Oliva"
+    },
+    {
+      "title": "Wikimedia Commons — «Pontón de la Oliva, Madrid, España, 2021 15.jpg» and «Pontón de la Oliva (4133880482).jpg»: the upstream face (upright upper wall, rubble slope, berm and steps), the octagonal tower and the tunnel mouth",
+      "url": "https://commons.wikimedia.org/wiki/File:Pont%C3%B3n_de_la_Oliva,_Madrid,_Espa%C3%B1a,_2021_15.jpg"
+    },
+    {
+      "title": "Wikimedia Commons — «Presa del Pontón de la Oliva - panoramio (1).jpg», «… (2).jpg», «… (3).jpg» and «El Pontón de la Oliva aliviando.jpg»: the downstream face, its bands, the round turret at the east end and the crest",
+      "url": "https://commons.wikimedia.org/wiki/Category:Pont%C3%B3n_de_la_Oliva"
+    },
+    {
+      "title": "PNOA orthophoto, © Instituto Geográfico Nacional de España, CC BY 4.0 — the crest, the upstream slope and steps, the tower",
+      "url": "https://www.ign.es/wms-inspire/pnoa-ma"
+    },
+    {
+      "title": "Terrain: MDT05, © Instituto Geográfico Nacional de España, CC BY 4.0 (tools/terrain.py) — the river bed below the dam at 702 m, the silted bed upstream at 705–706 m, the walls of the gorge",
+      "url": "https://centrodedescargas.cnig.es"
+    }
+  ],
+  "notes": "The model is the dam (Presa del Pontón de la Oliva), built by code (model_sources/Q5678588_presa_del_ponton_de_la_oliva.py, tools/meshkit.py) with AI assistance. A straight gravity dam of limestone ashlar across the gorge of the Lozoya, 104 m modelled between the rock walls (72.44 m of crest seen between them): the downstream face almost upright (1:20) with darker horizontal bands and string courses, a coping and parapet on the 6.72 m crest; the upstream face with an upright upper wall, a long slope of rubble masonry, a berm and three big steps at the foot (the steps are on the upstream side, as in the photos and Wikipedia); the octagonal tower of the old intake against the west cliff with its landing, the small gate house on the crest at the west end, the vaulted mouth of the culvert of the Lozoya at the upstream foot (a dark tunnel 6 m deep), the round turret at the east end. y = 0 is the river bed below the dam (702 m, ground_elev); the crest at 27 m (729 m) is taken from the 27 m height of Wikipedia above the bed, because the MDT05 has the dam cut out (±2 m). The rock of the gorge is drawn around the dam (a rock skirt following the MDT05 with the dam's own fill taken out; its rim dips 14 m into the ground), with a few trees in the gorge and the dry bed. ground: keep with ground_fit false (a dam across a gorge); the water is drawn by the game. Uncertain: the crest level (±2 m), the exact split between the upright wall and the slope upstream (±2 m), the size of the steps, the inside of the tower and the outlet works (simplified), the ends inside the rock.",
+  "triangles": 13634,
+  "ground": "keep",
+  "ground_fit": false,
+  "ground_at": [
+    0,
+    24
+  ],
+  "ground_low": 0,
+  "ground_elev": 702.0,
+  "terrain_radius": 700,
+  "footprint": [[-48.0, 18.1], [-48.0, -10.0], [-44.0, -17.0], [-30.0, -18.1], [30.0, -18.1], [42.0, -10.0], [48.0, 2.0], [50.0, 18.1]]
+}

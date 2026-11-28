@@ -1,0 +1,389 @@
+{
+  "id": "Q3373807",
+  "name": "Presa de Santillana",
+  "heading": 205.9,
+  "position": {
+    "lat": 40.70652,
+    "lon": -3.81806,
+    "source": "https://www.openstreetmap.org/way/48848775 (on the dam, waterway=dam, on the top of the downstream face of the west wing about 7 m from the axis of the crest road: the stop of the guided tour; the west wing's upstream edge runs at 115.9°, so its downstream face faces 205.9°)"
+  },
+  "authors": [
+    {
+      "name": "Álvaro C. Chulvi",
+      "url": "https://github.com/Aruvaro-Chulvi"
+    }
+  ],
+  "license": "CC-BY-4.0",
+  "rights": {
+    "status": "protected",
+    "architects": [],
+    "built": 1971,
+    "note": "The present dam, rockfill with an asphalt facing, was built by the Canal de Isabel II in front of the masonry dam of 1907–1908 and is in service since 1971 (Wikipedia). The engineers of either dam are not given in the sources consulted. A 20th-century engineering work: taken as protected."
+  },
+  "sources": [
+    {
+      "title": "OpenStreetMap way 48848775 — outline of the dam (waterway=dam): the two wings and the curve, the upstream edge, the dikes beyond both ends (© OpenStreetMap contributors, ODbL)",
+      "url": "https://www.openstreetmap.org/way/48848775"
+    },
+    {
+      "title": "OpenStreetMap ways 32261699 (the crest road, axis of the model), 599418082 and 1242506681 (the towers of the old dam), 599418083 and 1242506682 (their footbridges), 1242506692 (the spillway), 83397843 (the Manzanares through the bottom outlet) (© OpenStreetMap contributors, ODbL)",
+      "url": "https://www.openstreetmap.org/way/32261699"
+    },
+    {
+      "title": "Embalse de Santillana — Wikipedia (es): rockfill dam with an asphalt facing, 40 m over its foundation, 1355 m long, the old dam of 1907 and the new one of 1969–1971, five metres higher",
+      "url": "https://es.wikipedia.org/wiki/Embalse_de_Santillana"
+    },
+    {
+      "title": "Santillana reservoir — Wikipedia (en): foundation at 856.5 m, highest point of the dam at 896.5 m",
+      "url": "https://en.wikipedia.org/wiki/Santillana_reservoir"
+    },
+    {
+      "title": "Wikimedia Commons — «Embalse de Santillana (37461911980).jpg» (aerial view: the rockfill face with its berm, the crest road, both towers and footbridges, the old dam in the water), «Presa embalse santillana.JPG» (the old dam's crest with its posts, the main tower, the asphalt face), «Embalse santillana illescas.JPG» (the whole dam from the west)",
+      "url": "https://commons.wikimedia.org/wiki/Category:Santillana_Dam"
+    },
+    {
+      "title": "PNOA orthophoto, © Instituto Geográfico Nacional de España, CC BY 4.0 — the old dam in the water, the towers, the spillway with its gates and chute, the berm and the crest road",
+      "url": "https://www.ign.es/wms-inspire/pnoa-ma"
+    },
+    {
+      "title": "Terrain: MDT05, © Instituto Geográfico Nacional de España, CC BY 4.0 (tools/terrain.py) — the river below the dam at 863.4 m, the crest at 894.5–895 m, the reservoir at 892 m, the downstream slope",
+      "url": "https://centrodedescargas.cnig.es"
+    }
+  ],
+  "triangles": 25003,
+  "notes": "Built by code (model_sources/Q3373807_presa_de_santillana.py, tools/meshkit.py) with AI assistance. This model is the dam (Presa de Santillana); the id is the reservoir's (Embalse de Santillana), which the guided tour uses. The reservoir water is drawn by the game. The embankment of 1971 swept along the crest road (OSM): the west wing, the curve and the east wing, 750 m, crest road at 895.5 m between a 1 m concrete parapet on the upstream edge (896.5 m, the highest point) and a kerb, 10 m of crest, the upstream face in dark asphalt at 1.7 : 1, the downstream face in light grey rockfill at 1.8 : 1 with a 4 m berm track 12 m below the crest, each section going 3 m into the MDT05 ground at its toe; the low dikes that close the reservoir beyond both ends (233 m west, 198 m north-east, 6 m crest); the gated spillway at the west end (two bays with their steel gates, piers and hoist houses, the road bridge, a 62 m chute with a middle wall and a stilling basin sill); the masonry dam of 1908 standing in the reservoir upstream (curved west of the main tower, nearly straight east of it, crest at 892.5 m with its row of posts), its two castle-like towers (the main one, 11 m square with corner turrets, machicolations and merlons, top at 917 m; the lower east one with two turrets) and their footbridges from the crest road; the bottom-outlet house at the foot. y = 0 is the river below the dam (863.4 m, ground_elev). Uncertain: the slopes of both faces (taken from the MDT05 and the orthophoto, about 2 : 1 downstream overall), the crest level (896.5 m is the highest point in Wikipedia; the MDT05 gives 894.5–895 m on the 8 m grid), the heights of the old dam's crest (±1.5 m) and of the towers (±3 m, from photos), the size of the spillway gates and the chute floor (±1.5 m, orthophoto and MDT05); the parts of the old dam under the water are cut short at 881 m; the water treatment plant below the dam and the other small buildings at the foot are not modelled. Note: the MDT05 contains the dam itself (its crest about 1 m lower than the model, at the same place as OSM within 1–2 m) and has the reservoir flat at 892 m, so the old dam's crest is only 0.5 m above that surface and the lower parts of the towers and of the upstream face are under it; with ground_fit false the game does not cut it.",
+  "ground": "keep",
+  "ground_fit": false,
+  "ground_at": [
+    -78.4,
+    67.9
+  ],
+  "ground_low": -1,
+  "ground_elev": 863.4,
+  "footprint": [
+    [
+      -335.0,
+      -25.6
+    ],
+    [
+      -315.3,
+      -22.7
+    ],
+    [
+      -295.5,
+      -22.4
+    ],
+    [
+      -275.8,
+      -22.9
+    ],
+    [
+      -256.0,
+      -22.5
+    ],
+    [
+      -236.3,
+      -22.2
+    ],
+    [
+      -216.6,
+      -22.7
+    ],
+    [
+      -196.8,
+      -22.4
+    ],
+    [
+      -177.1,
+      -22.0
+    ],
+    [
+      -157.3,
+      -22.5
+    ],
+    [
+      -137.6,
+      -21.3
+    ],
+    [
+      -117.9,
+      -21.0
+    ],
+    [
+      -98.1,
+      -20.7
+    ],
+    [
+      -78.4,
+      -19.5
+    ],
+    [
+      -58.7,
+      -20.0
+    ],
+    [
+      -38.9,
+      -20.5
+    ],
+    [
+      -19.2,
+      -20.1
+    ],
+    [
+      0.6,
+      -19.8
+    ],
+    [
+      20.3,
+      -18.6
+    ],
+    [
+      39.9,
+      -18.3
+    ],
+    [
+      57.7,
+      -19.2
+    ],
+    [
+      75.6,
+      -23.0
+    ],
+    [
+      92.8,
+      -28.9
+    ],
+    [
+      108.2,
+      -37.1
+    ],
+    [
+      123.6,
+      -47.6
+    ],
+    [
+      138.7,
+      -60.1
+    ],
+    [
+      153.9,
+      -72.7
+    ],
+    [
+      169.1,
+      -85.3
+    ],
+    [
+      183.8,
+      -98.5
+    ],
+    [
+      199.5,
+      -110.4
+    ],
+    [
+      214.2,
+      -123.7
+    ],
+    [
+      230.5,
+      -134.9
+    ],
+    [
+      245.2,
+      -148.2
+    ],
+    [
+      260.4,
+      -160.8
+    ],
+    [
+      276.1,
+      -172.7
+    ],
+    [
+      290.3,
+      -186.6
+    ],
+    [
+      305.9,
+      -199.0
+    ],
+    [
+      321.5,
+      -212.9
+    ],
+    [
+      337.0,
+      -225.9
+    ],
+    [
+      357.8,
+      -193.2
+    ],
+    [
+      339.1,
+      -186.7
+    ],
+    [
+      326.7,
+      -172.8
+    ],
+    [
+      312.7,
+      -159.3
+    ],
+    [
+      299.3,
+      -144.7
+    ],
+    [
+      289.5,
+      -125.6
+    ],
+    [
+      276.0,
+      -110.9
+    ],
+    [
+      261.9,
+      -96.9
+    ],
+    [
+      248.4,
+      -82.3
+    ],
+    [
+      233.8,
+      -69.0
+    ],
+    [
+      220.3,
+      -54.3
+    ],
+    [
+      205.1,
+      -41.8
+    ],
+    [
+      189.3,
+      -29.9
+    ],
+    [
+      174.1,
+      -17.3
+    ],
+    [
+      157.9,
+      -5.1
+    ],
+    [
+      138.2,
+      8.6
+    ],
+    [
+      114.0,
+      21.4
+    ],
+    [
+      89.7,
+      27.9
+    ],
+    [
+      65.7,
+      33.9
+    ],
+    [
+      39.6,
+      33.6
+    ],
+    [
+      19.3,
+      36.9
+    ],
+    [
+      -0.5,
+      41.1
+    ],
+    [
+      -20.3,
+      47.0
+    ],
+    [
+      -40.0,
+      43.1
+    ],
+    [
+      -60.1,
+      61.6
+    ],
+    [
+      -79.8,
+      59.5
+    ],
+    [
+      -99.4,
+      54.6
+    ],
+    [
+      -119.0,
+      46.2
+    ],
+    [
+      -138.7,
+      40.5
+    ],
+    [
+      -158.4,
+      38.3
+    ],
+    [
+      -178.1,
+      38.0
+    ],
+    [
+      -197.8,
+      36.7
+    ],
+    [
+      -217.5,
+      33.7
+    ],
+    [
+      -237.2,
+      31.5
+    ],
+    [
+      -256.9,
+      28.5
+    ],
+    [
+      -276.6,
+      26.4
+    ],
+    [
+      -296.4,
+      24.2
+    ],
+    [
+      -316.1,
+      23.0
+    ],
+    [
+      -335.8,
+      24.4
+    ],
+    [
+      -312.5,
+      48.5
+    ],
+    [
+      -330.5,
+      54.7
+    ],
+    [
+      -354.2,
+      -14.3
+    ]
+  ]
+}
