@@ -22,10 +22,12 @@ Best fit: the height of y = 0 (as "keep") that leaves the least edge floating an
 | ✓ | Q1013093 Castillo nuevo de Manzanares el Real | keep | 922.3 | terrain at ground_at | ign | 9.4 | 0.4 | 0% | 4.0 | 4% | 923.8 m: 0% / 0% ✓ |
 | ✓ | Q849711 Catedral de Santa María la Real de la Almudena | keep | 633.0 | terrain at ground_at | ign | 11.8 | -5.4 | 0% | 7.7 | 4% | 638.0 m: 0% / 0% ✓ |
 | ✓ | Q37200 Great Pyramid of Giza | keep | 58.3 | terrain at ground_at | tiles | 53.8 | 5.1 | 0% | 10.8 | 3% | 59.3 m: 0% / 2% ✓ |
+| ✓ | Q2700544 Teatro romano de Mérida | keep | 223.1 | terrain at ground_at | ign | 9.5 | -2.9 | 0% | 4.9 | 2% | 225.1 m: 0% / 0% ✓ |
 | ✓ | Q4152 Schloss Neuschwanstein | keep | 960.0 | ground_elev | tiles | 29.4 | -4.8 | 0% | 6.5 | 1% | 960.5 m: 0% / 0% ✓ |
 | ✓ | Q3050235 Murallas de Ávila | keep | 1118.9 | terrain at ground_at | ign | 62.7 | -3.4 | 0% | 5.9 | 0% | 1118.9 m: 0% / 0% ✓ |
 | ✓ | Q47476 Alhambra | keep | 773.7 | terrain at ground_at | ign | 63.6 | 1.4 | 0% | 8.8 | 0% | 774.2 m: 0% / 0% ✓ |
 | ✓ | Q1326589 Alcázar de Toledo | keep | 546.5 | terrain at ground_at | ign | 15.0 | 2.0 | 0% | 3.1 | 0% | 546.5 m: 0% / 0% ✓ |
+| ✓ | Q1984155 Circo romano de Mérida | keep | 214.9 | ground_elev | ign | 4.9 | -2.3 | 0% | 3.3 | 0% | 214.9 m: 0% / 0% ✓ |
 | ✓ | Q12506 Hagia Sophia (Ayasofya) | keep | 39.3 | terrain at ground_at | tiles | 12.9 | -0.0 | 0% | 4.3 | 0% | 39.3 m: 0% / 0% ✓ |
 | ✓ | Q676203 Machu Picchu | keep | 2441.0 | terrain at ground_at | tiles | 87.2 | 0.6 | 0% | 3.0 | 0% | 2441.0 m: 0% / 0% ✓ |
 | ✓ | Q1063195 Torre de Madrid | flatten | 638.1 | median terrain of the footprint | ign | 4.6 | – | – | – | – | 638.1 m: 0% / 0% ✓ |
@@ -50,9 +52,11 @@ Best fit: the height of y = 0 (as "keep") that leaves the least edge floating an
 | ✓ | Q1752772 Monasterio de Santa María de El Paular | keep | 1154.2 | terrain at ground_at | ign | 7.4 | -1.9 | 0% | 0.8 | 0% | 1154.2 m: 0% / 0% ✓ |
 | ✓ | Q1811506 Sinagoga del Tránsito | keep | 507.2 | terrain at ground_at | ign | 3.4 | -3.7 | 0% | 0.3 | 0% | 507.2 m: 0% / 0% ✓ |
 | ✓ | Q1849031 Palacio de Cibeles | flatten | 645.0 | median terrain of the footprint | ign | 5.6 | – | – | – | – | 645.0 m: 0% / 0% ✓ |
+| ✓ | Q18808444 Templo de Diana (Mérida) | flatten | 225.0 | median terrain of the footprint | ign | 1.9 | – | – | – | – | 225.0 m: 0% / 0% ✓ |
 | ✓ | Q2092717 Edificio Telefónica | flatten | 661.6 | median terrain of the footprint | ign | 4.0 | – | – | – | – | 661.6 m: 0% / 0% ✓ |
 | ✓ | Q211250 Teatro Real | flatten | 638.9 | median terrain of the footprint | ign | 1.5 | – | – | – | – | 621.4 m: 0% / 4% ✓ |
 | ✓ | Q23093 Estación de Atocha | flatten | 619.2 | median terrain of the footprint | ign | 2.0 | – | – | – | – | 619.2 m: 0% / 0% ✓ |
+| ✓ | Q2360379 Anfiteatro de Mérida | keep | 227.0 | ground_elev | ign | 9.5 | -3.5 | 0% | 2.6 | 0% | 227.0 m: 0% / 0% ✓ |
 | ✓ | Q243 Torre Eiffel / Tour Eiffel | flatten | 40.0 | median terrain of the footprint | tiles | 4.3 | – | – | – | – | 40.0 m: 0% / 0% ✓ |
 | ✓ | Q2736564 Fuente de Cibeles | flatten | 644.5 | median terrain of the footprint | ign | 1.1 | – | – | – | – | 644.5 m: 0% / 0% ✓ |
 | ✓ | Q28471 Real Monasterio de San Lorenzo de El Escorial | keep | 1026.0 | terrain at ground_at | ign | 12.9 | -1.0 | 0% | 2.8 | 0% | 1026.0 m: 0% / 0% ✓ |
