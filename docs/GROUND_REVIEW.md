@@ -71,6 +71,8 @@ Best fit: the height of y = 0 (as "keep") that leaves the least edge floating an
 | ✓ | Q9188 Empire State Building | flatten | 15.0 | median terrain of the footprint | usgs | 3.2 | – | – | – | – | 15.0 m: 0% / 0% ✓ |
 | ✓ | Q9202 Statue of Liberty | flatten | 4.9 | median terrain of the footprint | usgs | 2.7 | – | – | – | – | 4.9 m: 0% / 0% ✓ |
 | ✓ | Q953610 Torre de Cristal | flatten | 731.3 | median terrain of the footprint | ign | 2.9 | – | – | – | – | 731.3 m: 0% / 0% ✓ |
+| ✓ | Q953919 Casita del Infante | keep | 1024.7 | terrain at ground_at | ign | 6.2 | -0.1 | 0% | 0.9 | 0% | 1024.7 m: 0% / 0% ✓ |
+| ✓ | Q962107 Puerta de Hierro | flatten | 594.9 | median terrain of the footprint | ign | 0.5 | – | – | – | – | 594.9 m: 0% / 0% ✓ |
 | ✓ | Q989733 Torrespaña (El Pirulí) | flatten | 658.0 | median terrain of the footprint | ign | 0.6 | – | – | – | – | 658.0 m: 0% / 0% ✓ |
 
 ## Accepted after review (≈)

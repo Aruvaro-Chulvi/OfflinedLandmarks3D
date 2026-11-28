@@ -1,0 +1,97 @@
+{
+  "id": "Q953919",
+  "name": "Casita del Infante",
+  "heading": 328.3,
+  "position": {
+    "lat": 40.5852894,
+    "lon": -4.1580409,
+    "source": "https://www.openstreetmap.org/way/315210758 (centroid of the outline; long sides at 58.3°)"
+  },
+  "authors": [
+    {
+      "name": "Álvaro C. Chulvi",
+      "url": "https://github.com/Aruvaro-Chulvi"
+    }
+  ],
+  "license": "CC-BY-4.0",
+  "rights": {
+    "status": "public_domain",
+    "architects": [
+      {
+        "name": "Juan de Villanueva",
+        "died": 1811,
+        "wikidata": "Q2429525"
+      }
+    ],
+    "built": 1773,
+    "note": "Built 1771–1773 for the Infante Gabriel de Borbón; a residence of the Spanish royal family managed by Patrimonio Nacional."
+  },
+  "sources": [
+    {
+      "title": "OpenStreetMap way 315210758 — outline 16.98 × 16.61 m with the two central bodies, orientation (© OpenStreetMap contributors, ODbL)",
+      "url": "https://www.openstreetmap.org/way/315210758"
+    },
+    {
+      "title": "OpenStreetMap — the garden (way 315210748), its fence, the walls and steps of the terraces, the paths, the round fountains and the mapped trees with their species, heights and crowns (© OpenStreetMap contributors, ODbL)",
+      "url": "https://www.openstreetmap.org/way/315210748"
+    },
+    {
+      "title": "PNOA orthophoto, © Instituto Geográfico Nacional de España, CC BY 4.0 — the entrance from the road on the north-west, the parterre and fountain on the south-east",
+      "url": "https://www.ign.es/wms-inspire/pnoa-ma"
+    },
+    {
+      "title": "Casita del Infante (San Lorenzo de El Escorial) — Wikipedia (es): square plan, granite, two floors, porch with columns, central hall",
+      "url": "https://es.wikipedia.org/wiki/Casita_del_Infante_(San_Lorenzo_de_El_Escorial)"
+    },
+    {
+      "title": "Wikimedia Commons — «Casita de Arriba.jpg» (entrance façade) and «Casa del Infante Don Gabriel-Escorial-II.JPG» (garden façade), heights measured on them (±5 %)",
+      "url": "https://commons.wikimedia.org/wiki/Category:Casita_del_Infante"
+    },
+    {
+      "title": "Terrain: MDT05, © Instituto Geográfico Nacional de España, CC BY 4.0 (tools/terrain.py)",
+      "url": "https://centrodedescargas.cnig.es"
+    }
+  ],
+  "triangles": 80301,
+  "notes": "Built by code (model_sources/Q953919_casita_del_infante.py, tools/meshkit.py) with AI assistance. Entrance (north-west): recessed porch with two columns and an iron grille, arched doors, round plaque on the attic, steps between two Egyptian-style sphinxes. Garden (south-east): arched door under a small pediment. Granite central bodies, corners, plinth, frieze and cornice; pale pink render on the side bodies; slate mansards with dormers, lead hipped roof and lantern with its oculus. The Italian terraced gardens are included: the central terrace with the house (0 m), the side terraces (−1 m) and the upper ones (−2 m) with their retaining walls and steps (levels from the IGN MDT05), boxwood parterres (shapes from the PNOA orthophoto, grid of paths from OSM), the round fountains and the garden fence. The trees are the ones mapped in OSM (Lebanon cedar 27 m, Sabine pine 25 m, two Jeffrey pines, four coast redwoods and three more conifers), each built from boughs and irregular clumps of foliage with the habit of its species; unmapped trees are left out. The porters' lodges by the gate are separate buildings.",
+  "ground": "keep",
+  "ground_at": [
+    0,
+    11
+  ],
+  "ground_low": -4,
+  "footprint": [
+    [
+      -46.0,
+      22.5
+    ],
+    [
+      -46.0,
+      -71.0
+    ],
+    [
+      46.1,
+      -71.0
+    ],
+    [
+      46.1,
+      22.5
+    ],
+    [
+      17.2,
+      22.5
+    ],
+    [
+      17.2,
+      37.5
+    ],
+    [
+      -18.0,
+      37.5
+    ],
+    [
+      -18.0,
+      22.5
+    ]
+  ]
+}

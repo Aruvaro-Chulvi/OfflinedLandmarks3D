@@ -1,0 +1,45 @@
+{
+  "id": "Q962107",
+  "name": "Puerta de Hierro",
+  "heading": 157.7,
+  "position": {
+    "lat": 40.4556121,
+    "lon": -3.7443376,
+    "source": "https://www.openstreetmap.org/way/568626354 (centroid of the outline; long axis at 67.7°)"
+  },
+  "authors": [
+    {
+      "name": "Álvaro C. Chulvi",
+      "url": "https://github.com/Aruvaro-Chulvi"
+    }
+  ],
+  "license": "CC-BY-4.0",
+  "rights": {
+    "status": "public_domain",
+    "architects": [
+      {
+        "name": "Francisco Moradillo",
+        "died": 1776,
+        "wikidata": "Q5866830"
+      }
+    ],
+    "built": 1753,
+    "note": "Sculpture by Juan Domingo Olivieri (died 1762), ironwork by Francisco Barranco. Moved stone by stone in 1991 to a traffic island near its first place."
+  },
+  "sources": [
+    {
+      "title": "OpenStreetMap way 568626354 — outline 22.18 × 3.78 m and orientation (© OpenStreetMap contributors, ODbL)",
+      "url": "https://www.openstreetmap.org/way/568626354"
+    },
+    {
+      "title": "Puerta de Hierro (Madrid) — Wikipedia (es): materials, arch, buttresses, pilasters, reliefs, sphinxes, royal arms, vases, the 1991 move",
+      "url": "https://es.wikipedia.org/wiki/Puerta_de_Hierro_(Madrid)"
+    },
+    {
+      "title": "Wikimedia Commons — «Puerta de Hierro (Madrid) 03.jpg», near-orthographic south façade (widths and heights measured on it, ±3–5 %), and the north façade photos 02 and 04",
+      "url": "https://commons.wikimedia.org/wiki/File:Puerta_de_Hierro_(Madrid)_03.jpg"
+    }
+  ],
+  "triangles": 12202,
+  "notes": "Built by code (model_sources/Q962107_puerta_de_hierro.py, tools/meshkit.py) with AI assistance. Both façades alike: arch with fluted Tuscan pilasters, trophy reliefs, scroll buttresses, triangular pediment, two reclining sphinxes and the royal arms of Fernando VI between flags (top 14.7 m); two loose end piers with flaming vases and wrought-iron railings and gate. Sculpture is stylised."
+}
