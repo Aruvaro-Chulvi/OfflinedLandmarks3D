@@ -1,0 +1,57 @@
+{
+  "id": "Q1568115",
+  "name": "Santa María la Blanca",
+  "heading": 253.8,
+  "position": {
+    "lat": 39.8569381,
+    "lon": -4.0302765,
+    "source": "https://www.openstreetmap.org/way/150415814 (centroid of the outline; long axis at 73.8°, the foot of the naves faces west-south-west)"
+  },
+  "authors": [
+    {
+      "name": "Álvaro C. Chulvi",
+      "url": "https://github.com/Aruvaro-Chulvi"
+    }
+  ],
+  "license": "CC-BY-4.0",
+  "rights": {
+    "status": "public_domain",
+    "architects": [],
+    "built": 1180,
+    "note": "Main synagogue of Toledo, about 1180 (date on a beam; rebuilt in the 13th century), Mudéjar work of anonymous Muslim builders for the Jewish community led by Yosef ben Shoshan; church from 1411; chapels at the head by Alonso de Covarrubias (16th century). Owned by the Archdiocese of Toledo, open as a monument."
+  },
+  "sources": [
+    {
+      "title": "OpenStreetMap way 150415814 — outline of the building (© OpenStreetMap contributors, ODbL)",
+      "url": "https://www.openstreetmap.org/way/150415814"
+    },
+    {
+      "title": "OpenStreetMap way 150415800 — the area of the monument with its garden courtyard (© OpenStreetMap contributors, ODbL)",
+      "url": "https://www.openstreetmap.org/way/150415800"
+    },
+    {
+      "title": "Santa María la Blanca (Toledo) — Wikipedia (es): five naves, 32 octagonal pillars, horseshoe arches, plain white walls of brick",
+      "url": "https://es.wikipedia.org/wiki/Santa_Mar%C3%ADa_la_Blanca_(Toledo)"
+    },
+    {
+      "title": "Wikimedia Commons — «Exterior of Synagogue of Santa María la Blanca.jpg» (the foot on the garden, heights estimated on it, ±10 %), «Santa Maria la Blanca.jpg», «Puerta de Santa María la Blanca (Toledo).jpg» (the street gate and its steps), «Ingresso a S.Maria de la Blanca - panoramio.jpg»",
+      "url": "https://commons.wikimedia.org/wiki/File:Exterior_of_Synagogue_of_Santa_Mar%C3%ADa_la_Blanca.jpg"
+    },
+    {
+      "title": "PNOA orthophoto, © Instituto Geográfico Nacional de España, CC BY 4.0 — the parallel roofs of the naves and the trees of the garden",
+      "url": "https://www.ign.es/wms-inspire/pnoa-ma"
+    },
+    {
+      "title": "Terrain: MDT05, © Instituto Geográfico Nacional de España, CC BY 4.0 (tools/terrain.py)",
+      "url": "https://centrodedescargas.cnig.es"
+    }
+  ],
+  "triangles": 5068,
+  "notes": "Built by code (model_sources/Q1568115_santa_maria_la_blanca.py, tools/meshkit.py) with AI assistance. The five naves step up to the central one: lean-to tiled roofs over the outer and inner naves and a gable roof over the central nave, small clerestory windows where the raised naves stand above the lower roofs; whitewashed walls on a brick plinth, the door with its glazed transom and the big modern grid windows in the foot. The heights are estimated on oblique photos (±10 %); the chapels of Covarrubias at the head are kept inside the volumes of the naves. The garden courtyard in front of the foot and along the north side is included: sand floor a step below the door, paved path, low brick beds, the cypresses and two broadleaf trees (positions from the orthophoto, ±2 m), the wall round it and the gate with its steps down to the street. The interior (pillars and arches) is not modelled.",
+  "ground": "keep",
+  "ground_at": [
+    0.1,
+    14.8
+  ],
+  "ground_low": -2.0
+}

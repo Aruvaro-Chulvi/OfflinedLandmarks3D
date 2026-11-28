@@ -1,0 +1,112 @@
+{
+  "id": "Q1123180",
+  "name": "Catedral Primada de Toledo",
+  "heading": 268.5,
+  "position": {
+    "lat": 39.8570768,
+    "lon": -4.0235672,
+    "source": "https://www.openstreetmap.org/relation/1605452 (the crossing of nave and transept, from the outline and its building:parts; axis from the outer walls of the aisles and the west front)"
+  },
+  "authors": [
+    {
+      "name": "Álvaro C. Chulvi",
+      "url": "https://github.com/Aruvaro-Chulvi"
+    }
+  ],
+  "license": "CC-BY-4.0",
+  "rights": {
+    "status": "public_domain",
+    "architects": [
+      {
+        "name": "Petrus Petri",
+        "died": 1291,
+        "wikidata": "Q3819663"
+      },
+      {
+        "name": "Alvar Martínez",
+        "wikidata": "Q100383418"
+      },
+      {
+        "name": "Hanequin de Bruselas",
+        "died": 1494,
+        "wikidata": "Q3820717"
+      },
+      {
+        "name": "Enrique Egas",
+        "died": 1534,
+        "wikidata": "Q3327101"
+      },
+      {
+        "name": "Nicolás de Vergara el Mozo",
+        "died": 1606,
+        "wikidata": "Q3819823"
+      },
+      {
+        "name": "Jorge Manuel Theotocópuli",
+        "died": 1631,
+        "wikidata": "Q3109427"
+      },
+      {
+        "name": "Narciso Tomé",
+        "died": 1742,
+        "wikidata": "Q2739760"
+      }
+    ],
+    "built": 1493,
+    "note": "Begun 1226, consecrated/closed 1493; cloister 1389–1425; tower 1425–c. 1440 (octagon and spire by Hanequin of Brussels); Mozarabic Chapel c. 1500 with the dome of Jorge Manuel Theotocópuli (1626–1631); sacristy, Sagrario and Ochavo late 16th–17th c.; the Transparente 1729–1732; west front restored by Eugenio Durango 1775–1780."
+  },
+  "sources": [
+    {
+      "title": "OpenStreetMap relation 1605452 «Catedral de Santa María» — outline, cloister courtyard and 27 building:parts with heights and levels: high body way 1552164151 (37 m), ambulatory way 1552164148 (18 m), low body relation 21278404, cloister relation 21278403, tower way 660075807 (90 m), Mozarabic dome way 1552164154 (39 m), San Ildefonso way 1552164146 and Santiago way 1552164147 (23 m), Ochavo way 1552164144 (42 m), Sagrario way 1552164142 (37 m), sacristy way 1552164138 and the dependencies (© OpenStreetMap contributors, ODbL)",
+      "url": "https://www.openstreetmap.org/relation/1605452"
+    },
+    {
+      "title": "PNOA orthophoto, © Instituto Geográfico Nacional de España, CC BY 4.0 — bays and flying buttresses of the nave, radial flyers of the ambulatory, the Transparente's slate skylight, the cloister garden",
+      "url": "https://www.ign.es/wms-inspire/pnoa-ma"
+    },
+    {
+      "title": "Terrain: MDT05, © Instituto Geográfico Nacional de España, CC BY 4.0 (tools/terrain.py) — the ground falls ~12 m from the north-west of the cloister to the south-east of the chevet",
+      "url": "https://centrodedescargas.cnig.es"
+    },
+    {
+      "title": "Catedral de Toledo — Wikipedia (es): 120 × 59 m, five naves, transept and double ambulatory, tower 92 m, portals, chapels, cloister, sacristy, Sagrario, Ochavo, Transparente",
+      "url": "https://es.wikipedia.org/wiki/Catedral_de_Toledo"
+    },
+    {
+      "title": "Toledo Cathedral — Wikipedia (en)",
+      "url": "https://en.wikipedia.org/wiki/Toledo_Cathedral"
+    },
+    {
+      "title": "Wikimedia Commons — «FP Toledo Cathedral 2025 - View from Alcazar.jpg» (chevet, chapels, Sagrario, Ochavo, tower)",
+      "url": "https://commons.wikimedia.org/wiki/File:FP_Toledo_Cathedral_2025_-_View_from_Alcazar.jpg"
+    },
+    {
+      "title": "Wikimedia Commons — «FP Toledo Cathedral 2025 - Tower from Alcazar.jpg» and «Tower of the Cathedral of Toledo.jpg» (octagon, spire and its three crowns)",
+      "url": "https://commons.wikimedia.org/wiki/File:FP_Toledo_Cathedral_2025_-_Tower_from_Alcazar.jpg"
+    },
+    {
+      "title": "Wikimedia Commons — «FP Toledo Cathedral 2025 - Views from Jesuit Church.jpg» and «Tejados de toledo desde la iglesia de los jesuitas.jpg» (tower proportions, roofs, Mozarabic dome)",
+      "url": "https://commons.wikimedia.org/wiki/File:FP_Toledo_Cathedral_2025_-_Views_from_Jesuit_Church.jpg"
+    },
+    {
+      "title": "Wikimedia Commons — «Catedral Toledo Fachada Principal.jpg» and «Catedral de Toledo. Fachada principal.jpg» (west front levels, measured on them ±10 %)",
+      "url": "https://commons.wikimedia.org/wiki/File:Catedral_Toledo_Fachada_Principal.jpg"
+    },
+    {
+      "title": "Wikimedia Commons — «Toledo cupula capilla mozarabe.jpg» and «Toledo Cathedral - Puerta de los Leones exterior view.jpg» (Mozarabic dome, south transept front and its forecourt)",
+      "url": "https://commons.wikimedia.org/wiki/File:Toledo_Cathedral_-_Puerta_de_los_Leones_exterior_view.jpg"
+    },
+    {
+      "title": "Wikimedia Commons — «FP Toledo Cathedral 2025 - Cloister and tower.jpg» (cloister galleries)",
+      "url": "https://commons.wikimedia.org/wiki/File:FP_Toledo_Cathedral_2025_-_Cloister_and_tower.jpg"
+    }
+  ],
+  "ground": "keep",
+  "ground_at": [
+    0,
+    82
+  ],
+  "ground_low": -9,
+  "notes": "Built by code (model_sources/Q1123180_catedral_de_toledo.py, tools/meshkit.py) with AI assistance. Five naves with a stepped section (outer aisles and chapels 15.5 m, inner aisles 22.5 m, clerestory 32.5 m, ridge 37 m from OSM), seven bays with double flying buttresses, transept with the Puerta de los Leones (south, with its forecourt, lions and railing) and the Puerta del Reloj (north), choir with a seven-sided apse, double ambulatory with radial double flyers and the slate skylight of the Transparente, the octagonal chapels of San Ildefonso and Santiago (battlements), the west front with the Puerta del Infierno, del Perdón and del Juicio Final, the Last Supper relief, the twin arches and pediment, and the compás with its railing; the tower (square shaft with the band of coats of arms and the belfry, octagon with pinnacles and flyers, slate spire with three crowns of spikes, cross and vane to 92 m); the Mozarabic Chapel in the base of the unfinished south tower with Theotocópuli's dome; the Sagrario (slate pyramid and lantern), the Ochavo (octagon, slate dome, lantern), the sacristy, the treasurer's patio and the dependencies; the cloister with its stone arcades, the wooden upper gallery, the rendered top floor and the garden. Uncertain: the heights of the tower's stages (square shaft to 55 m, octagon to 72 m, ±10 %, from photographs), the exact width of the tower's shaft (14 m; OSM draws 18 × 12.6 m with its buttresses), the inner/outer aisle division (±1.5 m), the heights of the dependencies (from their levels in OSM) and the steps between the floor and the streets (the town is ~5 m higher to the north and ~9 m lower to the south-east; the walls go down to 1.5 m below the real ground). Simplified: the tracery, the sculpture of the portals, the interior.",
+  "triangles": 47503
+}

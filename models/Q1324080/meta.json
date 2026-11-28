@@ -1,0 +1,57 @@
+{
+  "id": "Q1324080",
+  "name": "Mezquita del Cristo de la Luz",
+  "heading": 237.4,
+  "position": {
+    "lat": 39.8606036,
+    "lon": -4.0241699,
+    "source": "https://www.openstreetmap.org/way/114522030 (centroid of the outline; long axis at 57.4°, the south-west façade on Calle Cristo de la Luz is the main one)"
+  },
+  "authors": [
+    {
+      "name": "Álvaro C. Chulvi",
+      "url": "https://github.com/Aruvaro-Chulvi"
+    }
+  ],
+  "license": "CC-BY-4.0",
+  "rights": {
+    "status": "public_domain",
+    "architects": [],
+    "built": 999,
+    "note": "Mosque of Bab al-Mardum, finished in December 999 (foundation inscription: built for Ahmad ibn Hadidi under the direction of Musa ibn Ali and Sa'ada); Mudéjar apse added about 1187. Owned by the Archdiocese of Toledo, open as a monument."
+  },
+  "sources": [
+    {
+      "title": "OpenStreetMap way 114522030 — outline of the mosque and its apse (© OpenStreetMap contributors, ODbL)",
+      "url": "https://www.openstreetmap.org/way/114522030"
+    },
+    {
+      "title": "OpenStreetMap way 257671838 — Jardín de Cristo de la Luz (© OpenStreetMap contributors, ODbL)",
+      "url": "https://www.openstreetmap.org/way/257671838"
+    },
+    {
+      "title": "Cristo de la Luz — Wikipedia (es): square plan of about 9 m with nine vaulted bays, the south-west façade with three doorways, interlaced arches, sebka and the brick inscription, the north-west façade on the patio, the apse of 1187, the patio with the well and the chahar bagh",
+      "url": "https://es.wikipedia.org/wiki/Cristo_de_la_Luz"
+    },
+    {
+      "title": "Wikimedia Commons — «Fachada sudoeste de la Mezquita del Cristo de la Luz (Toledo).jpg» (frontal photo, heights measured on it, ±5 %), «Exterior de la Mezquita Cristo de la Luz (Toledo).jpg», «Mezquita de Bab al-Mardum (Toledo).jpg», «Apse of Cristo de la Luz, Toledo, Spain.jpg», «Mosque of Bab Mardum, Toledo, showing later Mudejar apse of Church of Cristo de la Luz (29206808740).jpg»",
+      "url": "https://commons.wikimedia.org/wiki/File:Fachada_sudoeste_de_la_Mezquita_del_Cristo_de_la_Luz_(Toledo).jpg"
+    },
+    {
+      "title": "PNOA orthophoto, © Instituto Geográfico Nacional de España, CC BY 4.0 — the patio, the garden and its trees",
+      "url": "https://www.ign.es/wms-inspire/pnoa-ma"
+    },
+    {
+      "title": "Terrain: MDT05, © Instituto Geográfico Nacional de España, CC BY 4.0 (tools/terrain.py) — also the levels of the patio and of the garden terraces",
+      "url": "https://centrodedescargas.cnig.es"
+    }
+  ],
+  "triangles": 17072,
+  "notes": "Built by code (model_sources/Q1324080_mezquita_del_cristo_de_la_luz.py, tools/meshkit.py) with AI assistance. The mosque of 999 in brick and masonry: on the south-west façade the three doorways (horseshoe and lobed arches with their alfiz), the band of interlaced blind arches, the sebka lattice, the brick inscription and the corbelled cornice, with the iron railing in front; on the north-west façade the three horseshoe arches inside round ones and the polylobed arches with two-colour voussoirs; blind arches on the south-east side. The Mudéjar apse of about 1187 with its straight bay and two tiers of blind arcades on a masonry plinth. The roofs are rarely seen and are estimated: a low tiled hip with the central bay raised a little, a half cone over the apse. The patio along the north-west façade (with the well and a palm) and the garden of Cristo de la Luz going down the slope in three terraces (levels from the IGN MDT05, ±1 m), with steps, a railing, the crossing paths and small pool of the chahar bagh and the trees from the orthophoto (positions ±2 m). The mirador over the Puerta del Sol and the inside (the nine vaults) are not modelled.",
+  "ground": "keep",
+  "ground_at": [
+    0.0,
+    8.9
+  ],
+  "ground_low": -8.0
+}

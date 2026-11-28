@@ -1,0 +1,73 @@
+{
+  "id": "Q1326589",
+  "name": "Alcázar de Toledo",
+  "heading": 1.6,
+  "position": {
+    "lat": 39.857982,
+    "lon": -4.0205127,
+    "source": "https://www.openstreetmap.org/way/83998985 (centroid of the outline, in the courtyard; the long sides run at 1.6°)"
+  },
+  "authors": [
+    {
+      "name": "Álvaro C. Chulvi",
+      "url": "https://github.com/Aruvaro-Chulvi"
+    }
+  ],
+  "license": "CC-BY-4.0",
+  "rights": {
+    "status": "public_domain",
+    "architects": [
+      {
+        "name": "Alonso de Covarrubias",
+        "died": 1570,
+        "wikidata": "Q339190"
+      },
+      {
+        "name": "Juan de Herrera",
+        "died": 1597,
+        "wikidata": "Q363914"
+      }
+    ],
+    "built": 1585,
+    "note": "Rebuilt for Charles V from 1535: north façade and courtyard by Alonso de Covarrubias, the staircase by Francisco de Villalpando, the south façade by Juan de Herrera; burnt in 1710, 1810 and 1887, destroyed in the siege of 1936 and rebuilt as it was between 1939 and 1961. Home of the Museo del Ejército; its modern building (2010) is a separate OpenStreetMap element and is not part of this model."
+  },
+  "sources": [
+    {
+      "title": "OpenStreetMap way 83998985 «Alcázar de Toledo» — outline and building:parts: the four towers (ways 1173930253–1173930256, 48 m) and their needles (ways 1552714420, 1552714601–1552714603, 60 m), the courtyard (way 194447882), the ranges (ways 1552568906–1552568908), the round turrets of the east façade (ways 1552710873–1552710875) (© OpenStreetMap contributors, ODbL)",
+      "url": "https://www.openstreetmap.org/way/83998985"
+    },
+    {
+      "title": "PNOA orthophoto, © Instituto Geográfico Nacional de España, CC BY 4.0 — the north esplanade, the walk between the west towers, the east terrace, the courtyard and the roofs",
+      "url": "https://www.ign.es/wms-inspire/pnoa-ma"
+    },
+    {
+      "title": "Terrain: MDT05, © Instituto Geográfico Nacional de España, CC BY 4.0 (tools/terrain.py) — the north esplanade at about 546.5 m, the streets 8–13 m lower on the other three sides",
+      "url": "https://centrodedescargas.cnig.es"
+    },
+    {
+      "title": "Alcázar de Toledo — Wikipedia (es): square building with four towers of 60 m crowned by slate spires, the courtyard with two floors of arches on columns, Covarrubias's north façade and Herrera's south façade, the statue of Charles V",
+      "url": "https://es.wikipedia.org/wiki/Alc%C3%A1zar_de_Toledo"
+    },
+    {
+      "title": "Alcázar of Toledo — Wikipedia (en)",
+      "url": "https://en.wikipedia.org/wiki/Alc%C3%A1zar_of_Toledo"
+    },
+    {
+      "title": "Wikimedia Commons — «Fachada norte del Alcázar de Toledo (España).jpg» (north façade, portal, esplanade) and «View of the Alcazar, Toledo (Spain), from Zocodover.jpg» (north-west tower and the walls above the street)",
+      "url": "https://commons.wikimedia.org/wiki/File:Fachada_norte_del_Alc%C3%A1zar_de_Toledo_(Espa%C3%B1a).jpg"
+    },
+    {
+      "title": "Wikimedia Commons — «Alcázar de Toledo - 03.jpg», «Alcázar of Toledo, Spain.jpg» and «Alcázar of Toledo, Spain. May 2017.jpg» (south façade and towers; heights measured on them ±10 %)",
+      "url": "https://commons.wikimedia.org/wiki/File:Alc%C3%A1zar_de_Toledo_-_03.jpg"
+    },
+    {
+      "title": "Wikimedia Commons — «Alcázar de Toledo - 01.jpg», «Alcazar Toledo Jesuitas 3.jpg» and «Alcazar Toledo exterior.jpg» (west façade)",
+      "url": "https://commons.wikimedia.org/wiki/File:Alc%C3%A1zar_de_Toledo_-_01.jpg"
+    }
+  ],
+  "ground": "keep",
+  "ground_at": [0, 50],
+  "ground_low": -12,
+  "triangles": 37941,
+  "notes": "Built by code (model_sources/Q1326589_alcazar_de_toledo.py, tools/meshkit.py) with AI assistance. The square body round its courtyard with hipped tiled roofs (cornice 28.5 m, ridge 34.5 m above the north esplanade); the four corner towers (cornice 33 m) with their slate spires, dormers, lanterns and needles (50.5 m, about 60 m above the streets of the south and east); Covarrubias's north façade (three floors of windows with balconies and pediments, the arcaded top floor, the candlesticks along the parapet, the portal with columns and the imperial arms); Herrera's south façade (stone pilasters, red panels, rows of windows, the open gallery with its balustrade); the west façade of Toledo masonry; the east façade with its three round turrets (OSM); the courtyard (open, paved) with two floors of arches on Corinthian columns, the upper balustrade, the lean-to roofs of the galleries and the statue of Charles V. The hilltop: y = 0 is the north esplanade and the courtyard (ground_at); modelled with it are the paved north esplanade with its balustrade and retaining walls, the walk between the west towers above the Cuesta de Carlos V with its railing, the terrace on the east side (car park, 10.3 m lower) above the gardens and the pavement of the street along the south façade; every wall goes down to 1.5 m below the real ground (MDT05). The modern building of the Museo del Ejército (a separate OSM element, north and east of the Alcázar, partly under the esplanade) is not included. Uncertain: the heights of the cornice, the towers and the spires (±10 %, from photographs), the levels of the terraces (MDT05, ±1 m), the east façade (few photographs), the number of bays in the courtyard. Simplified: the sculpture, the masonry patterns, the staircase and the interiors."
+}

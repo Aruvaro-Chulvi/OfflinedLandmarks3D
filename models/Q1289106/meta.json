@@ -1,0 +1,86 @@
+{
+  "id": "Q1289106",
+  "name": "Monasterio de San Juan de los Reyes",
+  "heading": 333.3,
+  "position": {
+    "lat": 39.857816,
+    "lon": -4.031687,
+    "source": "https://www.openstreetmap.org/relation/21282452 (centroid of the outline, in the cloister garden; the north wall of the church runs along the long axis 63.3°/243.3°)"
+  },
+  "authors": [
+    {
+      "name": "Álvaro C. Chulvi",
+      "url": "https://github.com/Aruvaro-Chulvi"
+    }
+  ],
+  "license": "CC-BY-4.0",
+  "rights": {
+    "status": "public_domain",
+    "architects": [
+      {
+        "name": "Juan Guas",
+        "died": 1496,
+        "wikidata": "Q3140999"
+      },
+      {
+        "name": "Enrique Egas",
+        "died": 1534,
+        "wikidata": "Q3327101"
+      },
+      {
+        "name": "Alonso de Covarrubias",
+        "died": 1570,
+        "wikidata": "Q339190"
+      }
+    ],
+    "built": 1504,
+    "note": "Founded 1477 by the Catholic Monarchs; church and cloister by Juan Guas (master builder 1479–1496, with the sculptor Egas Cueman), finished after his death by Enrique and Antón Egas (church 1495, cloister c. 1504–1510); the north portal designed by Alonso de Covarrubias (1553), finished 1610. Burnt in 1808; restored by Arturo Mélida from 1883 and again after 1940."
+  },
+  "sources": [
+    {
+      "title": "OpenStreetMap relation 21282452 «Monasterio de San Juan de los Reyes» — outline, cloister courtyard and building:parts: the church way 1552419301, the east range way 1552419298 (1 level), the south and west ranges way 1552419318 (2 levels) (© OpenStreetMap contributors, ODbL)",
+      "url": "https://www.openstreetmap.org/relation/21282452"
+    },
+    {
+      "title": "PNOA orthophoto, © Instituto Geográfico Nacional de España, CC BY 4.0 — the lantern over the crossing at the east end, the recesses between the south buttresses, the roofs of the ranges, the cloister garden",
+      "url": "https://www.ign.es/wms-inspire/pnoa-ma"
+    },
+    {
+      "title": "Terrain: MDT05, © Instituto Geográfico Nacional de España, CC BY 4.0 (tools/terrain.py) — the ground falls about 8 m from the east end to the west end",
+      "url": "https://centrodedescargas.cnig.es"
+    },
+    {
+      "title": "Monasterio de San Juan de los Reyes — Wikipedia (es): single nave with chapels between the buttresses, cimborrio over the head, north and west portals, the chains of the captives, the two-storey cloister and its garden in four parts with a well",
+      "url": "https://es.wikipedia.org/wiki/Monasterio_de_San_Juan_de_los_Reyes"
+    },
+    {
+      "title": "Monastery of San Juan de los Reyes — Wikipedia (en)",
+      "url": "https://en.wikipedia.org/wiki/Monastery_of_San_Juan_de_los_Reyes"
+    },
+    {
+      "title": "Wikimedia Commons — «Fachada norte de la Iglesia de San Juan de los Reyes (Toledo).jpg» and «Monastery of San Juan de los Reyes, Toledo.jpg» (north façade, bays, portal; heights measured on them ±10 %)",
+      "url": "https://commons.wikimedia.org/wiki/File:Fachada_norte_de_la_Iglesia_de_San_Juan_de_los_Reyes_(Toledo).jpg"
+    },
+    {
+      "title": "Wikimedia Commons — «Exterior of the Church of the Monastery of San Juan de los Reyes (Toledo)-3.jpg» (north wall and portal) and «Exterior of the Church of the Monastery of San Juan de los Reyes (Toledo)-5.jpg» (the head with the chains and the lantern)",
+      "url": "https://commons.wikimedia.org/wiki/File:Exterior_of_the_Church_of_the_Monastery_of_San_Juan_de_los_Reyes_(Toledo)-5.jpg"
+    },
+    {
+      "title": "Wikimedia Commons — «San Juan de los Reyes (Toledo). Ábside.jpg» and «Exterior of the Church of the Monastery of San Juan de los Reyes (Toledo).jpg» (the east end and its chains)",
+      "url": "https://commons.wikimedia.org/wiki/File:San_Juan_de_los_Reyes_(Toledo)._%C3%81bside.jpg"
+    },
+    {
+      "title": "Wikimedia Commons — «Monasterio San Juan de los Reyes - panoramio.jpg» and «SAN JUAN DE LOS REYES. TOLEDO, SPAIN.jpg» (the lantern and its dome, the roofs, the south side over the cloister)",
+      "url": "https://commons.wikimedia.org/wiki/File:Monasterio_San_Juan_de_los_Reyes_-_panoramio.jpg"
+    },
+    {
+      "title": "Wikimedia Commons — «San Juan de los Reyes Claustro.jpg» (the two floors of the cloister arcades, five bays a side)",
+      "url": "https://commons.wikimedia.org/wiki/File:San_Juan_de_los_Reyes_Claustro.jpg"
+    }
+  ],
+  "ground": "keep",
+  "ground_at": [3, 33],
+  "ground_low": -5,
+  "triangles": 30922,
+  "notes": "Built by code (model_sources/Q1289106_san_juan_de_los_reyes.py, tools/meshkit.py) with AI assistance. The church: single nave of four bays (granite, 23.3 m to the cornice) with pointed windows, the cresting along their sills and along the roofline, buttresses with pinnacles and statues, the chapels between the south buttresses under the cloister roof, a hipped tiled roof; the head (23.6 m) with its balustrade, corner pinnacles, the great north window, the blind arcades, the frieze and the iron chains of the captives on its north and east faces; the octagonal lantern over the crossing with its windows, corner pinnacles, balustrade, ribbed dome, little lantern and cross (38.3 m); the north portal (Covarrubias) with clustered pilasters, statues, niche, gable and cross, on the Plaza de San Juan de los Reyes (y = 0, ground_at); the west door at the level of the street below the west end, and the stair turret on the north-west corner. The cloister: two floors of arcades on the garden (pointed arches with tracery below, mixtilinear arches over balustrades above, piers with pinnacles, cresting), the walks with their floor, vault and lean-to roofs; the garden in four hedged beds round the well, with a fir, a magnolia and two orange trees (not mapped: placed as on the photographs). The convent ranges (rendered, tiled roofs) from the OSM parts. Every wall goes down to 1.5 m below the real ground (MDT05). Uncertain: the heights of the lantern and the dome (±2 m), the west portal (its design and the level of its sill; the street there is about 5 m below the plaza), the heights of the ranges (from their levels in OSM), the trees. The brief named the Covarrubias portal as the west one: it is on the north side, facing the plaza (photographs), and is modelled there. Simplified: tracery, sculpture and heraldry, the interior."
+}

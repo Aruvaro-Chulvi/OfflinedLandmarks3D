@@ -1,0 +1,55 @@
+{
+  "id": "Q581532",
+  "name": "Puente de Alcántara",
+  "heading": 171.0,
+  "position": {
+    "lat": 39.8603865,
+    "lon": -4.0174406,
+    "source": "https://www.openstreetmap.org/way/660415643 (the river under the middle of the main arch, on the centre line of the deck; heading = the downstream face, 90° from the axis of the footway way 724145214, 81.0°)"
+  },
+  "ground": "keep",
+  "ground_at": [0, 0],
+  "ground_low": 0,
+  "ground_fit": false,
+  "authors": [
+    {
+      "name": "Álvaro C. Chulvi",
+      "url": "https://github.com/Aruvaro-Chulvi"
+    }
+  ],
+  "license": "CC-BY-4.0",
+  "rights": {
+    "status": "public_domain",
+    "architects": [],
+    "built": 1721,
+    "note": "Roman bridge (founding of Toletum), rebuilt in the 10th century and under Alfonso X (13th century); the west gate-tower was rebuilt and decorated in 1484 under the Catholic Monarchs, and the east tower replaced by the Baroque triumphal arch in 1721. Builders unknown; all of it centuries old. Monumento nacional since 1921 (Bien de Interés Cultural)."
+  },
+  "sources": [
+    {
+      "title": "OpenStreetMap way 660415643 (man_made=bridge: deck 83 × 5.2 m, axis 81°, the two trapezoidal buttresses of the pier, the two cantilevered refuges), way 724145214 (the footway, 83 m), way 105336454 (the west gate-tower) and way 724145213 (the Baroque east arch), relation 10032868 (© OpenStreetMap contributors, ODbL)",
+      "url": "https://www.openstreetmap.org/way/660415643"
+    },
+    {
+      "title": "Puente de Alcántara (Toledo) — Wikipedia (de): 83 m between the gates, 5.40 m wide, main arch 28.30 m, pier 8.40 m, smaller arch 16 m, the walled-up third arch with a 1.72 m horseshoe postern, the towers (after C. Fernández Casado, Historia del puente en España, 1979)",
+      "url": "https://de.wikipedia.org/wiki/Puente_de_Alc%C3%A1ntara_(Toledo)"
+    },
+    {
+      "title": "Puente de Alcántara (Toledo) — Wikipedia (es): history, the west tower of Alfonso X decorated by the Catholic Monarchs, the Baroque arch of 1721, the two pairs of refuges",
+      "url": "https://es.wikipedia.org/wiki/Puente_de_Alc%C3%A1ntara_(Toledo)"
+    },
+    {
+      "title": "Wikimedia Commons — «Alcántara Bridge - view 1.JPG» and «Alcantara Bridge in Toledo, Spain. View from the north-east.jpg» (upstream elevation, arch springing, buttress, tower above the deck), «Puente de Alcántara (Toledo) Torreón occidental.jpg» (city face of the tower), «Puente de Alcántara (Toledo) Torreón oriental.jpg» and «Alcantara bridge - Toledo - 0.jpg» (the Baroque arch and the bridge face of the tower); heights by proportion, ±10 %",
+      "url": "https://commons.wikimedia.org/wiki/Category:Puente_de_Alc%C3%A1ntara,_Toledo"
+    },
+    {
+      "title": "IGN MDT05 (via tools/terrain.py, CC BY 4.0 scne.es): the Tagus at 450.0 m, the street west of the tower at 471 m, the road at the east arch at 468–469 m; PNOA orthophoto (IGN, CC BY 4.0) for the plan",
+      "url": "https://centrodedescargas.cnig.es/"
+    },
+    {
+      "title": "Wikidata Q581532",
+      "url": "https://www.wikidata.org/wiki/Q581532"
+    }
+  ],
+  "notes": "Built by code (model_sources/Q581532_puente_de_alcantara_toledo.py, tools/meshkit.py) with AI assistance. Modelled: the main semicircular arch (28.3 m) over the Tagus and the smaller one (16 m) over the slope up to the city, with granite voussoirs; the 7.8 m pier with its two trapezoidal buttresses crowned by refuges and stone balls; the long east abutment down the left bank with the horseshoe postern of the walled-up third arch; the two cantilevered refuges near the east end; parapets with coping, cornice band, end balls, two lamps; the west gate-tower (1484): passage arch, corner masses and recess on the city face with the sculpture niches and inscription, arms of the Catholic Monarchs and a box machicolation on the bridge face, brick courses, merlons, its base going down the slope; the Baroque east arch (1721): brick with granite quoins, arch with keystone and raised portcullis, pilasters with garlands, tablets, cornice, the attic with the imperial eagle, crown and shell crest, ball finials. Estimated (±): deck level (+21 m at the tower falling to +19 m at the east arch, ±1 m), arch springings (±1 m), tower and arch heights (±10 %), sculpture stylised. Axes: X along the bridge (+X east), +Z the downstream (south) face; y = 0 is the river (450.0 m, MDT05), origin on the water under the middle of the main arch. ground: keep with ground_fit false (a bridge): the banks are left as they are; piers to y = −3, abutments and tower base 2.5 m into the slope.",
+  "triangles": 7931
+}

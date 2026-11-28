@@ -1,0 +1,53 @@
+{
+  "id": "Q1811506",
+  "name": "Sinagoga del Tránsito",
+  "heading": 138.6,
+  "position": {
+    "lat": 39.855677,
+    "lon": -4.0296067,
+    "source": "https://www.openstreetmap.org/way/113942748 (centroid of the outline; long axis of the prayer hall at 48.6°)"
+  },
+  "authors": [
+    {
+      "name": "Álvaro C. Chulvi",
+      "url": "https://github.com/Aruvaro-Chulvi"
+    }
+  ],
+  "license": "CC-BY-4.0",
+  "rights": {
+    "status": "public_domain",
+    "architects": [],
+    "built": 1357,
+    "note": "Synagogue built 1355–1357 for Samuel ha-Leví, treasurer of Pedro I of Castile; the builder is unknown. Church of the Order of Calatrava after 1492; Museo Sefardí (Spanish Ministry of Culture) since 1964."
+  },
+  "sources": [
+    {
+      "title": "OpenStreetMap way 113942748 with its building:parts 1552304773–76 — outline, the prayer hall (4 levels) and the attached strips of 3, 2 and 1 levels (© OpenStreetMap contributors, ODbL)",
+      "url": "https://www.openstreetmap.org/way/113942748"
+    },
+    {
+      "title": "Sinagoga del Tránsito — Wikipedia (es): 1355–1357, hall 23 × 9.5 m and 17 m high inside, masonry with brick, Mudéjar windows",
+      "url": "https://es.wikipedia.org/wiki/Sinagoga_del_Tr%C3%A1nsito"
+    },
+    {
+      "title": "Wikimedia Commons — «España - Toledo - Sinagoga del Tránsito - Fachada.JPG» (near-frontal photo of the entrance façade, heights measured on it, ±5 %), «Toledo - Sinagoga El Transito 01.jpg», «Tolede.el Transito.extérieur.JPG», «Synagoge El Transito.jpg»",
+      "url": "https://commons.wikimedia.org/wiki/File:Espa%C3%B1a_-_Toledo_-_Sinagoga_del_Tr%C3%A1nsito_-_Fachada.JPG"
+    },
+    {
+      "title": "PNOA orthophoto, © Instituto Geográfico Nacional de España, CC BY 4.0 — roofs, the street front and the square of the entrance",
+      "url": "https://www.ign.es/wms-inspire/pnoa-ma"
+    },
+    {
+      "title": "Terrain: MDT05, © Instituto Geográfico Nacional de España, CC BY 4.0 (tools/terrain.py)",
+      "url": "https://centrodedescargas.cnig.es"
+    }
+  ],
+  "triangles": 4399,
+  "notes": "Built by code (model_sources/Q1811506_sinagoga_del_transito.py, tools/meshkit.py) with AI assistance. The whole OSM building is modelled, as it is one element: the prayer hall with its brick upper band, the row of small horseshoe windows under the eaves and its hipped roof of Arab tiles; the strip of the old women's gallery along the south-east front with the entrance block, the little corner loggia and the bell tower with two bells and a small pediment; the lower strip along the north-west side and the small room at the east corner. The garden to the north-west and the modern museum buildings to the north-east are separate OSM elements and are left out. Heights measured on one photo (±5 %); the north-west side and the lean-to roofs of the strips are less certain (only seen on the orthophoto). Masonry and brick courses are flat vertex colours; the plasterwork inside is not modelled.",
+  "ground": "keep",
+  "ground_at": [
+    -6.3,
+    12.6
+  ],
+  "ground_low": -2.0
+}

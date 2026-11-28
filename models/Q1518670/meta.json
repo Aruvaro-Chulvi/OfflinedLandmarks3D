@@ -1,0 +1,51 @@
+{
+  "id": "Q1518670",
+  "name": "Puente de San Martín",
+  "heading": 312.4,
+  "position": {
+    "lat": 39.8566798,
+    "lon": -4.0341273,
+    "source": "https://www.openstreetmap.org/relation/19735463 (the river under the middle of the main arch, between the piers of the bridge outline at x −20.4 and 20.1, on the line of the footway way 23495005; heading = the downstream face, 90° from the footway's axis, 42.4°)"
+  },
+  "ground": "keep",
+  "ground_at": [0, 0],
+  "ground_low": 0,
+  "ground_fit": false,
+  "authors": [
+    {
+      "name": "Álvaro C. Chulvi",
+      "url": "https://github.com/Aruvaro-Chulvi"
+    }
+  ],
+  "license": "CC-BY-4.0",
+  "rights": {
+    "status": "public_domain",
+    "architects": [],
+    "built": 1390,
+    "note": "First built in the 13th century; burnt about 1355 and damaged in 1368; rebuilt about 1390 by archbishop Pedro Tenorio (died 1399), who made the great central arch and the two crenellated towers; the approaches were widened under Carlos II, and the towers bear 16th-century arms. Master builders unknown. Monumento nacional since 1921 (Bien de Interés Cultural)."
+  },
+  "sources": [
+    {
+      "title": "OpenStreetMap relation 19735463 (man_made=bridge: the deck 126.6 × 6.4 m and its piers seen from above: the big pier with two rounded buttresses, the two rectangular buttresses), way 23495005 (the footway, axis 42.4°), ways 257932774 (the city tower and its gate house) and 257932776 (the outer tower) (© OpenStreetMap contributors, ODbL)",
+      "url": "https://www.openstreetmap.org/relation/19735463"
+    },
+    {
+      "title": "Puente de San Martín (Toledo) — Wikipedia (es, en, de): history, Pedro Tenorio, five arches, the central one of 40 m, all of ashlar, the 16th-century arms with the imperial eagle between two seated kings on the inner face of the city tower",
+      "url": "https://es.wikipedia.org/wiki/Puente_de_San_Mart%C3%ADn_(Toledo)"
+    },
+    {
+      "title": "Wikimedia Commons — «Puente de San Martín. Toledo, Spain.jpg» and «Puente de San Martín Toledo June 2016.jpg» (downstream elevation: arches, springings, deck), «Puente de San Martín (Toledo) 2.jpg» (the south-west arches and the main arch), «Puente de San Martín (Toledo) 3.jpg» (the stepped upstream buttress, the city tower), «Panorámica del Puente de San Martín Toledo- España.jpg» (the polygonal city tower and its gate house), «Puente de San Martín (Toledo). Torre defensiva.jpg» and «Puente de San Martín (Toledo). Torreón.jpg» (the two gates); heights by proportion, ±10 %",
+      "url": "https://commons.wikimedia.org/wiki/Category:Puente_de_San_Mart%C3%ADn_(Toledo)"
+    },
+    {
+      "title": "IGN MDT05 (via tools/terrain.py, CC BY 4.0 scne.es): the Tagus at 443.0 m, the road beyond the outer tower at 464–465 m, the street along the city tower at 467–468 m; PNOA orthophoto (IGN, CC BY 4.0) for the plan",
+      "url": "https://centrodedescargas.cnig.es/"
+    },
+    {
+      "title": "Wikidata Q1518670",
+      "url": "https://www.wikidata.org/wiki/Q1518670"
+    }
+  ],
+  "notes": "Built by code (model_sources/Q1518670_puente_de_san_martin_toledo.py, tools/meshkit.py) with AI assistance. Modelled: the pointed central arch (40.5 m between the piers of the OSM outline, rise 21 m) and four stilted semicircular arches (about 10 and 13.6 m on the city side, 17 and 7 m on the south-west side) with granite voussoirs and imposts; the big pier with its rounded downstream buttress crowned by a balcony and its stepped upstream buttress; the two rectangular buttresses with pilaster strips and corbelled refuges; parapets with coping, ball finials on pedestals, lamps; the outer (south-west) tower: passage, the great pointed horseshoe arch with the statue niche and carved tympanum on the bridge face, the gallery of small arches, string course, pyramid-capped merlons, its bastion; the city (north-east) tower: the polygonal keep to OSM's plan with merlons and loopholes, and the gate house on the bridge axis with the passage, Charles V's eagle between two seated kings and the tablets on its bridge face, window and loggia, hipped tiled roof. Not modelled: the city walls that join the city tower. Estimated (±): deck level (+21.5 m at the outer tower to +24.5 m at the city tower, ±1 m), springings and the spans of the four smaller arches (±1.5 m), tower heights (±10 %), sculpture stylised. Axes: X along the bridge (+X south-west, towards the outer tower), +Z the downstream (north-west) face; y = 0 is the river (443.0 m, MDT05), origin on the water under the middle of the main arch. ground: keep with ground_fit false (a bridge): the banks are left as they are; piers to y = −3, abutments and tower bases 2.5–3 m into the slopes.",
+  "triangles": 12224
+}
