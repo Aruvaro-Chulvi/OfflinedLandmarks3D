@@ -73,6 +73,7 @@ Best fit: the height of y = 0 (as "keep") that leaves the least edge floating an
 | ✓ | Q519568 Torre Moeve (Torre Cepsa) | flatten | 731.5 | median terrain of the footprint | ign | 1.8 | – | – | – | – | 731.5 m: 0% / 0% ✓ |
 | ✓ | Q530129 Palacio Real de Aranjuez | flatten | 488.2 | median terrain of the footprint | ign | 5.8 | – | – | – | – | 488.2 m: 0% / 0% ✓ |
 | ✓ | Q5755509 Casa del Labrador | flatten | 491.0 | median terrain of the footprint | ign | 0.0 | – | – | – | – | 491.0 m: 0% / 0% ✓ |
+| ✓ | Q5803317 Depósito elevado de Chamberí | flatten | 693.0 | median terrain of the footprint | ign | 0.2 | – | – | – | – | 693.0 m: 0% / 0% ✓ |
 | ✓ | Q6057871 Palacio de Biblioteca y Museos Nacionales | flatten | 652.1 | median terrain of the footprint | ign | 7.1 | – | – | – | – | 652.1 m: 0% / 0% ✓ |
 | ✓ | Q62408 Palace of Westminster | flatten | 1.8 | median terrain of the footprint | tiles | 5.5 | – | – | – | – | 1.8 m: 0% / 0% ✓ |
 | ✓ | Q64436 Arc de Triomphe de l'Étoile | flatten | 62.3 | median terrain of the footprint | tiles | 4.2 | – | – | – | – | 62.3 m: 0% / 0% ✓ |
