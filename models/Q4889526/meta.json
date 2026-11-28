@@ -74,9 +74,13 @@
     {
       "title": "Wikimedia Commons — «Madrid. Bank of Spain building. Alcalá street. Spain (2853649900).jpg» (cornice, balustrade, dormers, the globe on its iron stand)",
       "url": "https://commons.wikimedia.org/wiki/File:Madrid._Bank_of_Spain_building._Alcal%C3%A1_street._Spain_(2853649900).jpg"
+    },
+    {
+      "title": "PNOA orthophoto, © Instituto Geográfico Nacional de España, CC BY 4.0 (scne.es) — colour of the floors of the open courtyards (model_sources/Q4889526_pnoa.jpg, tools/ground_fill.py)",
+      "url": "https://www.ign.es/wms-inspire/pnoa-ma"
     }
   ],
-  "triangles": 65515,
+  "triangles": 70575,
   "notes": "Built by code (model_sources/Q4889526_banco_de_espana.py, tools/meshkit.py) with AI assistance. Main façade (+Z, heading 44.3°) = the chamfered corner facing the Plaza de Cibeles: its OSM edge runs at 134.3°, so its outward normal points to 44.3° (north-east); the Paseo del Prado front is on −X and the Calle de Alcalá front on +X. Outline and courtyards from OpenStreetMap, roof layout from the PNOA orthophoto, heights and bays measured on photos (±5 %): rusticated granite ground storey 6.8 m, limestone upper floors with arched main-floor windows between engaged columns, cornice 17.0 m, balustrade 18.2 m, slate mansards with dormers and iron cresting to 21.4 m, pavilion roofs to 22 m. The corner: door between two columns, the great glazed arch, the crest with the clock, figures and finials, and the gilded globe on its iron stand (top ≈ 24.6 m). Uncertain: the positions of the pavilions along the fronts (corner; the domed pavilion about 34–46 m from the corner on Paseo del Prado, then 101–113 m and the ends; on Alcalá at the bend and near Marqués de Cubas), the shape of the slate dome, the rhythm of the later wings (drawn like the 1891 fronts), the inner 6–7 storey block (from its OSM parts, plain), the glazed roofs (frustums). Sculpture is stylised. The ground rises a little to the west along Alcalá: foundations go 5 m down and y = 0 is the ground at the centroid, so the Cibeles corner may show a little plinth. Footprint = OSM outline grown by 1.5 m (balconies and the corner door columns stand out of the wall line).",
   "footprint": [
     [63.69, -40.49],

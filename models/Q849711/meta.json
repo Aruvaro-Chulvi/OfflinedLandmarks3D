@@ -83,6 +83,10 @@
     {
       "title": "Wikidata — architects and their dates",
       "url": "https://www.wikidata.org/wiki/Q849711"
+    },
+    {
+      "title": "PNOA orthophoto, © Instituto Geográfico Nacional de España, CC BY 4.0 (scne.es) — colour of the floors of the open courtyards (model_sources/Q849711_pnoa.jpg, tools/ground_fill.py)",
+      "url": "https://www.ign.es/wms-inspire/pnoa-ma"
     }
   ],
   "footprint": [
@@ -415,6 +419,6 @@
       24.99
     ]
   ],
-  "triangles": 33185,
+  "triangles": 34191,
   "notes": "Built by code (model_sources/Q849711_catedral_de_la_almudena.py, tools/meshkit.py) with AI assistance. Plan from the OpenStreetMap outline and building:parts (Latin cross running north–south, main façade to the north facing the Palacio Real across the Plaza de la Armería, apse to the south); includes the wings along the Plaza de la Armería and Calle de Bailén that belong to the same OSM building, with the open courtyard between the nave and the east wing. Heights measured on photos (±5 %): towers 52.8 m and dome 62.4 m to the top of the crosses; the 60 m and 73 m given by Wikipedia do not fit the photos (they may be measured from the lower ground or the crypt). Foundations go from −3 m on the east to about −16 m at the west end, where the ground falls to the Cuesta de la Vega and the Campo del Moro (EU-DEM, approximate). Simplified: sculpture and reliefs are stylised volumes or flat panels, the tower belfries and the crest of the façade are simplified, the neo-Gothic apse keeps its buttresses, pinnacles and lancet windows but not its tracery, the aisle and side-body roofs are simple lean-tos or flat, the east wing's red tile roof is a low ring round its courtyard, the crypt (under the church) is not modelled. The footprint is the OSM outline plus the front steps, grown by 1 m."
 }

@@ -2,6 +2,10 @@
   "id": "Q676203",
   "name": "Machu Picchu",
   "heading": 157.2,
+  "surround": {
+    "kind": "rainforest",
+    "radius": 2200
+  },
   "position": {
     "lat": -13.1631723,
     "lon": -72.5451661,
@@ -13,6 +17,8 @@
     0
   ],
   "ground_low": -45,
+  "terrain_radius": 2500,
+  "terrain_cut": false,
   "authors": [
     {
       "name": "Álvaro C. Chulvi",
@@ -54,10 +60,14 @@
     {
       "title": "Wikidata Q676203 — date (~1450), country",
       "url": "https://www.wikidata.org/wiki/Q676203"
+    },
+    {
+      "title": "OpenStreetMap — the footpaths, trails, scrub, wood and garden inside the archaeological site (way 157376572), saved in model_sources/Q676203_ground_osm.json: the colour of the open ground among the ruins; the node «Caos Granatico» (12940704693) for the quarry (© OpenStreetMap contributors, ODbL)",
+      "url": "https://www.openstreetmap.org/way/157376572"
     }
   ],
   "notes": "Built by code (model_sources/Q676203_machu_picchu.py, tools/meshkit.py) with AI assistance. Plan from OpenStreetMap: every building, terrace wall, wall, staircase and grass area mapped inside the archaeological site. Terraces: each retaining wall is a granite wall going 2.5 m below the ground at its foot, with a grey coping and a flat grass terrace behind it up to the foot of the next wall (level with the ground there, SRTM, +0.35 m). Buildings: roofless granite walls 0.8 m thick, 2.4–3.1 m to the eaves, steep gable ends on the small rectangular houses (≤3.4 m), one trapezoidal door in a long side and small trapezoidal windows in the other; large enclosures as plain 2.3 m walls; Main Temple and Temple of the Three Windows three-walled and open to the Sacred Plaza (3.8 m, the three windows looking east); Torreón (Temple of the Sun) curved, 4.2 m, with two windows, on its boulder with the Royal Tomb as a dark cave; the Intihuatana stone on a small platform on the top of its hill; the Sacred Rock; the Guardhouse (three walls) and five storehouses with thatched roofs (modern reconstructions). Grass of the plazas and slopes laid 0.25 m over the SRTM ground near the ruins. Heights of the walls are estimates (±25 %). Uncertain: the levels — SRTM 30 m smooths the ridge (the Intihuatana hill was raised 5 m so it reads; the Main Plaza is not as sunken as in reality), so terraces and floors follow a smoothed ground and may stand a little off the terrain of a finer model; which side of the Guardhouse is open; the number and place of the doors and windows of the houses; the exact identity of the storehouses. Not modelled: Huayna Picchu and Machu Picchu mountains, the terrain, the modern buildings and paths, the Inca trail and bridge. ground: keep — y = 0 is the ground in the middle of the Main Plaza (ground_at [0, 0]); the agricultural terraces go down to y ≈ −35 and the east terraces to ≈ −45 (ground_low), the Guardhouse stands ≈ 20 m above the plaza. footprint: the archaeological site as OpenStreetMap draws it, cut before the hotel, with the Guardhouse.",
-  "triangles": 58940,
+  "triangles": 75184,
   "footprint": [
     [
       -217.4,

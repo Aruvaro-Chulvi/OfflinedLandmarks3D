@@ -73,10 +73,14 @@
     {
       "title": "Wikimedia Commons: Palacio Real de Aranjuez, fachada sur.jpg (corner tower, drum, dome and lantern)",
       "url": "https://commons.wikimedia.org/wiki/File:Palacio_Real_de_Aranjuez,_fachada_sur.jpg"
+    },
+    {
+      "title": "PNOA orthophoto, © Instituto Geográfico Nacional de España, CC BY 4.0 (scne.es) — colour of the floors of the open courtyards (model_sources/Q530129_pnoa.jpg, tools/ground_fill.py)",
+      "url": "https://www.ign.es/wms-inspire/pnoa-ma"
     }
   ],
   "notes": "Built by code (model_sources/Q530129_palacio_real_de_aranjuez.py, tools/meshkit.py) with AI assistance. The palace with its gardens on the royal site: the west range on the Plaza de Armas with Bonavía's central body (five-arch portico, balcony, attic with the arms of Ferdinand VI, curved pediment, three royal statues), the two corner towers with drum, lead dome, lantern and cross, the block round the courtyard, Sabatini's two wings with their arcades on the plaza and three arches at their ends, balustrades with urns, slate hipped roofs, chimneys, windows and balconies; the Parterre (beds with box edging and lawn as OpenStreetMap draws them, sandy walks, the fountains of Hercules and Antaeus, Ceres and the two Nereids, the ha-ha moat), the small Jardín del Rey and Jardín de la Reina, and the part of the Jardín de la Isla within ~330 m (hedged blocks with plane trees, lawns, walks, the fountains of Hercules and the Hydra with its four ponds, Apollo, the Boticaria, the Clock, the Niño de la Espina and Venus, the two small bridges over the Ría, and the Salón de los Reyes Católicos with four rows of plane trees). Simplified or uncertain: heights are measured on photographs scaled on the OSM plan (ranges 17 m to the cornice, central body 24.5 m and pediment 27.5 m, towers 24 m and cross at 40.5 m, wings 12.8 m), ±10 %; the brick panels and stone frames are reduced to a brick wall with stone pilaster strips, cornices and window frames; the façades other than the west front are generic (bays every 4.6 m); the wings' roofs are drawn flat behind their balustrades; the trees of the Isla are placed on a jittered grid inside each hedged block (OpenStreetMap does not map them one by one) and the Salón's rows follow its axis; the statues and fountain groups are stylised figures (the Hercules and Antaeus pedestal is a ring of columns round a drum); the flower beds are plain lawn. The Tagus and the Ría are not modelled (Offlined draws the water); the island garden goes on further west beyond x = −330 m. y = 0 is the Plaza de Armas: the whole site is flat (≈ 490 m), garden surfaces lie a few centimetres above it.",
-  "triangles": 72061,
+  "triangles": 72879,
   "footprint": [
     [
       -330.0,

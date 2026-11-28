@@ -24,7 +24,11 @@ What is modelled:
   agricultural sector, with their reconstructed thatched roofs; the free-standing walls (city wall, enclosure
   walls) and the stone staircases (as OpenStreetMap draws them, except the long trails to Huayna Picchu,
   Intipunku and the Inca bridge).
-- The grass of the Main Plaza, of the terraces and of the slopes inside the site, laid 0.25 m over the ground.
+- The ground of the plazas, yards and slopes among the ruins, laid 0.25 m over the ground (since 2026-11-28 all of
+  it, not only what OSM tags as grass: before, the game saw through the rest and drew its own ground there): grass
+  where OSM has landuse=grass, the trails and footpaths of OSM as earth or stone (model_sources/Q676203_ground_osm.json),
+  darker green on its scrub and wood, and worn lawn (grass and earth) on the untagged ground; the quarry (the
+  «Caos Granítico», OSM node 12940704693) as bare granite with a field of loose boulders (sizes estimated).
 - Not modelled: Huayna Picchu and Machu Picchu mountains, the bare terrain, the modern buildings (the control
   huts by Huayna Picchu, the Sanctuary Lodge, the ticket and bus station), the tourist paths, the Inca trail
   and the Inca bridge, the Funerary Rock.
@@ -76,6 +80,10 @@ GRANITE_D = (0.60, 0.59, 0.56)         # foundations, low courses
 ROCK = (0.64, 0.63, 0.59)              # living rock, boulders
 GRASS = (0.40, 0.55, 0.24)             # terraces and plazas
 GRASS_D = (0.35, 0.47, 0.21)           # floors of the houses, slopes
+WORN = (0.47, 0.50, 0.30)              # worn lawn of the untagged ground among the ruins
+EARTH = (0.60, 0.52, 0.40)             # earth trails
+PATH_STONE = (0.70, 0.69, 0.65)        # stone-paved paths
+SCRUB = (0.25, 0.36, 0.16)             # scrub and wood
 THATCH = (0.71, 0.58, 0.33)            # ichu thatch
 THATCH_D = (0.58, 0.46, 0.25)
 DARK = (0.12, 0.11, 0.10)              # the cave of the Royal Tomb
@@ -608,9 +616,60 @@ def steps(s):
     return ms
 
 
+def _ground_osm():
+    """Footpaths and scrub of OSM inside the site (model_sources/Q676203_ground_osm.json), in model x, z."""
+    j = json.loads((ROOT / "model_sources" / "Q676203_ground_osm.json").read_text(encoding="utf-8"))
+    meta = json.loads((ROOT / "models" / "Q676203" / "meta.json").read_text(encoding="utf-8"))
+    lat0, lon0 = meta["position"]["lat"], meta["position"]["lon"]
+    ke = 111320.0 * math.cos(math.radians(lat0))
+
+    def xz(ll):
+        A = np.array(ll, float)
+        e = (A[:, 1] - lon0) * ke; n = (A[:, 0] - lat0) * 110574.0
+        return np.stack([-_c * e + _s * n, _s * e + _c * n], 1)     # the inverse of _dem's (it is its own inverse)
+    paths = [(xz(w["ll"]), w["surface"]) for w in j["paths"] if len(w["ll"]) >= 2]
+    scrub = [xz(w["ll"]) for w in j["scrub"] if len(w["ll"]) >= 3]
+    return paths, scrub
+
+
+def _dist_to_lines(px, pz, lines):
+    d = np.full(len(px), np.inf)
+    for L in lines:
+        for k in range(len(L) - 1):
+            ax, az = L[k]; bx, bz = L[k + 1]
+            dx, dz = bx - ax, bz - az; l2 = dx * dx + dz * dz
+            if l2 < 1e-9:
+                continue
+            t = np.clip(((px - ax) * dx + (pz - az) * dz) / l2, 0, 1)
+            d = np.minimum(d, np.hypot(px - ax - dx * t, pz - az - dz * t))
+    return d
+
+
+QUARRY_R = 15.0                       # radius of the quarry around its OSM node (estimated)
+
+
+def quarry():
+    """The «Caos Granítico»: loose granite boulders over the quarry (sizes and number estimated)."""
+    qx, qz = DATA["points"]["Caos Granatico"][:2]
+    site = np.array(DATA["site"], float)
+    blds = [np.array(b["r"], float) for b in DATA["buildings"]]
+    out = []
+    for k in range(70):
+        a, r = rng.uniform(0, 2 * math.pi), QUARRY_R * math.sqrt(rng.uniform(0, 1)) * 0.92
+        x, z = qx + math.cos(a) * r, qz + math.sin(a) * r
+        if not inside(np.array([x]), np.array([z]), site)[0] or any(inside(np.array([x]), np.array([z]), b)[0] for b in blds):
+            continue
+        w = rng.uniform(0.6, 2.6)
+        b = box(w, w * rng.uniform(0.45, 0.8), w * rng.uniform(0.6, 1.0), tint(ROCK, 0.06))
+        b.R(rng.uniform(-0.25, 0.25), rng.uniform(0, math.pi), rng.uniform(-0.25, 0.25))
+        b = crumple(b, w * 0.12, 1.3, int(k))
+        out.append(b.T(x, float(lev(x, z)) + 0.1, z))
+    return out
+
+
 def grass_drape(cell=2.0):
-    """The grass of the plazas and slopes inside the site, 0.25 m over the ground, leaving out the terraces and
-    the buildings."""
+    """The ground of the plazas, yards and slopes among the ruins, 0.25 m over the ground, leaving out the
+    terraces and the buildings: grass (OSM landuse=grass), trails (OSM footways and paths), scrub, worn lawn."""
     site = np.array(DATA["site"], float)
     G = [np.array(g["r"], float) for g in DATA["grass"]]
     x0, z0 = site.min(0); x1, z1 = site.max(0)
@@ -624,7 +683,6 @@ def grass_drape(cell=2.0):
         sel = m & (cx >= lo[0]) & (cx <= hi[0]) & (cz >= lo[1]) & (cz <= hi[1])
         if sel.any():
             gm[sel] |= inside(cx[sel], cz[sel], g)
-    m &= gm
     # only near what is modelled (the outline also takes in bare slopes far from the ruins)
     feat = [np.array(t["l"], float) for t in DATA["terraces"]] + [np.array(b["r"], float) for b in DATA["buildings"]]
     fp = np.vstack([resample(f, 2.0) for f in feat])
@@ -632,12 +690,14 @@ def grass_drape(cell=2.0):
     fi = np.clip(((fp[:, 0] - x0) / cell).astype(int), 0, len(xs) - 2)
     fj = np.clip(((fp[:, 1] - z0) / cell).astype(int), 0, len(zs) - 2)
     occ[fj, fi] = True
-    for _ in range(6):                                       # grow by 6 cells (12 m)
+    for _ in range(9):                                       # grow by 9 cells (18 m)
         o = occ.copy()
         o[1:] |= occ[:-1]; o[:-1] |= occ[1:]; o[:, 1:] |= occ[:, :-1]; o[:, :-1] |= occ[:, 1:]
         occ = o
     plaza = np.array([g["r"] for g in DATA["grass"] if g["id"] == 942151344][0], float)   # the Main Plaza: all of it
-    m &= occ.ravel() | inside(cx, cz, plaza)
+    qx, qz = DATA["points"]["Caos Granatico"][:2]               # the quarry
+    quarry = np.hypot(cx - qx, cz - qz) < QUARRY_R
+    m &= occ.ravel() | inside(cx, cz, plaza) | quarry            # all the open ground near the ruins
     for q in RIBBONS + [b["r"] for b in DATA["buildings"]]:
         q = np.array(q, float)
         lo, hi = q.min(0) - 0.5, q.max(0) + 0.5
@@ -663,8 +723,31 @@ def grass_drape(cell=2.0):
     V = np.array(V, float)
     V[:, 1] = lev(V[:, 0], V[:, 2]) + 0.25
     g = Mesh(V, F, GRASS)
+    # what each vertex is: grass, scrub, a trail, or the untagged ground among the ruins (worn lawn)
+    vx, vz = V[:, 0], V[:, 2]
+    is_grass = np.zeros(len(V), bool)
+    for gg in G:
+        lo, hi = gg.min(0) - 1, gg.max(0) + 1
+        sel = (vx >= lo[0]) & (vx <= hi[0]) & (vz >= lo[1]) & (vz <= hi[1])
+        if sel.any():
+            is_grass[sel] |= inside(vx[sel], vz[sel], gg)
+    paths, scrub = _ground_osm()
+    is_scrub = np.zeros(len(V), bool)
+    for q in scrub:
+        is_scrub |= inside(vx, vz, q)
+    stone = [L for L, sf in paths if sf in ("rock", "concrete", "paving_stones", "sett")]
+    earth = [L for L, sf in paths if sf not in ("rock", "concrete", "paving_stones", "sett")]
+    d_st, d_ea = _dist_to_lines(vx, vz, stone), _dist_to_lines(vx, vz, earth)
+    col = np.where(is_grass[:, None], np.array(GRASS), np.array(WORN))
+    col = np.where(is_scrub[:, None], np.array(SCRUB), col)
+    col = np.where((d_ea < 1.4)[:, None], np.array(EARTH), col)
+    col = np.where((d_st < 1.4)[:, None], np.array(PATH_STONE), col)
+    qx, qz = DATA["points"]["Caos Granatico"][:2]
+    col = np.where((np.hypot(vx - qx, vz - qz) < QUARRY_R - 1.0)[:, None], np.array(ROCK), col)   # the quarry
     k = fbm(V, 0.06, 3, 2)
-    g.c = np.array(GRASS) * (0.88 + 0.22 * k[:, None])
+    g.c = col * (0.88 + 0.22 * k[:, None])
+    print(f"ground: {len(F) // 2} cells of {cell:g} m — grass {is_grass.mean():.0%}, worn {(~is_grass & ~is_scrub).mean():.0%}, "
+          f"trails {((d_ea < 1.4) | (d_st < 1.4)).mean():.0%} of the vertices")
     return orient(g, lambda c: np.tile([0, 1.0, 0], (len(c), 1)))
 
 
@@ -682,7 +765,7 @@ def build():
     st = []
     for s in DATA["steps"]:
         st += steps(s)
-    holy = intihuatana() + sacred_rock()
+    holy = intihuatana() + sacred_rock() + quarry()
     grass = grass_drape()
     thatch_parts = [m for m in bld if len(m.c) and np.allclose(m.c.mean(0), THATCH, atol=0.08)]
     bld = [m for m in bld if not any(m is t for t in thatch_parts)]

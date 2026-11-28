@@ -2,6 +2,7 @@
   "id": "Q4152",
   "name": "Schloss Neuschwanstein",
   "heading": 246.6,
+  "surround": {"kind": "forest", "radius": 700},
   "position": {
     "lat": 47.5575676,
     "lon": 10.7496178,
@@ -13,6 +14,8 @@
     0
   ],
   "ground_low": -15,
+  "terrain_cut": false,
+  "ground_elev": 960.0,
   "authors": [
     {
       "name": "Álvaro C. Chulvi",
@@ -79,6 +82,10 @@
     {
       "title": "Wikidata Q4152 — architects and dates",
       "url": "https://www.wikidata.org/wiki/Q4152"
+    },
+    {
+      "title": "ground_elev 960.0 m: the height of y = 0 that best fits the model to the real ground of its area (SRTM via AWS Terrain Tiles, terrain.json) — tools/review_ground.py",
+      "url": "https://github.com/Aruvaro-Chulvi/OfflinedLandmarks3D/blob/main/docs/GROUND_REVIEW.md"
     }
   ],
   "notes": "Built by code (model_sources/Q4152_schloss_neuschwanstein.py, tools/meshkit.py) with AI assistance. Plan from the OpenStreetMap outlines and building:parts (squared to the 66.6°/246.6° axis of the courtyard buildings; the west block of the Palas is turned ~13° as in OSM); heights from the OSM parts, which agree with de.wikipedia for the Treppenturm (65 m) and the Viereckturm (45 m): Palas 33–34 m to the eaves and 45–46 m to the ridges, south tower 42 + 10 m spire, Treppenturm shaft to 45 m, upper turret to 53 m and spire to 65 m, Viereckturm 28 m + corbelled crenellated platform to 33 m + round turret and spire to 45 m, Knights' House 27 + 4 m, Kemenate 13 + 5 m, Torbau 10.5–17.4 m to the eaves and 22 m to its central gable. Heading 246.6° = the west front of the Palas (the Throne Hall end, towards the Alpsee and the Pöllat gorge); the classic view from the Marienbrücke is at azimuth ≈63° from that front (due south of the castle, bearing ≈184°, ~290 m away), showing the west front and the south side (+X). Levels (EU-DEM 25 m smooths the rock, ±2 m): y = 0 the upper courtyard (≈949 m), the lower courtyard and the gate at y = −6 (the 6 m of the OSM courtyard platform), a rock ledge around the walls at −7.5 and a simple rock cliff flaring down to −42 under the castle area of OSM way 221601969, so no gap shows where the terrain falls (≈15 m lower at the gatehouse). Estimated: storey heights and window rows (round-arched windows, paired on the upper floors), the dormers of the Palas roofs, the oriel of the west front, the raised terrace in front of the Palas (1.2 m), the stair between the courtyards, the parapets and battlements, the gilded finials. OSM tags the two highest spires green; they are drawn in the same dark slate as the other roofs. Not modelled: interiors, the terrain around, the Marienbrücke, the access road.",

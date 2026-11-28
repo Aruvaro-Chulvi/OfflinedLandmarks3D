@@ -2,6 +2,7 @@
   "id": "Q43473",
   "name": "Angkor Wat",
   "heading": 270.6,
+  "surround": {"kind": "rainforest", "radius": 1300},
   "position": {
     "lat": 13.4124485,
     "lon": 103.8669307,

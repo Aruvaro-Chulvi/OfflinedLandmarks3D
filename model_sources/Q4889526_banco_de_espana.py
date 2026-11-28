@@ -8,6 +8,9 @@ block at the corner of Paseo del Prado and Calle de Alcalá; extended along Alca
 was closed at Alcalá / Marqués de Cubas by Rafael Moneo (2003–2006, living), all keeping the exterior lines of
 the 1891 building. Because of the later architects the whole is still under copyright (status «protected»).
 
+Courtyards (since 2026-11-28): the open courtyards the building encloses get a floor (tools/ground_fill.py), coloured
+from the IGN orthophoto (PNOA, © Instituto Geográfico Nacional de España, CC BY 4.0, scne.es; model_sources/Q4889526_pnoa.jpg,
+its baked shadows taken out); before, the game saw through them and drew its own ground.
 Measurements (see meta.json for the sources):
 - OpenStreetMap relation 2614014 «Banco de España» (outline + 6 courtyards, ±0.5 m): 167 × 140 m. The Cibeles
   corner is a 12.4 m chamfer whose outward normal points to 44.3°: that is the main façade and the heading,
@@ -533,7 +536,10 @@ def main():
     stone += i_out
     roof += i_roof
     m_stone, m_roof, m_glass, m_iron = merge(stone), merge(roof), merge(glass), merge(ridge)
+    from ground_fill import courtyard_floor
+    floor = courtyard_floor([m_stone, m_roof, m_glass, m_iron], "Q4889526")
     tris, size = write_glb(out / "model.glb", [("banco_de_espana", m_stone), ("roofs", m_roof, {"material": "slate"}),
+                                               *([("courtyards", floor)] if floor is not None else []),
                                                ("cresting", m_iron, {"material": "metal"}),
                                                ("skylights", m_glass, {"material": "glass"})],
                            roughness=0.88, materials={"glass": GLASS, "metal": METAL, "slate": {"metallic": 0.1, "roughness": 0.55}})

@@ -13,6 +13,7 @@
     60
   ],
   "ground_low": -30,
+  "terrain_cut": false,
   "authors": [
     {
       "name": "Álvaro C. Chulvi",

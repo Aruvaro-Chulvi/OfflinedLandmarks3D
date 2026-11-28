@@ -30,6 +30,9 @@ What is modelled:
 - Not modelled: Westminster Abbey, the bridge, Portcullis House, New and Old Palace Yards and their gardens, the
   interiors.
 
+Courtyards (since 2026-11-28): the open courtyards inside the palace get a floor (tools/ground_fill.py), lawn, stone
+paving or the asphalt of the service yards as OpenStreetMap maps them (model_sources/Q62408_ground_osm.json); before,
+the game saw through them and drew its own ground.
 Measurements (see meta.json for the sources):
 - Plan: OpenStreetMap relation 1567699 (wikidata Q62408), ways 367642704 (Westminster Hall), 367642699 (St Stephen's
   Hall), 123557148 (Elizabeth Tower), 367642689 (Victoria Tower), 123557145 (Central Tower) and 367645111 (The
@@ -1740,10 +1743,63 @@ def footprint_ring(parts_meshes, step=0.5, grow=1.0):
     return [[round(float(x), 1), round(float(z), 1)] for x, z in s]
 
 
+def courtyard_colour():
+    """Colours of the courtyards from OpenStreetMap (model_sources/Q62408_ground_osm.json): lawn on its grass,
+    gardens and flower beds, dark asphalt on its service roads, stone paving elsewhere."""
+    j = json.loads((ROOT / "model_sources" / "Q62408_ground_osm.json").read_text(encoding="utf-8"))
+    meta = json.loads((ROOT / "models" / "Q62408" / "meta.json").read_bytes().decode("utf-8"))
+    lat0, lon0 = meta["position"]["lat"], meta["position"]["lon"]
+    th = math.pi - math.radians(meta["heading"]); c, s_ = math.cos(th), math.sin(th)
+    ke = 111320.0 * math.cos(math.radians(lat0))
+
+    def xz(ll):
+        A = np.array(ll, float).reshape(-1, 2)
+        e = (A[:, 1] - lon0) * ke; so = (lat0 - A[:, 0]) * 110574.0
+        return np.stack([c * e - s_ * so, s_ * e + c * so], 1)
+    grass = [xz(g["ll"]) for g in j["grass"]]
+    paved = [xz(g["ll"]) for g in j["paved"]]
+    service = [xz(g["ll"]) for g in j["service"]]
+
+    def inside(px, pz, P):
+        ins = np.zeros(len(px), bool)
+        for i in range(len(P)):
+            (xi, zi), (xj, zj) = P[i], P[i - 1]
+            m = (zi > pz) != (zj > pz)
+            ins ^= m & (px < (xj - xi) * (pz - zi) / np.where(zj - zi == 0, 1e-12, zj - zi) + xi)
+        return ins
+
+    def dist(px, pz, lines):
+        d = np.full(len(px), np.inf)
+        for L in lines:
+            for k in range(len(L) - 1):
+                (ax, az), (bx, bz) = L[k], L[k + 1]
+                dx, dz = bx - ax, bz - az; l2 = dx * dx + dz * dz
+                if l2 < 1e-9:
+                    continue
+                t = np.clip(((px - ax) * dx + (pz - az) * dz) / l2, 0, 1)
+                d = np.minimum(d, np.hypot(px - ax - dx * t, pz - az - dz * t))
+        return d
+
+    def colour(x, z):
+        x = np.asarray(x, float); z = np.asarray(z, float)
+        col = np.tile(np.array([0.66, 0.64, 0.59]), (len(x), 1))                 # York stone paving
+        col[dist(x, z, service) < 2.0] = (0.38, 0.38, 0.39)                       # asphalt of the service yards
+        for P in paved:
+            col[inside(x, z, P)] = (0.66, 0.64, 0.59)
+        for P in grass:
+            col[inside(x, z, P)] = (0.38, 0.50, 0.25)
+        return col
+    return colour
+
+
 def main():
     out = ROOT / "models" / "Q62408"
     out.mkdir(parents=True, exist_ok=True)
     parts = build()
+    from ground_fill import courtyard_floor
+    floor = courtyard_floor([p[1] for p in parts], "Q62408", colour=courtyard_colour())
+    if floor is not None:
+        parts = parts + [("courtyards", floor)]
     tris, size = write_glb(out / "model.glb", parts, roughness=0.88,
                            materials={"metal": METAL})
     allv = np.vstack([p[1].v for p in parts])

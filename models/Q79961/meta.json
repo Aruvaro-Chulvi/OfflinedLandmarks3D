@@ -2,6 +2,7 @@
   "id": "Q79961",
   "name": "Cristo Redentor",
   "heading": 80.9,
+  "surround": {"kind": "rainforest", "radius": 700},
   "position": {
     "lat": -22.9519171,
     "lon": -43.2104631,

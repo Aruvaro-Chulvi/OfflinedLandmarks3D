@@ -7,6 +7,9 @@ Enrique María Repullés (1845–1922) finished the crypt; Fernando Chueca Goiti
 completed it after the 1950 competition (the classical north façade, the dome, the nave); consecrated 1993.
 Protected (see meta.json).
 
+Courtyards (since 2026-11-28): the open courtyards the building encloses get a floor (tools/ground_fill.py), coloured
+from the IGN orthophoto (PNOA, © Instituto Geográfico Nacional de España, CC BY 4.0, scne.es; model_sources/Q849711_pnoa.jpg,
+its baked shadows taken out); before, the game saw through them and drew its own ground.
 Measurements (see meta.json for the sources):
 - OpenStreetMap relation 75658 (outline, two courtyards) and its building:part ways (nave, aisles, transept
   arms, crossing, drum, apse ring, radiating chapels, flying-buttress walls, towers, portico columns), in model
@@ -849,6 +852,10 @@ def main():
     out = ROOT / "models" / "Q849711"
     out.mkdir(parents=True, exist_ok=True)
     parts = build()
+    from ground_fill import courtyard_floor
+    floor = courtyard_floor(list(parts.values()), "Q849711")
+    if floor is not None:
+        parts["courtyards"] = floor
     tris, size = write_glb(out / "model.glb", [(k, m) for k, m in parts.items()], roughness=0.9)
     allv = np.vstack([m.v for m in parts.values()])
     lo, hi = allv.min(0), allv.max(0)

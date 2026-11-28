@@ -1,0 +1,8 @@
+{
+ "S": 37.173648984034834,
+ "W": -3.5934556786198244,
+ "N": 37.181020458085904,
+ "E": -3.5827283355694344,
+ "source": "PNOA m\u00e1xima actualidad, \u00a9 Instituto Geogr\u00e1fico Nacional de Espa\u00f1a, CC BY 4.0 (scne.es), WMS https://www.ign.es/wms-inspire/pnoa-ma",
+ "url": "https://www.ign.es/wms-inspire/pnoa-ma?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=OI.OrthoimageCoverage&STYLES=&CRS=EPSG:4326&BBOX=37.173648984034834,-3.5934556786198244,37.181020458085904,-3.5827283355694344&WIDTH=951&HEIGHT=815&FORMAT=image/jpeg"
+}

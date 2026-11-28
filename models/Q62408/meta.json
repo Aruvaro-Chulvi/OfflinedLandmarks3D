@@ -76,10 +76,14 @@
     {
       "title": "Wikidata Q62408 (Palace of Westminster) and Q41225 (Big Ben) — architects and dates",
       "url": "https://www.wikidata.org/wiki/Q62408"
+    },
+    {
+      "title": "OpenStreetMap — grass, gardens, paved areas and service roads of the courtyards (model_sources/Q62408_ground_osm.json, tools/ground_fill.py) (© OpenStreetMap contributors, ODbL)",
+      "url": "https://www.openstreetmap.org/"
     }
   ],
   "notes": "Built by code (model_sources/Q62408_palace_of_westminster.py, tools/meshkit.py) with AI assistance. Filed under the Palace of Westminster (Q62408); the Elizabeth Tower, Big Ben (Q41225), and the Victoria Tower (Q1858077) are part of the model. Heading 97.1°: the river (east) front on the Thames is the main façade (+Z), so the Victoria Tower stands at the −X (south) end and the Elizabeth Tower at the +X (north) end. Massing from the OpenStreetMap building:parts: every part at its OSM height with its roof shape (gabled, hipped, mansard, skillion, pyramidal, flat); dark cast-iron roofs with iron cresting, lead flats, sandy-grey Anston limestone. The Perpendicular bays (buttress shafts rising as small pinnacles above the parapet, rows of mullioned windows, string courses) are generated on every wall that OSM shows exposed — a stylised rhythm, not the real window count. Small turret parts become octagonal pinnacles. The three great towers are built by hand: the Victoria Tower (OSM stages scaled to the published 98.5 m, corner turrets, the Sovereign's Entrance arch on its south and west faces, the flagstaff to 120 m as in OSM with the Union Flag), the Elizabeth Tower (12.2 m shaft, clock stage with four 7 m dials centred 55 m up, gilded frames and hands, the belfry, the cast-iron spire with lucarnes and gilded ribs, the Ayrton light, finial at 96 m) and the Central Tower (octagonal lantern and stone spire raised to the published 91 m; OSM stops at 78 m). Westminster Hall from its OSM parts with the great north window; the river terrace (OSM way 367645111) with its parapet and the river wall down to y = −6 m. Uncertain: the stages of the Elizabeth Tower spire above 61 m (from photos, ±5 %), the exact shape of the Victoria Tower top and the height of its flagstaff (OSM 120 m, ±10 %), whether the Sovereign's Entrance arch also opens on the west face, the rhythm and number of the windows, the roofs that OSM tags only roughly. Not included: Westminster Abbey, Westminster Bridge, Portcullis House, New and Old Palace Yard, Speaker's Green and Black Rod's Garden. footprint: the palace, Westminster Hall, the towers and the terrace (courtyards included), +1 m.",
-  "triangles": 88670,
+  "triangles": 99700,
   "footprint": [
     [
       15.2,

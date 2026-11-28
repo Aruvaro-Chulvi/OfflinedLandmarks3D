@@ -27,7 +27,11 @@ What is modelled:
   of Mustafa I and İbrahim), the şadırvan of Mahmud I (eight columns under a wide lead roof, the marble basin
   inside), the primary school (sıbyan mektebi), an Ottoman outbuilding beside the şadırvan, the round
   skeuophylakion on the north side, the precinct walls and railing, trees.
-- Not modelled: the interiors, the terrain, the streets and squares outside the railing, the archaeological
+- The ground of the precinct (since 2026-11-28; before, the game saw through it and drew its own): it follows the
+  terrain the game uses (models/Q12506/terrain.json, SRTM), paved in the west courtyard and lawn in the gardens
+  elsewhere, with OpenStreetMap's grass, gardens, paved areas and paths (model_sources/Q12506_ground_osm.json) on
+  top, and its 11 mapped trees added to the ones placed by hand (which now stand on that ground too).
+- Not modelled: the interiors, the streets and squares outside the railing, the archaeological
   remains of Theodosius' church in front of the west façade, the modern ticket and security buildings.
 
 Measurements (see meta.json for the sources):
@@ -99,6 +103,8 @@ TRUNK = (0.36, 0.27, 0.19)
 CYPRESS = (0.15, 0.29, 0.14)
 TREES = [(0.24, 0.40, 0.18), (0.28, 0.44, 0.20), (0.21, 0.36, 0.17)]
 WATER = (0.29, 0.43, 0.50)
+PAVE = (0.74, 0.72, 0.67)              # stone paving of the courtyard and paths
+LAWN = (0.42, 0.52, 0.28)              # the lawns of the gardens
 
 FOUND = -6.0        # walls go down to here (lowest ground around: −4.6)
 TY = 0.5            # ground of the tombs above y = 0 (EU-DEM, ±1 m)
@@ -705,8 +711,134 @@ def precinct():
              (-70.0, 18.0, 1), (-66.0, -10.0, 0), (-64.0, -40.0, 2), (92.0, 24.0, 1), (95.0, -18.0, 0),
              (96.0, 60.0, 2), (68.0, 30.0, 0), (96.0, -36.0, 1), (66.0, 46.0, 0), (-68.0, 38.0, 0)]
     for x, z, k in spots:
-        ms += tree(x, z, TY if x > 40 else 0.0, k)
+        ms += tree(x, z, float(ground_y(x, z)), k)
     return ms
+
+
+# ── The ground of the precinct ───────────────────────────────────────────
+def _terrain():
+    """The terrain the game puts here (models/Q12506/terrain.json), as model y (0 at ground_at)."""
+    import base64
+    t = json.loads((ROOT / "models" / "Q12506" / "terrain.json").read_text(encoding="utf-8"))
+    meta = json.loads((ROOT / "models" / "Q12506" / "meta.json").read_text(encoding="utf-8"))
+    n = t["n"]
+    H = np.frombuffer(base64.b64decode(t["h"]), "<i2").reshape(n, n).astype(float) / 10.0 + t["off"]
+    th = math.pi - math.radians(meta["heading"]); c, s_ = math.cos(th), math.sin(th)
+
+    def T(x, z):
+        x = np.asarray(x, float); z = np.asarray(z, float)
+        e = x * c + z * s_; no = -(-x * s_ + z * c)
+        fi = np.clip((e - t["x0"]) / t["c"], 0, n - 1.0001); fj = np.clip((t["y0"] - no) / t["c"], 0, n - 1.0001)
+        i0 = np.floor(fi).astype(int); j0 = np.floor(fj).astype(int); a = fi - i0; b = fj - j0
+        return H[j0, i0] * (1 - a) * (1 - b) + H[j0, i0 + 1] * a * (1 - b) + H[j0 + 1, i0] * (1 - a) * b + H[j0 + 1, i0 + 1] * a * b
+    ga = meta.get("ground_at") or [0, 0]
+    t0 = float(T(*ga))
+    return lambda x, z: T(x, z) - t0
+
+
+_T_CACHE = []
+
+
+def ground_y(x, z):
+    if not _T_CACHE:
+        _T_CACHE.append(_terrain())
+    return _T_CACHE[0](x, z)
+
+
+def _osm_ground():
+    j = json.loads((ROOT / "model_sources" / "Q12506_ground_osm.json").read_text(encoding="utf-8"))
+    meta = json.loads((ROOT / "models" / "Q12506" / "meta.json").read_text(encoding="utf-8"))
+    lat0, lon0 = meta["position"]["lat"], meta["position"]["lon"]
+    th = math.pi - math.radians(meta["heading"]); c, s_ = math.cos(th), math.sin(th)
+    ke = 111320.0 * math.cos(math.radians(lat0))
+
+    def xz(ll):
+        A = np.array(ll, float).reshape(-1, 2)
+        e = (A[:, 1] - lon0) * ke; so = (lat0 - A[:, 0]) * 110574.0
+        return np.stack([c * e - s_ * so, s_ * e + c * so], 1)
+    return ([xz(g["ll"]) for g in j["grass"]], [xz(g["ll"]) for g in j["paved_areas"]],
+            [xz(g["ll"]) for g in j["paths"]], [tuple(xz(g["ll"])[0]) for g in j["trees"]])
+
+
+def _inside(px, pz, P):
+    P = np.asarray(P, float); ins = np.zeros(len(px), bool)
+    for i in range(len(P)):
+        (xi, zi), (xj, zj) = P[i], P[i - 1]
+        m = (zi > pz) != (zj > pz)
+        xc = (xj - xi) * (pz - zi) / np.where(zj - zi == 0, 1e-12, zj - zi) + xi
+        ins ^= m & (px < xc)
+    return ins
+
+
+def _dist_lines(px, pz, lines):
+    d = np.full(len(px), np.inf)
+    for L in lines:
+        for k in range(len(L) - 1):
+            (ax, az), (bx, bz) = L[k], L[k + 1]
+            dx, dz = bx - ax, bz - az; l2 = dx * dx + dz * dz
+            if l2 < 1e-9:
+                continue
+            t = np.clip(((px - ax) * dx + (pz - az) * dz) / l2, 0, 1)
+            d = np.minimum(d, np.hypot(px - ax - dx * t, pz - az - dz * t))
+    return d
+
+
+def precinct_ground(cell=2.0):
+    """A sheet over the precinct (inside the footprint, outside the buildings) on the terrain, 0.05 m above it,
+    paved in the west courtyard and lawn elsewhere, with OSM's grass, paved areas and paths; and OSM's trees."""
+    F = np.array(FOOTPRINT, float)
+    x0, z0 = F.min(0); x1, z1 = F.max(0)
+    xs = np.arange(x0, x1 + cell, cell); zs = np.arange(z0, z1 + cell, cell)
+    X, Z = np.meshgrid(xs[:-1] + cell / 2, zs[:-1] + cell / 2)
+    cx, cz = X.ravel(), Z.ravel()
+    keep = _inside(cx, cz, F)
+    for P in [OUTLINE, BAPTISTERY, SELIM_BODY, SELIM_PORCH, MURAD_BODY, MURAD_PORCH, SEHZADE, SCHOOL, OUTBUILDING]:
+        keep &= ~_inside(cx, cz, P)
+    for (qx, qz), r in ((SKEUO_C, SKEUO_R), (SADIRVAN_C, 7.6), (MEHMED_C, 9.0)):
+        keep &= np.hypot(cx - qx, cz - qz) > r
+    x0m, x1m, z0m, z1m = MEHMED_PORCH
+    keep &= ~((cx > x0m) & (cx < x1m) & (cz > z0m) & (cz < z1m))
+    nx = len(xs)
+    idx = {}
+    V, Fc = [], []
+
+    def vid(i, j):
+        k = (i, j)
+        if k not in idx:
+            idx[k] = len(V); V.append((xs[i], 0.0, zs[j]))
+        return idx[k]
+    for k in np.nonzero(keep)[0]:
+        j, i = divmod(int(k), nx - 1)
+        a, b, c, d = vid(i, j), vid(i + 1, j), vid(i + 1, j + 1), vid(i, j + 1)
+        Fc += [(a, c, b), (a, d, c)]
+    V = np.array(V, float)
+    V[:, 1] = ground_y(V[:, 0], V[:, 2]) + 0.05
+    grass, paved, paths, otrees = _osm_ground()
+    vx, vz = V[:, 0], V[:, 2]
+    west = vz > EXO[3] + 2.0                                     # the west courtyard, in front of the exonarthex
+    col = np.where(west[:, None], np.array(PAVE), np.array(LAWN))
+    for P in grass:
+        col = np.where(_inside(vx, vz, P)[:, None], np.array(LAWN), col)
+    for P in paved:
+        col = np.where(_inside(vx, vz, P)[:, None], np.array(PAVE), col)
+    col = np.where((_dist_lines(vx, vz, paths) < 1.3)[:, None], np.array(PAVE), col)
+    k = fbm(V, 0.07, 5, 2)
+    g = Mesh(V, Fc, LAWN)
+    g.c = np.clip(col * (0.9 + 0.18 * k[:, None]), 0, 1)
+    # make every face look up
+    n = np.cross(V[g.f[:, 1]] - V[g.f[:, 0]], V[g.f[:, 2]] - V[g.f[:, 0]])
+    flip = n[:, 1] < 0
+    g.f[flip] = g.f[flip][:, ::-1]
+    trees = []
+    hand = [(48.0, 52.0), (52.0, 80.0), (66.0, 84.0), (82.0, 80.0), (30.0, 88.0), (10.0, 90.0), (-12.0, 90.0),
+            (-35.0, 90.0), (-58.0, 92.0), (-76.0, 82.0), (-78.0, 60.0), (-70.0, 18.0), (-66.0, -10.0), (-64.0, -40.0),
+            (92.0, 24.0), (95.0, -18.0), (96.0, 60.0), (68.0, 30.0), (96.0, -36.0), (66.0, 46.0), (-68.0, 38.0)]
+    for i_, (x, z) in enumerate(otrees):
+        if not _inside(np.array([x]), np.array([z]), F)[0] or min(math.hypot(x - a, z - b) for a, b in hand) < 4.0:
+            continue
+        trees += tree(x, z, float(ground_y(x, z)), i_ % 3)
+    print(f"precinct ground: {len(Fc) // 2} cells of {cell:g} m, {len(trees) // 2 if trees else 0} OSM trees")
+    return [g] + trees
 
 
 # ── Assembly ─────────────────────────────────────────────────────────────────
@@ -717,7 +849,7 @@ def build():
     for k in MINARETS:
         mins += minaret(k)
     return [("church", merge(church)), ("domes", merge(domes)), ("minarets", merge(mins)),
-            ("tombs", merge(tombs())), ("precinct", merge(precinct()))]
+            ("tombs", merge(tombs())), ("precinct", merge(precinct())), ("ground", merge(precinct_ground()))]
 
 
 FOOTPRINT = [(-43.4, -57.1), (-63.6, -57.2), (-71.2, -52.0), (-74.4, -42.0), (-84.0, 26.3), (-85.5, 44.0),

@@ -9,6 +9,7 @@
   },
   "ground": "keep",
   "ground_at": [0, -100],
+  "ground_elev": 614.0,
   "authors": [
     {
       "name": "Álvaro C. Chulvi",
@@ -62,6 +63,10 @@
     {
       "title": "EU-DEM 25 m via OpenTopoData: ~613–617 m on the apron east of the pier, ~620–622 m on the landside to the west",
       "url": "https://www.opentopodata.org/datasets/eudem/"
+    },
+    {
+      "title": "ground_elev 614.0 m: the height of y = 0 that best fits the model to the real ground of its area (IGN MDT05 (CC BY 4.0), terrain.json) — tools/review_ground.py",
+      "url": "https://github.com/Aruvaro-Chulvi/OfflinedLandmarks3D/blob/main/docs/GROUND_REVIEW.md"
     }
   ],
   "triangles": 49408,

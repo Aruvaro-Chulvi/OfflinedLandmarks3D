@@ -33,7 +33,12 @@ What is modelled:
 - The Generalife across the ravine: its palace around the Patio de la Acequia (the long channel with the arcs of
   its jets, the flower beds, the north pavilion with the Sala Regia and the mirador tower, the porticoes), the
   Patio del Ciprés de la Sultana with its pool, the upper and lower gardens with their hedges and cypress rows.
-- Gardens, hedges, pools and fountains as OpenStreetMap draws them; trees in the gardens and cypress rows.
+- Gardens, hedges, pools and fountains as OpenStreetMap draws them; the cypress rows of OSM.
+- The open ground (since 2026-11-28): everything inside the walls and the Generalife that the model did not cover
+  (the Plaza de los Aljibes, the Secano, the yards of the medina, the paths) gets a floor that follows the ground,
+  coloured from the IGN orthophoto (PNOA, CC BY 4.0, scne.es; model_sources/Q47476_pnoa.jpg at 1 m/px, its
+  shadows softened), and the trees of the gardens and the open ground stand where the orthophoto shows their
+  crowns (dark green blobs), not at random. Before, the game saw through those holes and drew its own ground.
 - Not modelled: the terrain itself, the streets, the woods outside the walls (Bosque de la Alhambra), the
   interiors and their stucco, the Hotel Alhambra Palace and other buildings outside the walls.
 
@@ -42,10 +47,14 @@ Measurements (see meta.json for the sources):
   the Alcazaba 26935518, the Nasrid palaces 279110939 and their halls, the Palace of Charles V relation 2640220
   (outer square 62.8 × 61.6 m, circular courtyard Ø 30.8 m), the Generalife 196490785 and its palace relation
   14361006, courts, pools, gardens, hedges and tree rows (ids in DATA). Data © OpenStreetMap contributors, ODbL.
-- Ground: EU-DEM 25 m (Copernicus, via OpenTopoData), sampled on a 12 m grid over the whole site (DATA terrain).
-  y = 0 is the Plaza de los Aljibes (764 m in the DEM); the Nasrid palaces are at y = −3, the Plaza de Armas of
-  the Alcazaba at −10, the Partal pool at −5, the Patio de la Acequia of the Generalife at +31; the ground at the
-  foot of the walls goes down to about −30 (north front, over the Darro; the DEM smooths the steepest slopes).
+- Ground: since 2026-11-28 the IGN MDT05 (bare earth, 5 m; CC BY 4.0, scne.es) as resampled at 8 m in
+  models/Q47476/terrain.json (tools/terrain.py) — the same ground Offlined puts around the model, so model and
+  terrain meet. Before, EU-DEM 25 m (Copernicus, via OpenTopoData, sampled on a 12 m grid: DATA terrain, still
+  the fallback without terrain.json), which differed from the IGN ground by up to ±10 m.
+  y = 0 is the Plaza de los Aljibes (773.7 m in the IGN MDT05; 764 m in the old EU-DEM); the levels below are
+  taken from that ground: the Nasrid palaces at y = −4.5, the Plaza de Armas of the Alcazaba at +4.5 (the old
+  EU-DEM, smoothing the spur, gave −10), the Partal pool at −3.3, the Patio de la Acequia of the Generalife at
+  +24.3; the ground at the foot of the walls goes down to about −25 (north front, over the Darro).
 - Walls: walk 9.5 m above the outside ground or 3 m above the inside ground, whichever is higher (smoothed over
   ~25 m), parapet 0.5 m, merlons 1.15 m + 0.35 m cap (photos, ±15 %); foundations 6 m below the lowest ground.
   Wikipedia (es): the site is about 740 m long and 40–180 m wide (OSM gives 744 × 262 m for the smallest
@@ -82,6 +91,7 @@ import numpy as np
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "tools"))
 from meshkit import Mesh, merge, lathe, cap, triangulate, ring_area, offset, fbm, write_glb  # noqa: E402
+from PIL import Image  # noqa: E402
 
 rng = np.random.default_rng(1238)
 HEADING = 26.0
@@ -125,8 +135,25 @@ _DEM = np.array(_T["dm"], float).reshape(_T["nz"], _T["nx"]) / 10.0
 GROUND_AT = (226.0, -27.0)             # Plaza de los Aljibes
 
 
+_TJ = ROOT / "models" / "Q47476" / "terrain.json"
+if _TJ.exists():                                                  # the IGN MDT05 ground (tools/terrain.py)
+    import base64
+    _tj = json.loads(_TJ.read_text(encoding="utf-8"))
+    _IGN = np.frombuffer(base64.b64decode(_tj["h"]), "<i2").reshape(_tj["n"], _tj["n"]).astype(float) / 10.0 + _tj["off"]
+else:
+    _tj = None
+
+
 def dem(x, z):
     x = np.asarray(x, float); z = np.asarray(z, float)
+    if _tj is not None:
+        # model axes → metres east / north, as Offlined places the model (th = π − heading)
+        th = math.pi - math.radians(HEADING); c, s_ = math.cos(th), math.sin(th)
+        e = x * c + z * s_; n = -(-x * s_ + z * c)
+        fi = np.clip((e - _tj["x0"]) / _tj["c"], 0, _tj["n"] - 1.0001); fj = np.clip((_tj["y0"] - n) / _tj["c"], 0, _tj["n"] - 1.0001)
+        i0 = np.floor(fi).astype(int); j0 = np.floor(fj).astype(int); ti = fi - i0; tj = fj - j0
+        return (_IGN[j0, i0] * (1 - ti) * (1 - tj) + _IGN[j0, i0 + 1] * ti * (1 - tj)
+                + _IGN[j0 + 1, i0] * (1 - ti) * tj + _IGN[j0 + 1, i0 + 1] * ti * tj)
     i = np.clip((x - _T["x0"]) / _T["step"], 0, _T["nx"] - 1.0001)
     j = np.clip((z - _T["z0"]) / _T["step"], 0, _T["nz"] - 1.0001)
     i0 = np.floor(i).astype(int); j0 = np.floor(j).astype(int); fi = i - i0; fj = j - j0
@@ -1112,7 +1139,7 @@ def gardens(mb, trees_out):
             flat(mb, P, PAL + 0.15, col, depth=1.0)
         else:
             drape(mb, P, dy, tint(col, 0.04))
-        if area > 150 and gd["id"] not in COURT_GARDENS:
+        if False and area > 150 and gd["id"] not in COURT_GARDENS:   # (their trees now come from the orthophoto)
             n = min(40, int(area / 160))
             A = np.array(P)
             x0, z0 = A.min(0); x1, z1 = A.max(0)
@@ -1169,6 +1196,16 @@ def round_tree(mb, x, z, y, h):
     trunk = lathe([(0.18, 0), (0.15, h * 0.45)], TRUNK, 4)
     trunk.T(x, y, z); mb.add(trunk)
     crown = lathe([(0.0, 0.0), (r, r * 0.7), (r * 0.7, r * 1.45), (0.0, r * 1.75)], TREE, 6)
+    crown.c = np.array([tint(TREE, 0.08)] * len(crown.v))
+    crown.T(x, y + h * 0.35, z); mb.add(crown)
+
+
+def light_tree(mb, x, z, y, h):
+    """A lighter round tree for the hundreds taken from the orthophoto (keeps the model under its size limit)."""
+    r = h * 0.38
+    trunk = lathe([(0.18, 0), (0.15, h * 0.45)], TRUNK, 3)
+    trunk.T(x, y, z); mb.add(trunk)
+    crown = lathe([(0.0, 0.0), (r, r * 0.75), (r * 0.6, r * 1.45), (0.0, r * 1.7)], TREE, 5)
     crown.c = np.array([tint(TREE, 0.08)] * len(crown.v))
     crown.T(x, y + h * 0.35, z); mb.add(crown)
 
@@ -1342,6 +1379,168 @@ GEN = round(float(hy(*np.array(centroid(next(w["p"] for w in DATA["gardens"] if 
 
 
 # ── Assembly ─────────────────────────────────────────────────────────────────
+# ── The open ground and its trees, from the IGN orthophoto ─────────────────
+PNOA = ROOT / "model_sources" / "Q47476_pnoa.jpg"           # PNOA (IGN, CC BY 4.0), 1 m/px, north up
+PNOA_BOX = ROOT / "model_sources" / "Q47476_pnoa.json"      # its bounds (lat/lon) and source
+CELL = 2.0
+
+
+def _meta_pos():
+    m = json.loads((ROOT / "models" / "Q47476" / "meta.json").read_text(encoding="utf-8"))
+    return float(m["position"]["lat"]), float(m["position"]["lon"])
+
+
+def _to_ll(x, z):
+    """Model x, z → lat, lon (as Offlined places it: th = π − heading)."""
+    lat0, lon0 = _meta_pos()
+    th = math.pi - math.radians(HEADING); c, s_ = math.cos(th), math.sin(th)
+    e = x * c + z * s_; so = -x * s_ + z * c
+    return lat0 - so / 110574.0, lon0 + e / (111320.0 * math.cos(math.radians(lat0)))
+
+
+def pnoa():
+    """The orthophoto (downloaded once from the IGN WMS if it is not in model_sources) and a sampler (x, z) → rgb."""
+    if not PNOA.exists():
+        import urllib.request
+        P = np.array(RING + GEN_OUT)
+        x0, z0 = P.min(0) - 20; x1, z1 = P.max(0) + 20
+        ll = [_to_ll(x, z) for x in (x0, x1) for z in (z0, z1)]
+        S, N = min(a for a, b in ll), max(a for a, b in ll); W, E = min(b for a, b in ll), max(b for a, b in ll)
+        w = int((E - W) * 111320 * math.cos(math.radians(S))); h = int((N - S) * 110574)
+        url = ("https://www.ign.es/wms-inspire/pnoa-ma?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=OI.OrthoimageCoverage"
+               f"&STYLES=&CRS=EPSG:4326&BBOX={S},{W},{N},{E}&WIDTH={w}&HEIGHT={h}&FORMAT=image/jpeg")
+        PNOA.write_bytes(urllib.request.urlopen(urllib.request.Request(url, headers={"User-Agent": "OfflinedLandmarks3D"}), timeout=180).read())
+        PNOA_BOX.write_text(json.dumps({"S": S, "W": W, "N": N, "E": E, "source": "PNOA máxima actualidad, © Instituto Geográfico "
+                                        "Nacional de España, CC BY 4.0 (scne.es), WMS https://www.ign.es/wms-inspire/pnoa-ma",
+                                        "url": url}, indent=1) + "\n", encoding="utf-8", newline="\n")
+    box = json.loads(PNOA_BOX.read_text(encoding="utf-8"))
+    img = np.asarray(Image.open(PNOA).convert("RGB"), float) / 255.0
+    H, W_ = img.shape[:2]
+    # Without the shadows baked into the photo (the game casts its own): a shaded pixel (dark, and bluish or grey,
+    # not a tree crown) takes the mean colour of the sunlit ground within ~9 m around it
+    lum = img.mean(2)
+    exg = 2 * img[..., 1] - img[..., 0] - img[..., 2]
+    lit = (lum > 0.36) & (exg < 0.08)
+    def boxsum(a, r):
+        c = np.pad(a, ((r + 1, r), (r + 1, r)), mode="edge").cumsum(0).cumsum(1)
+        return c[2 * r + 1:, 2 * r + 1:] - c[:-2 * r - 1, 2 * r + 1:] - c[2 * r + 1:, :-2 * r - 1] + c[:-2 * r - 1, :-2 * r - 1]
+    wgt = boxsum(lit.astype(float), 4)
+    mean = np.stack([boxsum(img[..., k] * lit, 4) for k in range(3)], 2) / np.maximum(wgt, 1)[..., None]
+    shade = (lum < 0.33) & (exg < 0.05) & (wgt > 6)
+    ground_img = np.where(shade[..., None], mean, img)
+    # second pass, for the wide shadows (of the walls, of big trees): what is still dark or bluish, from ~21 m around
+    lum2 = ground_img.mean(2)
+    blue = (ground_img[..., 2] > ground_img[..., 0] + 0.01) | (lum2 < 0.3)
+    wgt2 = boxsum(lit.astype(float), 10)
+    mean2 = np.stack([boxsum(img[..., k] * lit, 10) for k in range(3)], 2) / np.maximum(wgt2, 1)[..., None]
+    ground_img = np.where((blue & (exg < 0.05) & (wgt2 > 20))[..., None], mean2, ground_img)
+
+    def at(x, z):
+        la, lo = _to_ll(np.asarray(x, float), np.asarray(z, float))
+        i = np.clip(((lo - box["W"]) / (box["E"] - box["W"]) * W_).astype(int), 0, W_ - 1)
+        j = np.clip(((box["N"] - la) / (box["N"] - box["S"]) * H).astype(int), 0, H - 1)
+        return ground_img[j, i]
+    return at, img, box
+
+
+def _covered(meshes, x0, z0, nx, nz):
+    """Cells of a CELL-metre grid that a mesh covers seen from above (points spread over every triangle)."""
+    cov = np.zeros((nz, nx), bool)
+    for m in meshes:
+        if not len(m.f):
+            continue
+        T = m.v[m.f]
+        a, b, c = T[:, 0], T[:, 1], T[:, 2]
+        area = np.linalg.norm(np.cross(b - a, c - a), axis=1) / 2
+        k = np.clip(np.ceil(area / 1.0).astype(int), 1, 2000)
+        rep_ = np.repeat(np.arange(len(T)), k)
+        u, v = rng.random(len(rep_)), rng.random(len(rep_))
+        fl = u + v > 1; u[fl], v[fl] = 1 - u[fl], 1 - v[fl]
+        P = a[rep_] + (b - a)[rep_] * u[:, None] + (c - a)[rep_] * v[:, None]
+        P = np.vstack([P, T.reshape(-1, 3)])
+        i = ((P[:, 0] - x0) / CELL).astype(int); j = ((P[:, 2] - z0) / CELL).astype(int)
+        ok = (i >= 0) & (j >= 0) & (i < nx) & (j < nz)
+        cov[j[ok], i[ok]] = True
+    return cov
+
+
+def open_ground(parts, existing_trees):
+    """A floor on whatever the walls and the Generalife enclose and the model left open, coloured from the
+    orthophoto; and trees where the orthophoto shows crowns (outside buildings and away from the OSM trees)."""
+    at, img, box = pnoa()
+    P = np.array(RING + GEN_OUT)
+    x0, z0 = P.min(0) - 2; x1, z1 = P.max(0) + 2
+    nx, nz = int((x1 - x0) / CELL) + 1, int((z1 - z0) / CELL) + 1
+    built = [m for name, m in parts if name not in ("gardens", "vegetation")]
+    cov_all = _covered([m for _, m in parts], x0, z0, nx, nz)
+    cov_built = _covered(built, x0, z0, nx, nz)
+    X, Z = np.meshgrid(x0 + (np.arange(nx) + 0.5) * CELL, z0 + (np.arange(nz) + 0.5) * CELL)
+    Q = np.stack([X.ravel(), Z.ravel()], 1)
+
+    def inpoly(R):
+        R = np.asarray(R); ins = np.zeros(len(Q), bool)
+        for i in range(len(R)):
+            (xi, zi), (xj, zj) = R[i], R[i - 1]
+            m = (zi > Q[:, 1]) != (zj > Q[:, 1])
+            xc = (xj - xi) * (Q[:, 1] - zi) / np.where(zj - zi == 0, 1e-12, zj - zi) + xi
+            ins ^= m & (Q[:, 0] < xc)
+        return ins.reshape(nz, nx)
+    within = inpoly(RING) | inpoly(GEN_OUT)
+    fill = within & ~cov_all
+    # colours at the grid nodes: the orthophoto averaged over the cell, its shadows softened (the game makes its own)
+    NX, NZ = np.meshgrid(x0 + np.arange(nx + 1) * CELL, z0 + np.arange(nz + 1) * CELL)
+    col = np.zeros(NX.shape + (3,))
+    for dx in (-0.6, 0.0, 0.6):
+        for dz in (-0.6, 0.0, 0.6):
+            col += at(NX + dx, NZ + dz)
+    col /= 9
+    lum = col.mean(2, keepdims=True)
+    col = np.clip(col * (0.62 + 0.38 * np.clip(0.52 / np.maximum(lum, 0.05), 0.6, 1.9)), 0, 1)
+    Y = hy(NX, NZ) + 0.05
+    mb = MB()
+    idx = -np.ones(NX.shape, int)
+    def node(j, i):
+        if idx[j, i] < 0:
+            idx[j, i] = len(mb.V); mb.V.append((float(NX[j, i]), float(Y[j, i]), float(NZ[j, i]))); mb.C.append(tuple(col[j, i]))
+        return idx[j, i]
+    for j in range(nz):
+        for i in range(nx):
+            if fill[j, i]:
+                a, b, c, d = node(j, i), node(j, i + 1), node(j + 1, i + 1), node(j + 1, i)
+                mb.F += [(a, c, b), (a, d, c)]                 # +z is the second index: these face up
+    # trees: dark green blobs of the orthophoto (excess green), one per local maximum, 4 m apart
+    H, W_ = img.shape[:2]
+    r, g, b_ = img[..., 0], img[..., 1], img[..., 2]
+    exg = 2 * g - r - b_
+    lm = img.mean(2)
+    tree = np.where((exg > 0.06) & (lm < 0.42), exg, 0.0)
+    from numpy.lib.stride_tricks import sliding_window_view as swv
+    pad = np.pad(tree, 2)
+    mx = swv(pad, (5, 5)).max(axis=(2, 3))
+    peaks = np.argwhere((tree > 0) & (tree >= mx))
+    lat0, lon0 = _meta_pos()
+    th = math.pi - math.radians(HEADING); c_, s_ = math.cos(th), math.sin(th)
+    keA = 111320.0 * math.cos(math.radians(lat0))
+    old = np.array([(x, z) for x, z, _ in existing_trees]) if existing_trees else np.zeros((0, 2))
+    veg = MB(); placed = []
+    for j, i in peaks:
+        la = box["N"] - (j + 0.5) / H * (box["N"] - box["S"]); lo = box["W"] + (i + 0.5) / W_ * (box["E"] - box["W"])
+        e = (lo - lon0) * keA; so = (lat0 - la) * 110574.0
+        x = e * c_ - so * s_; z = e * s_ + so * c_                 # inverse of _to_ll
+        ci, cj = int((x - x0) / CELL), int((z - z0) / CELL)
+        if not (0 <= ci < nx and 0 <= cj < nz) or not within[cj, ci] or cov_built[cj, ci]:
+            continue
+        if len(old) and np.min(np.hypot(old[:, 0] - x, old[:, 1] - z)) < 3.0:
+            continue
+        if placed and min(math.hypot(px - x, pz - z) for px, pz in placed[-400:]) < 4.0:
+            continue
+        placed.append((x, z))
+        size = float(np.clip(tree[max(0, j - 3):j + 4, max(0, i - 3):i + 4].astype(bool).sum() / 49.0, 0.2, 1.0))
+        light_tree(veg, x, z, float(hy(x, z)) - 0.2, 4.0 + 5.0 * size + rng.random() * 1.5)
+    print(f"open ground: {int(fill.sum())} cells of {CELL:g} m ({fill.sum() * CELL * CELL / 1e4:.2f} ha), {len(placed)} trees from the orthophoto")
+    return mb.mesh(), veg.mesh()
+
+
 def build():
     fort, tw, pal, cv, bl, gd, gen, veg = MB(), MB(), MB(), MB(), MB(), MB(), MB(), MB()
     C, walk = ring_wall(fort)
@@ -1362,8 +1561,11 @@ def build():
         b = lathe([(0.0, 0.0), (0.5, 0.3), (0.45, 0.9), (0.0, 1.2)], HEDGE, 5)
         b.T(x, GEN + 0.4, z); veg.add(b)
     trees(veg, others)
-    return [("walls", fort.mesh()), ("towers", tw.mesh()), ("nasrid_palaces", pal.mesh()), ("palace_charles_v", cv.mesh()),
-            ("buildings", bl.mesh()), ("gardens", gd.mesh()), ("generalife", gen.mesh()), ("vegetation", veg.mesh())]
+    parts = [("walls", fort.mesh()), ("towers", tw.mesh()), ("nasrid_palaces", pal.mesh()), ("palace_charles_v", cv.mesh()),
+             ("buildings", bl.mesh()), ("gardens", gd.mesh()), ("generalife", gen.mesh()), ("vegetation", veg.mesh())]
+    known = [(x, z, k) for x, z, k in others] + [(p[0], p[1], "cypress") for tr in DATA["tree_rows"] for p in resample(tr["p"], 3.2)]
+    ground, otrees = open_ground(parts, known)
+    return parts + [("open_ground", ground), ("trees", otrees)]
 
 
 def main():
@@ -1392,7 +1594,7 @@ def main():
         mj = json.loads(meta.read_text(encoding="utf-8"))
         mj["triangles"] = int(tris)
         mj["footprint"] = [[x, z] for x, z in fp]
-        meta.write_text(json.dumps(mj, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+        meta.write_text(json.dumps(mj, ensure_ascii=False, indent=2) + "\n", encoding="utf-8", newline="\n")
     lo = float(hy(*np.array(fp).T).min())
     print(f"{tris} triangles, {size / 1e6:.2f} MB; E0 {E0:.1f} m, PAL {PAL}, ARMAS {ARMAS}, PARTAL {PARTAL}, GEN {GEN}, "
           f"lowest ground on the footprint {lo:.1f}")

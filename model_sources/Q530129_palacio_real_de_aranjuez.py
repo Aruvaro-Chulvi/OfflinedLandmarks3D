@@ -25,6 +25,9 @@ What is modelled:
 - Not modelled: the Tagus and the Ría (Offlined draws the water), the rest of the island garden further west,
   the Casa de Oficios and Casa de Caballeros, the interiors.
 
+Courtyards (since 2026-11-28): the open courtyards the building encloses get a floor (tools/ground_fill.py), coloured
+from the IGN orthophoto (PNOA, © Instituto Geográfico Nacional de España, CC BY 4.0, scne.es; model_sources/Q530129_pnoa.jpg,
+its baked shadows taken out); before, the game saw through them and drew its own ground.
 Measurements (see meta.json for the sources):
 - Plan: OpenStreetMap relation 2610430 (outline and courtyard), in the axes of heading 273.7° (the main front
   faces west onto the Plaza de Armas). Main block 110.7 m north–south along the plaza front, 85.7 m deep; the
@@ -710,6 +713,10 @@ def main():
     used = np.unique(w.f)
     remap = np.full(len(w.v), -1); remap[used] = np.arange(len(used))
     named.append(("water", Mesh(w.v[used], remap[w.f], w.c[used]), {"material": "water"}))
+    from ground_fill import courtyard_floor
+    floor = courtyard_floor([p[1] for p in named], "Q530129")
+    if floor is not None:
+        named.append(("courtyards", floor))
     tris, size = write_glb(out_dir / "model.glb", named, roughness=0.88,
                            materials={"water": {"metallic": 0.0, "roughness": 0.12}})
     meta = out_dir / "meta.json"
@@ -717,7 +724,7 @@ def main():
         mj = json.loads(meta.read_text(encoding="utf-8"))
         mj["triangles"] = int(tris)
         mj["footprint"] = [[round(x, 1), round(z, 1)] for x, z in FOOTPRINT]
-        meta.write_text(json.dumps(mj, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+        meta.write_text(json.dumps(mj, ensure_ascii=False, indent=2) + "\n", encoding="utf-8", newline=chr(10))
     print(f"{tris} triangles, {size / 1e6:.2f} MB")
 
 

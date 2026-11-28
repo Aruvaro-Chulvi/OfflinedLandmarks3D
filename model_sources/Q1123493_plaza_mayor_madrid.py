@@ -9,7 +9,22 @@ corners with the arches; works went on until 1854 under Antonio López Aguado an
 The present murals of the Casa de la Panadería (Carlos Franco, 1992) are NOT reproduced: the façade only gets a
 warmer colour and abstract colour panels.
 
-What is modelled: the houses around the square (not the paving, not the equestrian statue of Felipe III).
+What is modelled: the houses around the square and, since 2026-11-28, the square itself (without its floor the
+game saw through the open square and drew its own ground there, grass and trees):
+- The paving of 1961, "ajedrezado" setts of three stones (porphyry, limestone and red Ávila granite, es.wikipedia
+  «Historia de la plaza Mayor de Madrid»), measured on the IGN PNOA orthophoto (CC BY 4.0, scne.es; ~0.1 m/px):
+  a grid of dark porphyry bands about 2.7 m wide, every 16.3 m east–west (±8.15, ±24.45, ±40.75, ±57.05 m from
+  the statue) and every 11.5 m north–south (±5.75, ±17.25, ±28.75, ±40.25 m); a thinner light limestone band
+  (~1.2 m) halfway between them both ways; the fields of pinkish-grey granite setts in between.
+- The equestrian statue of Felipe III in the middle (Giambologna and Pietro Tacca, 1616, here since 1848, pedestal
+  by Sabino de Medina; public domain) on its base of about 8.5 × 5.5 m (orthophoto), simplified: the horse with its
+  left foreleg raised, the king with the baton at his waist (es.wikipedia «Estatua ecuestre de Felipe III»). The
+  heights (about 4.5 m of pedestal, 4.5 m of horse and rider) are estimates and the way it faces was not checked.
+- The four big lampposts on round bases at the crossings of the dark bands (±24.45, ±17.25 m; orthophoto), and
+  the two dark ventilation grilles of the car park south-east of the statue (orthophoto). The lamps' design is
+  generic.
+- The café terraces against the porticoes ("instalan terrazas junto a los soportales", es.wikipedia): the groups
+  of large square white parasols where the orthophoto shows them (they change with the season).
 
 Measurements (see meta.json for the sources):
 - OpenStreetMap: the square is relation 16657232 (outer way 4263036 = the line of the façades). Its four corners
@@ -56,7 +71,7 @@ import numpy as np
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "tools"))
-from meshkit import Mesh, merge, box, cyl, lathe, quad, tube, cap, ring_area, write_glb, METAL  # noqa: E402
+from meshkit import Mesh, merge, box, cyl, lathe, quad, tube, cap, extrude, ring_area, write_glb, METAL  # noqa: E402
 
 rng = np.random.default_rng(1619)
 
@@ -81,6 +96,13 @@ SOFFIT = (0.80, 0.77, 0.70)
 SHOP = (0.80, 0.76, 0.68)
 DOOR = (0.24, 0.18, 0.14)
 GILT = (0.86, 0.68, 0.26)
+PAVE = (0.66, 0.64, 0.59)              # the fields of granite setts (orthophoto)
+PAVE_D = (0.51, 0.50, 0.47)            # dark porphyry bands (orthophoto)
+BRONZE = (0.17, 0.15, 0.11)
+PARASOL = (0.93, 0.92, 0.89)           # the terraces' square white parasols
+PAVE_L = (0.80, 0.78, 0.73)            # light limestone bands
+GRILLE = (0.16, 0.16, 0.17)
+TABLE = (0.35, 0.33, 0.31)
 CLOCK = (0.93, 0.92, 0.88)
 
 F = -50.0                              # sentinel for "down to the foundations" (see found())
@@ -641,15 +663,121 @@ def cuchilleros_arch():
             tube([((x0 + x1) / 2 + 1.6 * math.cos(t), ys + 1.6 * math.sin(t), z1 + 0.04) for t in np.linspace(math.pi, 0, 15)], 0.13, GRANITE_D, 6)]
 
 
-# ── Footprint: the ring of houses, with a slit to the square (even-odd keyhole) ─
+# ── The square: paving, the statue of Felipe III, café terraces ─────────────
+def centre():
+    return sum(q[0] for q in Q) / 4, sum(q[1] for q in Q) / 4
+
+
+def at(u, w):
+    """A point of the square from the statue: u metres east, w metres south (along the sides of the square)."""
+    cx, cz = centre()
+    t = SIDES[0].t                                                # the north side, west to east
+    n = np.array([-t[1], t[0]])                                   # southwards
+    return float(cx + u * t[0] + w * n[0]), float(cz + u * t[1] + w * n[1])
+
+
+def statue():
+    """Equestrian statue of Felipe III on its pedestal, simplified (heights estimated), in the middle."""
+    cx, cz = centre()
+    out = [B(-4.25, 4.25, 0.0, 0.3, -2.75, 2.75, GRANITE), B(-3.3, 3.3, 0.3, 0.75, -2.0, 2.0, GRANITE_D),
+           B(-2.9, 2.9, 0.75, 1.1, -1.65, 1.65, GRANITE), B(-2.5, 2.5, 1.1, 4.0, -1.3, 1.3, GRANITE),
+           B(-2.75, 2.75, 4.0, 4.5, -1.55, 1.55, GRANITE_D)]
+    y0 = 4.5
+    horse = [sphere(1.0, BRONZE).S(1.55, 0.7, 0.62).T(0, y0 + 2.15, 0)]                # body
+    for lx, lz, k in ((1.05, 0.33, 0.0), (1.05, -0.33, 0.55), (-1.05, 0.33, 0.0), (-1.05, -0.33, 0.0)):
+        leg = cyl(0.13, 0.1, 1.75, BRONZE, seg=8)
+        if k:                                                                       # the left foreleg, raised
+            leg = cyl(0.13, 0.1, 1.2, BRONZE, seg=8).R(0, 0, k).T(0, 0.55, 0)
+        horse.append(leg.T(lx, y0, lz))
+    horse += [cyl(0.42, 0.3, 1.5, BRONZE, seg=10).R(0, 0, -0.75).T(1.3, y0 + 2.2, 0),   # neck
+              sphere(0.5, BRONZE).S(1.4, 0.75, 0.55).T(2.25, y0 + 3.15, 0),            # head
+              cyl(0.12, 0.05, 1.3, BRONZE, seg=6).R(0, 0, 2.5).T(-1.45, y0 + 2.4, 0)]  # tail
+    rider = [cyl(0.42, 0.33, 1.2, BRONZE, seg=10).T(0.1, y0 + 2.75, 0),                # body
+             sphere(0.23, BRONZE).T(0.15, y0 + 4.2, 0),                                 # head
+             cyl(0.17, 0.12, 1.05, BRONZE, seg=8).R(0.35, 0, 0).T(0.05, y0 + 2.0, 0.42),  # legs
+             cyl(0.17, 0.12, 1.05, BRONZE, seg=8).R(-0.35, 0, 0).T(0.05, y0 + 2.0, -0.42),
+             cyl(0.05, 0.05, 0.8, BRONZE, seg=6).R(0, 0, -0.5).T(0.25, y0 + 3.0, 0.45)]   # baton at the waist
+    return merge(out + horse + rider).T(cx, 0, cz)
+
+
+def lamp(u, w):
+    """One of the four big lampposts: round stone base, cast-iron column, four arms with lanterns (generic)."""
+    x, z = at(u, w)
+    out = [cyl(1.9, 1.9, 0.35, GRANITE_D, seg=20), cyl(1.4, 1.4, 0.55, GRANITE, seg=20),
+           cyl(0.32, 0.22, 1.2, IRON, seg=10).T(0, 0.55, 0), cyl(0.16, 0.11, 4.6, IRON, seg=8).T(0, 1.75, 0)]
+    for k in range(4):
+        a = k * math.pi / 2 + math.pi / 4
+        ex, ez = math.cos(a) * 0.95, math.sin(a) * 0.95
+        out += [tube([(0, 5.4, 0), (ex * 0.6, 5.75, ez * 0.6), (ex, 5.7, ez)], 0.05, IRON, 5),
+                cyl(0.17, 0.24, 0.55, (0.95, 0.92, 0.80), seg=6).T(ex, 5.15, ez),       # lantern glass
+                cyl(0.27, 0.02, 0.28, IRON, seg=6).T(ex, 5.7, ez)]                      # its cap
+    out += [cyl(0.2, 0.02, 0.6, IRON, seg=6).T(0, 6.35, 0)]
+    return merge(out).T(x, 0, z)
+
+
+# Groups of terrace parasols seen on the orthophoto: (u0, u1, w0, w1) in metres from the statue (east, south)
+TERRACES = [(-60, -48, -37, -30.5), (-46, -39.5, -37, -30.5), (-39, -21.5, -37, -30.5), (36, 41.5, -42, -36.5),
+            (45.5, 56, -42, -36.5),
+            (-59, -46, -19.5, -8.5), (-58, -45, -5, 6), (-57.5, -45.5, 8.5, 30),
+            (45.5, 58, -27, -20.5), (45.5, 58, -20.5, -9.5), (46, 58.5, -8, 2.5), (47, 59, 3, 15.5), (48, 59, 15.5, 21.5),
+            (-55.5, -28.5, 27.5, 37), (-18.5, -8, 27.5, 37), (23.5, 57.5, 27.5, 37)]
+
+
+def terraces():
+    """Café terraces against the porticoes: large square white parasols in the groups of the orthophoto, a table
+    and chairs under each (illustrative: they change with the season)."""
+    out = []
+    for u0, u1, w0, w1 in TERRACES:
+        nu, nw = max(1, round((u1 - u0) / 5.6)), max(1, round((w1 - w0) / 5.6))
+        su, sw = (u1 - u0) / nu, (w1 - w0) / nw
+        for i in range(nu):
+            for j in range(nw):
+                u, w = u0 + (i + 0.5) * su, w0 + (j + 0.5) * sw
+                x, z = at(u, w)
+                half = min(su, sw) / 2 - 0.15
+                out += [cyl(0.05, 0.05, 2.9, TABLE, seg=6).T(x, 0, z),
+                        cyl(half * 1.414, 0.05, 0.5, PARASOL, seg=4).R(0, math.pi / 4, 0).T(x, 2.55, z),   # canopy
+                        cyl(half * 1.414, half * 1.414, 0.12, PARASOL, seg=4, caps=False).R(0, math.pi / 4, 0).T(x, 2.43, z)]
+                for dx, dz in ((-1.2, -1.1), (1.2, 1.1)):
+                    tx, tz = x + dx, z + dz
+                    out += [cyl(0.4, 0.4, 0.05, TABLE, seg=10).T(tx, 0.72, tz), cyl(0.04, 0.04, 0.72, TABLE, seg=5).T(tx, 0, tz),
+                            B(tx - 0.8, tx - 0.4, 0, 0.45, tz - 0.2, tz + 0.2, TABLE), B(tx + 0.4, tx + 0.8, 0, 0.45, tz - 0.2, tz + 0.2, TABLE)]
+    return merge(out)
+
+
+def square():
+    """The paving of 1961 (orthophoto): granite fields, light limestone bands, a grid of dark porphyry bands; the
+    four lampposts and the two grilles of the car park."""
+    out = [extrude(offset_quad(PD), -0.8, 0.0, PAVE_D, top_c=PAVE)]
+    U, Wd = 60.2, 42.0                                             # half-size of the open square from the statue
+    def band(u0, u1, w0, w1, y, c):
+        P = [at(u0, w0), at(u1, w0), at(u1, w1), at(u0, w1)]
+        out.append(cap(P if ring_area(P) > 0 else P[::-1], y, c))
+    for k in range(-3, 4):                                         # light bands, halfway (and through the statue)
+        band(k * 16.3 - 0.6, k * 16.3 + 0.6, -Wd, Wd, 0.008, PAVE_L)
+        band(-U, U, k * 11.5 - 0.6, k * 11.5 + 0.6, 0.009, PAVE_L)
+    for k in range(-4, 4):                                         # dark bands, between them (±8.15 … ±57.05)
+        u = (k + 0.5) * 16.3
+        if abs(u) < U:
+            band(u - 1.35, u + 1.35, -Wd, Wd, 0.014, PAVE_D)
+    for k in range(-4, 4):
+        w = (k + 0.5) * 11.5
+        if abs(w) < Wd:
+            band(-U, U, w - 1.4, w + 1.4, 0.015, PAVE_D)
+    band(1.2, 7.8, 12.05, 15.55, 0.02, GRILLE)                    # the car park's grilles (orthophoto)
+    band(25.45, 31.75, 11.95, 15.45, 0.02, GRILLE)
+    for u in (-24.45, 24.45):
+        for w in (-17.25, 17.25):
+            out.append(lamp(u, w))
+    return merge(out)
+
+
+# ── Footprint: the whole outline, the square included (its floor is part of the model now) ─
 def footprint():
     outer = [tuple(p) for p in DATA["fp"]]
     if ring_area(outer) < 0:
         outer = outer[::-1]
-    inner = offset_quad(-1.0)[::-1]                       # opposite orientation
-    k = min(range(len(outer)), key=lambda i: math.dist(outer[i], inner[0]))
-    ring = outer[k:] + outer[:k + 1] + [inner[0]] + inner[1:] + [inner[0]]
-    return [[round(x, 2), round(z, 2)] for x, z in ring]
+    return [[round(x, 2), round(z, 2)] for x, z in outer]
 
 
 def main():
@@ -663,6 +791,7 @@ def main():
             gilt.append(g)
     parts.append(roofs())
     parts.append(houses())
+    parts += [square(), statue(), terraces()]
     stone = merge(parts)
     gold = merge(gilt)
     for m in (stone, gold):
@@ -679,7 +808,7 @@ def main():
         mj = json.loads(meta.read_text(encoding="utf-8"))
         mj["footprint"] = footprint()
         mj["triangles"] = tris
-        meta.write_text(json.dumps(mj, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+        meta.write_text(json.dumps(mj, ensure_ascii=False, indent=2) + "\n", encoding="utf-8", newline="\n")
         print(f"meta.json: footprint {len(mj['footprint'])} points, triangles {tris}")
 
 

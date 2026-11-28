@@ -97,6 +97,10 @@
     {
       "title": "Wikidata Q12512 — architects and dates",
       "url": "https://www.wikidata.org/wiki/Q12512"
+    },
+    {
+      "title": "ground_elev 34.0 m: the height of y = 0 that best fits the model to the real ground of its area (SRTM via AWS Terrain Tiles, terrain.json) — tools/review_ground.py (SRTM is a surface model and mixes in the Vatican buildings: it gave 54.5 m at ground_at)",
+      "url": "https://github.com/Aruvaro-Chulvi/OfflinedLandmarks3D/blob/main/docs/GROUND_REVIEW.md"
     }
   ],
   "ground": "keep",
@@ -105,6 +109,7 @@
     137.0
   ],
   "ground_low": -7.3,
+  "ground_elev": 34.0,
   "triangles": 118619,
   "notes": "Built by code (model_sources/Q12512_st_peters_basilica.py, tools/meshkit.py) with AI assistance. Modelled: the basilica (Michelangelo's body with its giant pilasters, windows and attic round the three apses; Maderno's nave and façade 114.7 × 45.44 m with the eight giant Corinthian columns, the pediment, the inscription, the benediction loggia and the other windows, the portico entrances and the end arches, the attic, the balustrade with the 13 statues of Christ, St John the Baptist and eleven apostles, the two clocks of Valadier), the lead vault roofs over the four arms, Michelangelo's dome (octagonal platform, drum with 16 buttresses and paired columns, 16 windows with alternating pediments, attic, ribbed lead shell with 16 ribs and three rows of lucarnes, lantern with paired columns, cone with candelabra, gilded ball and cross at 136.6 m), the four minor domes, six small oval domes over the aisles and four little cupolas over the stairs; St Peter's Square: the sagrato with its 14 steps and the statues of St Peter and St Paul, the Piazza Retta and the ellipse paved in dark sampietrini with the travertine frames of the eight sectors, the two corridors (Braccio di Costantino and di Carlo Magno) with pilasters, windows, balustrade and 42 statues, Bernini's colonnade (the 305 supports mapped in OSM as Tuscan columns, three steps, entablature, balustrade, pitched roofs, pediments over the middle passages and the east ends, 98 statues of saints), the obelisk with its lions and cross, and the fountains of Maderno and Bernini. Simplified: statues, capitals and lucarnes are stylised; balustrades are solid bands; no interior. Uncertain: the absolute ground. The square is not flat: Wikipedia (it) gives 6 m between the façade and the obelisk; the paving here falls from y = 0 at the façade line to −3 m at the foot of the steps and −6 m at the obelisk, then −7.3 m at the east end (EU-DEM, ±1 m); the colonnade and the corridors follow that slope. 'ground': 'keep' with ground_at at the foot of the façade beside the sagrato. Also uncertain: the heights inside the dome profile (drum, attic, lantern levels ±3 %), the minor domes (±10 %), the colonnade heights (from OSM, ±5 %), the clocks and the fountains (estimated). The basilica is drawn symmetric about the axis of the mapped façade columns and the dome cross; the OSM outline lies 1–2.6 m south of it. The obelisk is placed where OSM has it (3.7 m north of that axis; Wikipedia it: 1.56 m). footprint: the basilica, the corridors, the colonnade and the square, +1 m (+0.5 m on the side of the Apostolic Palace); the Sacristy and the Apostolic Palace are not included.",
   "footprint": [
